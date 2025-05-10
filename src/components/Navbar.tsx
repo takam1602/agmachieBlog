@@ -9,6 +9,8 @@ export default function Navbar() {
       <Link href="/gallery">Gallery</Link>
       <Link href="/upload">Upload</Link>
       <Link href="/blog">Blog</Link>
+      <Link href="/view">Repo</Link>
+      <Link href="/login">Login</Link>
     </nav>
   )
 }
