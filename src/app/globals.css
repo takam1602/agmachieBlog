@@ -2,72 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ---- ベース ---- */
-html, body {
-  min-height: 100vh;
-  color: #1f2937;            /* gray-800 */
-  background: #f9fafb;       /* gray-50 */
-}
-html.dark body {
-  color: #f3f4f6;            /* gray-100 */
-  background: #111827;       /* gray-900 */
-}
+/* brand カラーを追加（tailwind.config.js には既に設定済みの想定） */
+.text-brand       { color: #166534; }
+.text-brand-dark  { color: #0e4024; }
+.bg-brand         { background: #166534; }
+.bg-brand-dark    { background: #0e4024; }
 
-/* ---- prose (Markdown) ---- */
-.prose {
-  max-width: 48rem;          /* ≒ max-w-3xl */
-  margin-left: auto;
-  margin-right: auto;
-}
-.prose h1 {
-  font-size: 1.875rem;       /* text-3xl */
-  line-height: 2.25rem;
-  font-weight: 700;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-.prose h2 {
-  font-size: 1.5rem;         /* text-2xl */
-  line-height: 2rem;
-  font-weight: 600;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
-}
-.prose h3 {
-  font-size: 1.25rem;        /* text-xl */
-  line-height: 1.75rem;
-  font-weight: 600;
-  margin-top: 1.25rem;
-  margin-bottom: 0.5rem;
-}
-.prose a  { color: #166534; text-decoration: underline; }
-.prose a:hover { opacity: 0.8; }
-.prose img {
-  display: block;
-  max-width: 100%;
-  margin: 1rem auto;
-  border-radius: 0.375rem;   /* rounded-md */
-  box-shadow: 0 1px 2px rgb(0 0 0 / 0.1);
-}
-
-/* ---- card & button ---- */
-.card {
-  background: #ffffff;
-  color: inherit;
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 2px rgb(0 0 0 / 0.1);
-  padding: 1.5rem;
-}
-html.dark .card { background: #1f2937; }
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  border-radius: 0.375rem;
-  font-weight: 500;
-  background: #166534;
-  color: #fff;
-  transition: background 0.2s;
-}
-.btn:hover { background: #0e4024; }
+/* Markdown (prose) */
+.prose            { max-width: 48rem; margin: 0 auto; }
+.prose h1         { margin: 2rem 0 1rem; font-size: 1.875rem; font-weight: 700; }
+.prose h2         { margin: 1.5rem 0 0.75rem; font-size: 1.5rem;  font-weight: 600; }
+.prose h3         { margin: 1.25rem 0 0.5rem; font-size: 1.25rem; font-weight: 600; }
+.prose a          { color: #166534; text-decoration: underline; }
+.prose a:hover    { opacity: 0.8; }
+.prose img        { border-radius: 0.375rem; box-shadow: 0 1px 2px rgb(0 0 0 / 0.1); margin: 1rem auto; max-width: 100%; }
