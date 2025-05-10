@@ -7,7 +7,7 @@ export default function MultiUpload() {
 
   const uploadFiles = async (files: FileList) => {
     setUploading(true)
-    for (let file of Array.from(files)) {
+    for (const file of Array.from(files)) {
       const { error } = await supabase.storage
         .from('ag-photos')
         .upload(`photos/${file.name}`, file, { cacheControl: '3600' })
