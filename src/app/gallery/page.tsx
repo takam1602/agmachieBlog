@@ -8,7 +8,7 @@ export default async function Gallery() {
 
   const photos = data?.map(
     (photo) =>
-      `${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/agmachine/photos/${photo.name}`
+      `${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/agmachinephotos/photos/${photo.name}`
   )
 
   return (
