@@ -1,62 +1,34 @@
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
-import rehypeRaw from 'rehype-raw'
-import Image from 'next/image'
-import { replaceRelativeImagePaths } from '@/utils/markdown'
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
+import { replaceRelativePaths } from '@/utils/markdown';
+import MarkdownImage from '@/components/MarkdownImage';
 
-/** README を取得する GitHub オーナー / リポジトリ / ブランチ */
-const OWNER = 'takam1602'
-const REPO  = 'AgMachine'
-const BRANCH = 'main'
-
-/** README Raw URL */
-const README_URL =
-  `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/README.md`
-
-/**
- * Markdown 内の <img> を next/image に置換するコンポーネント
- * react-markdown の components プロパティで利用
- */
-function MarkdownImage({ src, alt }: { src: string; alt?: string }) {
-  return (
-    <Image
-      src={src}
-      alt={alt ?? ''}
-      width={800}
-      height={600}
-      className="my-4 rounded"
-    />
-  )
-}
-
-export const revalidate = 300 // 5 分ごとに ISR
+const OWNER = 'takam1602';
+const REPO = 'AgMachine';
+const BRANCH = 'main';
+export const revalidate = 300;
 
 export default async function Home() {
-  // README をフェッチ
-  const res = await fetch(README_URL, { next: { revalidate: 300 } })
-  let markdownText = await res.text()
-
-  // 相対パス画像を Raw URL に変換
-  markdownText = replaceRelativeImagePaths(markdownText, OWNER, REPO, BRANCH)
+  const res = await fetch(`https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/README.md`,
+    { next: { revalidate: 300 } });
+  let md = await res.text();
+  md = replaceRelativePaths(md, OWNER, REPO, BRANCH);
 
   return (
-    <main className="prose prose-img:mx-auto mx-auto px-4 py-8">
-    <ReactMarkdown
-      remarkPlugins={[remarkGfm]}
-      rehypePlugins={[rehypeRaw]}
-      components={{
-        img({ src, alt }) {
-          // Blob や undefined は描画しない
-          if (typeof src !== 'string') return null
-          return <MarkdownImage src={src} alt={alt} />
-        },
-      }}
-    >
-      {markdownText}
-    </ReactMarkdown>
+    <main className="prose">
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        rehypePlugins={[rehypeRaw]}
+        components={{
+          img: ({ src, alt }) =>
+            typeof src === 'string' ? <MarkdownImage src={src} alt={alt} /> : null,
+        }}
+      >
+        {md}
+      </ReactMarkdown>
     </main>
-  )
+  );
 }
-
 
 

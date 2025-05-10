@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
 import MarkdownImage from '@/components/MarkdownImage'
-import { replaceRelativeImagePaths } from '@/utils/markdown'
+import { replaceRelativePaths } from '@/utils/markdown'
 
 const OWNER = 'takam1602'
 const REPO  = 'AgMachine'
@@ -19,7 +19,7 @@ export default async function BlogPage({ params }: { params: any }) {
   if (res.status !== 200) return <p className="p-8">Not Found</p>
 
   let md = await res.text()
-  md = replaceRelativeImagePaths(md, OWNER, REPO, BRANCH)
+  md = replaceRelativePaths(md, OWNER, REPO, BRANCH)
 
   return (
     <main className="prose mx-auto p-6">
