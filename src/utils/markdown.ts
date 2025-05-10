@@ -7,12 +7,12 @@ export function replaceRelativePaths(
   const baseRaw = `https://raw.githubusercontent.com/${repoOwner}/${repoName}/${branch}/`;
   // 画像 ![](...)
   markdown = markdown.replace(
-    /!\[([^\]]*)\]\((\.?\/[^)\s]+)\)/g,
+    /\[([^\]]+)\]\((\.?\/[^\)]+?\.md)\)/g,
     (_m, alt, path) => `![${alt}](${path.startsWith('http') ? path : baseRaw + path.replace(/^\.\//, '')})`
   );
   // リンク [](...)
   markdown = markdown.replace(
-    /\[([^\]]+)\]\((\.?\/[^)\s]+\.md)\)/g,
+    /\[([^\]]+)\]\((\.?\/[^\)]+?\.md)\)/g,
     (_m, text, path) => `[${text}](/view/${path.replace(/^\.\//, '').replace(/\.md$/, '')})`
   );
   return markdown;
