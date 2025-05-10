@@ -17,11 +17,15 @@ const README_URL =
  * Markdown 内の <img> を next/image に置換するコンポーネント
  * react-markdown の components プロパティで利用
  */
-function MarkdownImage({ src, alt }: { src: string; alt?: string }) {
+function MarkdownImage(props: {
+  src?: string
+  alt?: string
+}) {
+  if (!props.src) return null
   return (
     <Image
-      src={src}
-      alt={alt ?? ''}
+      src={props.src}
+      alt={props.alt ?? ''}
       width={800}
       height={600}
       className="my-4 rounded"
@@ -41,19 +45,17 @@ export default async function Home() {
 
   return (
     <main className="prose prose-img:mx-auto mx-auto px-4 py-8">
-    <ReactMarkdown
-      remarkPlugins={[remarkGfm]}
-      rehypePlugins={[rehypeRaw]}
-      components={{
-        img({ src, alt }) {
-          // Blob や undefined は描画しない
-          if (typeof src !== 'string') return null
-          return <MarkdownImage src={src} alt={alt} />
-        },
-      }}
-    >
-      {markdownText}
-    </ReactMarkdown>
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        rehypePlugins={[rehypeRaw]}
+        // 画像を next/image で描画
+        components={{
+          // img: ({node, ...props}) => <MarkdownImage {...props} />,
+          img: ({props}) => <MarkdownImage {...props} />,
+        }}
+      >
+        {markdownText}
+      </ReactMarkdown>
     </main>
   )
 }
