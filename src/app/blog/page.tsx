@@ -1,24 +1,26 @@
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
+import Link from 'next/link'
 
-export const revalidate = 60 // ISR
-
-async function fetchMarkdown() {
+export default async function BlogList() {
   const res = await fetch(
-    'https://raw.githubusercontent.com/takam1602/AgMachine/main/README.md',
-    { cache: 'no-store' }
+    'https://api.github.com/repos/takam1602/AgMachine/blog/',
+    { next: { revalidate: 60 } }
   )
-  return res.text()
-}
+  const files = await res.json()
 
-export default async function Blog() {
-  const markdown = await fetchMarkdown()
+  const markdownFiles = files.filter((file: any) => file.name.endsWith('.md'))
 
   return (
-    <div className="prose mx-auto p-8">
-      <ReactMarkdown remarkPlugins={[remarkGfm]}>
-        {markdown}
-      </ReactMarkdown>
+    <div className="p-6">
+      <h2 className="text-xl font-bold">Blog記事一覧</h2>
+      <ul className="mt-4">
+        {markdownFiles.map((file: any) => (
+          <li key={file.name}>
+            <Link href={`/blog/${file.name.replace('.md', '')}`}>
+              {file.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
