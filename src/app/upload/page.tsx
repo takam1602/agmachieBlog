@@ -8,7 +8,8 @@ export default function Upload() {
 
   const uploadFile = async (file: File) => {
     setUploading(true)
-    const { data, error } = await supabase.storage
+    /*const { data, error } = await supabase.storage */
+    const { error } = await supabase.storage
       .from('ag-photos')
       .upload(`photos/${file.name}`, file, { cacheControl: '3600' })
 
