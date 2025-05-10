@@ -1,4 +1,3 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
     remotePatterns: [
@@ -7,8 +6,12 @@ const nextConfig = {
         hostname: 'raw.githubusercontent.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'githubusercontent.com',
+        pathname: '/**',
+      },
     ],
   },
-}
-
-module.exports = nextConfig
+};
+module.exports = nextConfig;

@@ -1,19 +1,21 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
-import { replaceRelativePaths } from '@/utils/markdown';
 import MarkdownImage from '@/components/MarkdownImage';
+import { replaceRelativePaths } from '@/utils/markdown';
 
 const OWNER = 'takam1602';
-const REPO = 'AgMachine';
-const BRANCH = 'main';
+const REPO  = 'AgMachine';
+
 export const revalidate = 300;
 
 export default async function Home() {
-  const res = await fetch(`https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/README.md`,
-    { next: { revalidate: 300 } });
+  const res = await fetch(
+    `https://raw.githubusercontent.com/${OWNER}/${REPO}/main/README.md`,
+    { next: { revalidate: 300 } }
+  );
   let md = await res.text();
-  md = replaceRelativePaths(md, OWNER, REPO, BRANCH);
+  md = replaceRelativePaths(md, OWNER, REPO);
 
   return (
     <main className="prose">
@@ -30,5 +32,3 @@ export default async function Home() {
     </main>
   );
 }
-
-

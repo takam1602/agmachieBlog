@@ -1,19 +1,15 @@
-export function replaceRelativePaths(
-  markdown: string,
-  repoOwner: string,
-  repoName: string,
-  branch = 'main'
-) {
-  const baseRaw = `https://raw.githubusercontent.com/${repoOwner}/${repoName}/${branch}/`;
-  // 画像 ![](...)
-  markdown = markdown.replace(
-    /\[([^\]]+)\]\((\.?\/[^\)]+?\.md)\)/g,
-    (_m, alt, path) => `![${alt}](${path.startsWith('http') ? path : baseRaw + path.replace(/^\.\//, '')})`
+export function replaceRelativePaths(md: string, owner: string, repo: string, branch = 'main') {
+  const rawBase = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/`;
+
+  // 画像
+  md = md.replace(/!\[([^\]]*)\]\((\.?\/[^)\s]+)\)/g,
+    (_m, alt, p) => `![${alt}](${p.startsWith('http') ? p : rawBase + p.replace(/^\.\//, '')})`
   );
-  // リンク [](...)
-  markdown = markdown.replace(
-    /\[([^\]]+)\]\((\.?\/[^\)]+?\.md)\)/g,
-    (_m, text, path) => `[${text}](/view/${path.replace(/^\.\//, '').replace(/\.md$/, '')})`
+
+  // .md リンクを /view/ に
+  md = md.replace(/\[([^\]]+)\]\((\.?\/[^)\s]+?\.md)\)/g,
+    (_m, text, p) => `[${text}](/view/${p.replace(/^\.\//, '').replace(/\.md$/, '')})`
   );
-  return markdown;
+
+  return md;
 }
