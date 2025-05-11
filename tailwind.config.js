@@ -1,12 +1,14 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from 'tailwindcss'
+import typography from '@tailwindcss/typography'
+
+const config: Config = {
   content: ['./src/**/*.{ts,tsx,mdx}'],
   darkMode: 'class',
   theme: {
     extend: {
       colors: {
         brand: {
-          DEFAULT: '#166534',       // 深緑
+          DEFAULT: '#166534',
           light:   '#4caf50',
           dark:    '#0e4024',
         },
@@ -16,5 +18,7 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
-};
+  plugins: [typography],
+}
+
+export default config

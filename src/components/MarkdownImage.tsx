@@ -1,11 +1,11 @@
-import Image from 'next/image';
+import Image from 'next/image'
 
 export default function MarkdownImage({
   src,
   alt,
 }: {
-  src: string;
-  alt?: string;
+  src: string
+  alt?: string
 }) {
   return (
     <Image
@@ -15,5 +15,5 @@ export default function MarkdownImage({
       height={600}
       className="rounded-md shadow my-4"
     />
-  );
+  )
 }

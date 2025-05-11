@@ -1,15 +1,17 @@
-export function replaceRelativePaths(md: string, owner: string, repo: string, branch = 'main') {
-  const rawBase = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/`;
-
-  // 画像
+/**
+ * Markdown 内の相対画像・相対リンクをローカル /docs/ 参照に変換
+ * （GitHub 取得はやめる方針なので相対リンクのみ対応）
+ */
+export function replaceRelativePaths(md: string) {
+  // ./img/xxx.jpg → /img/xxx.jpg
   md = md.replace(/!\[([^\]]*)\]\((\.?\/[^)\s]+)\)/g,
-    (_m, alt, p) => `![${alt}](${p.startsWith('http') ? p : rawBase + p.replace(/^\.\//, '')})`
-  );
+    (_m, alt, p) => `![${alt}](${p.replace(/^\.\//, '/')})`
+  )
 
-  // .md リンクを /view/ に
+  // ./ag/xxx/README.md → /docs/ag/xxx/README
   md = md.replace(/\[([^\]]+)\]\((\.?\/[^)\s]+?\.md)\)/g,
-    (_m, text, p) => `[${text}](/view/${p.replace(/^\.\//, '').replace(/\.md$/, '')})`
-  );
+    (_m, text, p) => `[${text}](/docs/${p.replace(/^\.\//, '').replace(/\.md$/, '')})`
+  )
 
-  return md;
+  return md
 }
