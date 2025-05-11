@@ -19,4 +19,4 @@ claas とcaterpillar の，技術トレードの結果生まれた摩訶不思�
 
 [公式ページ](https://www.claas.tw/products/technologies/terra-trac/expertise)
 
-## [cat との関わり](../cat/README.md)がある
+## [cat との関わり](../cat/index.md)がある

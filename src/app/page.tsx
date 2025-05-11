@@ -40,9 +40,9 @@ export default function Home() {
         <h2 className="mb-8 text-center">日本の特色ある機械たち</h2>
         <ul className="grid grid-cols-2 sm:grid-cols-3 gap-6">
         {[
-            { href: '/docs/ag/kaihatsu/README', label: '北海道開発の機械' },
-            // { href: '/docs/ag/kaihatsu/README', label: '八郎潟開発の機械(工事中)' },
-            // { href: '/docs/ag/kaihatsu/README', label: '新篠津開発の機械(工事中)' },
+            { href: '/docs/ag/kaihatsu/index', label: '北海道開発の機械' },
+            // { href: '/docs/ag/kaihatsu/index', label: '八郎潟開発の機械(工事中)' },
+            // { href: '/docs/ag/kaihatsu/index', label: '新篠津開発の機械(工事中)' },
         ].map((q) => (
             <motion.li
             whileHover={{ y:-4, scale:1.03 }}
@@ -59,9 +59,9 @@ export default function Home() {
         <h2 className="mb-8 text-center">各国の特色ある機械たち</h2>
         <ul className="grid grid-cols-2 sm:grid-cols-3 gap-6">
         {[
-            { href: '/docs/ag/Thailand/README', label: 'タイ'       },
-            { href: '/docs/ag/Brazil/README',   label: 'ブラジル'   },
-            { href: '/docs/ag/Australia/README',label: 'オーストラリア' },
+            { href: '/docs/ag/Thailand/index', label: 'タイ'       },
+            { href: '/docs/ag/Brazil/index',   label: 'ブラジル'   },
+            { href: '/docs/ag/Australia/index',label: 'オーストラリア' },
         ].map((q) => (
             <motion.li
             whileHover={{ y:-4, scale:1.03 }}
@@ -78,10 +78,10 @@ export default function Home() {
         <h2 className="mb-8 text-center">農業機械のメーカ−(普通ではない)</h2>
         <ul className="grid grid-cols-2 sm:grid-cols-3 gap-6">
         {[
-            { href: '/docs/ag/deere/README',    label: 'John Deere' },
-            { href: '/docs/ag/morooka/README',  label: 'モロオカ'   },
-            { href: '/docs/ag/cat/README',      label: 'Caterpillar'},
-            { href: '/docs/ag/claas/README',    label: 'Claas'      },
+            { href: '/docs/ag/deere/index',    label: 'John Deere' },
+            { href: '/docs/ag/morooka/index',  label: 'モロオカ'   },
+            { href: '/docs/ag/cat/index',      label: 'Caterpillar'},
+            { href: '/docs/ag/claas/index',    label: 'Claas'      },
         ].map((q) => (
             <motion.li
             whileHover={{ y:-4, scale:1.03 }}
@@ -98,9 +98,9 @@ export default function Home() {
         <h2 className="mb-8 text-center">機械各論</h2>
         <ul className="grid grid-cols-2 sm:grid-cols-3 gap-6">
         {[
-            { href: '/docs/ag/landLevel/README', label: 'レベラー' },
-            { href: '/docs/ag/landHarrow/README', label: 'スペードブレードローラー'       },
-            { href: '/docs/ag/landClearing/README',   label: '開拓/Ladnd Clearing'   },
+            { href: '/docs/ag/landLevel/index', label: 'レベラー' },
+            { href: '/docs/ag/landHarrow/index', label: 'スペードブレードローラー'       },
+            { href: '/docs/ag/landClearing/index',   label: '開拓/Ladnd Clearing'   },
         ].map((q) => (
             <motion.li
             whileHover={{ y:-4, scale:1.03 }}
