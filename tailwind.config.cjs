@@ -5,10 +5,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        brand: {
-          DEFAULT: '#166534',
-          light:   '#4caf50',
-          dark:    '#0e4024',
+        brand: { DEFAULT:'#42b883',
+          dark:'#2c9c6e',
         },
       },
       fontFamily: {
@@ -16,5 +14,9 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [
+      require('@tailwindcss/typography'),
+      require('@tailwindcss/aspect-ratio'),
+      require('@tailwindcss/typography')
+  ],
 }

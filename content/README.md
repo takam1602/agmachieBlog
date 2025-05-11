@@ -1,19 +1,59 @@
-# 除雪車
-除雪車の参考文献
+# AgMachine リポジトリへようこそ
+![](./img/1.jpg)![](./img/2.jpg)
+![](./img/3.jpg)![](./img/4.jpg)
 
-- [milt 昭和30年代における開発機](https://www.thr.mlit.go.jp/tougi/kensetsu/sekou/pdf/josetsu_history.pdf)
-- [土木研　SR-300 型高速ロータリ](https://thesis.pwri.go.jp/files/doken_shiryou_0407_00.pdf)
-- [寒土木研　高速ロータリ除雪車について HTR-700 SR-303 型](https://thesis.ceri.go.jp/db/files/GR0002500776.pdf)
-- [建設機械施工 除雪機械の変遷](https://jcmanet.or.jp/bunken/kikanshi/2014/12/092.pdf)
-- [防災研　ロータリ除雪車の高速化に関する研究](https://nied-ir.bosai.go.jp/?action=repository_action_common_download&item_id=3753&item_no=1&attribute_id=22&file_no=1)
-- [土木研　湿雪地帯の除雪機構に関する研究](https://thesis.pwri.go.jp/files/doken_shiryou_0228_00.pdf)
-- [土木研　除雪機械の作業性能の調査　その２](https://thesis.pwri.go.jp/files/doken_shiryou_0323_00.pdf)
+Latest or oldest information of agricultural machinery
 
-# 除雪車写真貼
+最新・旧式の農業機械の情報を格納しているレポジトリです．
 
-- [開発局のUブレードが...](https://x.com/kenkinosuke/status/1652608666032545792?s=20)
+# Objectives
+生産者の方々に，機械開発,特に農業機械開発に携わっている方々に，機械オタクたちに，役立つ情報を提供したいと考えています．
 
-# ゆきみらい
-- [1992 04](https://jcmanet.or.jp/bunken/wp-content/uploads/1993/jcma-1993_04.pdf)
-ラットシェーバー.. 
-日立建機のラットシェーバー，後方に別エンジンを載せていたようだ．
+# Quick Link
+
+# 記
+- [北海道開発](./ag/kaihatsu/README.md)
+- [積年良土](./blog/sekinen.md)
+
+
+## 国
+- [タイ](ag/Thailand)
+- [ブラジル](ag/Brazil)
+- [オーストラリア](ag/Australia)
+
+## メーカー
+- [John Deere](ag/deere)
+- [モロオカ](ag/morooka)
+- [Caterpillar](ag/cat)
+- [claas](ag/claas)
+
+## 用途
+- [レベラー](ag/landLevel)
+- [スペードブレードローラー](ag/landHarrow)
+- [開拓/LandClearing](ag/landClearing)
+
+# blog
+考えたことやメモなど．
+- [農業機械の進化について](./blog/230804.md)
+- [乗用田植え機の変遷について1](./blog/230913.md)
+- [バーティカルなソーラーパネル](./blog/230914.md)
+- [日本の農業機械はなぜ秒速](./blog/231018.md)
+- [連作障害を回避したい](./blog/240723.md)
+- [オーガーとドレーパー](./blog/241116.md)
+- [アメリカのクイックヒッチ](./blog/241118.md)
+- [Claas india の機械とヤンマー](./blog/250324.md)
+- [CFX750からAPV5.2に速度信号を流せるか。](./blog/250404.md)
+- [CFX750からAPV5.2に速度信号を流すための準備](./blog/250407.md)
+- [CFX750からAPV5.2に速度信号(最終回)](./blog/250422.md)
+- [古いスガノ(私のDNA)](./blog/250418.md)
+
+# snow
+除雪もまた，筆者の興味の方向の1つ
+
+[除雪のページ](./snow/)
+
+# manual
+このリポジトリにはおもすぎて載せられないpdf や機械の使い方などをまとめています．
+
+- [小麦コンバイン(notionへ)](https://takam1602.notion.site/71285afa237b4355bffca9ee7caa2e40?pvs=4)
+- [Agmachine Google Drive(制限あり)](https://drive.google.com/drive/folders/1WD1pjh7rZXmn-130f_GEQYSJrFKsjQwi)

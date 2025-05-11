@@ -2,27 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-/* brand 色ユーティリティ（必要な分だけ） */
-.text-brand        { color:#166534 }
-.text-brand-dark   { color:#0e4024 }
+/* ===== 色変数 ===== */
+:root{
+  --bg:  #000;          /* 背景 */
+  --fg:  #42b883;       /* メイン緑  ⇒  #16a34a より暗い */
+  --fg-soft:#7bd7a8;    /* ホバー時   */
+  --link:#38bdf8;       /* リンク (青系) */
+  --link-hover:#0ea5e9; /* リンク hover */
+}
 
-/* ベースレイアウト */
+/* ---- 全体 ---- */
 html,body{
   min-height:100vh;
-  background:#f9fafb;
-  color:#1f2937;
-}
-html.dark body{
-  background:#111827;
-  color:#f3f4f6;
+  background:var(--bg);
+  color:var(--fg);
+  font-family:'Fira Code','Noto Sans JP',monospace;
 }
 
-/* Markdown (prose) */
-.prose{max-width:48rem;margin-left:auto;margin-right:auto}
-.prose img{border-radius:.375rem;box-shadow:0 1px 2px rgb(0 0 0/.1);margin:1rem auto;max-width:100%}
+/* ---- 見出し ---- */
+h1,h2,h3{font-weight:700;color:var(--fg)}
+/* 同サイズ…(省略可) */
 
-/* Card & Button (任意で使う用) */
-.card{background:#fff;padding:1.5rem;border-radius:.5rem;box-shadow:0 1px 2px rgb(0 0 0/.1)}
-html.dark .card{background:#1f2937}
-.btn{display:inline-flex;align-items:center;padding:.5rem 1rem;border-radius:.375rem;font-weight:500;background:#166534;color:#fff}
-.btn:hover{background:#0e4024}
+/* ---- リンク ---- */
+a{color:var(--link);text-underline-offset:3px}
+a:hover{color:var(--link-hover)}
+
+/* ---- code / img は前と同じ ---- */
+.prose img{border-radius:.5rem;box-shadow:0 0 15px #0f0;margin:1rem auto;max-width:100%}

@@ -1,14 +1,17 @@
 import './globals.css'
 import Navbar from '@/components/Navbar'
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: {children: React.ReactNode}) {
   return (
-    <html lang="ja" className="scroll-smooth">
-      <body className="min-h-screen bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
-        <Navbar />
-        <main className="max-w-6xl mx-auto px-4 py-8">{children}</main>
-        <footer className="text-center py-6 text-sm border-t border-gray-200 dark:border-gray-700">
-          © {new Date().getFullYear()} AgMachine
+    <html lang="ja">
+      <body>
+        <Navbar/>
+        {children}
+        <footer className="text-center py-8 text-xs text-[#5a5a5a] border-t border-[#222]">
+          <p>{new Date().getFullYear()} @takam1602 | Powered by Next.js & Tailwind CSS</p>
+          <p className="mt-2">
+            <a href="https://github.com/takam1602" className="hover:text-[var(--link-hover)]">contact@takam1602</a>
+          </p>
         </footer>
       </body>
     </html>
