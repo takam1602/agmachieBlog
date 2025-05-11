@@ -24,9 +24,9 @@ AGCO に移る前の，Dekalb 最後のトラクター，CATのチャレンジ�
     - [700Bではないでしょう](https://www.kellytractor.com/eng/images/pdf/agriculture/rubbertired_tractors/mt700b_brochure.pdf)
     本別I農場に渡って、今(2024年現在)はktngnmにあるとかないとか: あるわ．
     
-    ![](./img/kitanaga_mt745A.png)
+    ![](/img/kitanaga_mt745A.png)
     
-    ![](./img/kitanaga_MT745A_2.png)
+    ![](/img/kitanaga_MT745A_2.png)
 
 - 阿部建設(新篠津): 1台
     - [35](http://abekensetu.com/machine/machine_gallery/dsc00508/)

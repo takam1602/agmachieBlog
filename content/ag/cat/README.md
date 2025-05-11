@@ -28,12 +28,12 @@
 先程のGrainnews の記事が最も詳しい。
 他の写真も掲示板に流通してしまっている。
 [newagtalk](https://talk.newagtalk.com/forums/thread-view.asp?tid=274454&DisplayType=flat)
-- ![](./img/4955track.jpg)
-- ![](./img/4955track1.jpg)
-- ![](./img/4955track2.jpg)
-- ![](./img/fordpowershifttrack.jpg)
-- ![](./img/battrac.jpg)
-- ![](./img/catx2.jpg)
+- ![](/img/4955track.jpg)
+- ![](/img/4955_track1.jpg)
+- ![](/img/4955_track2.jpg)
+- ![](/img/fordpowershifttrack.jpg)
+- ![](/img/battrac.jpg)
+- ![](/img/catx2.jpg)
 
 様々な試作・開発工程があって、65が出来上がった。
 
@@ -46,7 +46,7 @@
 #### Davenport plant
 最初の、65の組み立てを行った/行う予定だった工場。
 [ebay で売られていたDavenport の帽子](https://www.ebay.com/itm/267031413235)
-![](./img/davenport_65_cap.png)
+![](/img/davenport_65_cap.png)
 
 1987年1月15日の[記事](https://www.chicagotribune.com/1987/01/15/caterpillar-to-close-3-plants/)では、
 Davenport plant で65の製造が計画されていた、と記載がある。
@@ -66,7 +66,7 @@ Davenport Production will be phased out over a number of months.
 
 ということだそうだ。
 Davenport のデザインと全く同じ,[ebay で売られていたAuroraの帽子](https://www.ebay.com/itm/296219555854)
-![](./img/aurora_65_cap.png)
+![](/img/aurora_65_cap.png)
 もある。
 
 [Caterpillar introduces tractor with new rubber track design](https://www.postbulletin.com/caterpillar-introduces-tractor-with-new-rubber-track-design)
@@ -133,7 +133,7 @@ The tractor's Mobil-trac System is assembled in Peoria-area facilities.
 ディカルブの工場は，flat belt tractor を主に製造していた．
 
 2003年にAGCOの工場が閉鎖されるまで，そこでトラクタが作られ続けていたが，現在は運送会社の持ち物になっている．
-![](./img/old_catPlant.png)
+![](/img/old_catPlant.png)
 Goolge earthの1999年のスクショ．上側にトラクタらしきものが並んでいるのが見える．
 
 #### Manitoba plant (New Holland Versatile)
@@ -186,11 +186,11 @@ Triangle Belt Tractor は見つからないが...
 [95E の動画 ](https://www.youtube.com/watch?v=-z4n0nUdUvE)
 を眺めてると3分20秒くらいとのところに，CH55みたいなのが写っている．これは決定的だろう。
 
-![](./img/ch55_dekalb.png)
+![](/img/ch55_dekalb.png)
 
 8分3秒くらいからは，結構やばいのいっぱい写ってる．
-CH35, 45かのTriangle Belt も[写ってる](./img/chRowCrop_outside.png)
-し，なによりプロトタイプが結構[写ってる](./img/ch_prottype.png)．
+CH35, 45かのTriangle Belt も[写ってる](/img/chRowCrop_outside.png)
+し，なによりプロトタイプが結構[写ってる](/img/ch_prottype.png)．
 
 映像から，2002年3月くらいまでの，caterpillar がトラクターを作り終えるまでの期間であっても，CH35, 45, 55 はWinnipeg からDekalbで製造していただろう，裏付けが取れた．
 
@@ -243,10 +243,10 @@ Caterpillar has moved production of its smaller three Challenger models (sold in
 
 Challenger® Row-Crop Tractorsが[2001年8月当時のHP](./200108_ch354555.md)にも登場していた。
 
-![](./img/200108Screen.png)
+![](/img/200108Screen.png)
 
 度々見るロゴマークはこれ。
-![](./img/undercarriage.gif)
+![](/img/undercarriage.gif)
 
 ### トラクタ製造の終焉
 
@@ -317,8 +317,8 @@ Way back machine で調べると，[農業機械部門の製品紹介ページ](
 では見られない．
 おそらく，予定通り，2002年の第1期, 4月か5月でAgco に全て移管したということだろう．
 
-[1st Quarter の報告書](./pdf/1q02_cat_inc.pdf)と
-[2nd Quarter の報告書](./pdf/2q02_cat_inc.pdf)
+[1st Quarter の報告書](/pdf/1q02_cat_inc.pdf)と
+[2nd Quarter の報告書](/pdf/2q02_cat_inc.pdf)
 も一応乗っけておく．
 
 - [2002年3月29日のFarmers weekly の記事](https://www.fwi.co.uk/news/agco-wraps-up-challenger-deal)
@@ -379,7 +379,7 @@ See your local Caterpillar dealer soon and learn how Challenger is Going Forward
 
 ということで、脈々とchallenger シリーズが量産されていく。
 
-![](./img/logo_challenger.gif)
+![](/img/logo_challenger.gif)
 
 ## 近年のchallenger
 Agco に渡ってからは，challenger シリーズは開発が続けられてきた．
@@ -536,10 +536,10 @@ Krause manufactured a line of tillage equipment for CAT in the year 2000 includi
 
 なるほど，確かに，Eのchallenger になってくると，黄色い作業機で作業している写真がカタログに時たま見られる．
 - [camso のカタログ(TL2 730)](https://camso.co/assets/products/specs/pl/ag/1801_AG_BrochureTrackWheel_CAT_8,5x8,5_EN_V11.pdf)
-![](./img/camso_65E_TL2730.png)
+![](/img/camso_65E_TL2730.png)
 
 検索に引っかかってくる怪しい(信用できるのかわからないという意味)マニュアルサイトを眺めてみると，どうやら，TL2 はIn-line ripper, TL3 はDisc ripper, TL4 はSoil finisher らしい．
-![](./img/cat_TL234.png)
+![](/img/cat_TL234.png)
 
 本当かどうか分からないが，確かに，TL2はIn-line ripper だし，TL3 はDisc ripperで，TL4 はfinisher だ．
 
@@ -571,7 +571,7 @@ Deere の2100 と比べると，全然違う．
 
 ### TL5 Field Cultivator
 これだけ，まだカタログが見つかってない．
-![](./img/tl5_3.jpeg)
+![](/img/tl5_3.jpeg)
 
 でも，動画はあるし，こういう写真はある．
 

@@ -15,22 +15,22 @@
 ##  [Parma Folding land plane ](https://parmacompany.com/ag-equipment/tillage/land-plane/folding-land-plane/)
 
 ###  [カタログ](https://parmacompany.com/wp-content/uploads/2017/08/2015-LAND-PLANE.pdf)
-![](img/parma_landplane.jpg)
-![](img/parma_landplane_spec.png)
+![](/img/parma_landplane.jpg)
+![](/img/parma_landplane_spec.png)
 
 ## [Schmeiser VARITRAK 3PT Land Leveler](https://www.tgschmeiser.com/products/landlevelers/3pointlandleveler.html)
 
 ### [カタログ](https://www.tgschmeiser.com/pdfs/Open%20Field.pdf)
 
-![](img/schmeiser_varitrak.png)
-![](img/schmeiser_varitrak_spec.png)
+![](/img/schmeiser_varitrak.png)
+![](/img/schmeiser_varitrak_spec.png)
 
 ## [Art's way land planes](https://artsway.com/equipment/)
 
 ### [カタログ](https://artsway.com/wp-content/uploads/2023/07/Dirt-Work-Web-Spreads.pdf)
 
-![](img/artsway_landplane_back.jpg)
-![](img/artsway_landplane_spec.png)
+![](/img/artsway_landplane_back.jpg)
+![](/img/artsway_landplane_spec.png)
 (24ft は44389ドルから!!)
 
 - folding ではないレベラーは現場で組み立て
@@ -43,7 +43,7 @@
 1. ボックススクレーパー(レベラー), ドラグスクレーパ, ボトムレススクレーパ
 (Box scraper, box leveler, drag scraper, bottomless scraper)
 
-![ボックススクレーパのイメージ(Rome RLS)](img/rome_boxleveler_RLS.jpg)
+![ボックススクレーパのイメージ(Rome RLS)](/img/rome_boxleveler_RLS.jpg)
 
     - 牽引式でブレードにサイドプレートがついたボックスをリアタイヤのシリンダで高さを調節し表土の削り取り，敷き均しを行う．
     - ボックスは上下に解放されており，スクレーパーに比べると運土の効率は小さく(土のこぼれ・溢れ),大型のほ場だと効率が低下する可能性がある．
@@ -53,7 +53,7 @@
 2. ランドプレーン, トリプレーン
 (Land-Plane, Tri-Plane)
 
-![トリプレーンのイメージ(Schmeiser Tri-Plane)](img/schmeiser_triPlane.png)
+![トリプレーンのイメージ(Schmeiser Tri-Plane)](/img/schmeiser_triPlane.png)
 
     - 使い方がよくわからないです．
     - 牽引式のブレードでサイドプレートがついていたりいなかったりする．
@@ -65,7 +65,7 @@
 3. スクレーパー
 (Scraper)
 
-![スクレーパーのイメージ(K-tec 1236)](img/scraper_ktec_1236.jpg)
+![スクレーパーのイメージ(K-tec 1236)](/img/scraper_ktec_1236.jpg)
 
     - スクレーパといえばこれ．
     - 運土量が大きく造成の効率は恐らく一番これがよい．

@@ -107,7 +107,7 @@ CRP ground のような狭い土地での播種に向いている．
 
 [Online](https://www.deere.com/assets/publications/index.html?id=ec2fcd6f)
 or 
-[PDF](./brochure/airSeeding_2021.pdf)
+[PDF](/brochure/airSeeding_2021.pdf)
 
 - N500C series
 
@@ -151,7 +151,7 @@ seeding unit の押し付け圧の調整
 これはトラクタとセットじゃないと扱いこなすのが厳しいかも．
 
 そしておそらく，とんでもなく高価... 25万ドル！！！！！！！４０００万！！！
-![](./pic/n530c_buildyourOwn.png)
+![](/img/n530c_buildyourOwn.png)
 
 ### 1590 に代わるドリルはなんだろうか．
 

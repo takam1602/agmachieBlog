@@ -290,21 +290,21 @@ MB-50, MB-30の大型機に改善されたリアヒッチが取り付けられ�
 
 - 2003年4月のHPから農業用トラクタ，ゴムクローラトラクタの表記は消えてしまった．
 
-![](./img/morooka_2003_0215.png "2003年2月HP 商品案内(Wayback machineを利用してキャプチャ)")
+![](/img/morooka_2003_0215.png "2003年2月HP 商品案内(Wayback machineを利用してキャプチャ)")
 *2003年2月HP 商品案内(Wayback machineを利用してキャプチャ)*
 
-![](./img/morooka_2002_0211_spec.png " 2003年2月HP 仕様(Wayback machineを利用してキャプチャ)")
+![](/img/morooka_2002_0211_spec.png " 2003年2月HP 仕様(Wayback machineを利用してキャプチャ)")
 *2003年2月HP 仕様(Wayback machineを利用してキャプチャ)*
 
-![](./img/morooka_2002_history.png "2002年HPに掲載されていた写真(Wayback machineを利用してキャプチャ)")
+![](/img/morooka_2002_history.png "2002年HPに掲載されていた写真(Wayback machineを利用してキャプチャ)")
 *2002年HPに掲載されていた写真(Wayback machineを利用してキャプチャ)*
 
-![](./img/morooka_nanikore.png "2002年キャリアダンプに搭載された小型バックホー, 詳細不明(Wayback machineを利用してキャプチャ)")
+![](/img/morooka_nanikore.png "2002年キャリアダンプに搭載された小型バックホー, 詳細不明(Wayback machineを利用してキャプチャ)")
 *2002年HPに掲載されていた, キャリアダンプに搭載された小型バックホー, 詳細不明(Wayback machineを利用してキャプチャ)*
 
 - 2018年に帯広で開催された国際農業機械展示会に、久方ぶりの試作機としてトラクタが展示された。このときは写真撮影禁止であり、参考出品であった。今後も発売する予定はないとのこと。
 現在は動画用におそらく阿見のテストフィールドに置いてある。
-![](./img/morooka_tractor_2018.jpg "2024年1月1日現在wikipedia より転載。")
+![](/img/morooka_tractor_2018.jpg "2024年1月1日現在wikipedia より転載。")
 *2024年1月1日現在wikipedia より転載。*
 
 (この写真、某白い農機の試験ほ場では...? 上げて良い写真だったのだろうか)
@@ -331,7 +331,7 @@ MB-50, MB-30の大型機に改善されたリアヒッチが取り付けられ�
 
 - MITSUBISHI のカッティングレーザーロータリー
 
-![](./img/mitsubishi_cuttingRaserRotary.JPG)
+![](/img/mitsubishi_cuttingRaserRotary.JPG)
 
 MACの遺産だと思われるが正体は分からない．
 画像だけが手元にある．
@@ -340,10 +340,10 @@ MACの遺産だと思われるが正体は分からない．
 
 関連特許かわからないが，[「特開平９−３２２６０７」](https://www.j-platpat.inpit.go.jp/c1801/PU/JP-H09-322607/11/ja) はいかつい．
 
-![](./img/mitsubishi_1997_frontrortaly_1.png)
-![](./img/mitsubishi_1997_frontrortaly_2.png)
-![](./img/mitsubishi_1997_frontrortaly_3.png)
-![](./img/mitsubishi_1997_frontrortaly_4.png)
+![](/img/mitsubishi_1997_frontrortaly_1.jpg)
+![](/img/mitsubishi_1997_frontrortaly_2.jpg)
+![](/img/mitsubishi_1997_frontrortaly_3.png)
+![](/img/mitsubishi_1997_frontrortaly_4.jpg)
 
 これを，逆にしたものだろうか．
 

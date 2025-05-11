@@ -8,15 +8,15 @@
 
 ### Agriculture
 - 600 series Heavy offset disks
-[600](./brochure/Magnum-600-Series.pdf)
-[600F](./brochure/MAGNUM-600F-SERIES-FIXED-OFFSET-DISK-AUS.pdf)
+[600](/brochure/Magnum-600-Series.pdf)
+[600F](/brochure/MAGNUM-600F-SERIES-FIXED-OFFSET-DISK-AUS.pdf)
     - stump-jump ディスクハロー．
     - 36インチ！！
     - 6m で450-600 馬力
     - ディスク1枚あたりにかかる重量は1t 超え．
 
 - 500 series single way plow 
-[500](./brochure/500-3pt.pdf)
+[500](/brochure/500-3pt.pdf)
     - これもヤバそう
     - 昔の小西・スターのブッシュボグハロー的な．
     - 504 と505: おそらく直装
@@ -24,13 +24,13 @@
     - 36 インチブレードを最も大きい機種で16 枚... 重さは15t になるみたい．
 
 - 700 special plows 
-[700](./brochure/700-Series.pdf)
+[700](/brochure/700-Series.pdf)
     - サイズ的には普通
     - リッジディスクプラウ
     - 畦畔造成に良さそう．
 
 - 500 One-way plows
-[500](./brochure/500_plows.pdf)
+[500](/brochure/500_plows.pdf)
 
 - でかいディスクプラウ，36 インチディクスで10-20枚．作業幅は6m くらい．
 - スタンプジャンプディスクプラウ．強靭，最強．
@@ -39,21 +39,21 @@
 ### Forestry
 Ag でこんなにやばかったら，Forestry ではどうなるのか．
 - Bedding Plow
-[100](./brochure/MAGNUM-140-Rev-D.pdf)
-[200](./brochure/200SeriesMountedBeddingPlow.pdf)
+[100](/brochure/MAGNUM-140-Rev-D.pdf)
+[200](/brochure/200SeriesMountedBeddingPlow.pdf)
     - 100 とか200 はまあ小さいだろうと思ったら，デカかった．
     - 前の700 のクソデカ版
     - なにゆえ，森林抜開地でリッジングするのだろうか．
 
 - Combination Sub-soil plows
-[300](./brochure/300series.pdf)
-[400](./brochure/400MountedRidegPlow.pdf)
+[300](/brochure/300series.pdf)
+[400](/brochure/400MountedRidegPlow.pdf)
     - サブソイラ付きの，牽引式・直装式のリッジプラウ
     - でかいわ．
 
 - Eco-Till High Impact Minimal Tillage
-[Eco-Til](./brochure/EcoTil.pdf)
-[Eco-Til 2](./brochure/EcoTil2.pdf)
+[Eco-Til](/brochure/EcoTil.pdf)
+[Eco-Til 2](/brochure/EcoTil2.pdf)
 
     - サブソイラだけど，リッジャのディスクは取り外し，ただ単に48インチコールタを取り付けただけの機械．
     コールタ間の土は完全に破壊されるが，土の移動は少なく，植林には良いみたい．
@@ -64,20 +64,20 @@ Ag でこんなにやばかったら，Forestry ではどうなるのか．
 
 ### Land Clearing
 - Single Blade/Root plows
-[900](./brochure/SERIES-900-BLADE-PLOW-BROCHURE.pdf)
+[900](/brochure/SERIES-900-BLADE-PLOW-BROCHURE.pdf)
     - 残根処理，引き抜き専用機械
     - 主根もいけるのかもだけど，基本的にはその周りのほそぼそとしたたくさんある根を抜き上げる機械か．
 
 - Rotary rake
-[1207](./brochure/MODEL-1207-ROTARY-FINE-RAKE.pdf)
-[1200](./brochure/MODEL-1200-RAKES-C.pdf)
+[1207](/brochure/MODEL-1207-ROTARY-FINE-RAKE.pdf)
+[1200](/brochure/MODEL-1200-RAKES-C.pdf)
     - 牧草とはわけが違う．
     - 900 とかで引っこ抜いて地面に散乱した根・枝・葉をウィンドローにする．
     - Pinwheel diameter 2.4m とか．でかい．
 
 - Stump puller
-[1700](./brochure/MODEL-1700-STUMP-PULLER-A.pdf)
-[1710](./brochure/MODEL-1710-STUMP-PULLER-B.pdf)
+[1700](/brochure/MODEL-1700-STUMP-PULLER-A.pdf)
+[1710](/brochure/MODEL-1710-STUMP-PULLER-B.pdf)
     - 動画でよく見るやつ．
     - 連続でメインの太い切り株を掘り上げる．
     - トラクタの種類が決まっている??
@@ -89,7 +89,7 @@ Ag でこんなにやばかったら，Forestry ではどうなるのか．
 まあへんなの　いっぱい作ってる． 
 ### Land Clearing
 - Bush rake
-[TRK](./brochure/TRK-Bush-Rake-3.pdf)
+[TRK](/brochure/TRK-Bush-Rake-3.pdf)
 
     - レーキ直径は1.68 m か2.2m 
     - ゴムタイヤなので，横滑り防止のディスクはついていない．軽いの専用??
@@ -97,14 +97,14 @@ Ag でこんなにやばかったら，Forestry ではどうなるのか．
 ## [Harrell](https://harrellag.com/)
 ジョージアに本社，乾燥地域の作業機を作っている会社
 - Rock N’ Root Rake
-[rake](./brochure/HAP-Rock-N-Root-Rake-Flyer-Digital-v3.pdf)
+[rake](/brochure/HAP-Rock-N-Root-Rake-Flyer-Digital-v3.pdf)
     -　そこそこの大きさのレーキかも
     -　造りはそこそこかも
 
 ## [MULTI FARMING SYSTEMS](https://multifarmingsystems.com.au/)
 オーストラリア,クイーンズランドの会社．世界最大のレーキかも．
 - Stickrake / Rock and Root Rake
-[rake](./brochure/18-Wheel-Rake-8.5-x-11-21-Sep-15.pdf)
+[rake](/brochure/18-Wheel-Rake-8.5-x-11-21-Sep-15.pdf)
     - でかいし，大きい．
     - ホイール径は1.2 m !! 
     - up to 23 wheels !!

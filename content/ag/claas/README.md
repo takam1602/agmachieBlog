@@ -1,7 +1,7 @@
 # Claas 
 
 ## Commandor 114/116/228 CS Mobile track system
-![](./img/claas_cs116_1989_uk.jpg)
+![](/img/claas_cs116_1989_uk.jpg)
 - [PR動画!?](https://www.youtube.com/watch?v=oOO7BQskOfk)
 - [当時の貴重な動画1](https://www.youtube.com/watch?v=bvHTqTpl90g)
 - [当時の貴重な動画2](https://www.youtube.com/watch?v=J-DffV_MWQg)

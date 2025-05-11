@@ -14,9 +14,9 @@
 deep fertilizing plow, なかなか，特殊なプラウ
 
 耕起と同時に心土犁にて心土を破壊し透水性，排水性の改善を図り，併せて土壌改良材を作土直下及び心土の破砕底部に投入し，収量アップを図ります．
-![](./img/sugano/cat_shindohibai.png)
+![](/img/sugano/cat_shindohibai.png)
 
-![](./img/sugano/cat_shindohiba2.png)
+![](/img/sugano/cat_shindohibai2.png)
 
 試験成績を見る限り，十勝の黒ボクほ場では，作土直下の心土は低pHだったり低リンだったりしたようで，根圏域の拡大が抑制されていたほ場があったようだ．
 
@@ -37,7 +37,7 @@ deep fertilizing plow, なかなか，特殊なプラウ
 水田(転作田)を対象に，籾殻の投入により，既設の疎水剤と連結させて透排水性の向上を図り，同時に耕起を行う複合機．
 '''
 
-![](./img/sugano/kousya_momigara.JPG)
+![](/img/sugano/kousya_momigara.JPG)
 
 これは，良さそうだけど，有材心土改良耕のように，資材の投入がネックになるだろう．
 また，そもそもの抜け道として暗渠施工がなされていないと，意味がない．
@@ -57,25 +57,25 @@ deep fertilizing plow, なかなか，特殊なプラウ
 
 同じ30"でも，いくつかバージョンがあるようだ．
 
-![](./img/sugano/kousya_konsou.JPG)
+![](/img/sugano/kousya_konsou.JPG)
 
 これは2018年に苫小牧に置いてあったやつ。
-![](./img/sugano/tomakomai_30layermix.JPG)
+![](/img/sugano/tomakomai_30layermix.JPG)
 
 北見がちょっとおかしい
-![](./img/sugano/kitami_konsou.JPG)
+![](/img/sugano/kitami_konsou.JPG)
 
-![](./img/sugano/kitami_konsou2.JPG)
+![](/img/sugano/kitami_konsou2.JPG)
 
 北見にへんなプラウがあった。
-![](./img/sugano/kitami_jumboKonsou1.JPG)
-![](./img/sugano/kitami_jumboKonsou2.JPG)
-![](./img/sugano/kitami_jumboKonsou3.JPG)
+![](/img/sugano/kitami_jumboKonsou1.JPG)
+![](/img/sugano/kitami_jumboKonsou2.JPG)
+![](/img/sugano/kitami_jumboKonsou3.JPG)
 
 なんだろう。以上にフレームがゴツく、サポートホイールが2連あるし、スキマーも大きい。
 
 花巻には、簡素化したような混層耕プラウがある(あった)。
-![](./img/sugano/hanamaki_konsou.JPG)
+![](/img/sugano/hanamaki_konsou.JPG)
 
 # 分割混層耕プラウ
 
@@ -86,7 +86,7 @@ deep fertilizing plow, なかなか，特殊なプラウ
 表層の下層の泥炭を混層し，土壌の膨柔化，通気性・透水性の改良を図る．
 表層に客土がある場合，山の土は締め固まっているときがあったので，下層の有機質が多量に存在する泥炭土を表層に部分的に混入させ，作土の有機質含有量を高める．
 
-![](./img/sugano/kousya_bunkatsu.JPG)
+![](/img/sugano/kousya_bunkatsu.JPG)
 
 # 改良反転客土耕: 三段耕プラウ
 
@@ -102,54 +102,54 @@ deep fertilizing plow, なかなか，特殊なプラウ
 
 これは土の館に保管されてるやつ: 苫小牧から持ってきたんじゃなかったっけ。
 
-![](./img/sugano/kousya_sandankou.JPG)
+![](/img/sugano/kousya_sandankou.JPG)
 
 2018年に苫小牧に置いてあったやつ: いま土の館にあるのとおんなじかな
-![](./img/sugano/tomakomai_sandankou.JPG)
+![](/img/sugano/tomakomai_sandankou.JPG)
 
 
-![](./img/sugano/sandankou.png)
+![](/img/sugano/sandankou.png)
 
 村井先生の記事から
-![](./img/sugano/P14-08-1024x713.jpg)
+![](/img/sugano/P14-08-1024x713.jpg)
 
 混層されている様子
-![](./img/sugano/P14-10-1024x693.jpg)
+![](/img/sugano/P14-10-1024x693.jpg)
 
 
 # 草地用プラウ
 
 草地用の24"2連プラウ: おそらく
-![](./img/sugano/tomakomai_242.JPG)
+![](/img/sugano/tomakomai_242.JPG)
 
 花巻にあった、ナタコールタのプラウ
-![](./img/sugano/hanamaki_blushBreaker.JPG)
+![](/img/sugano/hanamaki_blushBreaker.JPG)
 
 
 ## 謎プラウ
 
 アキュムレータのワンウェイ4連??
 
-![](./img/sugano/cat_acum4.png)
+![](/img/sugano/cat_acum4.png)
 
 勝部さんのだが、24" 3連？見たこと無い。
 
-![](./img/sugano/cat_katsube_243.png)
+![](/img/sugano/cat_katsube_243.png)
 
 勝部さんのだが、38" 2連, D6
 
 謎プラウ森田のとこにあったやつかもスイングプラウ(仮)
 
-![](./img/sugano/swingPlow.png)
+![](/img/sugano/swingPlow.png)
 
 スイングプラウの3連? 20" か。
-![](./img/sugano/P16-05-1024x703.jpg)
+![](/img/sugano/P16-05-1024x703.jpg)
 
 森田のやつはL型2連、と書かれていた。スイングプラウではなく、L型プラウと呼ぶべきかもしれない。
-![](./img/sugano/morita_swingPlot.png)
+![](/img/sugano/morita_swingPlot.png)
 
 通常の?22"3？
-![](./img/sugano/P14-01-1024x713.jpg)
+![](/img/sugano/P14-01-1024x713.jpg)
 
 26" 1 連, 28" 1連，トヨタの愛知エンジンの工場で作った, 100台も出てない??: 芽室の吉本さん
 
@@ -157,7 +157,7 @@ deep fertilizing plow, なかなか，特殊なプラウ
 
 ランドハローだけにとどまらず、コイルパッカーとかコンビネーションパッカーとか。
 
-![](./img/sugano/landHarrow.png)
+![](/img/sugano/landHarrow.png)
 
 いわゆるプレス耕法の目論見はこのときからあったのか。
 
@@ -173,16 +173,16 @@ deep fertilizing plow, なかなか，特殊なプラウ
 サブソイラはウィングの角度が小さくチゼルの幅も小さいので破砕効果が小さいことが，パンブレーカーとの違いである．
 '''
 通常のサブソイラフレームよりもゴツく作成しており，ナコール製のアキュムレータを装着している．
-![](./img/sugano/obihiro_panbreaker_knife.jpg)
+![](/img/sugano/obihiro_panbreaker_knife.jpg)
 
 このスタンダードは，農業公社専用のものだろうか．
 しかし，スガノのお家芸でもある，サブソイラフレームのものもある．
 数年前には，帯広にはハーフソイラ仕様のものも置いてあった．
 
-![](./img/sugano/obihiro_panbreaker_halfsoil.jpg)
+![](/img/sugano/obihiro_panbreaker_halfsoil.jpg)
 
 
 パンブレーカとディスクを組み合わせて，心土破砕整地耕と名付けられたものもあったようだが，現在はディスク部分は剥がされて，置いてある．
 
-![](./img/sugano/obihiro_panbreaker_attachment.jpg)
+![](/img/sugano/obihiro_panbreaker_attachment.jpg)
 

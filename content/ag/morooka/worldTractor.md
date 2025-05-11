@@ -4,7 +4,7 @@
 
 Classic Tractor Magazine の2019年のFacebook ページからの転載．
 
-![](./img/classicTractorMagazine_mk300_1.jpg)![](./img/classicTractorMagazine_mk300_2.jpg)
+![](/img/classicTractorMagazine_mk300_1.jpg)![](/img/classicTractorMagazine_mk300_2.jpg)
 
 - [Morooka のwiki](https://tractors.fandom.com/wiki/Morooka)
 
@@ -37,11 +37,11 @@ Contact: FARM SHOW Followup, Yuasa Warwick Machinery Ltd., Rothwell Road, Wedgno
 
 - [JAなんぽろ　くみあいだより 2022 April](http://www.ja-nanporo.or.jp/wp-content/uploads/2022/04/bd47e9c206f6be3b6f54a296e82a6ec5.pdf)
 
-![](./img/morooka_jaNanporo_202204.jpg)
+![](/img/morooka_jaNanporo_202204.jpg)
 
 - [MK-220 @ EURO Auctions](https://vimeo.com/696464778)
 
-![](./img/komatsu_mk220_auctions_1.jpg)
+![](/img/komatsu_mk220_auctions_1.jpg)
 
 [Online Bidding](https://www.euroauctionslive.com/servlet/Search.do?auctionId=678&itemId=925568&catalogLink=auctionId%3D678%26categoryName%3DTractors)
 花巻にあったやつ, 2017年にはエンジン始動の動画を撮影していた．No.10

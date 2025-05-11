@@ -1,13 +1,13 @@
 # How engineers developed the rubber-belted tractor: Scott Garvey
 
-![](./img/grainews/caterpillar-challenger65-belt-track.jpg)
-![](./img/grainews/first-whelled-prototype.jpg)
-![](./img/grainews/rondave-1.jpg)
-![](./img/grainews/belted-2-main.jpg)
-![](./img/grainews/ch65-cutaway-drawing.jpg)
-![](./img/grainews/wheeled.jpg)
-![](./img/grainews/wheeled-2.jpg)
-![](./img/grainews/wheeled-4.jpg)
+![](/img/grainews/caterpillar-challenger65-belt-track.jpg)
+![](/img/grainews/first-whelled-prototype.jpg)
+![](/img/grainews/rondave-1.jpg)
+![](/img/grainews/belted-2-main.jpg)
+![](/img/grainews/ch65-cutaway-drawing.jpg)
+![](/img/grainews/wheeled.jpg)
+![](/img/grainews/wheeled-2.jpg)
+![](/img/grainews/wheeled-4.jpg)
 
 ## Part One: In the late 1970s Caterpillar was looking for a way to break into the ag tractor market. It had two options.
 
