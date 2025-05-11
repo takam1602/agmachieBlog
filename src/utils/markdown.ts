@@ -4,9 +4,10 @@
  */
 export function replaceRelativePaths(md: string) {
   // ./img/xxx.jpg → /img/xxx.jpg
-  md = md.replace(/!\[([^\]]*)\]\((\.?\/[^)\s]+)\)/g,
-    (_m, alt, p) => `![${alt}](${p.replace(/^\.\//, '/')})`
-  )
+  md = md.replace(
+  /!\[([^\]]*)\]\((?:\.?\/)?img\/([^)\s]+)\)/g,
+  (_m, alt, p) => `![${alt}](/img/${p})`
+)
 
   // ./ag/xxx/README.md → /docs/ag/xxx/README
   md = md.replace(/\[([^\]]+)\]\((\.?\/[^)\s]+?\.md)\)/g,
