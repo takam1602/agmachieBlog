@@ -32,8 +32,9 @@ export default function Home() {
         リポジトリサイトです。
         </p>
         </section>
-
+        <div className="w-full max-w-4xl mx-auto">
         <section className="relative isolate"> <ImageCarousel images={heroImages} interval={4000} />
+        </div>
         </section>
 
         <section className="py-20 border-t border-[#222]">
