@@ -6,6 +6,7 @@
 - [当時の貴重な動画1](https://www.youtube.com/watch?v=bvHTqTpl90g)
 - [当時の貴重な動画2](https://www.youtube.com/watch?v=J-DffV_MWQg)
 - [Profi の動画](https://www.youtube.com/watch?v=W6my_Iv7Lok)
+- [traction の228CSの動画](https://www.youtube.com/watch?v=l3N9Unp8dMU)
 - [reddit ](https://www.reddit.com/r/farmingsimulator/comments/xp0tki/claas_commander_116228_cs_mts_mod_idea/)
 - [yesterday combine](https://forums.yesterdaystractors.com/threads/claas-228-combine-track-machine.1764183/)
 - [そもそも，commandor が変なコンバイン](https://www.youtube.com/watch?v=O46blmJ3XRU)
