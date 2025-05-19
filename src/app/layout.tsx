@@ -1,6 +1,14 @@
 import './globals.css'
 import Navbar from '@/components/Navbar'
 
+export const metadata: Metadata = {
+    title: "Agmachine",
+    description: "ag machine repositry by takam1602",
+    verification:{
+        google:"3ITIM0eNhLXG7UpZW7hjxVztQhiSe9Ajga0j3aIicIw",
+    },
+}
+
 export default function RootLayout({ children }: {children: React.ReactNode}) {
   return (
     <html lang="ja">
@@ -17,3 +25,5 @@ export default function RootLayout({ children }: {children: React.ReactNode}) {
     </html>
   )
 }
+
+
