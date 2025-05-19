@@ -28,6 +28,7 @@ const blogEntries = [
     { href: '/docs/blog/250407', label: 'CFX750から速度信号を取り出せるか2' },
     { href: '/docs/blog/250418', label: 'CFX750から速度信号を取り出せるか3' },
     { href: '/docs/blog/250422', label: 'ロマン・スガノ' },
+    { href: '/docs/blog/250519', label: 'イセキ・モトコフ プランター' },
 ]
 
 export default function Home() {
