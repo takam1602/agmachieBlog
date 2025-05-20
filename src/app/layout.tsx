@@ -8,29 +8,11 @@ export const metadata: Metadata = {
     icons: {
         icon: '/favicon.ico',             
         shortcut: '/favicon-32x32.png',   
-        apple: '/favicon-32x32.png',      
+        apple: '/favicon-32x32.png',
     },
     verification:{
         google:"3ITIM0eNhLXG7UpZW7hjxVztQhiSe9Ajga0j3aIicIw",
     },
-
-    openGraph: {
-    title: 'Agricultural Machinery Repo.',
-    description:
-      'Latest & oldest｜最新・旧式の農業機械情報をストック。開発者・生産者・機械オタクに役立つリポジトリサイト。',
-    url: 'https://agmachie-blog.vercel.app',
-    siteName: 'AgMachine',
-    images: [
-      {
-        url: '/img/og-image.png',     // OG用の大きめのサムネイル画像
-        width: 1200,
-        height: 630,
-        alt: 'AgMachine オープングラフ画像',
-      },
-    ],
-    locale: 'ja_JP',
-    type: 'website',
-  },
 }
 
 export default function RootLayout({
