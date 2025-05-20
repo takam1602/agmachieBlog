@@ -37,7 +37,7 @@ export default function Home() {
             <main className="px-4">
                 {/* HERO */}
                 <section className="py-24 text-center">
-                    <h1 className="text-5xl font-bold text-green-400">
+                    <h1 className="text-10xl font-bold text-green-400">
                         <TypeAnimation
                             sequence={[
                                 'Agricultural Machinery Repository', 1200,
