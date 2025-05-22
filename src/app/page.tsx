@@ -52,8 +52,7 @@ export default function Home() {
                         />
                     </h1>
                     <p className="mt-6 text-[#5a5a5a] leading-relaxed">
-                        最新・旧式の農業機械の情報をストックし、開発者・生産者・機械オタクに役立つ情報を
-                        共有するリポジトリサイトです。
+                    農業機械のリポジトリです．サイト作成者が気になった機械が乗っています．そのためかなり偏った内容となってしまっています．ご了承ください．
                     </p>
                 </section>
 
@@ -85,9 +84,10 @@ export default function Home() {
                     <h2 className="mb-8 text-center">各国の特色ある機械たち</h2>
                     <ul className="grid grid-cols-2 sm:grid-cols-3 gap-6">
                         {[
-                            { href: '/docs/ag/Thailand/index', label: 'タイ' },
-                            { href: '/docs/ag/Brazil/index',   label: 'ブラジル' },
-                            { href: '/docs/ag/Australia/index',label: 'オーストラリア' },
+                            { href: '/docs/ag/usa/index',label: 'US' },
+                            { href: '/docs/ag/Australia/index',label: 'AUS' },
+                            { href: '/docs/ag/Thailand/index', label: 'THAI' },
+                            { href: '/docs/ag/Brazil/index',   label: 'BR' },
                         ].map((q) => (
                             <motion.li
                                 whileHover={{ y: -4, scale: 1.03 }}
