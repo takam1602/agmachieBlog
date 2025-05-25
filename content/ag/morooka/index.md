@@ -147,7 +147,10 @@ MB-50, MB-30の大型機に改善されたリアヒッチが取り付けられ�
     - 何はともあれ，国産初の量産トラクタ
     - MCT-80, 100, 150, 200, 250 の５シリーズ展開
     - また力強いキャッチコピー
-    <!--- 農業新聞リンク must buy
+    
+    <!--
+
+    -農業新聞リンク must buy
         - [昭和63年04月26日](http://www.shin-norin.co.jp/shop/50_2587.html)
         - [平成1年07月18日](http://www.shin-norin.co.jp/shop/51_2647.html)
         - [平成3年7月23日号](http://www.shin-norin.co.jp/shop/51_2746.html)
@@ -156,6 +159,7 @@ MB-50, MB-30の大型機に改善されたリアヒッチが取り付けられ�
         - [平成8年08月27日](http://www.shin-norin.co.jp/shop/52_2993.html)
         - [平成10年08月11日](http://www.shin-norin.co.jp/shop/52_3089.html)
         - [平成17年09月20日](http://www.shin-norin.co.jp/shop/54_3433.html)
+
     -->
     
     ```sh
