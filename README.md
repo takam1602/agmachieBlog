@@ -4,3 +4,4 @@ Agricultural Maninary Repository
 
 [AgMachine](https://agmachie-blog.vercel.app/)
 
+ hogehoge
