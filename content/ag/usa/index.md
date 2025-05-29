@@ -26,8 +26,7 @@ HPは非常に簡素だが，作ってる機械はかなりマニアック．
 
 日本だとタウンビーバーとかに投げ入れて粉砕するのだろうけど，アメリカはそうも行かない．
 
-#### EDS
-[Broshure](/pdf/EDS sheet 2010 mobile.pdf)
+- EDSについて: [Broshure](/pdf/EDS sheet 2010 mobile.pdf)
 
 A super duty flail in every respect. 
 The self powered Engine Shredder will take rows of orchard brush and process down to splinters. 
@@ -65,4 +64,12 @@ on-ground harvesting とoff-ground harvesting に分かれているのがおも�
 ちなみに，on-groud は木から地面に落としてそれを拾い上げるような収穫体系で，
 off-ground は木の上から直接収穫するような収穫体系．
 
+## コットン関係
+
+コットンピッカートとかもいいけど...
+オーガニックコットンとかどうしてるのか、除草とか。
+
+- [SM Fab](https://www.smfabus.com/)
+
+クソデカカルチベータ: というよりも、クソデカツールバーの会社ですね。
 
