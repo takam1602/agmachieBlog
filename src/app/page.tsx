@@ -75,7 +75,7 @@ export default function Home() {
                                 key={q.href}
                                 className="border border-[#222] rounded p-4 text-center hover:border-[var(--fg)] transition"
                             >
-                                <Link href={q.href}>{q.label}</Link>
+                                <Link href={q.href} className="block w-full h-full">{q.label}</Link>
                             </motion.li>
                         ))}
                     </ul>
@@ -96,7 +96,7 @@ export default function Home() {
                                 key={q.href}
                                 className="border border-[#222] rounded p-4 text-center hover:border-[var(--fg)] transition"
                             >
-                                <Link href={q.href}>{q.label}</Link>
+                                <Link href={q.href} className="block w-full h-full">{q.label}</Link>
                             </motion.li>
                         ))}
                     </ul>
@@ -117,7 +117,7 @@ export default function Home() {
                                 key={q.href}
                                 className="border border-[#222] rounded p-4 text-center hover:border-[var(--fg)] transition"
                             >
-                                <Link href={q.href}>{q.label}</Link>
+                                <Link href={q.href} className="block w-full h-full">{q.label}</Link>
                             </motion.li>
                         ))}
                     </ul>
@@ -137,7 +137,7 @@ export default function Home() {
                                 key={q.href}
                                 className="border border-[#222] rounded p-4 text-center hover:border-[var(--fg)] transition"
                             >
-                                <Link href={q.href}>{q.label}</Link>
+                                <Link href={q.href} className="block w-full h-full">{q.label}</Link>
                             </motion.li>
                         ))}
                     </ul>

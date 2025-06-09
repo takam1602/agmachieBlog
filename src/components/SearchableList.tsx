@@ -23,8 +23,10 @@ export default function SearchableList({ entries }: { entries: Entry[] }) {
       <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {filtered.map((e) => (
           <li key={e.href} className="border border-[#333] p-4 rounded hover:border-green-500">
-            <Link href={e.href} className="text-green-400 hover:underline">
+            <Link href={e.href} className="block w-full h-full p-4">
+            <span className="text-green-400 hover:underline">
               {e.label}
+              </span>
             </Link>
           </li>
         ))}
