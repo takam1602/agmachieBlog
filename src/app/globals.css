@@ -28,4 +28,11 @@ a{color:var(--link);text-underline-offset:3px}
 a:hover{color:var(--link-hover)}
 
 /* ---- code / img は前と同じ ---- */
-.prose img{border-radius:.5rem;box-shadow:0 0 15px #0f0;margin:1rem auto;max-width:100%}
+.prose img{
+margin:1rem auto;
+max-width:320px;
+width: 100%;
+height: auto;
+border-radius:.5rem;
+box-shadow:0 0 15px #0f0;
+}
