@@ -108,9 +108,10 @@ export default function Home() {
                     <ul className="grid grid-cols-2 sm:grid-cols-3 gap-6">
                         {[
                             { href: '/docs/ag/deere/index',   label: 'John Deere' },
-                            { href: '/docs/ag/morooka/index', label: 'モロオカ'   },
                             { href: '/docs/ag/cat/index',     label: 'Caterpillar' },
                             { href: '/docs/ag/claas/index',   label: 'Claas'       },
+                            { href: '/docs/ag/morooka/index', label: 'モロオカ'   },
+                            { href: '/docs/ag/tcm/index', label: '東洋運搬機'   },
                         ].map((q) => (
                             <motion.li
                                 whileHover={{ y: -4, scale: 1.03 }}
