@@ -11,8 +11,8 @@ const heroImages = [
   { src: '/img/front/2.jpg', alt: 'カルチ' },
   { src: '/img/front/3.jpg', alt: '芋' },
   { src: '/img/front/4.jpg', alt: '栃木' },
-  { src: '/img/front/5.jpg', alt: 'ディスク' },
-  { src: '/img/front/6.jpg', alt: 'チゼル' },
+  { src: '/img/front/5.JPG', alt: 'ディスク' },
+  { src: '/img/front/6.JPG', alt: 'チゼル' },
 ]
 // JSX の外で定義する
 const blogEntries = [
