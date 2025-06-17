@@ -7,18 +7,18 @@ import ImageCarousel from '@/components/ImageCarousel'
 import SearchableList from '@/components/SearchableList'
 
 const heroImages = [
-  { src: '/img/front/1.jpg', alt: 'v' },
-  { src: '/img/front/2.jpg', alt: 'カルチ' },
-  { src: '/img/front/3.jpg', alt: '芋' },
-  { src: '/img/front/4.jpg', alt: '栃木' },
-  { src: '/img/front/5.JPG', alt: 'ディスク' },
-  { src: '/img/front/6.JPG', alt: 'チゼル' },
-  { src: '/img/front/7.JPG', alt: '9750' },
-  { src: '/img/front/8.JPG', alt: 'タイ' },
-  { src: '/img/front/9.JPG', alt: 'マンモス' },
-  { src: '/img/front/10.JPG', alt: 'wagga' },
-  { src: '/img/front/11.JPG', alt: '中国' },
-  { src: '/img/front/12.JPG', alt: '中国' },
+  { src: '/img/front/1.jpg', alt: 'v' , width: 640, height: 480},
+  { src: '/img/front/2.jpg', alt: 'カルチ' , width: 640, height: 480},
+  { src: '/img/front/3.jpg', alt: '芋' , width: 640, height: 480},
+  { src: '/img/front/4.jpg', alt: '栃木' , width: 640, height: 480},
+  { src: '/img/front/5.JPG', alt: 'ディスク' , width: 640, height: 480},
+  { src: '/img/front/6.JPG', alt: 'チゼル' , width: 640, height: 480},
+  { src: '/img/front/7.JPG', alt: '9750' , width: 640, height: 480},
+  { src: '/img/front/8.JPG', alt: 'タイ' , width: 640, height: 480},
+  { src: '/img/front/9.JPG', alt: 'マンモス' , width: 640, height: 480},
+  { src: '/img/front/10.JPG', alt: 'wagga' , width: 640, height: 480},
+  { src: '/img/front/11.JPG', alt: '中国' , width: 640, height: 480},
+  { src: '/img/front/12.JPG', alt: '中国' , width: 640, height: 480},
 ]
 
 // JSX の外で定義する
