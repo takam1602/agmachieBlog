@@ -2,10 +2,14 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+type Img = { 
+    src: string; 
+    alt?: string;
+    width: number;
+    height: number;
+}
 
-type Img = { src: string; alt?: string }
 type Props = { images: Img[]; interval?: number }
-
 export default function ImageCarousel({ images, interval = 4000 }: Props) {
   const validImages = images.filter((i) => i.src)
   const [idx, setIdx] = useState(0)
@@ -19,24 +23,20 @@ export default function ImageCarousel({ images, interval = 4000 }: Props) {
   }, [validImages.length, interval])
 
   return (
-    // 親のコンテナの最大幅も考慮
     <div className="relative w-full max-w-xl mx-auto overflow-hidden rounded-lg shadow">
       <div
         className="flex transition-transform duration-500"
         style={{ transform: `translateX(-${idx * 100}%)` }}
       >
+
         {validImages.map((img, i) => (
-          // ここを修正: w-full flex-none から w-640px h-480px flex-none などへ
-          // Tailwind CSS で直接 px 値を指定できない場合、カスタムCSSで対応
-          <div key={i} className="flex-none" style={{ width: '640px', height: '480px' }}>
+          <div key={i} className="w-full flex-none flex justify-center items-center">
             <Image
               src={img.src}
               alt={img.alt ?? `slide-${i + 1}`}
-              width={640} // Next.js Imageに伝える画像の元の幅
-              height={480} // Next.js Imageに伝える画像の元の高さ
-              className="object-cover" // 画像のアスペクト比を保ちつつ、コンテナを覆う
-              // sizes は画像が画面のどのくらいを占めるかをブラウザに伝えるもので、
-              // 今回のように固定サイズなら必須ではないかもしれませんが、置いておいても問題ありません。
+              width={640}
+              height={480}
+              className="max-w-full h-auto object-contain"
               sizes="(max-width: 576px) 100vw, 576px"
               priority={i === 0}
             />
@@ -45,4 +45,4 @@ export default function ImageCarousel({ images, interval = 4000 }: Props) {
       </div>
     </div>
   )
-}
+} 
