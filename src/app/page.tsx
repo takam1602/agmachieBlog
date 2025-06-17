@@ -14,6 +14,7 @@ const heroImages = [
   { src: '/img/front/5.JPG', alt: 'ディスク' },
   { src: '/img/front/6.JPG', alt: 'チゼル' },
 ]
+
 // JSX の外で定義する
 const blogEntries = [
     { href: '/docs/blog/sekinen', label: '積年良土とは' },
@@ -62,7 +63,7 @@ export default function Home() {
 
                 {/* Image Carousel */}
                 <section className="py-10">
-                        <ImageCarousel images={heroImages} interval={4000} />
+                        <ImageCarousel images={heroImages} interval={3000} />
                 </section>
 
                 {/* 日本の特色 */}
