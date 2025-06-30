@@ -125,6 +125,24 @@ deep fertilizing plow, なかなか，特殊なプラウ
 花巻にあった、ナタコールタのプラウ
 ![](/img/sugano/hanamaki_blushBreaker.JPG)
 
+# L型プラウ
+
+現在のように上下にボトムを配したリバーシブル機構ではなく、ボトムをL字に配して、スイングさせることでリバーシブル機構を実現しようとした、特殊なプラウ。
+
+謎プラウ森田のとこにあったやつかもスイングプラウ(仮)
+
+![](/img/sugano/swingPlow.png)
+
+スイングプラウの3連? 20" か。
+![](/img/sugano/P16-05-1024x703.jpg)
+
+森田のやつはL型2連、と書かれていた。スイングプラウではなく、L型プラウと呼ぶべきかもしれない。
+![](/img/sugano/morita_swingPlot.png)
+
+白石牧場の入口にもあった。
+![](/img/sugano/shiroishi_lPlough/IMG0037.JPG)
+
+[関連記事](../../blog/250628.md)
 
 ## 謎プラウ
 
@@ -137,16 +155,6 @@ deep fertilizing plow, なかなか，特殊なプラウ
 ![](/img/sugano/cat_katsube_243.png)
 
 勝部さんのだが、38" 2連, D6
-
-謎プラウ森田のとこにあったやつかもスイングプラウ(仮)
-
-![](/img/sugano/swingPlow.png)
-
-スイングプラウの3連? 20" か。
-![](/img/sugano/P16-05-1024x703.jpg)
-
-森田のやつはL型2連、と書かれていた。スイングプラウではなく、L型プラウと呼ぶべきかもしれない。
-![](/img/sugano/morita_swingPlot.png)
 
 通常の?22"3？
 ![](/img/sugano/P14-01-1024x713.jpg)
