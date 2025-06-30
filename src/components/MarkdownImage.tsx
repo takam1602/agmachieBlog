@@ -1,4 +1,8 @@
+'use client'
+
+import { useState } from 'react'
 import Image from 'next/image'
+import ImageLightbox from '@/components/ImageLightbox'
 
 export default function MarkdownImage({
   src,
@@ -7,9 +11,22 @@ export default function MarkdownImage({
   src: string
   alt?: string
 }) {
+  const [open, setOpen] = useState(false)
+
   return (
-    <a href={src} target="_blank" rel="noopener noreferrer" className="block mx-auto my-4">
-      <div className="relative w-full max-w-[640px] aspect-[16/9] overflow-hidden rounded-md shadow">
+    <>
+      {open && (
+        <ImageLightbox
+          src={src}
+          alt={alt ?? ''}
+          onClose={() => setOpen(false)}
+        />
+      )}
+
+      <div
+        className="relative w-full max-w-[640px] aspect-[16/9] overflow-hidden rounded-md shadow mx-auto my-4 cursor-pointer"
+        onClick={() => setOpen(true)}
+      >
         <Image
           src={src}
           alt={alt ?? ''}
@@ -19,6 +36,6 @@ export default function MarkdownImage({
           sizes="(max-width: 640px) 100vw, 640px"
         />
       </div>
-    </a>
+    </>
   )
 }
