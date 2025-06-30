@@ -42,6 +42,7 @@ const blogEntries = [
     { href: '/docs/blog/250520_2', label: '作物の要水量' },
     { href: '/docs/blog/250525', label: '水稲の移植栽培' },
     { href: '/docs/blog/250525_2', label: '水稲の不耕起・部分耕・無代掻き移植栽培' },
+    { href: '/docs/blog/250628', label: 'スガノのLプラウ' },
 ]
 
 export default function Home() {
