@@ -1,9 +1,12 @@
 'use client'
 
+import { useState } from 'react'
 import { TypeAnimation } from 'react-type-animation'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+
 import ImageCarousel from '@/components/ImageCarousel'
+import ImageLightbox   from '@/components/ImageLightbox'
 import SearchableList from '@/components/SearchableList'
 
 const heroImages = [
@@ -46,7 +49,18 @@ const blogEntries = [
 ]
 
 export default function Home() {
+
+  const [lightboxImg, setLightboxImg] = useState<{ src: string; alt: string } | null>(null)
     return (
+        <>
+        {lightboxImg && (
+          <ImageLightbox
+            src={lightboxImg.src}
+            alt={lightboxImg.alt}
+            onClose={() => setLightboxImg(null)}
+          />
+        )}
+
         <div className="flex justify-center">
             <main className="px-4">
                 {/* HERO */}
@@ -70,7 +84,11 @@ export default function Home() {
 
                 {/* Image Carousel */}
                 <section className="py-10">
-                        <ImageCarousel images={heroImages} interval={3000} />
+                        <ImageCarousel 
+                        images={heroImages} 
+                        interval={3000} 
+                        onImageClick={(img) => 
+                            setLightboxImg({src:img.src, alt: img.alt ?? ''})}/>
                 </section>
 
                 {/* 日本の特色 */}
@@ -165,5 +183,6 @@ export default function Home() {
                 </section>
             </main>
         </div>
+        </> 
     )
 }
