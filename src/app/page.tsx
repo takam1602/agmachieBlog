@@ -5,184 +5,199 @@ import { TypeAnimation } from 'react-type-animation'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
-import ImageCarousel from '@/components/ImageCarousel'
-import ImageLightbox   from '@/components/ImageLightbox'
+import ImageCarousel  from '@/components/ImageCarousel'
+import ImageLightbox  from '@/components/ImageLightbox'
 import SearchableList from '@/components/SearchableList'
 
+/* ---------- トップページ用画像 ---------- */
 const heroImages = [
-  { src: '/img/front/1.jpg', alt: 'v' , width: 640, height: 480},
-  { src: '/img/front/2.jpg', alt: 'カルチ' , width: 640, height: 480},
-  { src: '/img/front/3.jpg', alt: '芋' , width: 640, height: 480},
-  { src: '/img/front/4.jpg', alt: '栃木' , width: 640, height: 480},
-  { src: '/img/front/5.JPG', alt: 'ディスク' , width: 640, height: 480},
-  { src: '/img/front/6.JPG', alt: 'チゼル' , width: 640, height: 480},
-  { src: '/img/front/7.JPG', alt: '9750' , width: 640, height: 480},
-  { src: '/img/front/8.JPG', alt: 'タイ' , width: 640, height: 480},
-  { src: '/img/front/9.JPG', alt: 'マンモス' , width: 640, height: 480},
-  { src: '/img/front/10.JPG', alt: 'wagga' , width: 640, height: 480},
-  { src: '/img/front/11.JPG', alt: '中国' , width: 640, height: 480},
-  { src: '/img/front/12.JPG', alt: '中国' , width: 640, height: 480},
+  { src: '/img/front/1.jpg',  alt: 'v',         width: 640, height: 480 },
+  { src: '/img/front/2.jpg',  alt: 'カルチ',     width: 640, height: 480 },
+  { src: '/img/front/3.jpg',  alt: '芋',         width: 640, height: 480 },
+  { src: '/img/front/4.jpg',  alt: '栃木',       width: 640, height: 480 },
+  { src: '/img/front/5.JPG',  alt: 'ディスク',   width: 640, height: 480 },
+  { src: '/img/front/6.JPG',  alt: 'チゼル',     width: 640, height: 480 },
+  { src: '/img/front/7.JPG',  alt: '9750',       width: 640, height: 480 },
+  { src: '/img/front/8.JPG',  alt: 'タイ',       width: 640, height: 480 },
+  { src: '/img/front/9.JPG',  alt: 'マンモス',   width: 640, height: 480 },
+  { src: '/img/front/10.JPG', alt: 'wagga',      width: 640, height: 480 },
+  { src: '/img/front/11.JPG', alt: '中国',       width: 640, height: 480 },
+  { src: '/img/front/12.JPG', alt: '中国',       width: 640, height: 480 },
 ]
 
-// JSX の外で定義する
+/* ---------- ブログ記事リスト ---------- */
 const blogEntries = [
-    { href: '/docs/blog/sekinen', label: '積年良土とは' },
-    { href: '/docs/blog/230804', label: '農業機械の進化' },
-    { href: '/docs/blog/230913', label: '乗用田植機' },
-    { href: '/docs/blog/230914', label: 'v-solar' },
-    { href: '/docs/blog/231018', label: 'なぜ秒速？' },
-    { href: '/docs/blog/240723', label: 'Biofumigation' },
-    { href: '/docs/blog/241116', label: 'Header 戦争~Draper vs Auger~' },
-    { href: '/docs/blog/241118', label: 'US クイックヒッチのなぞ' },
-    { href: '/docs/blog/250324', label: 'claas india とヤンマー' },
-    { href: '/docs/blog/250327', label: 'クレトラック' },
-    { href: '/docs/blog/250404', label: 'CFX750から速度信号を取り出せるか1' },
-    { href: '/docs/blog/250407', label: 'CFX750から速度信号を取り出せるか2' },
-    { href: '/docs/blog/250422', label: 'CFX750から速度信号を取り出せるか3' },
-    { href: '/docs/blog/250418', label: 'ロマン・スガノ' },
-    { href: '/docs/blog/250519', label: 'イセキ・モトコフ プランター(チェコ)' },
-    { href: '/docs/blog/250520', label: '代掻きの必要性' },
-    { href: '/docs/blog/250520_2', label: '作物の要水量' },
-    { href: '/docs/blog/250525', label: '水稲の移植栽培' },
-    { href: '/docs/blog/250525_2', label: '水稲の不耕起・部分耕・無代掻き移植栽培' },
-    { href: '/docs/blog/250628', label: 'スガノのLプラウ' },
+  { href: '/docs/blog/sekinen/',     label: '積年良土とは' },
+  { href: '/docs/blog/230804/',      label: '農業機械の進化' },
+  { href: '/docs/blog/230913/',      label: '乗用田植機' },
+  { href: '/docs/blog/230914/',      label: 'v-solar' },
+  { href: '/docs/blog/231018/',      label: 'なぜ秒速？' },
+  { href: '/docs/blog/240723/',      label: 'Biofumigation' },
+  { href: '/docs/blog/241116/',      label: 'Header 戦争~Draper vs Auger~' },
+  { href: '/docs/blog/241118/',      label: 'US クイックヒッチのなぞ' },
+  { href: '/docs/blog/250324/',      label: 'claas india とヤンマー' },
+  { href: '/docs/blog/250327/',      label: 'クレトラック' },
+  { href: '/docs/blog/250404/',      label: 'CFX750から速度信号を取り出せるか1' },
+  { href: '/docs/blog/250407/',      label: 'CFX750から速度信号を取り出せるか2' },
+  { href: '/docs/blog/250422/',      label: 'CFX750から速度信号を取り出せるか3' },
+  { href: '/docs/blog/250418/',      label: 'ロマン・スガノ' },
+  { href: '/docs/blog/250519/',      label: 'イセキ・モトコフ プランター(チェコ)' },
+  { href: '/docs/blog/250520/',      label: '代掻きの必要性' },
+  { href: '/docs/blog/250520_2/',    label: '作物の要水量' },
+  { href: '/docs/blog/250525/',      label: '水稲の移植栽培' },
+  { href: '/docs/blog/250525_2/',    label: '水稲の不耕起・部分耕・無代掻き移植栽培' },
+  { href: '/docs/blog/250628/',      label: 'スガノのLプラウ' },
 ]
+
+/* ====================================================================== */
 
 export default function Home() {
+  const [lightboxImg, setLightboxImg] =
+    useState<{ src: string; alt: string } | null>(null)
 
-  const [lightboxImg, setLightboxImg] = useState<{ src: string; alt: string } | null>(null)
-    return (
-        <>
-        {lightboxImg && (
-          <ImageLightbox
-            src={lightboxImg.src}
-            alt={lightboxImg.alt}
-            onClose={() => setLightboxImg(null)}
-          />
-        )}
+  return (
+    <>
+      {/* ライトボックス */}
+      {lightboxImg && (
+        <ImageLightbox
+          src={lightboxImg.src}
+          alt={lightboxImg.alt}
+          onClose={() => setLightboxImg(null)}
+        />
+      )}
 
-        <div className="flex justify-center">
-            <main className="px-4">
-                {/* HERO */}
-                <section className="py-24 text-center">
-                    <h1 className="text-10xl font-bold text-green-400">
-                        <TypeAnimation
-                            sequence={[
-                                'Agricultural Machinery Repository', 1200,
-                                'Welcome, curious engineer.',      1200,
-                                '農業機械　リポジトリ',              1500,
-                                'ようこそ',                        1800,
-                            ]}
-                            speed={{ type: 'keyStrokeDelayInMs', value: 200 }}
-                            repeat={Infinity}
-                        />
-                    </h1>
-                    <p className="mt-6 text-[#5a5a5a] leading-relaxed">
-                    農業機械のリポジトリです．私が気になった機械・技術をまとめています．かなり偏った内容ですが、ご了承ください．
-                    </p>
-                </section>
+      <div className="flex justify-center">
+        <main className="px-4">
 
-                {/* Image Carousel */}
-                <section className="py-10">
-                        <ImageCarousel 
-                        images={heroImages} 
-                        interval={3000} 
-                        onImageClick={(img) => 
-                            setLightboxImg({src:img.src, alt: img.alt ?? ''})}/>
-                </section>
+          {/* HERO ---------------------------------------------------------- */}
+          <section className="py-24 text-center">
+            <h1 className="text-10xl font-bold text-green-400">
+              <TypeAnimation
+                sequence={[
+                  'Agricultural Machinery Repository', 1200,
+                  'Welcome, curious engineer.',        1200,
+                  '農業機械　リポジトリ',                1500,
+                  'ようこそ',                            1800,
+                ]}
+                speed={{ type: 'keyStrokeDelayInMs', value: 200 }}
+                repeat={Infinity}
+              />
+            </h1>
+            <p className="mt-6 text-[#5a5a5a] leading-relaxed">
+              農業機械のリポジトリです．私が気になった機械・技術をまとめています．かなり偏った内容ですが、ご了承ください．
+            </p>
+          </section>
 
-                {/* 日本の特色 */}
-                <section className="py-20 border-t border-[#222]">
-                    <h2 className="mb-8 text-center">日本の特色ある機械たち</h2>
-                    <ul className="grid grid-cols-2 sm:grid-cols-3 gap-6">
-                        {[
-                            { href: '/docs/ag/kaihatsu/index', label: '北海道開発の機械' },
-                        ].map((q) => (
-                            <motion.li
-                                whileHover={{ y: -4, scale: 1.03 }}
-                                key={q.href}
-                                className="border border-[#222] rounded p-4 text-center hover:border-[var(--fg)] transition"
-                            >
-                                <Link href={q.href} className="block w-full h-full">{q.label}</Link>
-                            </motion.li>
-                        ))}
-                    </ul>
-                </section>
+          {/* Carousel ------------------------------------------------------ */}
+          <section className="py-10">
+            <ImageCarousel
+              images={heroImages}
+              interval={3000}
+              onImageClick={(img) =>
+                setLightboxImg({ src: img.src, alt: img.alt ?? '' })
+              }
+            />
+          </section>
 
-                {/* 各国の特色 */}
-                <section className="py-20 border-t border-[#222]">
-                    <h2 className="mb-8 text-center">各国の特色ある機械たち</h2>
-                    <ul className="grid grid-cols-2 sm:grid-cols-3 gap-6">
-                        {[
-                            { href: '/docs/ag/usa/index',label: 'US' },
-                            { href: '/docs/ag/Australia/index',label: 'AUS' },
-                            { href: '/docs/ag/Thailand/index', label: 'THAI' },
-                            { href: '/docs/ag/Brazil/index',   label: 'BR' },
-                        ].map((q) => (
-                            <motion.li
-                                whileHover={{ y: -4, scale: 1.03 }}
-                                key={q.href}
-                                className="border border-[#222] rounded p-4 text-center hover:border-[var(--fg)] transition"
-                            >
-                                <Link href={q.href} className="block w-full h-full">{q.label}</Link>
-                            </motion.li>
-                        ))}
-                    </ul>
-                </section>
+          {/* 日本の特色 ---------------------------------------------------- */}
+          <section className="py-20 border-t border-[#222]">
+            <h2 className="mb-8 text-center">日本の特色ある機械たち</h2>
+            <ul className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+              {[
+                /* --- 末尾 '/index' を削除 --- */
+                { href: '/docs/ag/kaihatsu/', label: '北海道開発の機械' },
+              ].map((q) => (
+                <motion.li
+                  whileHover={{ y: -4, scale: 1.03 }}
+                  key={q.href}
+                  className="border border-[#222] rounded p-4 text-center hover:border-[var(--fg)] transition"
+                >
+                  <Link href={q.href} className="block w-full h-full">
+                    {q.label}
+                  </Link>
+                </motion.li>
+              ))}
+            </ul>
+          </section>
 
-                {/* メーカー */}
-                <section className="py-20 border-t border-[#222]">
-                    <h2 className="mb-8 text-center">農業機械のメーカ−(普通ではない)</h2>
-                    <ul className="grid grid-cols-2 sm:grid-cols-3 gap-6">
-                        {[
-                            { href: '/docs/ag/deere/index',   label: 'John Deere' },
-                            { href: '/docs/ag/cat/index',     label: 'Caterpillar' },
-                            { href: '/docs/ag/claas/index',   label: 'Claas'       },
-                            { href: '/docs/ag/morooka/index', label: 'モロオカ'   },
-                            { href: '/docs/ag/tcm/index', label: '東洋運搬機'   },
-                        ].map((q) => (
-                            <motion.li
-                                whileHover={{ y: -4, scale: 1.03 }}
-                                key={q.href}
-                                className="border border-[#222] rounded p-4 text-center hover:border-[var(--fg)] transition"
-                            >
-                                <Link href={q.href} className="block w-full h-full">{q.label}</Link>
-                            </motion.li>
-                        ))}
-                    </ul>
-                </section>
+          {/* 各国の特色 ---------------------------------------------------- */}
+          <section className="py-20 border-t border-[#222]">
+            <h2 className="mb-8 text-center">各国の特色ある機械たち</h2>
+            <ul className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+              {[
+                { href: '/docs/ag/usa/',       label: 'US'   },
+                { href: '/docs/ag/Australia/', label: 'AUS'  },
+                { href: '/docs/ag/Thailand/',  label: 'THAI' },
+                { href: '/docs/ag/Brazil/',    label: 'BR'   },
+              ].map((q) => (
+                <motion.li
+                  whileHover={{ y: -4, scale: 1.03 }}
+                  key={q.href}
+                  className="border border-[#222] rounded p-4 text-center hover:border-[var(--fg)] transition"
+                >
+                  <Link href={q.href} className="block w-full h-full">
+                    {q.label}
+                  </Link>
+                </motion.li>
+              ))}
+            </ul>
+          </section>
 
-                {/* 機械各論 */}
-                <section className="py-20 border-t border-[#222]">
-                    <h2 className="mb-8 text-center">機械各論</h2>
-                    <ul className="grid grid-cols-2 sm:grid-cols-3 gap-6">
-                        {[
-                            { href: '/docs/ag/landLevel/index',    label: 'レベラー'                   },
-                            { href: '/docs/ag/landHarrow/index',   label: 'スペードブレードローラー'   },
-                            { href: '/docs/ag/landClearing/index', label: '開拓/Land Clearing'         },
-                        ].map((q) => (
-                            <motion.li
-                                whileHover={{ y: -4, scale: 1.03 }}
-                                key={q.href}
-                                className="border border-[#222] rounded p-4 text-center hover:border-[var(--fg)] transition"
-                            >
-                                <Link href={q.href} className="block w-full h-full">{q.label}</Link>
-                            </motion.li>
-                        ))}
-                    </ul>
-                </section>
+          {/* メーカー ------------------------------------------------------ */}
+          <section className="py-20 border-t border-[#222]">
+            <h2 className="mb-8 text-center">農業機械のメーカ−(普通ではない)</h2>
+            <ul className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+              {[
+                { href: '/docs/ag/deere/',   label: 'John Deere' },
+                { href: '/docs/ag/cat/',     label: 'Caterpillar' },
+                { href: '/docs/ag/claas/',   label: 'Claas' },
+                { href: '/docs/ag/morooka/', label: 'モロオカ' },
+                { href: '/docs/ag/tcm/',     label: '東洋運搬機' },
+              ].map((q) => (
+                <motion.li
+                  whileHover={{ y: -4, scale: 1.03 }}
+                  key={q.href}
+                  className="border border-[#222] rounded p-4 text-center hover:border-[var(--fg)] transition"
+                >
+                  <Link href={q.href} className="block w-full h-full">
+                    {q.label}
+                  </Link>
+                </motion.li>
+              ))}
+            </ul>
+          </section>
 
-                {/* ブログ記事 */}
-                <section className="py-20 border-t border-[#222]">
-                    <h2 className="mb-8 text-center">ブログ記事</h2>
+          {/* 機械各論 ------------------------------------------------------ */}
+          <section className="py-20 border-t border-[#222]">
+            <h2 className="mb-8 text-center">機械各論</h2>
+            <ul className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+              {[
+                { href: '/docs/ag/landLevel/',    label: 'レベラー' },
+                { href: '/docs/ag/landHarrow/',   label: 'スペードブレードローラー' },
+                { href: '/docs/ag/landClearing/', label: '開拓/Land Clearing' },
+              ].map((q) => (
+                <motion.li
+                  whileHover={{ y: -4, scale: 1.03 }}
+                  key={q.href}
+                  className="border border-[#222] rounded p-4 text-center hover:border-[var(--fg)] transition"
+                >
+                  <Link href={q.href} className="block w-full h-full">
+                    {q.label}
+                  </Link>
+                </motion.li>
+              ))}
+            </ul>
+          </section>
 
-                    {/* 検索付きリスト */}
-                    <div className="mb-12 w-full">
-                        <SearchableList entries={blogEntries} />
-                    </div>
-                </section>
-            </main>
-        </div>
-        </> 
-    )
+          {/* ブログ記事 ---------------------------------------------------- */}
+          <section className="py-20 border-t border-[#222]">
+            <h2 className="mb-8 text-center">ブログ記事</h2>
+            <div className="mb-12 w-full">
+              <SearchableList entries={blogEntries} />
+            </div>
+          </section>
+        </main>
+      </div>
+    </>
+  )
 }

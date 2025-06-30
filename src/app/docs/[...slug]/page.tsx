@@ -1,88 +1,98 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import path from 'path'
+/* ---------- server component ---------- */
+import fs from 'node:fs'              // ← ★ ここを promises ではなく fs
+import path from 'node:path'
+import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import React, { DetailedHTMLProps, AnchorHTMLAttributes } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-import rehypeRaw from 'rehype-raw'
-import { loadMarkdown, listDir } from '@/utils/md'
+import MarkdownImage from '@/components/MarkdownImage'
 
-export const runtime = 'nodejs'
-export const revalidate = 60
+/* content/ 以下の .md / index.md を探す */
+function getDocPath(slug: string[]) {
+    const leaf = slug.at(-1)!
+    const tryPath = (...parts: string[]) =>
+    path.join(process.cwd(), 'content', ...parts)
 
-export default async function Doc({ params }: { params: any }) {
-  /** ① params を常に await して単一オブジェクトに統一 */
-  const p: any = await Promise.resolve(
-    typeof params === 'function' ? params() : params
-  )
+    // 1) /index.md
+    const idxPath = tryPath(...slug, leaf.endsWith('.md') ? '' : 'index.md')
+    if (fs.existsSync(idxPath)) return idxPath
 
-  /** ② slug 配列から相対パスを組み立て */
-  const slugArr: string[] = Array.isArray(p.slug) ? p.slug : []
-  const relPath = slugArr.length ? path.join(...slugArr) : 'index'
+        // 2) /foo.md
+        if (!leaf.endsWith('.md') && !leaf.endsWith('.mdx')) {
+            const filePath = tryPath(...slug.slice(0, -1), `${leaf}.md`)
+            if (fs.existsSync(filePath)) return filePath
+        }
 
-  /* ---------- ファイルを探す (index.md も含む) ---------- */
-  const candidates = [relPath + '.md', path.join(relPath, 'index.md')]
+    return idxPath        // 存在しない ⇒ notFound() で 404
+}
 
-  for (const file of candidates) {
-    try {
-      const { content } = await loadMarkdown(file.replace(/\.md$/, ''))
-      return (
-        <article className="prose mx-auto p-6 prose-img:mx-auto prose-img:max-w-[1280px] prose-img:aspect-[16/9]">
-          <ReactMarkdown
-            remarkPlugins={[remarkGfm]}
-            rehypePlugins={[rehypeRaw]}
-            components={{
-              img: ({ src, alt }) => {
-                if (typeof src !== 'string' || !src) return null
+export const dynamic = 'force-dynamic'
 
-                    const url =
-                        src.startsWith('./img/')
-                            ? src.replace(/^\.\/img\//, '/img/')
-                            : src
+// type PageProps<P> = { params: P }
+
+export default async function DocPage(
+  { params }: { params: Promise<{ slug: string[] }> },
+) {
+  const { slug } = await params   // ← 1 行だけ await を追加
+    /* ベース URL 例: /docs/ag/kaihatsu/ */
+    const dirUrl =
+        '/docs/' + (slug.at(-1)!.endsWith('.md') ? slug.slice(0, -1) : slug).join('/') + '/'
+
+    const mdPath = getDocPath(slug)
+    const source = await fs.promises.readFile(mdPath, 'utf8').catch(() => notFound())
+
+    return (
+        <article className="prose mx-auto px-4 py-8">
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm]}
+          components={{
+            /* 画像 → MarkdownImage */
+            img: ({ src = '', alt = '' }) => <MarkdownImage src={src as string} alt={alt} />,
+        
+            /* ---------- <a> 用レンダラ ---------- */
+            a: (
+              props: DetailedHTMLProps<
+                AnchorHTMLAttributes<HTMLAnchorElement>,
+                HTMLAnchorElement
+              >,
+            ) => {
+              const { href = '', children, ...rest } = props
+              const hasImgChild = React.Children.toArray(children).some(
+                (c): c is React.ReactElement<{ src?: string; alt?: string }> =>
+                  React.isValidElement(c) &&
+                  (c.type === 'img' || c.type === MarkdownImage),
+              )
+              if (hasImgChild) {
+                return <>{children}</>
+              }
+        
+              /* 外部リンクは新規タブ */
+              if (/^https?:\/\//.test(href)) {
                 return (
-                  <a
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block mx-auto my-4"
-                  >
-                    <img
-                      src={url}
-                      alt={alt}
-                      className="w-full max-w-[1280px] aspect-[16/9] object-cover rounded-md shadow"
-                    />
+                  <a href={href} {...rest} target="_blank" rel="noopener noreferrer">
+                    {children}
                   </a>
                 )
-              },
-            }}
-          >
-            {content}
-          </ReactMarkdown>
+              }
+        
+              /* 相対リンクを補正 */
+              const fixed = href.startsWith('./')
+                ? dirUrl + href.slice(2)
+                : href.startsWith('/')
+                ? href
+                : dirUrl + href
+        
+              return (
+                <Link href={fixed} {...rest} className="text-blue-600 underline">
+                  {children}
+                </Link>
+              )
+            },
+          }}
+        >
+          {source as string}
+        </ReactMarkdown>
         </article>
-      )
-    } catch {
-      /* 次の候補を試す */
-    }
-  }
-
-  /* ---------- ディレクトリの場合 ---------- */
-  try {
-    const list = await listDir(relPath)
-    return (
-      <div className="prose mx-auto p-6">
-        <h2>Index of /{relPath}</h2>
-        <ul>
-          {list.map((e) => (
-            <li key={e.name}>
-              {e.isDir ? '📁' : '📄'}&nbsp;
-              <Link href={`/docs/${path.join(relPath, e.name)}`}> 
-                {e.name}{e.isDir ? '/' : ''}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
     )
-  } catch {
-    return <p className="p-8">Not found</p>
-  }
 }

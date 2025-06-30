@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 
 interface Props {
@@ -11,47 +10,53 @@ interface Props {
 }
 
 export default function ImageLightbox({ src, alt, onClose }: Props) {
-  // Esc キーで閉じる
+  /* Esc で閉じる */
   useEffect(() => {
-    const handleKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose()
-    window.addEventListener('keydown', handleKey)
-    return () => window.removeEventListener('keydown', handleKey)
+    const h = (e: KeyboardEvent) => e.key === 'Escape' && onClose()
+    window.addEventListener('keydown', h)
+    return () => window.removeEventListener('keydown', h)
   }, [onClose])
 
+  /* ====================================================================
+     外側は **すべてインライン style** にして Tailwind に依存させない
+     ==================================================================== */
   return (
-    <AnimatePresence>
-      <motion.div
-        className="fixed inset-0 z-[999] flex items-center justify-center bg-black/80 p-4"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        onClick={onClose}          // 背景クリックでも閉じる
+    <div
+      style={{
+        position: 'fixed',
+        inset: 0,                     // top:0 right:0 bottom:0 left:0
+        background: 'rgba(0,0,0,.8)', // 半透明黒
+        zIndex: 9999,                 // ほぼ最前面
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '1rem',
+      }}
+      onClick={onClose}               /* 背景クリックで閉じる */
+    >
+      {/* 内側は Tailwind で OK */}
+      <div
+        className="relative w-full h-full animate-zoomIn"
+        onClick={(e) => e.stopPropagation()}
       >
-        <motion.div
-          onClick={(e) => e.stopPropagation()}
-          initial={{ scale: 0.95 }}
-          animate={{ scale: 1 }}
-          exit={{ scale: 0.95 }}
-          className="relative"
+        <button
+          aria-label="close"
+          className="absolute -top-4 -right-4 text-white text-3xl"
+          onClick={onClose}
         >
-          <button
-            aria-label="close"
-            className="absolute -top-4 -right-4 text-white text-3xl"
-            onClick={onClose}
-          >
-            &times;
-          </button>
+          &times;
+        </button>
 
-          <Image
-            src={src}
-            alt={alt}
-            width={1024}
-            height={768}
-            className="max-h-[80vh] w-auto h-auto rounded"
-            priority
-          />
-        </motion.div>
-      </motion.div>
-    </AnimatePresence>
+        {/* 画面いっぱい (余白 1rem) に収まる fill 画像 */}
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="100vw"
+          className="object-contain rounded"
+          priority
+        />
+      </div>
+    </div>
   )
 }

@@ -1,17 +1,17 @@
 'use client'
 
+import { ComponentPropsWithoutRef } from 'react'
 import type { MDXComponents } from 'mdx/types'
 import MarkdownImage from '@/components/MarkdownImage'
 
-/**
- * Markdown / MDX 内の <img> タグをすべて
- * Lightbox 付きの MarkdownImage に置き換える
- */
 export function useMDXComponents(
   components: MDXComponents,
 ): MDXComponents {
   return {
-    img: (props) => <MarkdownImage {...(props as any)} />,
+    /* ------- ここが修正ポイント ------- */
+    img: (props: ComponentPropsWithoutRef<'img'>) => (
+      <MarkdownImage src={(props.src ?? '') as string} alt={props.alt} />
+    ),
     ...components,
   }
 }
