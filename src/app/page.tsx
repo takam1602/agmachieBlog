@@ -49,6 +49,7 @@ const blogEntries = [
   { href: '/docs/blog/250628/',      label: 'スガノのLプラウ' },
   { href: '/docs/blog/250728/',      label: 'ネタ帳' },
   { href: '/docs/blog/250801/',      label: 'ドリルは種まき機？' },
+  { href: '/docs/blog/250812/',      label: 'Rotary vs Walker' },
 ]
 
 /* ====================================================================== */
