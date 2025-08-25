@@ -46,6 +46,8 @@
 
 [この写経](./yano_soryuu.md)
 
-矢野先生は2011年に亡くなられた... 私が先生の思いを引きついで伝えようじゃないか。
+矢野先生は2011年に亡くなられた... 無念
 [訃報](https://www.jstage.jst.go.jp/article/sagopalm/20/1/20_1/_pdf/-char/en)
 
+# 開発局周りの資料
+- [バンブーハーベスタ](./landDevJP.md)
