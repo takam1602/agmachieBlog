@@ -84,5 +84,8 @@ AGCO に移る前の，Dekalb 最後のトラクター，CATのチャレンジ�
 なんかの記事で35か45が写真に写っていた．
 公社の払い下げかも．
 
+- 群馬: なぜか55がヤフオクに売られてた: 明後日でどころを聞いてくる。
+    - [55](https://auctions.yahoo.co.jp/jp/auction/m1198304617)
+
 # クローラ関連のリンク
 [農業経営者のリンク](https://agri-biz.jp/item/content/pdf/8179)
