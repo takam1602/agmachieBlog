@@ -36,7 +36,23 @@
 様々な試作・開発工程があって、65が出来上がった。
 
 ### 農業用トラクタ
+#### D6D SA
 
+#### AG4, AG6
+With many US farmers in the field, it's a good time to highlight a lesser-known Cat ag machine, the AG 6. 
+The AG 6 was a custom products version of the D6D SA briefly offered by Cat in the mid-1980's. 
+The AG 6 was an odd blend of tried and true steel-track tractor and styling elements borrowed from its contemporary the first gen Challenger. 
+Cat would also offer a smaller version, the AG 4, before eventually focusing exclusively on the Challenger line for ag applications.
+
+Face book 記事
+- ![](/img/ag6_fb1.jpg)
+- ![](/img/ag6_fb2.jpg)
+- ![](/img/ag4_fb1.jpg)
+
+スチールトラックなトラクター
+ag4 はラバートラックであり、少しずつ試作機とともに、65へ近づいていたことがわかる。　
+
+#### 65の幕開け
 1987年, Challenger 65が市場初となる，ゴムクローラトラクタ(Rubber Track Tractor)が発表．
 オーロラ工場で最初の65を生産した後、イリノイ州のディカルブで生産sされた。
 ディカルブにあったトラクター工場は，2002年にCat が農業用トラクターをAGCOに売却し，2003年にAGCOがミネソタ州ジャクソンに工場を移転するまで，16年ほど稼働をした．
@@ -448,5 +464,3 @@ Caterpillar takes over Claas teleporter plant
         North American LEXION combines – many of which continued to be sold through Caterpillar dealers – retained the CAT yellow and black color scheme until 2019.  
 
 - [farmprogress](https://www.farmprogress.com/farming-equipment/pioneering-claas-combine-factory-celebrates-25-years)
-
-
