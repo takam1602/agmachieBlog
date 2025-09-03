@@ -335,6 +335,123 @@ CON MOTOR A DIESEL CATERPILLAR 3126, DE 290 HP, CON TURBO, TRANSMISION POWER SHI
 ![](/img/CH55_7DM01051_40.png)
 ![](/img/CH55_7DM01051_41.png)
 
+# CATERPILLAR CH55 (1998)
+
+## 詳細情報
+- **Serial Number:** 29014RB
+- **Hours:** 4,356
+- **Price:** USD $22,500
+- **Source URL:** <https://www.machinerytrader.com/listing/for-sale/242305659/1998-caterpillar-ch55-175-hp-to-299-hp-tractors>
+
+## Description
+24" belts, Powershift transmission, 3 point hitch, 1000 PTO, ag drawbar, 4 remotes, Good Tracks, 4356 hours, Good Looking tractor but IT HAS A BAD TRANSMISSION, SOLD AS IS WHERE IS,
+
+QUICK & EASY ONSITE LOW FIXED RATE FINANCING AVAILABLE. TRUCKING AVAILABLE ANYWHERE.
+IF YOU ARE PLANNING A TRIP TO LOOK AT A PIECE OF EQUIPMENT, PLEASE CALL FIRST TO CONFIRM THAT IT IS ON THE LOT AND STILL AVAILABLE
+
+## Photos
+![](img/CH55_29014RB_1.png)
+![](img/CH55_29014RB_2.png)
+![](img/CH55_29014RB_3.png)
+![](img/CH55_29014RB_4.png)
+![](img/CH55_29014RB_5.png)
+![](img/CH55_29014RB_6.png)
+![](img/CH55_29014RB_7.png)
+![](img/CH55_29014RB_8.png)
+![](img/CH55_29014RB_9.png)
+![](img/CH55_29014RB_10.png)
+![](img/CH55_29014RB_11.png)
+![](img/CH55_29014RB_12.png)
+![](img/CH55_29014RB_13.png)
+![](img/CH55_29014RB_14.png)
+![](img/CH55_29014RB_15.png)
+![](img/CH55_29014RB_16.png)
+![](img/CH55_29014RB_17.png)
+![](img/CH55_29014RB_18.png)
+![](img/CH55_29014RB_19.png)
+![](img/CH55_29014RB_20.png)
+![](img/CH55_29014RB_21.png)
+![](img/CH55_29014RB_22.png)
+![](img/CH55_29014RB_23.png)
+![](img/CH55_29014RB_24.png)
+![](img/CH55_29014RB_25.png)
+![](img/CH55_29014RB_26.png)
+![](img/CH55_29014RB_27.png)
+![](img/CH55_29014RB_28.png)
+![](img/CH55_29014RB_29.png)
+![](img/CH55_29014RB_30.png)
+![](img/CH55_29014RB_31.png)
+![](img/CH55_29014RB_32.png)
+![](img/CH55_29014RB_33.png)
+![](img/CH55_29014RB_34.png)
+![](img/CH55_29014RB_35.png)
+![](img/CH55_29014RB_36.png)
+![](img/CH55_29014RB_37.png)
+![](img/CH55_29014RB_38.png)
+![](img/CH55_29014RB_39.png)
+![](img/CH55_29014RB_40.png)
+![](img/CH55_29014RB_41.png)
+![](img/CH55_29014RB_42.png)
+![](img/CH55_29014RB_43.png)
+![](img/CH55_29014RB_44.png)
+![](img/CH55_29014RB_45.png)
+![](img/CH55_29014RB_46.png)
+![](img/CH55_29014RB_47.png)
+![](img/CH55_29014RB_48.png)
+![](img/CH55_29014RB_49.png)
+![](img/CH55_29014RB_50.png)
+![](img/CH55_29014RB_51.png)
+
+# CATERPILLAR CH55 (1999)
+
+## 詳細情報
+- **Serial Number:** UNKNOWN
+- **Hours:** 6,650
+- **Price:** USD $40,000
+- **Source URL:** <https://www.machinerytrader.com/listing/for-sale/242116965/1999-caterpillar-ch55-175-hp-to-299-hp-tractors>
+
+## Description
+Good used older tractor tractor. Has 16" belts, 88" centers, rear 3 point and pto. Also has Trimble autopilot. Belts are getting down on tread. Priced to sell! Good dependable cheap power!
+
+## Photos
+![](img/CH55_UNKNOWN_1.png)
+![](img/CH55_UNKNOWN_2.png)
+![](img/CH55_UNKNOWN_3.png)
+![](img/CH55_UNKNOWN_4.png)
+![](img/CH55_UNKNOWN_5.png)
+![](img/CH55_UNKNOWN_6.png)
+
+# CATERPILLAR CH55 (2001)
+
+## 詳細情報
+- **Serial Number:** N/A
+- **Hours:** 7,700
+- **Price:** USD $43,541
+- **Source URL:** <https://www.machinerytrader.com/listing/for-sale/246123685/2001-caterpillar-ch55-175-hp-to-299-hp-tractors>
+
+## Description
+PTO, P. Shfit Trans, 3pth, 4 SCVS, 18" Tracks on 120" Spacing
+
+## Photos
+![](img/CH55_N_A_1.png)
+![](img/CH55_N_A_2.png)
+![](img/CH55_N_A_3.png)
+![](img/CH55_N_A_4.png)
+![](img/CH55_N_A_5.png)
+![](img/CH55_N_A_6.png)
+![](img/CH55_N_A_7.png)
+![](img/CH55_N_A_8.png)
+![](img/CH55_N_A_9.png)
+![](img/CH55_N_A_10.png)
+![](img/CH55_N_A_11.png)
+![](img/CH55_N_A_12.png)
+![](img/CH55_N_A_13.png)
+![](img/CH55_N_A_14.png)
+![](img/CH55_N_A_15.png)
+![](img/CH55_N_A_16.png)
+![](img/CH55_N_A_17.png)
+![](img/CH55_N_A_18.png)
+
 # CATERPILLAR CH55 (2001)
 
 ## 詳細情報
