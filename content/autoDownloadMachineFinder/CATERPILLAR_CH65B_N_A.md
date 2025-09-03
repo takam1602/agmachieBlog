@@ -10,15 +10,6 @@
 On consignment, challenger 65b. Runs and shifts great! Brakes not working
 
 ## Photos
-<table>
-  <tbody>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65B_N_A_1.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65B_N_A_1.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65B_N_A_2.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65B_N_A_2.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65B_N_A_3.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65B_N_A_3.png</div></td>
-    </tr>
-  </tbody>
-</table>
+![](img/CH65B_N_A_1.png)
+![](img/CH65B_N_A_2.png)
+![](img/CH65B_N_A_3.png)

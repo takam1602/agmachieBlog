@@ -26,12 +26,12 @@
 先程のGrainnews の記事が最も詳しい。
 他の写真も掲示板に流通してしまっている。
 [newagtalk](https://talk.newagtalk.com/forums/thread-view.asp?tid=274454&DisplayType=flat)
-- ![](/img/4955track.jpg)
-- ![](/img/4955_track1.jpg)
-- ![](/img/4955_track2.jpg)
-- ![](/img/fordpowershifttrack.jpg)
-- ![](/img/battrac.jpg)
-- ![](/img/catx2.jpg)
+![](/img/4955track.jpg)
+![](/img/4955_track1.jpg)
+![](/img/4955_track2.jpg)
+![](/img/fordpowershifttrack.jpg)
+![](/img/battrac.jpg)
+![](/img/catx2.jpg)
 
 様々な試作・開発工程があって、65が出来上がった。
 
@@ -45,9 +45,9 @@ The AG 6 was an odd blend of tried and true steel-track tractor and styling elem
 Cat would also offer a smaller version, the AG 4, before eventually focusing exclusively on the Challenger line for ag applications.
 
 Face book 記事
-- ![](/img/ag6_fb1.jpg)
-- ![](/img/ag6_fb2.jpg)
-- ![](/img/ag4_fb1.jpg)
+![](/img/ag6_fb1.jpg)
+![](/img/ag6_fb2.jpg)
+![](/img/ag4_fb1.jpg)
 
 スチールトラックなトラクター
 ag4 はラバートラックであり、少しずつ試作機とともに、65へ近づいていたことがわかる。　

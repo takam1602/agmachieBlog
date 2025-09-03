@@ -1,4 +1,3 @@
-
 import tkinter as tk
 from tkinter import scrolledtext, filedialog, messagebox
 from tkinter import ttk
@@ -21,7 +20,7 @@ from requests.adapters import HTTPAdapter
 class ScraperApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Machinery Trader Scraper v7.3 (Robust Fetch & Fallback)")
+        self.root.title("Machinery Trader Scraper v7.3.1 (Markdown Simple Images)")
         self.root.geometry("1000x880")
         self.session = None
 
@@ -32,7 +31,7 @@ class ScraperApp:
         self.last_details = {}
         self.debug_enabled = tk.BooleanVar(value=True)  # 既定: 詳細ON
 
-        # 写真の列数 (1〜3)
+        # 写真の列数 (1〜3) — いまはMarkdown側で使いませんがUIは残しています
         self.columns_var = tk.IntVar(value=3)
 
         self.setup_ui()
@@ -139,7 +138,7 @@ class ScraperApp:
             self.debug("抽出レポート: " + json.dumps(extract_report, ensure_ascii=False, indent=2))
             self.debug("抽出詳細（概要）: " + json.dumps({k: details.get(k) for k in ["Year","Manufacturer","Model","Serial Number","Hours","Price"]}, ensure_ascii=False))
 
-            # 必須キー確認（フォールバック後に判定）
+            # 必須キー確認
             required_keys = ["Year", "Manufacturer", "Model"]
             missing_keys = [key for key in required_keys if not details.get(key) or details[key] == "N/A"]
             if missing_keys:
@@ -216,7 +215,6 @@ class ScraperApp:
 
         if self.is_likely_minimal_page(resp, soup):
             self.debug("⚠ 薄いページ/チャレンジ判定 → 代替ヘッダで再試行します")
-            # 代替ヘッダで再GET（Referer や画像受理を追加）
             alt_headers = {
                 'User-Agent': ('Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
                                'AppleWebKit/537.36 (KHTML, like Gecko) '
@@ -236,7 +234,6 @@ class ScraperApp:
             self._normalize_encoding(resp2)
             soup2 = BeautifulSoup(resp2.text, 'html.parser')
 
-            # 改善していれば差し替え
             if not self.is_likely_minimal_page(resp2, soup2):
                 return resp2, soup2
             else:
@@ -246,7 +243,6 @@ class ScraperApp:
         return resp, soup
 
     def _normalize_encoding(self, resp: requests.Response):
-        # ISO-8859-1など誤検出時はapparent_encodingへ
         if not resp.encoding or resp.encoding.lower() in ('iso-8859-1', 'ascii'):
             try:
                 apparent = resp.apparent_encoding
@@ -258,12 +254,9 @@ class ScraperApp:
 
     def is_likely_minimal_page(self, resp: requests.Response, soup: BeautifulSoup) -> bool:
         content_len = len(resp.content) if resp.content is not None else 0
-        # 主要ブロックが見当たらない
         has_core = bool(soup.select_one('h1.detail__title')) or bool(soup.select('div.detail__specs-wrapper')) or bool(soup.select('script[type="application/ld+json"]'))
-        # よくある文言
         body_text = soup.get_text(" ", strip=True).lower() if soup else ""
         suspicious_text = ("enable javascript" in body_text) or ("checking your browser" in body_text)
-        # 閾値: 10KB未満は怪しい（通常は数百KB）
         return (content_len < 10_000) or (not has_core) and suspicious_text
 
     # ==============================
@@ -286,7 +279,7 @@ class ScraperApp:
                     value = values[i].get_text(strip=True)
                     details[key] = value
 
-        # 2) h1 から（従来）
+        # 2) h1 から
         title_h1 = soup.select_one('h1.detail__title')
         if title_h1:
             report["used_selectors"].append('h1.detail__title')
@@ -344,7 +337,7 @@ class ScraperApp:
             if soup.title and soup.title.string:
                 self._fill_basics_from_text(soup.title.string, details, report, source='html.title')
 
-        # 7) URLスラッグから推定
+        # 7) URLスラッグ
         if any(details.get(k) in ("", "N/A") for k in ("Year", "Manufacturer", "Model")):
             y, mfr, model = self._infer_from_url(page_url)
             if y: details.setdefault("Year", y)
@@ -353,11 +346,11 @@ class ScraperApp:
             if y or mfr or model:
                 report["fallbacks"].append("url-slug")
 
-        # 標準キーの既定値
+        # 既定値
         for key in ["Year", "Manufacturer", "Model", "Serial Number", "Hours", "Description", "Price"]:
             details.setdefault(key, "N/A")
 
-        # Description 追加探索
+        # Description
         if details.get("Description") in ("", "N/A"):
             desc_tag = soup.select_one('.detail__description, .listing-description, div[itemprop="description"]')
             if desc_tag:
@@ -367,22 +360,16 @@ class ScraperApp:
         return details, report
 
     def _fill_basics_from_text(self, text: str, details: dict, report: dict, source: str):
-        """
-        タイトル等から Year / Manufacturer / Model を推定して details に setdefault で埋める。
-        """
         if not text:
             return
         original = text
-        # ノイズ除去（"For Sale", "|" 以降等）
-        text = re.sub(r'\|.*$', '', text)  # "| MachineryTrader.com" など
+        text = re.sub(r'\|.*$', '', text)
         text = re.sub(r'for sale.*$', '', text, flags=re.I).strip()
         text = re.sub(r'in stock.*$', '', text, flags=re.I).strip()
 
-        # 例: "1995 CATERPILLAR CH65C"
         m = re.search(r'\b(19|20)\d{2}\b', text)
         year = m.group(0) if m else None
 
-        # yearの後ろを分解してメーカー/モデルを推定
         manufacturer = None
         model = None
         if year:
@@ -390,9 +377,7 @@ class ScraperApp:
         else:
             tail = text.strip()
 
-        # トークン化
         tokens = re.split(r'\s+', tail)
-        # メーカーは「数字を含まない連続トークン」
         mfr_tokens = []
         i = 0
         stop_words = set(['for', 'sale', 'tractor', 'tractors', 'combine', 'harvester', 'harvesters',
@@ -408,7 +393,6 @@ class ScraperApp:
             mfr_tokens.append(tk)
             i += 1
 
-        # モデルはその後、stop_wordsに当たるまで
         model_tokens = []
         while i < len(tokens):
             tk = re.sub(r'[^A-Za-z0-9\-/\.]+', '', tokens[i])
@@ -433,25 +417,19 @@ class ScraperApp:
         report.setdefault("parsed_samples", []).append({"source": source, "original": original, "normalized": text, "year": year, "manufacturer": manufacturer, "model": model})
 
     def _infer_from_url(self, url: str):
-        """
-        URLスラッグから Year / Manufacturer / Model を推定。
-        例: /listing/for-sale/<id>/1995-caterpillar-ch65c-175-hp-to-299-hp-tractors
-        """
         try:
             path = urlparse(url).path.strip('/')
             parts = path.split('/')
             if len(parts) < 4:
                 return None, None, None
-            slug = parts[-1]  # 末尾スラッグ
+            slug = parts[-1]
             tokens = [t for t in slug.split('-') if t]
 
-            # Year
             year = None
             if tokens and re.fullmatch(r'(19|20)\d{2}', tokens[0]):
                 year = tokens[0]
                 tokens = tokens[1:]
 
-            # Manufacturer: 数字を含まない連続トークン
             mfr_tokens = []
             i = 0
             stop_words = set(['for', 'sale', 'tractor', 'tractors', 'combine', 'harvester', 'harvesters',
@@ -488,7 +466,6 @@ class ScraperApp:
         report = {"trials": [], "counts": {}}
         photo_urls = []
 
-        # 1) 既存セレクタ
         sel1 = 'div.mc-items .mc-item img'
         tags1 = soup.select(sel1)
         report["trials"].append(sel1)
@@ -497,7 +474,6 @@ class ScraperApp:
             if tag.get('data-fullscreen'):
                 photo_urls.append(tag['data-fullscreen'])
 
-        # 2) 代替セレクタ
         if not photo_urls:
             sel2 = 'div.mc-items img, div.gallery img, img'
             tags2 = soup.select(sel2)
@@ -510,7 +486,6 @@ class ScraperApp:
                         photo_urls.append(val)
                         break
 
-        # 重複排除
         photo_urls = list(dict.fromkeys(photo_urls))
         return photo_urls, report
 
@@ -544,7 +519,6 @@ class ScraperApp:
             total_photos = len(photo_urls)
             self.progress_bar['maximum'] = total_photos or 1
 
-            # 画像DL
             photo_paths = []
             for i, photo_url in enumerate(photo_urls):
                 self.update_status(f"画像をダウンロード中... ({i+1}/{total_photos})")
@@ -569,8 +543,9 @@ class ScraperApp:
                     self.append_text(self.result_text, f" ✗ 写真のダウンロード失敗: {photo_url}, Error: {e}\n")
                     self.debug_exception("画像ダウンロード失敗", e)
 
-            # Markdown生成（写真グリッド対応）
+            # Markdown生成（← シンプルなMarkdown画像に戻しました）
             self.update_status("Markdownファイルを生成中...")
+            # columns は現在未使用だが引数は残す
             columns = max(1, min(3, int(self.columns_var.get())))
             markdown_content = self.generate_markdown(details, photo_paths, source_url, columns=columns)
 
@@ -578,7 +553,6 @@ class ScraperApp:
             with open(md_filename, "w", encoding="utf-8") as f:
                 f.write(markdown_content)
 
-            # HTMLスナップショット
             if self.last_html:
                 raw_html_path = os.path.join(parent_dir, f"{base_filename}_raw.html")
                 with open(raw_html_path, "w", encoding="utf-8") as f:
@@ -597,9 +571,13 @@ class ScraperApp:
             self.root.after(0, self.reset_ui)
 
     # ==============================
-    # Markdown（写真グリッド）
+    # Markdown（シンプル画像リストに戻す）
     # ==============================
     def generate_markdown(self, details, photo_paths, source_url, columns=3):
+        """
+        写真は 1 行 1 枚の Markdown 形式で出力（例: ![](img/xxx.png)）。
+        columns 引数は現在未使用（互換のため残置）。
+        """
         year, manu, model = details.get("Year", "N/A"), details.get("Manufacturer", "N/A"), details.get("Model", "N/A")
         md = f"# {manu} {model} ({year})\n\n"
         md += "## 詳細情報\n"
@@ -616,24 +594,8 @@ class ScraperApp:
             md += "_No photos available._\n"
             return md
 
-        cols = max(1, min(3, int(columns)))
-        md += "<table>\n  <tbody>\n"
-        for row in self._chunked(photo_paths, cols):
-            md += "    <tr>\n"
-            for path in row:
-                rel = path.replace(os.sep, "/")
-                md += (
-                    '      <td style="padding:6px; vertical-align:top; text-align:center;">'
-                    f'<img src="{rel}" alt="photo" loading="lazy" '
-                    'style="max-width:100%; height:auto; display:block; margin:0 auto;"/>\n'
-                    f'        <div style="font-size:12px; color:#666;">{os.path.basename(rel)}</div>'
-                    "</td>\n"
-                )
-            if len(row) < cols:
-                for _ in range(cols - len(row)):
-                    md += '      <td style="padding:6px;"></td>\n'
-            md += "    </tr>\n"
-        md += "  </tbody>\n</table>\n"
+        for path in photo_paths:
+            md += f"![]({path.replace(os.sep, '/')})\n"
         return md
 
     @staticmethod

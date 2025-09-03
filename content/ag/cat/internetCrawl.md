@@ -1,4 +1,5 @@
-# インターネット最高
+# チャレンジャーの写真たち
+
 色々な中古サイトがあるけれど、良質そうなものを選んでみた。
 - [Machinary Trader](https://www.machinerytrader.com/)
 
@@ -15,42 +16,18 @@
 285 Hp Turbo Engine, 50% Track Assemblies, Left Final Leaks, Runs Excellent, As Is
 
 ## Photos
-<table>
-  <tbody>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/AG6_Z5X01324_1.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">AG6_Z5X01324_1.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/AG6_Z5X01324_2.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">AG6_Z5X01324_2.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/AG6_Z5X01324_3.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">AG6_Z5X01324_3.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/AG6_Z5X01324_4.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">AG6_Z5X01324_4.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/AG6_Z5X01324_5.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">AG6_Z5X01324_5.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/AG6_Z5X01324_6.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">AG6_Z5X01324_6.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/AG6_Z5X01324_7.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">AG6_Z5X01324_7.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/AG6_Z5X01324_8.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">AG6_Z5X01324_8.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/AG6_Z5X01324_9.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">AG6_Z5X01324_9.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/AG6_Z5X01324_10.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">AG6_Z5X01324_10.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/AG6_Z5X01324_11.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">AG6_Z5X01324_11.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/AG6_Z5X01324_12.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">AG6_Z5X01324_12.png</div></td>
-    </tr>
-  </tbody>
-</table>
+![](img/AG6_Z5X01324_1.png)
+![](img/AG6_Z5X01324_2.png)
+![](img/AG6_Z5X01324_3.png)
+![](img/AG6_Z5X01324_4.png)
+![](img/AG6_Z5X01324_5.png)
+![](img/AG6_Z5X01324_6.png)
+![](img/AG6_Z5X01324_7.png)
+![](img/AG6_Z5X01324_8.png)
+![](img/AG6_Z5X01324_9.png)
+![](img/AG6_Z5X01324_10.png)
+![](img/AG6_Z5X01324_11.png)
+![](img/AG6_Z5X01324_12.png)
 
 # CATERPILLAR CH65 (1988)
 
@@ -67,152 +44,58 @@ QUICK & EASY ONSITE LOW FIXED RATE FINANCING AVAILABLE. TRUCKING AVAILABLE ANYWH
 IF YOU ARE PLANNING A TRIP TO LOOK AT A PIECE OF EQUIPMENT, PLEASE CALL FIRST TO CONFIRM THAT IT IS ON THE LOT AND STILL AVAILABLE
 
 ## Photos
-<table>
-  <tbody>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_1.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_1.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_2.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_2.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_3.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_3.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_4.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_4.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_5.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_5.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_6.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_6.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_7.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_7.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_8.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_8.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_9.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_9.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_10.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_10.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_11.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_11.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_12.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_12.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_13.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_13.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_14.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_14.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_15.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_15.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_16.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_16.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_17.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_17.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_18.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_18.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_19.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_19.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_20.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_20.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_21.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_21.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_22.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_22.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_23.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_23.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_24.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_24.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_25.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_25.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_26.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_26.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_27.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_27.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_28.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_28.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_29.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_29.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_30.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_30.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_31.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_31.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_32.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_32.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_33.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_33.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_34.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_34.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_35.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_35.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_36.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_36.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_37.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_37.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_38.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_38.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_39.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_39.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_40.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_40.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_41.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_41.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_42.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_42.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_43.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_43.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_44.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_44.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_45.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_45.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_46.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_46.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_47.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_47.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_48.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_48.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_49.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_49.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_50.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_50.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_51.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_51.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65_N_A_52.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65_N_A_52.png</div></td>
-      <td style="padding:6px;"></td>
-      <td style="padding:6px;"></td>
-    </tr>
-  </tbody>
-</table>
+![](img/CH65_N_A_1.png)
+![](img/CH65_N_A_2.png)
+![](img/CH65_N_A_3.png)
+![](img/CH65_N_A_4.png)
+![](img/CH65_N_A_5.png)
+![](img/CH65_N_A_6.png)
+![](img/CH65_N_A_7.png)
+![](img/CH65_N_A_8.png)
+![](img/CH65_N_A_9.png)
+![](img/CH65_N_A_10.png)
+![](img/CH65_N_A_11.png)
+![](img/CH65_N_A_12.png)
+![](img/CH65_N_A_13.png)
+![](img/CH65_N_A_14.png)
+![](img/CH65_N_A_15.png)
+![](img/CH65_N_A_16.png)
+![](img/CH65_N_A_17.png)
+![](img/CH65_N_A_18.png)
+![](img/CH65_N_A_19.png)
+![](img/CH65_N_A_20.png)
+![](img/CH65_N_A_21.png)
+![](img/CH65_N_A_22.png)
+![](img/CH65_N_A_23.png)
+![](img/CH65_N_A_24.png)
+![](img/CH65_N_A_25.png)
+![](img/CH65_N_A_26.png)
+![](img/CH65_N_A_27.png)
+![](img/CH65_N_A_28.png)
+![](img/CH65_N_A_29.png)
+![](img/CH65_N_A_30.png)
+![](img/CH65_N_A_31.png)
+![](img/CH65_N_A_32.png)
+![](img/CH65_N_A_33.png)
+![](img/CH65_N_A_34.png)
+![](img/CH65_N_A_35.png)
+![](img/CH65_N_A_36.png)
+![](img/CH65_N_A_37.png)
+![](img/CH65_N_A_38.png)
+![](img/CH65_N_A_39.png)
+![](img/CH65_N_A_40.png)
+![](img/CH65_N_A_41.png)
+![](img/CH65_N_A_42.png)
+![](img/CH65_N_A_43.png)
+![](img/CH65_N_A_44.png)
+![](img/CH65_N_A_45.png)
+![](img/CH65_N_A_46.png)
+![](img/CH65_N_A_47.png)
+![](img/CH65_N_A_48.png)
+![](img/CH65_N_A_49.png)
+![](img/CH65_N_A_50.png)
+![](img/CH65_N_A_51.png)
+![](img/CH65_N_A_52.png)
 
 # CATERPILLAR CH65B (1990)
 
@@ -226,18 +109,9 @@ IF YOU ARE PLANNING A TRIP TO LOOK AT A PIECE OF EQUIPMENT, PLEASE CALL FIRST TO
 On consignment, challenger 65b. Runs and shifts great! Brakes not working
 
 ## Photos
-<table>
-  <tbody>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65B_N_A_1.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65B_N_A_1.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65B_N_A_2.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65B_N_A_2.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65B_N_A_3.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65B_N_A_3.png</div></td>
-    </tr>
-  </tbody>
-</table>
+![](img/CH65B_N_A_1.png)
+![](img/CH65B_N_A_2.png)
+![](img/CH65B_N_A_3.png)
 
 # CATERPILLAR CH65C (1995)
 
@@ -254,121 +128,46 @@ QUICK & EASY ONSITE LOW FIXED RATE FINANCING AVAILABLE. TRUCKING AVAILABLE ANYWH
 IF YOU ARE PLANNING A TRIP TO LOOK AT A PIECE OF EQUIPMENT, PLEASE CALL FIRST TO CONFIRM THAT IT IS ON THE LOT AND STILL AVAILABLE
 
 ## Photos
-<table>
-  <tbody>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_1.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_1.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_2.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_2.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_3.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_3.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_4.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_4.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_5.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_5.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_6.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_6.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_7.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_7.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_8.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_8.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_9.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_9.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_10.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_10.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_11.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_11.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_12.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_12.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_13.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_13.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_14.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_14.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_15.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_15.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_16.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_16.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_17.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_17.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_18.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_18.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_19.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_19.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_20.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_20.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_21.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_21.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_22.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_22.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_23.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_23.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_24.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_24.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_25.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_25.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_26.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_26.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_27.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_27.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_28.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_28.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_29.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_29.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_30.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_30.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_31.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_31.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_32.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_32.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_33.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_33.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_34.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_34.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_35.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_35.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_36.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_36.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_37.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_37.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_38.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_38.png</div></td>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_39.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_39.png</div></td>
-    </tr>
-    <tr>
-      <td style="padding:6px; vertical-align:top; text-align:center;"><img src="img/CH65C_28084_40.png" alt="photo" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;"/>
-        <div style="font-size:12px; color:#666;">CH65C_28084_40.png</div></td>
-      <td style="padding:6px;"></td>
-      <td style="padding:6px;"></td>
-    </tr>
-  </tbody>
-</table>
-
+![](img/CH65C_28084_1.png)
+![](img/CH65C_28084_2.png)
+![](img/CH65C_28084_3.png)
+![](img/CH65C_28084_4.png)
+![](img/CH65C_28084_5.png)
+![](img/CH65C_28084_6.png)
+![](img/CH65C_28084_7.png)
+![](img/CH65C_28084_8.png)
+![](img/CH65C_28084_9.png)
+![](img/CH65C_28084_10.png)
+![](img/CH65C_28084_11.png)
+![](img/CH65C_28084_12.png)
+![](img/CH65C_28084_13.png)
+![](img/CH65C_28084_14.png)
+![](img/CH65C_28084_15.png)
+![](img/CH65C_28084_16.png)
+![](img/CH65C_28084_17.png)
+![](img/CH65C_28084_18.png)
+![](img/CH65C_28084_19.png)
+![](img/CH65C_28084_20.png)
+![](img/CH65C_28084_21.png)
+![](img/CH65C_28084_22.png)
+![](img/CH65C_28084_23.png)
+![](img/CH65C_28084_24.png)
+![](img/CH65C_28084_25.png)
+![](img/CH65C_28084_26.png)
+![](img/CH65C_28084_27.png)
+![](img/CH65C_28084_28.png)
+![](img/CH65C_28084_29.png)
+![](img/CH65C_28084_30.png)
+![](img/CH65C_28084_31.png)
+![](img/CH65C_28084_32.png)
+![](img/CH65C_28084_33.png)
+![](img/CH65C_28084_34.png)
+![](img/CH65C_28084_35.png)
+![](img/CH65C_28084_36.png)
+![](img/CH65C_28084_37.png)
+![](img/CH65C_28084_38.png)
+![](img/CH65C_28084_39.png)
+![](img/CH65C_28084_40.png)
 
 
 # CATERPILLAR CH45 (1995)
@@ -383,9 +182,7 @@ IF YOU ARE PLANNING A TRIP TO LOOK AT A PIECE OF EQUIPMENT, PLEASE CALL FIRST TO
 Set up With Ag Leader, Nicer Local Tractor, three point Included, 86" Spacing with 14" Spacers, 4 SCV's, Power Shift
 
 ## Photos
-![](/img/CH45_1DR00499_1.png) ![](/img/CH45_1DR00499_2.png) ![](/img/CH45_1DR00499_3.png) ![](/img/CH45_1DR00499_4.png) ![](/img/CH45_1DR00499_5.png)
-
-![](/img/CH45_1DR00499_6.png)![](/img/CH45_1DR00499_7.png)![](/img/CH45_1DR00499_8.png)![](/img/CH45_1DR00499_9.png)![](/img/CH45_1DR00499_10.png)![](/img/CH45_1DR00499_11.png)![](/img/CH45_1DR00499_12.png)![](/img/CH45_1DR00499_13.png)![](/img/CH45_1DR00499_14.png)![](/img/CH45_1DR00499_15.png)![](/img/CH45_1DR00499_16.png)![](/img/CH45_1DR00499_17.png)![](/img/CH45_1DR00499_18.png)![](/img/CH45_1DR00499_19.png)![](/img/CH45_1DR00499_20.png)![](/img/CH45_1DR00499_21.png)![](/img/CH45_1DR00499_22.png)![](/img/CH45_1DR00499_23.png)![](/img/CH45_1DR00499_24.png)![](/img/CH45_1DR00499_25.png)
+![](/img/CH45_1DR00499_1.png) ![](/img/CH45_1DR00499_2.png) ![](/img/CH45_1DR00499_3.png) ![](/img/CH45_1DR00499_4.png) ![](/img/CH45_1DR00499_5.png)![](/img/CH45_1DR00499_6.png)![](/img/CH45_1DR00499_7.png)![](/img/CH45_1DR00499_8.png)![](/img/CH45_1DR00499_9.png)![](/img/CH45_1DR00499_10.png)![](/img/CH45_1DR00499_11.png)![](/img/CH45_1DR00499_12.png)![](/img/CH45_1DR00499_13.png)![](/img/CH45_1DR00499_14.png)![](/img/CH45_1DR00499_15.png)![](/img/CH45_1DR00499_16.png)![](/img/CH45_1DR00499_17.png)![](/img/CH45_1DR00499_18.png)![](/img/CH45_1DR00499_19.png)![](/img/CH45_1DR00499_20.png)![](/img/CH45_1DR00499_21.png)![](/img/CH45_1DR00499_22.png)![](/img/CH45_1DR00499_23.png)![](/img/CH45_1DR00499_24.png)![](/img/CH45_1DR00499_25.png)
 
 # CATERPILLAR CH45 (1997)
 
