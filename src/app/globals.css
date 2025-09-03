@@ -83,3 +83,14 @@ a:hover{color:var(--link-hover)}
   max-width: 1280px;
   margin: 1rem auto;
 }
+
+mark[data-hl] {
+  background: rgba(245, 158, 11, 0.18); /* yellow-500/20 */
+  outline: 1px solid #f59e0b;           /* yellow-500 */
+  border-radius: 2px;
+  padding: 0 1px;
+}
+mark[data-hl].ring-2 {
+  outline-width: 2px;
+  outline-color: #22d3ee; /* cyan-400 */
+}

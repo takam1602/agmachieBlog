@@ -109,9 +109,9 @@ IF YOU ARE PLANNING A TRIP TO LOOK AT A PIECE OF EQUIPMENT, PLEASE CALL FIRST TO
 On consignment, challenger 65b. Runs and shifts great! Brakes not working
 
 ## Photos
-![](img/CH65B_N_A_1.png)
-![](img/CH65B_N_A_2.png)
-![](img/CH65B_N_A_3.png)
+![](/img/CH65B_N_A_1.png)
+![](/img/CH65B_N_A_2.png)
+![](/img/CH65B_N_A_3.png)
 
 # CATERPILLAR CH65C (1995)
 
