@@ -1,0 +1,105 @@
+[09:07:58] セッション初期化完了: リトライ=3, backoff=0.6
+[09:07:58] [HEAD] https://www.machinerytrader.com/listing/for-sale/238772497/1995-caterpillar-ch65c-175-hp-to-299-hp-tractors
+[09:08:00] HEAD https://www.machinerytrader.com/listing/for-sale/238772497/1995-caterpillar-ch65c-175-hp-to-299-hp-tractors [200 OK] in 1.75s (host=www.machinerytrader.com)
+[09:08:00] レスポンス情報: {
+  "method": "HEAD",
+  "final_url": "https://www.machinerytrader.com/listing/for-sale/238772497/1995-caterpillar-ch65c-175-hp-to-299-hp-tractors",
+  "status": 200,
+  "reason": "OK",
+  "elapsed_sec": 1.752,
+  "encoding": "utf-8",
+  "content_length": 0,
+  "request_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Connection": "keep-alive",
+    "Accept-Language": "ja-JP,ja;q=0.9,en-US;q=0.8,en;q=0.7",
+    "Cache-Control": "no-cache",
+    "Pragma": "no-cache",
+    "Upgrade-Insecure-Requests": "1"
+  },
+  "response_headers": {
+    "Date": "Wed, 03 Sep 2025 00:08:00 GMT",
+    "Content-Type": "text/html; charset=utf-8",
+    "Connection": "keep-alive",
+    "Content-Encoding": "gzip",
+    "CF-Ray": "9791029459fc9f8e-AMS",
+    "CF-Cache-Status": "DYNAMIC",
+    "Cache-Control": "no-cache, no-store",
+    "Expires": "-1",
+    "Set-Cookie": "ASP.NET_SessionId=204tg1u5qyn01ffsdxyiopca; path=/; HttpOnly; SameSite=Lax, UserID=ID=ieXQZGcm0cvZsgPy4ycQMU2N2CNY064jDcA4yuBzGac0zSXs13jBTnhtTHT0cZdcw3NAmeLHk%2fV0BziF8vLmGg%3d%3d&LV=drqfkTbKWhN1PPnbPicOaC8ySo4HKURJo%2frFKlc6M8nl91Sri4Pa0wUuc0y%2fjg9rX3F0oOp49rb7D67bn%2bpkToGl0TcKbaCn; expires=Mon, 03-Sep-2035 00:08:00 GMT; path=/; secure; HttpOnly, Tracking=SessionStarted=1&UserReferrer=&GUID=16639451896748; expires=Wed, 03-Sep-2025 00:28:00 GMT; path=/; secure; HttpOnly, VisitorID=ieXQZGcm0cvZsgPy4ycQMU2N2CNY064jDcA4yuBzGac0zSXs13jBTnhtTHT0cZdcw3NAmeLHk%2fV0BziF8vLmGg%3d%3d; expires=Thu, 08-Oct-2026 00:08:00 GMT; path=/; secure; HttpOnly, ASP.NET_SessionId=204tg1u5qyn01ffsdxyiopca; path=/; HttpOnly; SameSite=Lax, UserID=ID=ieXQZGcm0cvZsgPy4ycQMU2N2CNY064jDcA4yuBzGac0zSXs13jBTnhtTHT0cZdcw3NAmeLHk%2fV0BziF8vLmGg%3d%3d&LV=drqfkTbKWhN1PPnbPicOaC8ySo4HKURJo%2frFKlc6M8nl91Sri4Pa0wUuc0y%2fjg9rX3F0oOp49rb7D67bn%2bpkToGl0TcKbaCn; expires=Mon, 03-Sep-2035 00:08:00 GMT; path=/; secure; HttpOnly, Tracking=SessionStarted=1&UserReferrer=&GUID=16639451896748; expires=Wed, 03-Sep-2025 00:28:00 GMT; path=/; secure; HttpOnly, VisitorID=ieXQZGcm0cvZsgPy4ycQMU2N2CNY064jDcA4yuBzGac0zSXs13jBTnhtTHT0cZdcw3NAmeLHk%2fV0BziF8vLmGg%3d%3d; expires=Thu, 08-Oct-2026 00:08:00 GMT; path=/; secure; HttpOnly, geoipcountryid=id=83; path=/; secure; HttpOnly, FastTrackIronUser=; expires=Sun, 03-Aug-2025 00:08:00 GMT; path=/, __RequestVerificationToken=ZT98e8zdVGWNTPY0jMrDYyjI1_3r2s1WShVFlJmsPMUqKYbY7vkv14gKrCdLnUWtoFYy2A2; path=/; HttpOnly, __XSRF-TOKEN=FGy_ys2fi3UlJwvq6HKDltju-ukwmrsZmbWv2BblxC9k8lD-wRbpgKj1mANJoKZn8WroC6RQ5w9mH-hFhDGUu0saWSMGi-pa8GuJWYyscEHaEKPA8Mvyirzy0d9fN66Rbcwx3PeoONUhM2FxmKxv3VARpjcfYCIFS0yGwg2; path=/; secure; HttpOnly, BIGipServerwww.machinery_tradesites_http_pool=3112347840.20480.0000; path=/; Httponly; Secure",
+    "Vary": "Accept-Encoding",
+    "Pragma": "no-cache",
+    "X-Frame-Options": "SAMEORIGIN",
+    "X-Powered-By": "ASP.NET",
+    "Server-Timing": "cfCacheStatus;desc=\"DYNAMIC\", cfOrigin;dur=0,cfEdge;dur=908",
+    "Server": "cloudflare"
+  },
+  "cookies": {
+    "ASP.NET_SessionId": "204tg1u5qyn01ffsdxyiopca",
+    "UserID": "ID=ieXQZGcm0cvZsgPy4ycQMU2N2CNY064jDcA4yuBzGac0zSXs13jBTnhtTHT0cZdcw3NAmeLHk%2fV0BziF8vLmGg%3d%3d&LV=drqfkTbKWhN1PPnbPicOaC8ySo4HKURJo%2frFKlc6M8nl91Sri4Pa0wUuc0y%2fjg9rX3F0oOp49rb7D67bn%2bpkToGl0TcKbaCn",
+    "Tracking": "SessionStarted=1&UserReferrer=&GUID=16639451896748",
+    "VisitorID": "ieXQZGcm0cvZsgPy4ycQMU2N2CNY064jDcA4yuBzGac0zSXs13jBTnhtTHT0cZdcw3NAmeLHk%2fV0BziF8vLmGg%3d%3d",
+    "geoipcountryid": "id=83",
+    "__RequestVerificationToken": "ZT98e8zdVGWNTPY0jMrDYyjI1_3r2s1WShVFlJmsPMUqKYbY7vkv14gKrCdLnUWtoFYy2A2",
+    "__XSRF-TOKEN": "FGy_ys2fi3UlJwvq6HKDltju-ukwmrsZmbWv2BblxC9k8lD-wRbpgKj1mANJoKZn8WroC6RQ5w9mH-hFhDGUu0saWSMGi-pa8GuJWYyscEHaEKPA8Mvyirzy0d9fN66Rbcwx3PeoONUhM2FxmKxv3VARpjcfYCIFS0yGwg2",
+    "BIGipServerwww.machinery_tradesites_http_pool": "3112347840.20480.0000"
+  }
+}
+[09:08:00] [GET] https://www.machinerytrader.com/listing/for-sale/238772497/1995-caterpillar-ch65c-175-hp-to-299-hp-tractors
+[09:08:00] GET https://www.machinerytrader.com/listing/for-sale/238772497/1995-caterpillar-ch65c-175-hp-to-299-hp-tractors [200 OK] in 0.36s (host=www.machinerytrader.com)
+[09:08:00] レスポンス情報: {
+  "method": "GET",
+  "final_url": "https://www.machinerytrader.com/listing/for-sale/238772497/1995-caterpillar-ch65c-175-hp-to-299-hp-tractors",
+  "status": 200,
+  "reason": "OK",
+  "elapsed_sec": 0.357,
+  "encoding": "ISO-8859-1",
+  "content_length": 4233,
+  "request_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Connection": "keep-alive",
+    "Accept-Language": "ja-JP,ja;q=0.9,en-US;q=0.8,en;q=0.7",
+    "Cache-Control": "no-cache",
+    "Pragma": "no-cache",
+    "Upgrade-Insecure-Requests": "1",
+    "Cookie": "ASP.NET_SessionId=204tg1u5qyn01ffsdxyiopca; UserID=ID=ieXQZGcm0cvZsgPy4ycQMU2N2CNY064jDcA4yuBzGac0zSXs13jBTnhtTHT0cZdcw3NAmeLHk%2fV0BziF8vLmGg%3d%3d&LV=drqfkTbKWhN1PPnbPicOaC8ySo4HKURJo%2frFKlc6M8nl91Sri4Pa0wUuc0y%2fjg9rX3F0oOp49rb7D67bn%2bpkToGl0TcKbaCn; Tracking=SessionStarted=1&UserReferrer=&GUID=16639451896748; VisitorID=ieXQZGcm0cvZsgPy4ycQMU2N2CNY064jDcA4yuBzGac0zSXs13jBTnhtTHT0cZdcw3NAmeLHk%2fV0BziF8vLmGg%3d%3d; geoipcountryid=id=83; __RequestVerificationToken=ZT98e8zdVGWNTPY0jMrDYyjI1_3r2s1WShVFlJmsPMUqKYbY7vkv14gKrCdLnUWtoFYy2A2; __XSRF-TOKEN=FGy_ys2fi3UlJwvq6HKDltju-ukwmrsZmbWv2BblxC9k8lD-wRbpgKj1mANJoKZn8WroC6RQ5w9mH-hFhDGUu0saWSMGi-pa8GuJWYyscEHaEKPA8Mvyirzy0d9fN66Rbcwx3PeoONUhM2FxmKxv3VARpjcfYCIFS0yGwg2; BIGipServerwww.machinery_tradesites_http_pool=3112347840.20480.0000"
+  },
+  "response_headers": {
+    "Date": "Wed, 03 Sep 2025 00:08:00 GMT",
+    "Content-Type": "text/html",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "Content-Encoding": "gzip",
+    "CF-Ray": "9791029bdeca9f8e-AMS",
+    "CF-Cache-Status": "DYNAMIC",
+    "Access-Control-Allow-Origin": "*",
+    "Cache-Control": "no-cache, no-store",
+    "Vary": "origin, access-control-request-method, access-control-request-headers, Accept-Encoding",
+    "server-timing": "bon, total;dur=0.138153, cfCacheStatus;desc=\"DYNAMIC\", cfOrigin;dur=0,cfEdge;dur=72",
+    "Server": "cloudflare"
+  },
+  "cookies": {}
+}
+[09:08:00] 抽出レポート: {
+  "used_selectors": [
+    "div.detail__specs-wrapper .detail__specs-label/value"
+  ],
+  "counts": {
+    "detail__specs-wrapper": 0,
+    "ld+json": 0
+  },
+  "fallbacks": []
+}
+[09:08:00] 抽出詳細（概要）: {"Year": "N/A", "Manufacturer": "N/A", "Model": "N/A", "Serial Number": "N/A", "Hours": "N/A", "Price": "N/A"}
+[09:08:00] ❌ 値エラー: ページの基本情報(年/メーカー/モデル)が取得できませんでした: Year, Manufacturer, Model
+[09:08:00] Traceback (most recent call last):
+  File "/mnt/takam1602/ag/agmachieBlog/content/autoDownloadMachineFinder/scraper_app.py", line 160, in run_scraping_task
+    raise ValueError(f"ページの基本情報(年/メーカー/モデル)が取得できませんでした: {', '.join(missing_keys)}")
+ValueError: ページの基本情報(年/メーカー/モデル)が取得できませんでした: Year, Manufacturer, Model
+
+[09:08:00] 総処理時間: 2.13s
+
