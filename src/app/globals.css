@@ -37,36 +37,39 @@ border-radius:.5rem;
 box-shadow:0 0 15px #0f0;
 }
 
-/* 画像が2枚以上ある段落を “ギャラリー” として横並びグリッド化 */
-.prose p:has(img + img) {
+.prose p:has(img + img),
+.prose p:has(a + a) {
   display: grid;
-  /* 1列220px以上で自動折返し。画面が狭ければ1〜2列、広ければ3列+ に */
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 12px;
   align-items: start;
   justify-items: center;
-  margin: 1rem 0; /* 通常段落と同じくらいの余白 */
+  margin: 1rem 0;
 }
 
-/* ギャラリー内では画像の外枠（リンク）をブロック化して幅100%に */
-.prose p:has(img + img) a {
+/* ギャラリー段落内の子要素は幅100%でブロック化 */
+.prose p:has(img + img) > a,
+.prose p:has(a + a) > a,
+.prose p:has(img + img) > img,
+.prose p:has(a + a) > img {
   display: block;
   width: 100%;
 }
 
-/* ギャラリー内の画像はセル幅いっぱい、アスペクト比維持 */
-.prose p:has(img + img) img {
+/* ギャラリー段落内の画像はセル幅いっぱい＆高さ抑制 */
+.prose p:has(img + img) img,
+.prose p:has(a + a) img {
   width: 100%;
   height: auto;
-  max-height: 320px;     /* 行の高さを抑える（必要に応じて調整） */
-  object-fit: cover;     /* 画像が縦長でもセルに気持ちよく収まる */
-  margin: 0;             /* 通常画像のマージンを上書き */
-  border-radius: .5rem;  /* 角丸（お好みで） */
-  box-shadow: 0 0 15px #0f0; /* 既存の演出を残したい場合はこのまま */
+  max-height: 320px;    /* サムネ高さ（好みで調整） */
+  object-fit: cover;    /* 縦長画像も気持ちよくトリミング */
+  margin: 0;
+  border-radius: .5rem;
+  box-shadow: 0 0 15px #0f0;
 }
 
-/* 1枚だけの画像は従来どおり中央寄せ・大きめに表示 */
-.prose p:has(img):not(:has(img + img)) img {
-  max-width: 1280px;     /* 単独画像は大きめで */
+/* 単独画像（ギャラリーではない）だけは従来どおり大きめ */
+.prose p:has(img):not(:has(img + img)):not(:has(a + a)) img {
+  max-width: 1280px;
   margin: 1rem auto;
 }
