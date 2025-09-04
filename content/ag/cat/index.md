@@ -11,3 +11,7 @@
 
 # MSC
 - [中古のチャレンジャーを買うとき、見るべきポイント](./oldch.md)
+
+# シリアルナンバー早見表
+[シリアルナンバー一覧](https://www.scribd.com/document/536238190/Serial-Index-Caterpillar)
+![](/img/cat_agProductSerialNumber.png)
