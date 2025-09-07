@@ -19,3 +19,23 @@ Toyo Carrie Manufacturing でTCMである。
 # ファーミングローダ
 
 # 堆肥散布車
+
+# 特許
+
+- [ロータリカッター](https://www.j-platpat.inpit.go.jp/c1801/PU/JP-S55-005178/23/ja)
+
+- [農園芸用車両](https://www.j-platpat.inpit.go.jp/c1801/PU/JP-S57-072245/23/ja)
+
+- [肥料運搬車](https://www.j-platpat.inpit.go.jp/c1801/PU/JP-S58-035429/23/ja)
+
+- [肥料運搬車2](https://www.j-platpat.inpit.go.jp/c1801/PU/JP-S58-035430/23/ja)
+
+- [堆肥散布機](https://www.j-platpat.inpit.go.jp/c1801/PU/JP-S63-134613/23/ja)
+
+- [堆肥散布機リアゲート制御](https://www.j-platpat.inpit.go.jp/c1801/PU/JP-S63-134614/23/ja)
+
+- [NCD マニュアスプレッダ](https://www.j-platpat.inpit.go.jp/c1801/PU/JP-H02-023234/23/ja)
+
+- [NCD マニュアスプレッダ2](https://www.j-platpat.inpit.go.jp/c1801/PU/JP-H02-023409/23/ja)
+
+- [パンゴンの水平](https://www.j-platpat.inpit.go.jp/c1801/PU/JP-S53-002815/11/ja)
