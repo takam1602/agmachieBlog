@@ -1,11 +1,10 @@
 ## Track Tractor 
 
 トラクターの歴史については、
-[bigtractorpower氏の動画1](https://www.youtube.com/watch?v=hEjiFfajYf0)
-や
-[bigtractorpower氏の動画2](https://www.youtube.com/watch?v=nEWKNSJCdR0)
-や
-[氏のブログ](http://www.bigtractorpower.com/caterpillartractors.htm)
+- [bigtractorpower氏の動画1](https://www.youtube.com/watch?v=hEjiFfjYf0)
+- [bigtractorpower氏の動画2](https://www.youtube.com/watch?v=nEWKNSJCdR0)
+- [氏のブログ](http://www.bigtractorpower.com/caterpillartractors.htm)
+
 によく語られてる．
 
 最も、詳しい記事は、2014年のGrainewsの記事だろう。
@@ -13,12 +12,14 @@
 - [How engineers developed the rubber-belted tractor 2](https://www.grainews.ca/machinery-shop/how-engineers-invented-the-rubber-belted-tractor-for-ag/)
 
 それぞれの記事の翻訳は[こちら](./grainews_2014.md)
+
 ## クローリング
 - [写真とかシリアル番号](./internetCrawl.md)
 
 ### Caterpillar 社のトラクタ
 #### 要約
 - Holt 社とBest 社のトラクタでアメリカを開拓したところから．
+- 斜里町の三井農場にHolt のトラクタが入ってきたとの記録がある。
 - 20世紀半ばから，建設業界へシフト．農業機械の専業メーカーではなくなる．
 - 1987年にchallenger 65 を発表，農業機械業界に再び参入
 - 2002年春にAgco へchallenger の販売・製造を移譲，caterpillar は再び農業業界から手を引く．

@@ -1,3 +1,22 @@
+# 斜里町のHolt トラクター
+
+cat つながりということで、斜里町のトラクタにも触れてみる: 
+[街の論文](https://shiretoko-museum.jpn.org/media/shuppan/kempo/sm03_04.pdf)
+
+を見ると、三井合名会社斜里農場は支店出張所の開設は大正2年(1913)のようだ。
+
+[日本農業機械化協会](https://nitinoki.or.jp/kikaika-mail-mag/column/column_43/column4303/list.html)
+のHPを見ると、Holt トラクタは1915年に導入されたとある。
+
+[むー氏のポスト](https://x.com/muwsan/status/496364858476986369)
+を見ると、トラクターの絵葉書があったようだ。
+
+[斜里郡斜里村三井農場に於けるトラクター開墾の実況](https://www.lib.hokudai.ac.jp/cgi-bin/hoppodb/record.cgi?id=0B054480000009000)
+
+北方資料室何か有るようだ
+
+資料が大変限られているため、見つけ次第アップロードしよう。
+
 # 日本で見られるチャレンジャー: 合計 25台前後(2025年7月時点)
 
 隠れチャレンジャーがあるとしたら...
