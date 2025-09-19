@@ -465,3 +465,13 @@ Caterpillar takes over Claas teleporter plant
         North American LEXION combines – many of which continued to be sold through Caterpillar dealers – retained the CAT yellow and black color scheme until 2019.  
 
 - [farmprogress](https://www.farmprogress.com/farming-equipment/pioneering-claas-combine-factory-celebrates-25-years)
+
+- [Claas color のMT7Aシリーズ](https://www.forum-macchine.it/forum/lavori-agricoli-e-forestali/macchine-agricole/trattori-da-campo-aperto/3412-trattori-challenger/page2)
+
+カタログがあるらしい。
+
+![](/img/challenger765A.jpg)
+![](/img/challenger765BB.jpg)
+![](/img/challenger765C.jpg)
+![](/img/challenger765D.jpg)
+![](/img/challenger765E.jpg)
