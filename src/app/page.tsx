@@ -52,6 +52,7 @@ const blogEntries = [
   { href: '/docs/blog/250812/',      label: 'Rotary vs Walker' },
   { href: '/docs/blog/250907/',      label: 'Tire vs Track' },
   { href: '/docs/blog/250910/',      label: 'トラクターのフロントレーキ' },
+  { href: '/docs/blog/250922/',      label: 'ドイツ旅行記(2025)' },
 ]
 
 /* ====================================================================== */
