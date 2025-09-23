@@ -53,6 +53,7 @@ const blogEntries = [
   { href: '/docs/blog/250907/',      label: 'Tire vs Track' },
   { href: '/docs/blog/250910/',      label: 'トラクターのフロントレーキ' },
   { href: '/docs/blog/250922/',      label: 'ドイツ旅行記(2025)' },
+  { href: '/docs/blog/250924/',      label: 'Besssr Direkt?' },
 ]
 
 /* ====================================================================== */
