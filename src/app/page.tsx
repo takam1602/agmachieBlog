@@ -195,6 +195,27 @@ export default function Home() {
               ))}
             </ul>
           </section>
+        
+          {/* 展示会とか ------------------------------------------------------ */}
+          <section className="py-20 border-t border-[#222]">
+            <h2 className="mb-8 text-center">展示会・博物館・学会</h2>
+            <ul className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+              {[
+                { href: '/docs/ag/exhibition/',    label: '展示会' },
+              ].map((q) => (
+                <motion.li
+                  whileHover={{ y: -4, scale: 1.03 }}
+                  key={q.href}
+                  className="border border-[#222] rounded p-4 text-center hover:border-[var(--fg)] transition"
+                >
+                  <Link href={q.href} className="block w-full h-full">
+                    {q.label}
+                  </Link>
+                </motion.li>
+              ))}
+            </ul>
+          </section>
+
 
           {/* ブログ記事 ---------------------------------------------------- */}
           <section className="py-20 border-t border-[#222]">
