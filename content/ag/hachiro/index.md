@@ -21,7 +21,7 @@
 当時の貴重なカタログ。
 
 DL版はここ
-![](/brochure/qualityequipmentBrochure.pdf)
+[Quality Marsh Equipment](/brochure/qualityequipmentBrochure.pdf)
 
 八郎潟の干拓初期には、Wheel buggy, Amphibious four wheep drive carrier, 104W-HD-59, が導入されたのであろう。
 
