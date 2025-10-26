@@ -113,6 +113,7 @@ export default function Home() {
               {[
                 /* --- 末尾 '/index' を削除 --- */
                 { href: '/docs/ag/kaihatsu/', label: '北海道開発の機械' },
+                { href: '/docs/ag/hachiro/', label: '八郎潟の機械' },
               ].map((q) => (
                 <motion.li
                   whileHover={{ y: -4, scale: 1.03 }}
