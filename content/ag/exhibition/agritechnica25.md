@@ -1,21 +1,35 @@
 # アグリテクニカ2025
 2025年は11月9日-15日に例年通りハノーファー・メッセで開催。
 
-# まとめ(参加しないのに)
+[DLGのHP](https://www.dlg.org/en/detail/-dlg-agrifuture-concept-winners-2025-announced-visionary-ideas-in-agricultural-technology-recognized)などを参考に情報収集。
+
+## 勝手にまとめ(参加しないのに)
 - Amazone が技術としては抜きん出てる感じ。
-- 大型の機械は、Claas のJaguar が新発表、大型機械の開発のトレンドは成熟している。
-- ロボットは結構多そう。Nexat を始めとして、新しい農業の形を実現する機械も多数展示。
+- ロボットは今回も結構多そう。Nexat を始めとして、新しい農業の形を実現する機械も多数展示。
 - 中国の機械が結構多そう。Zoomlion を始めとして、今後の世界の農業機械市場を変えるかも。
 - 日本の機械もKubotaを筆頭として、ロボット農機を展示
-- 土を動かす機械もいっぱい展示。Baarckには展示してほしかった。
 
-# 写真 
+## 写真 
 
 は、適宜クレジット付きで載せていく予定.
+## [AEF](https://digital.agritechnica.com/newfront/exhibitor/aef---agricultural-industry-electronics-foundation-ev)
+
+Plugfest でおなじみのAEFの、FieldDataSync という機械間の無線通信技術が面白い。
+[Field machine sync](https://www.aef-online.org/aef-news/fielddatasync-shortlisted-for-dlg-agrifuture-concept-winner-2025.html)
+
+Deere とかでもMachine Sync とかでカートとコンバインの協調ができるように、メーカー依存のコミュニケーションシステムは存在していたけど、メーカーに依存しないシステムとしてはこれが初か。
+
+AEFが、というよりかはTUMとかAGCOとかのグループで、Fereral Ministry of Agriculture, Foodがマネージして作ったシステムらしい。
+
+北大で協調ロボット作ったけど、あれはローカルLANとか5Gだった。
+通信の方法が気になるのと、どうやって通信した結果をトラクタのCANに潜り込ませているのか、そこのアーキテクチャが気になる。
+
+ともあれ、こういうのが市販化されるとトラクタ・ハーベスタにレトロフィットで乗っかるとカートの人たちも便利になるし、溢れさせてさあ大変ということもなさそう。
 
 ## [Amazone](https://digital.agritechnica.com/newfront/exhibitor/amazonen-werke--h-dreyer-se--co-kg)
 
-今回、結構気合入ってると思う。
+今回もめちゃくちゃ気合入ってると思う。
+
 ソフト、ハードともに結構アップデートされてる。
 [公式の紹介](https://amazone.net/en/agritechnica/agritechnica-2025-innovations/categories/highlights)
     
@@ -65,8 +79,7 @@ amazone のスポットスプレー技術が合わさることで実現できる
 クローラで牽引力もあって、tillage をよくデモでやってるイメージ。
 小型なのによく牽けたら、いいよね。
 
-T2, W3, W4 とか展示するみたい。
-
+T2, W3, W4 と何種類か展示するみたい。
 
 ## [Bednar](https://digital.agritechnica.com/newfront/exhibitor/bednar-fmt-sro)
 
@@ -74,7 +87,6 @@ T2, W3, W4 とか展示するみたい。
 はおもしろそう。
 
 スペードブレードローラーは持ってこないのか。あれってclaydonだっけ。
-
 
 ## [claas](https://digital.agritechnica.com/newfront/exhibitor/claas-95d9d2c8)
 
@@ -99,19 +111,31 @@ terrastar 、hankmo との違いが気になるところ。
 UNI-TOUCHなるインテリアが使いやすいのだろうか。
 
 
-## [einbock](https://digital.agritechnica.com/newfront/exhibitor/einbck-gmbh-ff65cb95)
+## [Einbock](https://digital.agritechnica.com/newfront/exhibitor/einbck-gmbh-ff65cb95)
 ウムラウト。
 
 [einboeck](https://www.einboeck.at/)
 日本にも入ってきつつ有るウィーダーだけど、オプションが豊富。なにか草抜きのヒントがあるかも。
 
+Smart-hill なる画像ベースの列認識、列合わせが良いらしい。
+
 
 ## [Ermo](digital.agritechnica.com/newfront/marketplace/exhibitors?pageNumber=45&limit=60G)
 
-中澤さんでお馴染みの、イタリアンプラウ。
+イタリアンプラウ。
 クソデカ混層耕ボトムプラウを持ってくるかも。
 
-## [grimme](https://digital.agritechnica.com/newfront/exhibitor/grimme-landmaschinenfabrik-gmbh--co-kg)
+## [Geringhoff](https://digital.agritechnica.com/newfront/exhibitor/carl-geringhoff-vertriebsgesellschaft-mbh--co-kg-fc1b82da)
+
+色々なヘッダーが出るはずだけど、メダルの
+[Yield eyeQ](https://www.geringhoff.com/en/YieldEyeQrow)
+は面白いかも。
+
+ヘッドロスを最小にするために、ヘッダーにカメラつけてロスをモニタリング
+
+リール速度とか、エアー量を調節するのに役立てるみたい。
+
+## [Grimme](https://digital.agritechnica.com/newfront/exhibitor/grimme-landmaschinenfabrik-gmbh--co-kg)
 
 [気合入っている様子](https://grimme.com/en/agritechnica-2025)
 
@@ -193,6 +217,17 @@ CTFの権化。まあ人がいっぱいだろうけど、電動だし見どこ�
 ローラーが良い会社。
 変なtillage tools.
 
+## [SLSd]()
+
+まあ
+[変な機械たち](https://sls-systeme.de/#!/services)
+を作ってる会社。
+
+点滴灌漑用のパイプライン敷設・回収を機械化したらしく、すごいらしい。
+
+パイプラインの場所ｗお勘tにするのにセンサーを使って、回収していくのかな。
+[DripperSense](https://sls-systeme.de/wp-content/uploads/2023/11/SLS-DripperSense.pdf)
+
 ## [Vadastad](https://digital.agritechnica.com/newfront/exhibitor/vderstad-ab)
 
 最近はHorshと競ってる感じがあるけど、tempo とcarrier は良い感じの機械たち。
@@ -210,4 +245,8 @@ CTFの権化。まあ人がいっぱいだろうけど、電動だし見どこ�
 [いろんな、変な収穫機](https://zuern-harvesting.de/)
 を作ってる。
 
-雑草の種子部分だけ収穫する機械はマニアックだけど面白い。
+また、seed select なる、コンバインから出てくる雑草種子の低減ユニットを開発したらしい。
+seed terminator みたいな、ハンマーミル構造ではなく、どうにかして、小さい抵抗で不活性化するらしい。
+
+...どんな構造か、あまり情報が出てこない。
+知財絡みかな。
