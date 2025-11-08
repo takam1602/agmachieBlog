@@ -1,10 +1,14 @@
 # アグリテクニカ2025
-2025年は11月9日-15日に例年通りハノーファー・メッセで開催。
+40周年なんすね。
 
+2025年は11月9日-15日に例年通りハノーファー・メッセで開催。
 [DLGのHP](https://www.dlg.org/en/detail/-dlg-agrifuture-concept-winners-2025-announced-visionary-ideas-in-agricultural-technology-recognized)などを参考に情報収集。
 
+## 注意点(N氏)
+- ブースでお酒飲みすぎると全部回りきれなくなるのでほどほどに...
+
 ## 勝手にまとめ(参加しないのに)
-- Amazone が技術としては抜きん出てる感じ。
+- Amazone が技術としては抜きん出てる感じ。面白い。
 - ロボットは今回も結構多そう。Nexat を始めとして、新しい農業の形を実現する機械も多数展示。
 - 中国の機械が結構多そう。Zoomlion を始めとして、今後の世界の農業機械市場を変えるかも。
 - 日本の機械もKubotaを筆頭として、ロボット農機を展示
@@ -73,7 +77,7 @@ amazone のスポットスプレー技術が合わさることで実現できる
 
 [何かしらのsolutionがあると面白いかも](https://www.apv.at/agritechnica-2025)
 
-## [AgXeed](digital.agritechnica.com/newfront/marketplace/exhibitors?pageNumber=45&limit=60G)
+## [AgXeed](https://digital.agritechnica.com/newfront/marketplace/exhibitors?pageNumber=45&limit=60G)
 
 最近良く目にするロボット。
 クローラで牽引力もあって、tillage をよくデモでやってるイメージ。
@@ -88,17 +92,20 @@ T2, W3, W4 と何種類か展示するみたい。
 
 スペードブレードローラーは持ってこないのか。あれってclaydonだっけ。
 
-## [claas](https://digital.agritechnica.com/newfront/exhibitor/claas-95d9d2c8)
+## [Claas](https://digital.agritechnica.com/newfront/exhibitor/claas-95d9d2c8)
 
 トラクタのデザインが一新、400hp のaxion みたいなのも発表。
 [公式](https://www.claas.com/de-de/erleben/stories/agritechnica)
 
+クボタみたいな顔かも。
+
 Jaguar 1200が良さそう。
 スループットが改善されて、数年以内に日本にも入ってくると思われ。
 
-ゼリオンは前回までで展示された感があるから、今回の目玉はトラクタとjaguar でしょう。
+ゼリオンも、トラックのものが展示されるみたいだ。
+でもこれは前回展示されてたし、今回の目玉はトラクタと新型jaguar でしょう。
 
-## [claydon](https://digital.agritechnica.com/newfront/exhibitor/claydon)
+## [Claydon](https://digital.agritechnica.com/newfront/exhibitor/claydon)
 スペードブレードローラーはこっちだったわ。
 [claydon](https://claydondrill.com/)
 
@@ -120,14 +127,27 @@ UNI-TOUCHなるインテリアが使いやすいのだろうか。
 Smart-hill なる画像ベースの列認識、列合わせが良いらしい。
 
 
-## [Ermo](digital.agritechnica.com/newfront/marketplace/exhibitors?pageNumber=45&limit=60G)
+## [Ermo](https://digital.agritechnica.com/newfront/marketplace/exhibitors?pageNumber=45&limit=60G)
 
 イタリアンプラウ。
 クソデカ混層耕ボトムプラウを持ってくるかも。
 
+
+## [Fendt](https://digital.agritechnica.com/newfront/exhibitor/fendt---agco-gmbh)
+
+ドイツの哲学。フェンㇳ。
+
+電動なり、大型なり色々な新しいトラクタを出すようだ。
+
+今回初登場は、
+- [Xaver GT](https://www.youtube.com/watch?v=Ro3D9n5J5as)
+
+ツールキャリアから始まるフェントの歴史が、新しく進化。まあありきたりっちゃありきたりなんだけど、トラクタで引っ張ってほ場まで移動、安全性もOK, 色々な既成の除草機を使えるという結構良さげな、実用に重きを置いた機械。
+
+
 ## [Geringhoff](https://digital.agritechnica.com/newfront/exhibitor/carl-geringhoff-vertriebsgesellschaft-mbh--co-kg-fc1b82da)
 
-色々なヘッダーが出るはずだけど、メダルの
+色々なヘッダーが出るはずだけど、シルバーの
 [Yield eyeQ](https://www.geringhoff.com/en/YieldEyeQrow)
 は面白いかも。
 
@@ -143,10 +163,10 @@ Smart-hill なる画像ベースの列認識、列合わせが良いらしい。
 
 芋以外の収穫機はヒントが多そう。
 芋以外は、どちらかというと、
-[asa-lift](digital.agritechnica.com/newfront/marketplace/exhibitors?pageNumber=45&limit=60G) 
+[Asa-lift](https://digital.agritechnica.com/newfront/marketplace/exhibitors?pageNumber=45&limit=60G) 
 に展示が分散してそう。
 
-## [Horizon](digital.agritechnica.com/newfront/marketplace/exhibitors?pageNumber=45&limit=60G)
+## [Horizon](https://digital.agritechnica.com/newfront/marketplace/exhibitors?pageNumber=45&limit=60G)
 
 Horizonも不耕起よくやってる。
 プランタのクリーナーやドリルの播種ユニットが面白そう。
@@ -165,11 +185,11 @@ tillage tools も、独特なので面白そう。
 ## [John Deere](https://digital.agritechnica.com/newfront/exhibitor/john-deere-walldorf-international-gmbh)
 
 今年のdeere はなにかおもしろいの有るかなぁ
-[マップ](https://johndeere.widen.net/s/9wxwkx26xz/2601-international-stele-de#page=1)
+[マップ](https://johndeere.widen.net/s/9wxwkx26xz/2601-internggational-stele-de#page=1)
 
 あんまり目新しいのはないかもだけど、9RX 830が置いて有るらしいからそれは人気かも。
 
-X9だけで1日溶けそうだ。
+Deere のブースで1日溶けそうだ。
 
 ## [Kubota](https://digital.agritechnica.com/newfront/exhibitor/kubota-deutschland-gmbh-77dc58b6)
 
@@ -184,6 +204,10 @@ X9だけで1日溶けそうだ。
 - M7004 ロボット仕様: 普通のロボトラと同じだろうか。
 - All terrain tractor: CES2025でベストイノベーションアワードらしい。
 
+他に、farmworld TVとか見てて気になったやつは
+- Aurea imaging のセンサ、ビンヤード向けのフェノタイピング用のセンサかな。
+- 
+
 ## [Lemken](https://digital.agritechnica.com/newfront/exhibitor/lemken-gmbh--co-kg-c6876ee2)
 
 あんまり目新しいのはないかだけど、ブロキャスがあるのは面白い。
@@ -193,12 +217,25 @@ X9だけで1日溶けそうだ。
 Krone も気合入ってるはず。
 リンクを貼ろうとしたけど、なぜかアクセスエラー(251102現在)
 
+
+やっとアグリテクニカ開催してから
+[アクセス](https://yourharvest.krone-agriculture.com/en/product-overview?utm_linktype=intern&utm_section=products&utm_string=Neuheiten_entdecken)
+できるようになった。(1109午前4:30JST)
+
 - RotoChop: 残幹処理チョッパー
 
 まあぶっ叩いてるだけと言ってしまえばそうなのだが、地際ぎりぎり、というかなんなら土もぶっ叩いてる気がするのだが、動画を見る限りよく地面に追従してきれいに残幹を処理してくれている。
 
 結構抵抗ありそうなのだが、ヘッダーはベルトPTO駆動なのだろうか。
 駆動の伝達方法と馬力損失、そこが気になる。
+
+Bigpack やロボット(Krone-Lemkenのやつ)も持ってくるようだ。
+
+あと、なんだろう、見慣れない機械が動画では写ってる。
+premos 的な新製品かな。
+ひょっとしてpremos のフィーダーがちょっと変な感じかも。
+
+Kroneの25周年ブラックビューティーはかっこいい。
 
 ## [Monosem](https://digital.agritechnica.com/newfront/exhibitor/monosem)
 
@@ -211,6 +248,10 @@ MS Electron
 ## [NEXAT](https://digital.agritechnica.com/newfront/exhibitor/nexat-gmbh)
 
 CTFの権化。まあ人がいっぱいだろうけど、電動だし見どころは沢山有るはず。
+
+[news](https://www.aginsights.blog/nexat-to-present-soybean-sowing-system-capable-of-planting-200-hectares-per-load-at-agritechnica-2025/)
+そして、今回初公開の、プランター28m 幅、これまではガントリーの真ん中だけだったけど、左右にも展開してより幅広く、効率的に作業できるようになった。
+ブラジルで稼働してるのかも、というやつが公開される。
 
 ## [Sumo](https://digital.agritechnica.com/newfront/exhibitor/sumo-uk-ltd)
 
@@ -233,14 +274,19 @@ CTFの権化。まあ人がいっぱいだろうけど、電動だし見どこ�
 最近はHorshと競ってる感じがあるけど、tempo とcarrier は良い感じの機械たち。
 レキサスツインがあればなぁ...
 
-## [Zoomlion](digital.agritechnica.com/newfront/marketplace/exhibitors?pageNumber=45&limit=60G)
+## [Zoomlion](https://digital.agritechnica.com/newfront/marketplace/exhibitors?pageNumber=45&limit=60G)
 
 今後確実に世界を賑わすチャイナトラクタ。
+中国の農業機械は確実に数年以内に世界に渡る。
 無視は絶対にできない。
 
-今回はRabe と手を組んで展示するみたい。
+コンバインも出すようだ。
 
-## [zurn](digital.agritechnica.com/newfront/marketplace/exhibitors?pageNumber=45&limit=60G)
+今回はRabe と手を組んで、Rabeの機械をzoomlion の色で出すみたいだ。
+
+ハイブリッドトラクタを持ってくるかな。
+
+## [Zurn](https://digital.agritechnica.com/newfront/marketplace/exhibitors?pageNumber=45&limit=60G)
 
 [いろんな、変な収穫機](https://zuern-harvesting.de/)
 を作ってる。
