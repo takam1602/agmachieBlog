@@ -105,6 +105,9 @@ Jaguar 1200が良さそう。
 ゼリオンも、トラックのものが展示されるみたいだ。
 でもこれは前回展示されてたし、今回の目玉はトラクタと新型jaguar でしょう。
 
+fanshopも充実してますねぇ。
+30万くらい一気に溶けそう。
+
 ## [Claydon](https://digital.agritechnica.com/newfront/exhibitor/claydon)
 スペードブレードローラーはこっちだったわ。
 [claydon](https://claydondrill.com/)
@@ -132,6 +135,13 @@ Smart-hill なる画像ベースの列認識、列合わせが良いらしい。
 イタリアンプラウ。
 クソデカ混層耕ボトムプラウを持ってくるかも。
 
+## [EOX](https://digital.agritechnica.com/newfront/exhibitor/eox-tractors)
+
+オランダの電動トラクタ。
+結構昔から存在していて、同径四駆な電動トラクタ。
+最初の大型電動トラクタなんじゃないかな灯って調べたら、[2011年からあるらしい](https://www.eoxtractors.com/en/visie-missie)
+
+今回はどんなアップデートをしてくるのだろうか。
 
 ## [Fendt](https://digital.agritechnica.com/newfront/exhibitor/fendt---agco-gmbh)
 
@@ -144,6 +154,9 @@ Smart-hill なる画像ベースの列認識、列合わせが良いらしい。
 
 ツールキャリアから始まるフェントの歴史が、新しく進化。まあありきたりっちゃありきたりなんだけど、トラクタで引っ張ってほ場まで移動、安全性もOK, 色々な既成の除草機を使えるという結構良さげな、実用に重きを置いた機械。
 
+    - どうやって引っ張ってるんだと思ったら、ボールヒッチがフロントについてた。牽引する時のモーション(ヒッチ上げ下げ？リアタイヤ上げ？)が気になる
+    - どうやって作業機をスライドインさせるのか、足回りが回転してホロノミックなのか。
+    - またがせる理由は、オペレータの視界確保がメインだったのがGTだったけど、今回はロボット、位置制御がしやすいとか、なにかメリットはあるのだろうか。８
 
 ## [Geringhoff](https://digital.agritechnica.com/newfront/exhibitor/carl-geringhoff-vertriebsgesellschaft-mbh--co-kg-fc1b82da)
 
@@ -244,6 +257,14 @@ Kroneの25周年ブラックビューティーはかっこいい。
 MS Electron
 
 なる電動プランターは面白そう。
+
+## [Newholland]()
+トラクタを発表するようだ。
+
+ロボット周りでいうと、R4 Hybrid robot が新しい。
+- vineyard, orchard で動くロボットのようで、トラックベルト2本で動作する。
+- スプレーヤを牽引したり、PTOでポンプやモアーを回したり、できるようだ。
+_ あんまりGNSSアンテナや、LiDarがらしいものが見当たらなかったり、近くで見ないとわからんか。
 
 ## [NEXAT](https://digital.agritechnica.com/newfront/exhibitor/nexat-gmbh)
 
