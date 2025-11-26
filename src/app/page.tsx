@@ -55,6 +55,7 @@ const blogEntries = [
   { href: '/docs/blog/250922/',      label: 'ドイツ旅行記(2025)' },
   { href: '/docs/blog/250924/',      label: 'Besssr Direkt?' },
   { href: '/docs/blog/251113/',      label: 'ついでにセンシングっていいよね' },
+  { href: '/docs/blog/251126/',      label: 'さつまいも栽培の機械(高効率)' },
 ]
 
 /* ====================================================================== */
