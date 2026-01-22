@@ -7,41 +7,44 @@ import ImageLightbox from '@/components/ImageLightbox'
 
 export default function MarkdownImage({ src, alt = '' }: { src: string; alt?: string }) {
   const [open, setOpen] = useState(false)
-
-  // ─── ① open の変化を監視 ──────────────────
-  console.log('[MarkdownImage] render', { src, open })
+  const [isError, setIsError] = useState(false)
 
   return (
     <>
-      {/* ② Portal が呼ばれた瞬間にログ */}
       {open &&
         typeof window !== 'undefined' &&
         createPortal(
-          (() => {
-            console.log('[MarkdownImage] createPortal', src)
-            return <ImageLightbox src={src} alt={alt} onClose={() => setOpen(false)} />
-          })(),
+          <ImageLightbox src={src} alt={alt} onClose={() => setOpen(false)} />,
           document.body,
         )}
 
       <span
-        className="block relative w-full max-w-[640px] aspect-[16/9] overflow-hidden rounded-md shadow mx-auto my-4 cursor-pointer"
+        className="block relative w-full max-w-[800px] mx-auto my-6 cursor-pointer bg-[#222] border border-[#333] hover:border-[var(--accent)] transition-colors group rounded-lg overflow-hidden"
         onClick={(e) => {
           e.preventDefault()
           e.stopPropagation()
-          console.log('[MarkdownImage] click', src)   // ③ クリックログ
           setOpen(true)
         }}
       >
-        <Image
-          src={src}
-          alt={alt}
-          width={640}
-          height={480}
-          className="object-cover"
-          sizes="(max-width:640px) 100vw, 640px"
-        />
+        {!isError ? (
+          <Image
+            src={src}
+            alt={alt}
+            width={0}
+            height={0}
+            sizes="(max-width: 800px) 100vw, 800px"
+            className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-300"
+            onError={() => setIsError(true)}
+            unoptimized={true}
+          />
+        ) : (
+          <span className="flex items-center justify-center w-full aspect-video text-gray-500 text-sm flex-col gap-2">
+            <span className="text-2xl">⚠️</span>
+            <span>Image not found</span>
+          </span>
+        )}
       </span>
+      {alt && <span className="block text-center text-sm text-gray-500 mt-2 mb-6">{alt}</span>}
     </>
   )
 }

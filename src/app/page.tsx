@@ -12,7 +12,7 @@ import SearchableList from '@/components/SearchableList'
 const heroImages = [
   { src: '/img/front/1.jpg',  alt: 'v',         width: 640, height: 480 },
   { src: '/img/front/2.jpg',  alt: 'カルチ',     width: 640, height: 480 },
-  { src: '/img/front/3.jpg',  alt: '芋',         width: 640, height: 480 },
+  { src: '/img/front/3.JPG',  alt: '芋',         width: 640, height: 480 },
   { src: '/img/front/4.jpg',  alt: '栃木',       width: 640, height: 480 },
   { src: '/img/front/5.JPG',  alt: 'ディスク',   width: 640, height: 480 },
   { src: '/img/front/6.JPG',  alt: 'チゼル',     width: 640, height: 480 },
@@ -55,6 +55,8 @@ const blogEntries = [
   { href: '/docs/blog/250924/',      label: 'Besssr Direkt?' },
   { href: '/docs/blog/251113/',      label: 'ついでにセンシングっていいよね' },
   { href: '/docs/blog/251126/',      label: 'さつまいも栽培の機械(高効率)' },
+  { href: '/docs/blog/picTest/',      label: '画像のテス' },
+  { href: '/docs/blog/picTest_sec/',      label: '画像のテス(セキュリティー)' },
 ]
 
 /* ====================================================================== */
