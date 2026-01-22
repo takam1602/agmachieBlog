@@ -1,7 +1,7 @@
 
 'use client'
 
-import React, { useMemo, useState } from 'react'
+import React, { useMemo } from 'react'
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
@@ -60,15 +60,14 @@ function toText(children: React.ReactNode): string {
 
 export default function DocInteractive({ source, dirUrl }: Props) {
   const headings = useMemo(() => extractHeadings(source), [source])
-  const [isTocOpen, setIsTocOpen] = useState(false)
 
   return (
-    <div className="mx-auto px-4 py-8 max-w-6xl grid grid-cols-1 lg:grid-cols-[1fr_240px] gap-8">
+    <div className="w-full px-4 py-8 grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8">
       
       {/* メインコンテンツ */}
-      <div className="min-w-0">
+      <div className="min-w-0 w-full">
          {/* 上部ナビゲーション (Mobile用) */}
-         <div className="flex flex-col gap-4 mb-6 lg:hidden">
+         <div className="flex flex-col gap-6 mb-8 lg:hidden">
             <div className="flex items-center justify-between gap-3">
               <Link
                 href="/"
@@ -79,40 +78,27 @@ export default function DocInteractive({ source, dirUrl }: Props) {
               <InPageSearch articleSelector="#md-article" />
             </div>
 
-            {/* Mobile Collapsible TOC */}
+            {/* Mobile TOC (Always Visible) */}
             {headings.length > 0 && (
-              <div className="border border-[#333] rounded bg-[#1a1a1a] overflow-hidden">
-                <button
-                  onClick={() => setIsTocOpen(!isTocOpen)}
-                  className="w-full flex items-center justify-between p-3 text-sm font-medium text-gray-200 hover:bg-[#222]"
-                >
-                  <span>Table of Contents</span>
-                  <span className={`transform transition-transform ${isTocOpen ? 'rotate-180' : ''}`}>
-                    ▼
-                  </span>
-                </button>
-                {isTocOpen && (
-                  <nav className="p-3 border-t border-[#333] bg-[#121212]">
-                     <ul className="space-y-2 max-h-60 overflow-y-auto">
-                      {headings.map((h, i) => (
-                        <li key={`${h.id}-${i}`} style={{ paddingLeft: `${(h.level - 1) * 1}rem` }}>
-                          <a
-                            href={`#${h.id}`}
-                            className="block text-sm text-[var(--link)] hover:underline"
-                            onClick={() => setIsTocOpen(false)}
-                          >
-                            {h.text}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </nav>
-                )}
-              </div>
+              <nav className="p-4 border border-[#333] rounded bg-[#1a1a1a]">
+                <h4 className="font-bold text-gray-200 mb-3 text-sm uppercase tracking-wider border-b border-[#333] pb-2">Table of Contents</h4>
+                 <ul className="space-y-1 max-h-60 overflow-y-auto">
+                  {headings.map((h, i) => (
+                    <li key={`${h.id}-${i}`} style={{ paddingLeft: `${(h.level - 1) * 1}rem` }}>
+                      <a
+                        href={`#${h.id}`}
+                        className="block text-sm text-[var(--link)] hover:underline py-0.5"
+                      >
+                        {h.text}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
             )}
         </div>
 
-        <article id="md-article" className="prose prose-invert max-w-none">
+        <article id="md-article" className="prose prose-invert max-w-none w-full">
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
             components={{
@@ -174,7 +160,7 @@ export default function DocInteractive({ source, dirUrl }: Props) {
       </div>
 
       {/* サイドバー (Desktop用 TOC & Search) */}
-      <aside className="hidden lg:block sticky top-24 h-fit max-h-[calc(100vh-6rem)] overflow-y-auto pr-2">
+      <aside className="hidden lg:block sticky top-24 h-fit max-h-[calc(100vh-6rem)] overflow-y-auto pr-2 w-full">
         <div className="mb-6">
             <Link
                 href="/"
