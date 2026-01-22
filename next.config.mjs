@@ -9,7 +9,20 @@ const withMdx = nextMdx({
   },
 })
 
-export default withMdx({
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   pageExtensions: ['tsx', 'ts', 'mdx', 'md'],
-  images: { unoptimized: true }, // 開発中は楽なので off
-})
+  images: {
+    // 開発中のトラブルを避けるため、一時的に最適化を無効化するのも一つの手です
+    // unoptimized: true, 
+
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**', // すべてのHTTPS画像を許可（開発用として強力）
+      },
+    ],
+  },
+}
+
+export default withMdx(nextConfig)
