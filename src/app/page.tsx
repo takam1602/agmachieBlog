@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { TypeAnimation } from 'react-type-animation'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 import ImageCarousel  from '@/components/ImageCarousel'
@@ -76,24 +75,26 @@ export default function Home() {
       )}
 
       <div className="flex justify-center">
-        <main className="px-4">
+        <main className="w-full max-w-5xl px-4 pb-20">
 
           {/* HERO ---------------------------------------------------------- */}
           <section className="py-24 text-center">
-            <h1 className="text-10xl font-bold text-green-400">
+            <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight mb-8 min-h-[120px] md:min-h-[80px]">
               <TypeAnimation
                 sequence={[
-                  'Agricultural Machinery Repository', 1200,
-                  'Welcome, curious engineer.',        1200,
-                  '農業機械　リポジトリ',                1500,
-                  'ようこそ',                            1800,
+                  'AgMachine Repository', 1500,
+                  'Welcome, curious engineer.', 1500,
+                  '農業機械　リポジトリ', 1500,
                 ]}
-                speed={{ type: 'keyStrokeDelayInMs', value: 200 }}
+                speed={{ type: 'keyStrokeDelayInMs', value: 150 }}
                 repeat={Infinity}
+                wrapper="span"
+                cursor={true}
+                className="text-[var(--accent)]"
               />
             </h1>
-            <p className="mt-6 text-[#5a5a5a] leading-relaxed">
-              農業機械のリポジトリです．私が気になった機械・技術をまとめています．かなり偏った内容ですが、ご了承ください．
+            <p className="mt-4 text-gray-400 leading-relaxed max-w-2xl mx-auto text-lg">
+              農業機械のリポジトリです．私が気になった機械・技術をまとめています．<br className="hidden md:inline"/>かなり偏った内容ですが、ご了承ください．
             </p>
           </section>
 
@@ -108,127 +109,90 @@ export default function Home() {
             />
           </section>
 
-          {/* 日本の特色 ---------------------------------------------------- */}
-          <section className="py-20 border-t border-[#222]">
-            <h2 className="mb-8 text-center">日本の特色ある機械たち</h2>
-            <ul className="grid grid-cols-2 sm:grid-cols-3 gap-6">
-              {[
-                /* --- 末尾 '/index' を削除 --- */
-                { href: '/docs/ag/kaihatsu/', label: '北海道開発の機械' },
-                { href: '/docs/ag/hachiro/', label: '八郎潟の機械' },
-              ].map((q) => (
-                <motion.li
-                  whileHover={{ y: -4, scale: 1.03 }}
-                  key={q.href}
-                  className="border border-[#222] rounded p-4 text-center hover:border-[var(--fg)] transition"
-                >
-                  <Link href={q.href} className="block w-full h-full">
-                    {q.label}
-                  </Link>
-                </motion.li>
-              ))}
-            </ul>
-          </section>
+          {/* Repository Section (Grid Layout) ------------------------------ */}
+          <div id="repository" className="space-y-20 pt-10">
+            
+            {/* 日本の特色 */}
+            <Section title="日本の特色ある機械たち">
+               {[
+                { href: '/docs/ag/kaihatsu/', label: '北海道開発の機械', desc: '独自の進化を遂げた機械たち' },
+                { href: '/docs/ag/hachiro/', label: '八郎潟の機械', desc: '大規模干拓地の機械' },
+              ].map((item) => <Card key={item.href} {...item} />)}
+            </Section>
 
-          {/* 各国の特色 ---------------------------------------------------- */}
-          <section className="py-20 border-t border-[#222]">
-            <h2 className="mb-8 text-center">各国の特色ある機械たち</h2>
-            <ul className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+            {/* 各国の特色 */}
+            <Section title="各国の特色ある機械たち">
               {[
-                { href: '/docs/ag/usa/',       label: 'US'   },
-                { href: '/docs/ag/Australia/', label: 'AUS'  },
-                { href: '/docs/ag/Thailand/',  label: 'THAI' },
-                { href: '/docs/ag/Brazil/',    label: 'BR'   },
-              ].map((q) => (
-                <motion.li
-                  whileHover={{ y: -4, scale: 1.03 }}
-                  key={q.href}
-                  className="border border-[#222] rounded p-4 text-center hover:border-[var(--fg)] transition"
-                >
-                  <Link href={q.href} className="block w-full h-full">
-                    {q.label}
-                  </Link>
-                </motion.li>
-              ))}
-            </ul>
-          </section>
+                { href: '/docs/ag/usa/',       label: 'US', desc: 'United States' },
+                { href: '/docs/ag/Australia/', label: 'AUS', desc: 'Australia' },
+                { href: '/docs/ag/Thailand/',  label: 'THAI', desc: 'Thailand' },
+                { href: '/docs/ag/Brazil/',    label: 'BR', desc: 'Brazil' },
+              ].map((item) => <Card key={item.href} {...item} />)}
+            </Section>
 
-          {/* メーカー ------------------------------------------------------ */}
-          <section className="py-20 border-t border-[#222]">
-            <h2 className="mb-8 text-center">農業機械のメーカ−(普通ではない)</h2>
-            <ul className="grid grid-cols-2 sm:grid-cols-3 gap-6">
-              {[
-                { href: '/docs/ag/deere/',   label: 'John Deere' },
-                { href: '/docs/ag/cat/',     label: 'Caterpillar' },
-                { href: '/docs/ag/claas/',   label: 'Claas' },
-                { href: '/docs/ag/morooka/', label: 'モロオカ' },
-                { href: '/docs/ag/tcm/',     label: '東洋運搬機' },
-              ].map((q) => (
-                <motion.li
-                  whileHover={{ y: -4, scale: 1.03 }}
-                  key={q.href}
-                  className="border border-[#222] rounded p-4 text-center hover:border-[var(--fg)] transition"
-                >
-                  <Link href={q.href} className="block w-full h-full">
-                    {q.label}
-                  </Link>
-                </motion.li>
-              ))}
-            </ul>
-          </section>
+            {/* メーカー */}
+            <Section title="農業機械のメーカー (Niche)">
+               {[
+                { href: '/docs/ag/deere/',   label: 'John Deere', desc: 'The Deer' },
+                { href: '/docs/ag/cat/',     label: 'Caterpillar', desc: 'Yellow Iron' },
+                { href: '/docs/ag/claas/',   label: 'Claas', desc: 'Seed Green' },
+                { href: '/docs/ag/morooka/', label: 'モロオカ', desc: 'Rubber Crawler' },
+                { href: '/docs/ag/tcm/',     label: '東洋運搬機', desc: 'Wheel Loader' },
+              ].map((item) => <Card key={item.href} {...item} />)}
+            </Section>
 
-          {/* 機械各論 ------------------------------------------------------ */}
-          <section className="py-20 border-t border-[#222]">
-            <h2 className="mb-8 text-center">機械各論</h2>
-            <ul className="grid grid-cols-2 sm:grid-cols-3 gap-6">
-              {[
-                { href: '/docs/ag/landLevel/',    label: 'レベラー' },
-                { href: '/docs/ag/landHarrow/',   label: 'スペードブレードローラー' },
-                { href: '/docs/ag/landClearing/', label: '開拓/Land Clearing' },
-              ].map((q) => (
-                <motion.li
-                  whileHover={{ y: -4, scale: 1.03 }}
-                  key={q.href}
-                  className="border border-[#222] rounded p-4 text-center hover:border-[var(--fg)] transition"
-                >
-                  <Link href={q.href} className="block w-full h-full">
-                    {q.label}
-                  </Link>
-                </motion.li>
-              ))}
-            </ul>
-          </section>
-        
-          {/* 展示会とか ------------------------------------------------------ */}
-          <section className="py-20 border-t border-[#222]">
-            <h2 className="mb-8 text-center">展示会・博物館・学会</h2>
-            <ul className="grid grid-cols-2 sm:grid-cols-3 gap-6">
-              {[
-                { href: '/docs/ag/exhibition/',    label: '展示会' },
-              ].map((q) => (
-                <motion.li
-                  whileHover={{ y: -4, scale: 1.03 }}
-                  key={q.href}
-                  className="border border-[#222] rounded p-4 text-center hover:border-[var(--fg)] transition"
-                >
-                  <Link href={q.href} className="block w-full h-full">
-                    {q.label}
-                  </Link>
-                </motion.li>
-              ))}
-            </ul>
-          </section>
+            {/* 機械各論 */}
+             <Section title="機械各論">
+               {[
+                { href: '/docs/ag/landLevel/',    label: 'レベラー', desc: 'Leveling' },
+                { href: '/docs/ag/landHarrow/',   label: 'スペードブレードローラー', desc: 'Harrowing' },
+                { href: '/docs/ag/landClearing/', label: '開拓/Land Clearing', desc: 'Clearing' },
+              ].map((item) => <Card key={item.href} {...item} />)}
+            </Section>
+            
+            {/* 展示会 */}
+             <Section title="展示会・博物館・学会">
+               {[
+                { href: '/docs/ag/exhibition/',    label: '展示会', desc: 'Exhibitions & Museums' },
+              ].map((item) => <Card key={item.href} {...item} />)}
+            </Section>
 
+          </div>
 
           {/* ブログ記事 ---------------------------------------------------- */}
-          <section className="py-20 border-t border-[#222]">
-            <h2 className="mb-8 text-center">ブログ記事</h2>
-            <div className="mb-12 w-full">
-              <SearchableList entries={blogEntries} />
-            </div>
+          <section className="py-20 mt-10 border-t border-[#333]">
+            <h2 className="text-3xl font-bold text-center mb-10 text-white">ブログ記事 / Notes</h2>
+            <SearchableList entries={blogEntries} />
           </section>
         </main>
       </div>
     </>
   )
+}
+
+function Section({ title, children }: { title: string, children: React.ReactNode }) {
+    return (
+        <section className="border-t border-[#333] pt-10">
+            <h2 className="text-2xl font-bold mb-6 pl-4 border-l-4 border-[var(--accent)] text-white">
+                {title}
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {children}
+            </div>
+        </section>
+    )
+}
+
+function Card({ href, label, desc }: { href: string, label: string, desc?: string }) {
+    return (
+        <Link 
+            href={href} 
+            className="group block p-6 rounded-xl bg-[#1a1a1a] border border-[#333] hover:border-[var(--accent)] transition-all duration-300 hover:shadow-lg hover:shadow-[rgba(66,184,131,0.1)] hover:-translate-y-1"
+        >
+            <h3 className="text-xl font-bold text-gray-200 group-hover:text-[var(--accent)] transition-colors">
+                {label}
+            </h3>
+            {desc && <p className="mt-2 text-sm text-gray-500">{desc}</p>}
+        </Link>
+    )
 }

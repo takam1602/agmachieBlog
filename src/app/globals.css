@@ -2,95 +2,105 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ===== 色変数 ===== */
-:root{
-  --bg:  #000;
-  --fg:  #42b883;
-  --fg-soft:#7bd7a8;
-  --link:#38bdf8;
-  --link-hover:#0ea5e9;
+/* ===== 色変数 (Refined Dark Mode) ===== */
+:root {
+  /* 背景: 完全な黒ではなく、深いグレーで目に優しく */
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  
+  /* 文字色: 白すぎないオフホワイト */
+  --text-primary: #e5e5e5;
+  --text-secondary: #a3a3a3;
+  
+  /* アクセント: 以前の緑を踏襲しつつ、視認性を確保 */
+  --accent: #42b883;
+  --accent-hover: #3aa876;
+  
+  /* リンク色 */
+  --link: #38bdf8;
+  --link-hover: #0ea5e9;
 }
 
-/* ---- 全体 ---- */
-html,body{
-  min-height:100vh;
-  background:var(--bg);
-  color:var(--fg);
-  font-family:'Fira Code','Noto Sans JP',monospace;
+/* ---- 全体設定 ---- */
+html, body {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  /* 可読性の高いサンセリフ体を優先、コードのみ等幅 */
+  font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* コードブロック等に等幅フォントを適用 */
+code, pre, kbd {
+  font-family: 'Fira Code', monospace;
 }
 
 /* ---- 見出し ---- */
-h1,h2,h3{font-weight:700;color:var(--fg)}
-
-/* ---- リンク ---- */
-a{color:var(--link);text-underline-offset:3px}
-a:hover{color:var(--link-hover)}
-
-/* ---- 画像（デフォルト） ---- */
-.prose img{
-  margin:1rem auto;
-  max-width:320px;
-  width: 100%;
-  height: auto;
-  border-radius:.5rem;
-  box-shadow:0 0 15px #0f0;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.025em;
 }
 
-/* 画像が2枚以上ある段落を “ギャラリー” にする */
-/* img 直置き / a 包み / span 包み のどれでも検知 */
+h1 { font-size: 2.25rem; line-height: 2.5rem; }
+h2 { font-size: 1.875rem; line-height: 2.25rem; }
+h3 { font-size: 1.5rem; line-height: 2rem; }
+
+/* ---- リンク ---- */
+a {
+  color: var(--link);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--link-hover);
+}
+
+/* ---- Tailwind Typography (Prose) カスタマイズ ---- */
+.prose {
+  max-width: 65ch;
+  color: var(--text-secondary);
+}
+.prose strong { color: var(--text-primary); }
+.prose h1, .prose h2, .prose h3 { color: var(--text-primary); margin-top: 1.5em; }
+.prose a { color: var(--accent); text-decoration: underline; }
+.prose a:hover { color: var(--accent-hover); }
+
+/* 画像スタイル: 以前の強烈な緑の発光を控えめに、上品な影へ */
+.prose img {
+  margin: 1.5rem auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.15);
+  border: 1px solid #333;
+}
+
+/* ギャラリースタイル (既存機能の維持・微調整) */
 .prose p:has(img + img),
 .prose p:has(a + a),
 .prose p:has(span + span) {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 12px;
-  align-items: start;
-  justify-items: center;
-  margin: 1rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
 }
 
-/* ギャラリー段落の直下子要素は幅100%でブロック化 */
-.prose p:has(img + img) > a,
-.prose p:has(a + a) > a,
-.prose p:has(span + span) > a,
-.prose p:has(img + img) > img,
-.prose p:has(a + a) > img,
-.prose p:has(span + span) > img,
-.prose p:has(img + img) > span,
-.prose p:has(a + a) > span,
-.prose p:has(span + span) > span {
-  display: block;
-  width: 100%;
-}
-
-/* ギャラリー内の画像はセル幅いっぱい */
-/* デフォルトの max-width:320px を上書きするため max-width:100% を明示 */
+/* ギャラリー内の画像 */
 .prose p:has(img + img) img,
 .prose p:has(a + a) img,
 .prose p:has(span + span) img {
   width: 100%;
-  max-width: 100%;
-  height: auto;
-  max-height: 320px;      /* サムネの縦サイズ上限（好みで調整） */
+  height: 200px; /* 高さを統一してグリッドを整える */
   object-fit: cover;
   margin: 0;
-  border-radius: .5rem;
-  box-shadow: 0 0 15px #0f0;
+  border-radius: 0.5rem;
+  box-shadow: none; /* グリッド内は影を控える */
+  border: 1px solid #333;
+  transition: transform 0.2s;
 }
 
-/* 単独画像（ギャラリー化されない段落）だけは従来どおり大きめ */
-.prose p:has(img):not(:has(img + img)):not(:has(a + a)):not(:has(span + span)) img {
-  max-width: 1280px;
-  margin: 1rem auto;
-}
-
-mark[data-hl] {
-  background: rgba(245, 158, 11, 0.18); /* yellow-500/20 */
-  outline: 1px solid #f59e0b;           /* yellow-500 */
-  border-radius: 2px;
-  padding: 0 1px;
-}
-mark[data-hl].ring-2 {
-  outline-width: 2px;
-  outline-color: #22d3ee; /* cyan-400 */
+.prose p:has(img + img) img:hover,
+.prose p:has(a + a) img:hover {
+  transform: scale(1.02);
+  border-color: var(--accent);
 }

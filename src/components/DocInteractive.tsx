@@ -1,7 +1,7 @@
 
 'use client'
 
-import React, { useMemo } from 'react'
+import React, { useMemo, useState } from 'react'
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
@@ -14,7 +14,7 @@ type Props = {
   dirUrl: string
 }
 
-type Heading = { text: string; id: string }
+type Heading = { text: string; id: string; level: number }
 
 /** 簡易 slugify（日本語はそのまま、半角英数は小文字＆ハイフン） */
 function slugify(input: string): string {
@@ -27,16 +27,17 @@ function slugify(input: string): string {
   return encodeURIComponent(ascii || base)
 }
 
-/** Markdown 文字列から `# 見出し` だけ抽出（`##` 以下は無視） */
-function extractH1(content: string): Heading[] {
-  const h1s: Heading[] = []
-  const re = /^#\s+(.+?)\s*$/gm
+/** Markdown 文字列から #, ##, ### 見出しを抽出 */
+function extractHeadings(content: string): Heading[] {
+  const headings: Heading[] = []
+  const re = /^(#{1,3})\s+(.+?)\s*$/gm
   let m: RegExpExecArray | null
   while ((m = re.exec(content)) !== null) {
-    const text = m[1]
-    h1s.push({ text, id: slugify(text) })
+    const level = m[1].length
+    const text = m[2]
+    headings.push({ text, id: slugify(text), level })
   }
-  return h1s
+  return headings
 }
 
 /** React children → テキスト（h1 の id 付与用） */
@@ -58,113 +59,130 @@ function toText(children: React.ReactNode): string {
 }
 
 export default function DocInteractive({ source, dirUrl }: Props) {
-  const headings = useMemo(() => extractH1(source), [source])
+  const headings = useMemo(() => extractHeadings(source), [source])
 
   return (
-    <div className="prose mx-auto px-4 py-8">
-      {/* 上部コントロール（Home / 検索 / TOC） */}
-      <div className="flex flex-col gap-4 mb-6">
-        <div className="flex items-center justify-between gap-3">
-          {/* ← Home */}
+    <div className="mx-auto px-4 py-8 max-w-4xl grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-8">
+      
+      {/* メインコンテンツ */}
+      <div className="min-w-0">
+         {/* 上部ナビゲーション (Mobile用) */}
+         <div className="flex items-center justify-between gap-3 mb-6 lg:hidden">
           <Link
             href="/"
-            className="px-3 py-1 rounded border border-[#333] hover:bg-[#0b0b0b]"
+            className="text-sm px-3 py-1 rounded border border-[#333] hover:bg-[#1f1f1f] transition-colors"
           >
             ← Home
           </Link>
-
-          {/* ページ内検索 */}
           <InPageSearch articleSelector="#md-article" />
         </div>
 
-        {/* TOC（# 見出しのみ） */}
-        {headings.length > 0 && (
-          <nav
-            aria-label="Table of contents"
-            className="flex flex-wrap items-center gap-3 p-3 rounded border border-[#222] bg-[#0a0a0a]"
+        <article id="md-article" className="prose prose-invert max-w-none">
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            components={{
+              /* 画像 → MarkdownImage */
+              img({ src, alt }) {
+                if (typeof src !== 'string') return null
+                return <MarkdownImage src={src} alt={alt} />
+              },
+
+              /* h1-h3 に id を自動付与 */
+              h1: ({ children, ...rest }) => HeadingRenderer({ level: 1, children, ...rest }),
+              h2: ({ children, ...rest }) => HeadingRenderer({ level: 2, children, ...rest }),
+              h3: ({ children, ...rest }) => HeadingRenderer({ level: 3, children, ...rest }),
+
+              /* <a> の描画（元の仕様を完全踏襲） */
+              a(props) {
+                const { href, children, className, title } =
+                  props as React.DetailedHTMLProps<
+                    React.AnchorHTMLAttributes<HTMLAnchorElement>,
+                    HTMLAnchorElement
+                  >
+                const url = typeof href === 'string' ? href : ''
+
+                // 子に画像（<img> or <MarkdownImage>）が含まれるときは素通し
+                const hasImgChild = React.Children.toArray(children).some(
+                  (c) =>
+                    React.isValidElement(c) &&
+                    (c.type === 'img' || c.type === (MarkdownImage as unknown))
+                )
+                if (hasImgChild) return <>{children}</>
+
+                // 外部リンクは新規タブ
+                if (/^https?:\/\//.test(url)) {
+                  return (
+                    <a href={url} target="_blank" rel="noopener noreferrer" className={className} title={title}>
+                      {children}
+                    </a>
+                  )
+                }
+
+                // 相対リンク補正
+                const fixed = url.startsWith('./')
+                  ? dirUrl + url.slice(2)
+                  : url.startsWith('/')
+                  ? url
+                  : dirUrl + url
+
+                return (
+                  <Link href={fixed} className={`text-[var(--link)] hover:text-[var(--link-hover)] underline ${className ?? ''}`} title={title}>
+                    {children}
+                  </Link>
+                )
+              },
+            }}
           >
-            <span className="text-sm opacity-80">TOC:</span>
-            {headings.map((h) => (
-              <a
-                key={h.id}
-                href={`#${h.id}`}
-                className="text-[var(--link)] hover:text-[var(--link-hover)] text-sm underline-offset-2"
-              >
-                {h.text}
-              </a>
-            ))}
-          </nav>
-        )}
+            {source}
+          </ReactMarkdown>
+        </article>
       </div>
 
-      {/* 本文（元の挙動を踏襲：画像→MarkdownImage／リンク補正／画像リンク素通し） */}
-      <article id="md-article">
-        <ReactMarkdown
-          remarkPlugins={[remarkGfm]}
-          components={{
-            /* 画像 → MarkdownImage */
-            img({ src, alt }) {
-              if (typeof src !== 'string') return null
-              return <MarkdownImage src={src} alt={alt} />
-            },
+      {/* サイドバー (Desktop用 TOC & Search) */}
+      <aside className="hidden lg:block sticky top-24 h-fit">
+        <div className="mb-6">
+            <Link
+                href="/"
+                className="inline-block text-sm text-gray-400 hover:text-white mb-4 transition-colors"
+            >
+                ← Back to Home
+            </Link>
+            <InPageSearch articleSelector="#md-article" />
+        </div>
 
-            /* h1 のみ id を自動付与（TOC のリンク先） */
-            h1({ children, ...rest }) {
-              const text = toText(children)
-              const id = slugify(text)
-              return (
-                <h1 id={id} {...rest}>
-                  {children}
-                </h1>
-              )
-            },
-
-            /* <a> の描画（元の仕様を完全踏襲） */
-            a(props) {
-              const { href, children, className, title } =
-                props as React.DetailedHTMLProps<
-                  React.AnchorHTMLAttributes<HTMLAnchorElement>,
-                  HTMLAnchorElement
-                >
-              const url = typeof href === 'string' ? href : ''
-
-              // 子に画像（<img> or <MarkdownImage>）が含まれるときは素通し
-              const hasImgChild = React.Children.toArray(children).some(
-                (c) =>
-                  React.isValidElement(c) &&
-                  (c.type === 'img' || c.type === (MarkdownImage as unknown))
-              )
-              if (hasImgChild) return <>{children}</>
-
-              // 外部リンクは新規タブ
-              if (/^https?:\/\//.test(url)) {
-                return (
-                  <a href={url} target="_blank" rel="noopener noreferrer" className={className} title={title}>
-                    {children}
+        {headings.length > 0 && (
+          <nav className="p-4 rounded-lg bg-[#1a1a1a] border border-[#333]">
+            <h4 className="font-bold text-gray-200 mb-3 text-sm uppercase tracking-wider">Table of Contents</h4>
+            <ul className="space-y-1">
+              {headings.map((h, i) => (
+                <li key={`${h.id}-${i}`} className={`text-sm leading-relaxed ${h.level === 1 ? 'mt-3 font-semibold' : ''}`} style={{ paddingLeft: `${(h.level - 1) * 0.75}rem` }}>
+                  <a
+                    href={`#${h.id}`}
+                    className="block text-gray-400 hover:text-[var(--accent)] transition-colors py-0.5"
+                  >
+                    {h.text}
                   </a>
-                )
-              }
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
+      </aside>
 
-              // 相対リンク補正（./ → 現在ディレクトリ、その他は dirUrl 起点）
-              const fixed = url.startsWith('./')
-                ? dirUrl + url.slice(2)
-                : url.startsWith('/')
-                ? url
-                : dirUrl + url
-
-              return (
-                <Link href={fixed} className={`text-blue-600 underline ${className ?? ''}`} title={title}>
-                  {children}
-                </Link>
-              )
-            },
-          }}
-        >
-          {source}
-        </ReactMarkdown>
-      </article>
     </div>
   )
+}
+
+/* Helper to render headings with IDs */
+function HeadingRenderer({ level, children, ...rest }: any) {
+    const text = toText(children)
+    const id = slugify(text)
+    const Tag = `h${level}` as any
+    return (
+        <Tag id={id} {...rest}>
+            {children}
+        </Tag>
+    )
 }
 
 /* ページ内検索（型安全版） */
@@ -205,8 +223,6 @@ function InPageSearch({ articleSelector }: { articleSelector: string }) {
       const text = n as Text
       if (!text.data || !text.data.trim()) continue
       let start = 0
-      // 同一テキストノード内の複数ヒットを順にマーキング
-      // surroundContents によりノードが分割されるため、nextSibling をたどって進む
       // eslint-disable-next-line no-constant-condition
       while (true) {
         const raw = text.data
@@ -224,7 +240,6 @@ function InPageSearch({ articleSelector }: { articleSelector: string }) {
 
         const after = mark.nextSibling
         if (after && after.nodeType === Node.TEXT_NODE) {
-          // TreeWalker の現在位置を次のテキストノードへ
           walker.currentNode = after as Node
           start = 0
         } else {
@@ -270,29 +285,29 @@ function InPageSearch({ articleSelector }: { articleSelector: string }) {
   }, [idx])
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-2 bg-[#1a1a1a] p-1 rounded border border-[#333]">
       <input
         type="text"
         value={q}
         onChange={(e) => setQ(e.target.value)}
-        placeholder="ページ内検索…"
-        className="rounded border border-[#333] bg-[#0c0c0c] px-3 py-1 text-sm"
+        placeholder="Search..."
+        className="w-24 bg-transparent text-sm text-white placeholder-gray-500 outline-none px-1"
       />
       <button
         type="button"
         onClick={() => go(-1)}
-        className="px-2 py-1 rounded border border-[#333] hover:bg-[#0b0b0b] text-sm"
+        className="text-gray-400 hover:text-white px-1"
       >
-        Prev
+        ▲
       </button>
       <button
         type="button"
         onClick={() => go(1)}
-        className="px-2 py-1 rounded border border-[#333] hover:bg-[#0b0b0b] text-sm"
+        className="text-gray-400 hover:text-white px-1"
       >
-        Next
+        ▼
       </button>
-      <span className="opacity-70 text-xs">{info}</span>
+      <span className="text-xs text-gray-500 min-w-[30px] text-center">{info}</span>
     </div>
   )
 }
