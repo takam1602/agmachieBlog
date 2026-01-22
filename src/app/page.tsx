@@ -75,11 +75,11 @@ export default function Home() {
       )}
 
       <div className="flex justify-center">
-        <main className="w-full max-w-5xl px-4 pb-20">
+        <main className="w-full max-w-6xl px-4 pb-12">
 
           {/* HERO ---------------------------------------------------------- */}
-          <section className="py-24 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight mb-8 min-h-[120px] md:min-h-[80px]">
+          <section className="pt-10 pb-6 text-center">
+            <h1 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-4 min-h-[60px] md:min-h-[70px]">
               <TypeAnimation
                 sequence={[
                   'AgMachine Repository', 1500,
@@ -93,13 +93,13 @@ export default function Home() {
                 className="text-[var(--accent)]"
               />
             </h1>
-            <p className="mt-4 text-gray-400 leading-relaxed max-w-2xl mx-auto text-lg">
-              農業機械のリポジトリです．私が気になった機械・技術をまとめています．<br className="hidden md:inline"/>かなり偏った内容ですが、ご了承ください．
+            <p className="text-gray-400 leading-relaxed max-w-2xl mx-auto text-sm md:text-base">
+              農業機械のリポジトリです．気になった機械・技術をまとめています．
             </p>
           </section>
 
           {/* Carousel ------------------------------------------------------ */}
-          <section className="py-10">
+          <section className="py-4">
             <ImageCarousel
               images={heroImages}
               interval={3000}
@@ -110,7 +110,7 @@ export default function Home() {
           </section>
 
           {/* Repository Section (Grid Layout) ------------------------------ */}
-          <div id="repository" className="space-y-20 pt-10">
+          <div id="repository" className="space-y-10 pt-8">
             
             {/* 日本の特色 */}
             <Section title="日本の特色ある機械たち">
@@ -131,7 +131,7 @@ export default function Home() {
             </Section>
 
             {/* メーカー */}
-            <Section title="農業機械のメーカー (Niche)">
+            <Section title="農業機械のメーカー">
                {[
                 { href: '/docs/ag/deere/',   label: 'John Deere', desc: 'The Deer' },
                 { href: '/docs/ag/cat/',     label: 'Caterpillar', desc: 'Yellow Iron' },
@@ -160,8 +160,8 @@ export default function Home() {
           </div>
 
           {/* ブログ記事 ---------------------------------------------------- */}
-          <section className="py-20 mt-10 border-t border-[#333]">
-            <h2 className="text-3xl font-bold text-center mb-10 text-white">ブログ記事 / Notes</h2>
+          <section className="py-12 mt-8 border-t border-[#333]">
+            <h2 className="text-2xl font-bold text-center mb-6 text-white">ブログ記事 / Notes</h2>
             <SearchableList entries={blogEntries} />
           </section>
         </main>
@@ -172,11 +172,11 @@ export default function Home() {
 
 function Section({ title, children }: { title: string, children: React.ReactNode }) {
     return (
-        <section className="border-t border-[#333] pt-10">
-            <h2 className="text-2xl font-bold mb-6 pl-4 border-l-4 border-[var(--accent)] text-white">
+        <section className="border-t border-[#333] pt-6">
+            <h2 className="text-xl font-bold mb-4 pl-3 border-l-4 border-[var(--accent)] text-white">
                 {title}
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
                 {children}
             </div>
         </section>
@@ -187,12 +187,12 @@ function Card({ href, label, desc }: { href: string, label: string, desc?: strin
     return (
         <Link 
             href={href} 
-            className="group block p-6 rounded-xl bg-[#1a1a1a] border border-[#333] hover:border-[var(--accent)] transition-all duration-300 hover:shadow-lg hover:shadow-[rgba(66,184,131,0.1)] hover:-translate-y-1"
+            className="group block p-4 rounded-lg bg-[#1a1a1a] border border-[#333] hover:border-[var(--accent)] transition-all duration-200 hover:bg-[#222]"
         >
-            <h3 className="text-xl font-bold text-gray-200 group-hover:text-[var(--accent)] transition-colors">
+            <h3 className="text-base font-bold text-gray-200 group-hover:text-[var(--accent)] transition-colors line-clamp-1">
                 {label}
             </h3>
-            {desc && <p className="mt-2 text-sm text-gray-500">{desc}</p>}
+            {desc && <p className="mt-1 text-xs text-gray-500 line-clamp-1">{desc}</p>}
         </Link>
     )
 }
