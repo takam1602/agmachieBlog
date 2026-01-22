@@ -5,6 +5,7 @@ import React, { useMemo } from 'react'
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import { Search, ChevronUp, ChevronDown } from 'lucide-react'
 import MarkdownImage from '@/components/MarkdownImage'
 
 type Props = {
@@ -310,29 +311,34 @@ function InPageSearch({ articleSelector }: { articleSelector: string }) {
   }, [idx])
 
   return (
-    <div className="flex items-center gap-2 bg-[#1a1a1a] p-1 rounded border border-[#333]">
+    <div className="flex items-center gap-1 bg-[#1a1a1a] p-1.5 rounded-lg border border-[#333] shadow-inner">
+      <Search size={14} className="text-gray-500 ml-1 shrink-0" />
       <input
         type="text"
         value={q}
         onChange={(e) => setQ(e.target.value)}
-        placeholder="Search..."
-        className="w-24 bg-transparent text-sm text-white placeholder-gray-500 outline-none px-1"
+        placeholder="Find..."
+        className="w-20 md:w-24 bg-transparent text-sm text-white placeholder-gray-500 outline-none px-1"
       />
-      <button
-        type="button"
-        onClick={() => go(-1)}
-        className="text-gray-400 hover:text-white px-1"
-      >
-        ▲
-      </button>
-      <button
-        type="button"
-        onClick={() => go(1)}
-        className="text-gray-400 hover:text-white px-1"
-      >
-        ▼
-      </button>
-      <span className="text-xs text-gray-500 min-w-[30px] text-center">{info}</span>
+      <div className="flex items-center border-l border-[#333] ml-1 pl-1 gap-0.5">
+        <button
+          type="button"
+          onClick={() => go(-1)}
+          className="text-gray-400 hover:text-white p-0.5"
+          title="Previous"
+        >
+          <ChevronUp size={14} />
+        </button>
+        <button
+          type="button"
+          onClick={() => go(1)}
+          className="text-gray-400 hover:text-white p-0.5"
+          title="Next"
+        >
+          <ChevronDown size={14} />
+        </button>
+      </div>
+      <span className="text-[10px] text-gray-500 min-w-[30px] text-center font-mono">{info}</span>
     </div>
   )
 }
