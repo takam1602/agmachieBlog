@@ -1,7 +1,7 @@
 
 'use client'
 
-import React, { useMemo, useState } from 'react'
+import React, { useMemo } from 'react'
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
@@ -88,9 +88,9 @@ export default function DocInteractive({ source, dirUrl }: Props) {
               },
 
               /* h1-h3 に id を自動付与 */
-              h1: ({ children, ...rest }) => HeadingRenderer({ level: 1, children, ...rest }),
-              h2: ({ children, ...rest }) => HeadingRenderer({ level: 2, children, ...rest }),
-              h3: ({ children, ...rest }) => HeadingRenderer({ level: 3, children, ...rest }),
+              h1: ({ children, ...rest }) => <HeadingRenderer level={1} {...rest}>{children}</HeadingRenderer>,
+              h2: ({ children, ...rest }) => <HeadingRenderer level={2} {...rest}>{children}</HeadingRenderer>,
+              h3: ({ children, ...rest }) => <HeadingRenderer level={3} {...rest}>{children}</HeadingRenderer>,
 
               /* <a> の描画（元の仕様を完全踏襲） */
               a(props) {
@@ -174,10 +174,15 @@ export default function DocInteractive({ source, dirUrl }: Props) {
 }
 
 /* Helper to render headings with IDs */
-function HeadingRenderer({ level, children, ...rest }: any) {
+type HeadingProps = React.DetailedHTMLProps<
+  React.HTMLAttributes<HTMLHeadingElement>,
+  HTMLHeadingElement
+> & { level: 1 | 2 | 3 | 4 | 5 | 6 }
+
+function HeadingRenderer({ level, children, ...rest }: HeadingProps) {
     const text = toText(children)
     const id = slugify(text)
-    const Tag = `h${level}` as any
+    const Tag = `h${level}` as const
     return (
         <Tag id={id} {...rest}>
             {children}
@@ -223,7 +228,6 @@ function InPageSearch({ articleSelector }: { articleSelector: string }) {
       const text = n as Text
       if (!text.data || !text.data.trim()) continue
       let start = 0
-      // eslint-disable-next-line no-constant-condition
       while (true) {
         const raw = text.data
         const i = raw.toLowerCase().indexOf(qLower, start)
