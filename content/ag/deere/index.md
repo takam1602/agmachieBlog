@@ -1,20 +1,20 @@
 # John Deere
 Nothing Runs Like a Deere
 
-[日本のジョンディアについてはこちら](jpDeere.md)
+- [日本のジョンディア](jpDeere.md)
+- [ジョンディアのおもちゃ](./deereModel.md)
 
-地域によって生産・販売している品目が異なる．
-トラクタは大筋同一であるが，コンバインは小型サイズのものが様々であったり，耕起やドリル関連はほとんど機械の種類が異なる．
+# 世界各国のDeere
+販売品目が異なる.
 
-主要なところ->
-
-- [US John deere](https://www.deere.com/en/)
-- [UK John deere](https://www.deere.co.uk/en/)
-- [BR John deere](https://www.deere.com.br/pt/)
-- [Africa John deere](https://www.deere.africa/en/index.html)
-- [CN John deere](https://www.deere.com.cn/zh/index.html)
+- [US](https://www.deere.com/en/)
+- [UK](https://www.deere.co.uk/en/)
+- [BR](https://www.deere.com.br/pt/)
+- [Africa](https://www.deere.africa/en/index.html)
+- [CN](https://www.deere.com.cn/zh/index.html)
 
 ## Tractor
+
 ### Power beyond は何．
 
 [Pressure free return and power beyond](https://salesmanual.deere.com/sales/salesmanual/en_GB/tractors/2017/feature/hydraulics/6m/power_beyond_r2_t4.html)
@@ -73,12 +73,14 @@ deere のドリルのほとんどはコモディティカート引っ張って�
 
 ### Box Drills
 [Online](https://www.deere.com/assets/publications/index.html?id=f1e99c2a#11)
+
 or
-![PDF](./brochure/boxDrill_1508.pdf)
+
+[PDF](./brochure/boxDrill_1508.pdf)
 
 - 1590はどうか．
 
-いかんせん構造上折りたたみは厳しいため，作業幅を拡げるには1590の20'になるかもしれない．そうすると道路移動が厳しくなる．
+構造上折りたたみは厳しいため，作業幅を拡げるには1590の20'になるかもしれない．そうすると道路移動が厳しくなる．
 公式のカタログに書かれているけれども，1590でちょうどよくて，もう少し幅の広い，効率的な作業機械をお求めの場合は1990CCS drill のようなものがよいと勧められている．
 
 1590のrow-spacing は7.5" か10" のどちらか．
