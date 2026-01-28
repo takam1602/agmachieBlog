@@ -7,8 +7,8 @@ export default function FeaturedTopics({ post }: { post: BlogPost | null }) {
   return (
     <div className="h-full flex flex-col">
        <h2 className="text-xl font-bold text-white pl-3 border-l-4 border-[var(--accent)] flex items-center gap-3 mb-4">
-         <span>Featured Topic</span>
-         <span className="text-xs font-normal text-gray-400">Discover something new</span>
+         <span></span>
+         <span className="text-xs font-normal text-gray-400"></span>
        </h2>
        
        <Link href={post.href} className="flex-grow group block h-full">
@@ -19,7 +19,7 @@ export default function FeaturedTopics({ post }: { post: BlogPost | null }) {
             
             <div className="mb-2">
                 <span className="inline-block px-2 py-1 bg-[var(--accent)]/10 text-[var(--accent)] text-xs font-bold rounded uppercase tracking-wider">
-                    Recommended
+                    Random Pick
                 </span>
             </div>
 
