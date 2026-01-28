@@ -3,7 +3,8 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { Search } from 'lucide-react'
 
-type Entry = { href: string; label: string }
+// Updated to accept more data if available, but keeping it compatible
+type Entry = { href: string; label: string; date?: string; excerpt?: string }
 
 export default function SearchableList({ entries }: { entries: Entry[] }) {
   const [query, setQuery] = useState('')
@@ -13,41 +14,51 @@ export default function SearchableList({ entries }: { entries: Entry[] }) {
   )
 
   return (
-    <div className="max-w-4xl mx-auto">
-      <div className="relative mb-8 group">
+    <div className="w-full">
+      {/* Search Input */}
+      <div className="relative mb-8 group max-w-xl mx-auto">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
           <Search size={18} className="text-gray-500 group-focus-within:text-[var(--accent)] transition-colors" />
         </div>
         <input
           type="text"
-          placeholder="記事を検索..."
+          placeholder="Search articles..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="w-full p-3 pl-10 text-base rounded-xl bg-[#1a1a1a] text-white border border-[#333] focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent)]/20 outline-none transition-all shadow-lg"
+          className="w-full p-3 pl-10 text-base rounded-full bg-[#1a1a1a] text-white border border-[#333] focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)] outline-none transition-all"
         />
       </div>
 
-      <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {/* Grid Layout (Compact Tiles) */}
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {filtered.map((e) => (
-          <li key={e.href}>
-            <Link
-              href={e.href}
-              className="block h-full p-5 rounded-lg border border-[#333] bg-[#1a1a1a] hover:bg-[#222] hover:border-[var(--accent)] hover:translate-y-[-2px] transition-all duration-200 group shadow-md"
-            >
-              <h3 className="text-lg font-medium text-gray-200 group-hover:text-[var(--accent)] transition-colors">
+          <Link
+            key={e.href}
+            href={e.href}
+            className="group flex flex-col bg-[#1a1a1a] border border-[#333] rounded-lg overflow-hidden hover:border-[var(--accent)] transition-all duration-200 hover:-translate-y-1 hover:shadow-md hover:shadow-[var(--accent)]/5 h-full"
+          >
+            {/* Card Content - Title Focused */}
+            <div className="p-4 flex flex-col h-full justify-between min-h-[100px]">
+              <h3 className="text-sm md:text-base font-bold text-gray-200 group-hover:text-[var(--accent)] transition-colors line-clamp-3 mb-2 leading-snug">
                 {e.label}
               </h3>
-              <p className="mt-2 text-sm text-gray-500">
-                Read article →
-              </p>
-            </Link>
-          </li>
+              
+              {/* Optional: Minimal Date */}
+              {e.date && (
+                 <div className="pt-2 border-t border-[#2a2a2a] mt-auto">
+                    <span className="text-[10px] text-gray-600 font-mono group-hover:text-gray-500 transition-colors">
+                        {e.date}
+                    </span>
+                 </div>
+              )}
+            </div>
+          </Link>
         ))}
-      </ul>
+      </div>
       
       {filtered.length === 0 && (
-        <div className="text-center py-10 text-gray-500">
-          記事が見つかりませんでした。
+        <div className="text-center py-16 text-gray-500 bg-[#1a1a1a]/50 rounded-lg border border-dashed border-[#333]">
+          <p>No articles found matching your search.</p>
         </div>
       )}
     </div>
