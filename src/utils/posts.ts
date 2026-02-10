@@ -1,4 +1,5 @@
 import fs from 'fs/promises';
+import { Stats } from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { exec } from 'child_process';
@@ -36,7 +37,7 @@ function createExcerpt(content: string, length: number = 100): string {
 /**
  * ファイル名から日付を推測する
  */
-function getDateFromFilename(filename: string, stats: any): string {
+function getDateFromFilename(filename: string, stats: Stats): string {
   const match = filename.match(/^(\d{2})(\d{2})(\d{2})(_\d+)?\.md$/);
   if (match) {
     const year = parseInt(match[1], 10);
@@ -95,7 +96,7 @@ export async function getGitRecentUpdates(limit: number = 5): Promise<BlogPost[]
 
         // Title extraction
         const titleMatch = content.match(/^#\s+(.*)$/m);
-        let title = titleMatch ? titleMatch[1] : path.basename(relPath, '.md');
+        const title = titleMatch ? titleMatch[1] : path.basename(relPath, '.md');
         
         // パスからカテゴリ的なものを付与してもいいかも
         // 例: content/ag/usa/xxx.md -> [AG] xxx
@@ -118,7 +119,7 @@ export async function getGitRecentUpdates(limit: number = 5): Promise<BlogPost[]
           href,
         });
 
-      } catch (err) {
+      } catch {
         // ファイルが削除されている場合などは無視
         continue;
       }
