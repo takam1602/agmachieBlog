@@ -7,10 +7,6 @@ export default async function Page() {
 
   const recentUpdates = await getGitRecentUpdates(5);
 
-  const featuredPost = posts.length > 0 
-    ? posts[Math.floor(Math.random() * posts.length)] 
-    : null;
-
   // Prepare data for the client-side searchable list
   const blogEntries = posts.map(post => ({
     href: post.href,
@@ -22,7 +18,7 @@ export default async function Page() {
   return (
     <HomeClient blogEntries={blogEntries} latestPosts={recentUpdates}>
       <div className="w-full">
-         <FeaturedTopics post={featuredPost} />
+         <FeaturedTopics posts={posts} />
       </div>
     </HomeClient>
   );
