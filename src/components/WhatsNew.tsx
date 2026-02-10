@@ -11,7 +11,7 @@ export default function WhatsNew({ posts }: { posts: BlogPost[] }) {
         
         <div className="flex items-center gap-2 flex-shrink-0">
             <span className="bg-[var(--accent)] text-[#121212] font-bold px-2 py-0.5 rounded text-xs uppercase tracking-wider">
-                What's new !!
+                What&apos;s new !!
             </span>
         </div>
 
