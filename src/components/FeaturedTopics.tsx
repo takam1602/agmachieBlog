@@ -1,7 +1,19 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { BlogPost } from '@/utils/posts';
 
-export default function FeaturedTopics({ post }: { post: BlogPost | null }) {
+export default function FeaturedTopics({ posts }: { posts: BlogPost[] }) {
+  const [post, setPost] = useState<BlogPost | null>(null);
+
+  useEffect(() => {
+    if (posts.length > 0) {
+      const randomPost = posts[Math.floor(Math.random() * posts.length)];
+      setPost(randomPost);
+    }
+  }, [posts]);
+
   if (!post) return null;
 
   return (
