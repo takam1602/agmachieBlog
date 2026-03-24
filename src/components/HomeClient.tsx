@@ -100,7 +100,7 @@ export default function HomeClient({ blogEntries, latestPosts, children }: HomeC
             {/* 日本の特色 */}
             <Section title="日本の特色ある機械たち">
                {[
-                { href: '/docs/ag/kaihatsu/', label: '北海道開発の機械', desc: '独自の進化を遂げた機械たち' },
+                { href: '/docs/ag/kaihatsu/', label: '北海道開発の機械', desc: '北海道開拓とか' },
                 { href: '/docs/ag/hachiro/', label: '八郎潟の機械', desc: '大規模干拓地の機械' },
               ].map((item) => <Card key={item.href} {...item} />)}
             </Section>
@@ -112,17 +112,18 @@ export default function HomeClient({ blogEntries, latestPosts, children }: HomeC
                 { href: '/docs/ag/Australia/', label: 'AUS', desc: 'Australia' },
                 { href: '/docs/ag/Thailand/',  label: 'THAI', desc: 'Thailand' },
                 { href: '/docs/ag/Brazil/',    label: 'BR', desc: 'Brazil' },
+                { href: '/docs/ag/France/',    label: 'FR', desc: 'France' },
               ].map((item) => <Card key={item.href} {...item} />)}
             </Section>
 
             {/* メーカー */}
             <Section title="農業機械のメーカー">
                {[
-                { href: '/docs/ag/deere/',   label: 'John Deere', desc: 'The Deer' },
-                { href: '/docs/ag/cat/',     label: 'Caterpillar', desc: 'Yellow Iron' },
-                { href: '/docs/ag/claas/',   label: 'Claas', desc: 'Seed Green' },
-                { href: '/docs/ag/morooka/', label: 'モロオカ', desc: 'Rubber Crawler' },
-                { href: '/docs/ag/tcm/',     label: '東洋運搬機', desc: 'Wheel Loader' },
+                { href: '/docs/ag/deere/',   label: 'John Deere', desc: 'Nothing runs like a Deere' },
+                { href: '/docs/ag/cat/',     label: 'Caterpillar', desc: '猫' },
+                { href: '/docs/ag/claas/',   label: 'Claas', desc: 'Knotter' },
+                { href: '/docs/ag/morooka/', label: 'モロオカ', desc: '農建トラクター' },
+                { href: '/docs/ag/tcm/',     label: '東洋運搬機', desc: '独創' },
               ].map((item) => <Card key={item.href} {...item} />)}
             </Section>
 

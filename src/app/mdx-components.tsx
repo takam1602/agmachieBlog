@@ -8,7 +8,6 @@ export function useMDXComponents(
   components: MDXComponents,
 ): MDXComponents {
   return {
-    /* ------- ここが修正ポイント ------- */
     img: (props: ComponentPropsWithoutRef<'img'>) => (
       <MarkdownImage src={(props.src ?? '') as string} alt={props.alt} />
     ),
