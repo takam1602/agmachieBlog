@@ -4,7 +4,7 @@ import Header from '@/components/Header'
 
 export const metadata = {
   title: 'Agricultural Machinery Repository',
-  description: '気になった農業機械や技術をまとめるブログ',
+  description: '農業機械の情報をまとめるリポジトリ',
 }
 
 export default function RootLayout({
