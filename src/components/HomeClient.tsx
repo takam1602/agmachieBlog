@@ -113,6 +113,7 @@ export default function HomeClient({ blogEntries, latestPosts, children }: HomeC
                 { href: '/docs/ag/Thailand/',  label: 'THAI', desc: 'Thailand' },
                 { href: '/docs/ag/Brazil/',    label: 'BR', desc: 'Brazil' },
                 { href: '/docs/ag/France/',    label: 'FR', desc: 'France' },
+                { href: '/docs/ag/Hungary/',    label: 'HU', desc: 'Hungary' },
               ].map((item) => <Card key={item.href} {...item} />)}
             </Section>
 
