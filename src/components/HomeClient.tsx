@@ -111,6 +111,7 @@ export default function HomeClient({ blogEntries, latestPosts, children }: HomeC
                 { href: '/docs/ag/usa/',       label: 'US', desc: 'United States' },
                 { href: '/docs/ag/Australia/', label: 'AUS', desc: 'Australia' },
                 { href: '/docs/ag/Thailand/',  label: 'THAI', desc: 'Thailand' },
+                { href: '/docs/ag/uk/',       label: 'UK', desc: 'United Kingdom' },
                 { href: '/docs/ag/Brazil/',    label: 'BR', desc: 'Brazil' },
                 { href: '/docs/ag/France/',    label: 'FR', desc: 'France' },
                 { href: '/docs/ag/Hungary/',    label: 'HU', desc: 'Hungary' },
