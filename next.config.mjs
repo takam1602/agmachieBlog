@@ -13,13 +13,21 @@ const withMdx = nextMdx({
 const nextConfig = {
   pageExtensions: ['tsx', 'ts', 'mdx', 'md'],
   images: {
-    // 開発中のトラブルを避けるため、一時的に最適化を無効化するのも一つの手です
-    // unoptimized: true, 
-
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '**', // すべてのHTTPS画像を許可（開発用として強力）
+        hostname: 'raw.githubusercontent.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'githubusercontent.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '/**',
       },
     ],
   },

@@ -6,27 +6,55 @@ import { cookies } from 'next/headers'
 import matter from 'gray-matter'
 import DocInteractive from '@/components/DocInteractive'
 import LoginForm from '@/components/LoginForm'
+import { getStaticDocParams } from '@/utils/posts'
+import { verifyAuthToken } from '@/utils/auth'
 
-/* content/ 以下の .md / index.md を探す（元のロジックを踏襲）*/
-function getDocPath(slug: string[]) {
-  const leaf = slug.at(-1)!
-  const tryPath = (...parts: string[]) =>
-    path.join(process.cwd(), 'content', ...parts)
+const CONTENT_ROOT = path.join(process.cwd(), 'content')
 
-  // 1) /index.md
-  const idxPath = tryPath(...slug, leaf.endsWith('.md') ? '' : 'index.md')
-  if (fs.existsSync(idxPath)) return idxPath
-
-  // 2) /foo.md
-  if (!leaf.endsWith('.md') && !leaf.endsWith('.mdx')) {
-    const filePath = tryPath(...slug.slice(0, -1), `${leaf}.md`)
-    if (fs.existsSync(filePath)) return filePath
-  }
-
-  return idxPath // 存在しない ⇒ notFound() で 404
+function insideContent(filePath: string) {
+  const resolved = path.resolve(filePath)
+  return resolved === CONTENT_ROOT || resolved.startsWith(`${CONTENT_ROOT}${path.sep}`)
 }
 
-export const dynamic = 'force-dynamic'
+/* content/ 以下の .md / .mdx / index.md を安全に探す */
+function getDocPath(slug: string[]) {
+  const cleanSlug = slug
+    .map((part) => decodeURIComponent(part))
+    .filter((part) => part && part !== '.' && part !== '..' && !part.includes(path.sep))
+
+  if (cleanSlug.length !== slug.length) notFound()
+
+  const leaf = cleanSlug.at(-1)
+  if (!leaf) notFound()
+
+  const candidates = [
+    path.join(CONTENT_ROOT, ...cleanSlug, 'index.md'),
+    path.join(CONTENT_ROOT, ...cleanSlug, 'index.mdx'),
+  ]
+
+  if (!leaf.endsWith('.md') && !leaf.endsWith('.mdx')) {
+    candidates.push(
+      path.join(CONTENT_ROOT, ...cleanSlug.slice(0, -1), `${leaf}.md`),
+      path.join(CONTENT_ROOT, ...cleanSlug.slice(0, -1), `${leaf}.mdx`),
+    )
+  } else {
+    candidates.push(path.join(CONTENT_ROOT, ...cleanSlug))
+  }
+
+  const found = candidates.map((candidate) => path.resolve(candidate)).find((candidate) => (
+    insideContent(candidate) && fs.existsSync(candidate)
+  ))
+
+  if (!found) notFound()
+  return found
+}
+
+export const dynamic = 'auto'
+export const dynamicParams = true
+
+export async function generateStaticParams() {
+  return getStaticDocParams()
+}
 
 export default async function DocPage({
   params,
@@ -38,7 +66,7 @@ export default async function DocPage({
   /* ベース URL 例: /docs/ag/kaihatsu/ （相対リンク補正用・元の仕様を踏襲）*/
   const dirUrl =
     '/docs/' +
-    (slug.at(-1)!.endsWith('.md') ? slug.slice(0, -1) : slug).join('/') +
+    (slug.at(-1)!.endsWith('.md') || slug.at(-1)!.endsWith('.mdx') ? slug.slice(0, -1) : slug).join('/') +
     '/'
 
   const mdPath = getDocPath(slug)
@@ -53,7 +81,7 @@ export default async function DocPage({
     const token = cookieStore.get('auth_token')
 
     // 認証されていない場合はログインフォームを表示
-    if (!token || token.value !== 'secret_token') {
+    if (!verifyAuthToken(token?.value)) {
       return <LoginForm />
     }
   }
