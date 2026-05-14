@@ -17,6 +17,7 @@ export default async function Page() {
     date: post.date,
     excerpt: post.excerpt,
     category: post.category,
+    searchText: post.searchText,
   }));
 
   return (
