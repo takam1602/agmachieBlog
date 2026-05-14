@@ -1,24 +1,146 @@
 'use client'
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import Link from 'next/link'
 import { Search } from 'lucide-react'
 
 // Updated to accept more data if available, but keeping it compatible
-type Entry = { href: string; label: string; date?: string; excerpt?: string; category?: string }
+type Entry = {
+  href: string
+  label: string
+  date?: string
+  excerpt?: string
+  category?: string
+  searchText?: string
+}
+
+type SearchResult = Entry & { score: number }
+
+const stopWords = new Set([
+  'the', 'and', 'for', 'with', 'from', 'this', 'that', 'have', 'has', 'was', 'were',
+  'です', 'ます', 'これ', 'それ', 'ため', 'こと', 'もの', 'よう',
+])
+
+function normalizeText(text: string) {
+  return text
+    .normalize('NFKC')
+    .toLowerCase()
+    .replace(/https?:\/\/\S+/g, ' ')
+    .replace(/[!"#$%&'()*+,./:;<=>?@[\\\]^_`{|}~、。・「」『』（）【】［］]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function addToken(tokens: Map<string, number>, token: string, weight = 1) {
+  if (token.length < 2 || stopWords.has(token)) return
+  tokens.set(token, (tokens.get(token) ?? 0) + weight)
+}
+
+function tokenize(text: string, baseWeight = 1) {
+  const normalized = normalizeText(text)
+  const tokens = new Map<string, number>()
+
+  for (const word of normalized.match(/[a-z0-9][a-z0-9-]{1,}/g) ?? []) {
+    addToken(tokens, word, baseWeight)
+  }
+
+  for (const word of normalized.match(/[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}ー]{2,}/gu) ?? []) {
+    addToken(tokens, word, baseWeight * 1.3)
+    for (let i = 0; i < word.length - 1; i += 1) {
+      addToken(tokens, word.slice(i, i + 2), baseWeight)
+    }
+    for (let i = 0; i < word.length - 2; i += 1) {
+      addToken(tokens, word.slice(i, i + 3), baseWeight * 0.8)
+    }
+  }
+
+  return tokens
+}
+
+function mergeTokens(target: Map<string, number>, source: Map<string, number>) {
+  source.forEach((value, key) => {
+    target.set(key, (target.get(key) ?? 0) + value)
+  })
+}
+
+function vectorNorm(vector: Map<string, number>) {
+  let sum = 0
+  vector.forEach((value) => {
+    sum += value * value
+  })
+  return Math.sqrt(sum) || 1
+}
+
+function buildSearchIndex(entries: Entry[]) {
+  const docs = entries.map((entry) => {
+    const tokens = new Map<string, number>()
+    mergeTokens(tokens, tokenize(entry.label, 4))
+    mergeTokens(tokens, tokenize(entry.category ?? '', 2.5))
+    mergeTokens(tokens, tokenize(entry.excerpt ?? '', 2))
+    mergeTokens(tokens, tokenize(entry.searchText ?? '', 1))
+    return { entry, tokens }
+  })
+
+  const docFreq = new Map<string, number>()
+  docs.forEach(({ tokens }) => {
+    tokens.forEach((_, token) => {
+      docFreq.set(token, (docFreq.get(token) ?? 0) + 1)
+    })
+  })
+
+  const totalDocs = Math.max(1, docs.length)
+  const indexedDocs = docs.map(({ entry, tokens }) => {
+    const vector = new Map<string, number>()
+    tokens.forEach((tf, token) => {
+      const idf = Math.log(1 + totalDocs / (1 + (docFreq.get(token) ?? 0)))
+      vector.set(token, (1 + Math.log(tf)) * idf)
+    })
+    return { entry, vector, norm: vectorNorm(vector), normalizedText: normalizeText(`${entry.label} ${entry.excerpt ?? ''} ${entry.category ?? ''}`) }
+  })
+
+  return { indexedDocs, docFreq, totalDocs }
+}
+
+function vectorizeQuery(query: string, docFreq: Map<string, number>, totalDocs: number) {
+  const queryTokens = tokenize(query, 1)
+  const vector = new Map<string, number>()
+  queryTokens.forEach((tf, token) => {
+    const idf = Math.log(1 + totalDocs / (1 + (docFreq.get(token) ?? 0)))
+    vector.set(token, (1 + Math.log(tf)) * idf)
+  })
+  return { vector, norm: vectorNorm(vector), normalizedQuery: normalizeText(query) }
+}
+
+function searchSimilar(entries: Entry[], query: string, index: ReturnType<typeof buildSearchIndex>): SearchResult[] {
+  const trimmed = query.trim()
+  if (!trimmed) return []
+
+  const { vector, norm, normalizedQuery } = vectorizeQuery(trimmed, index.docFreq, index.totalDocs)
+  if (vector.size === 0) return []
+
+  return index.indexedDocs
+    .map(({ entry, vector: docVector, norm: docNorm, normalizedText }) => {
+      let dot = 0
+      vector.forEach((queryValue, token) => {
+        dot += queryValue * (docVector.get(token) ?? 0)
+      })
+
+      const exactBonus = normalizedText.includes(normalizedQuery) ? 0.18 : 0
+      return { ...entry, score: dot / (norm * docNorm) + exactBonus }
+    })
+    .filter((entry) => entry.score > 0.015)
+    .sort((a, b) => b.score - a.score || ((a.date ?? '') < (b.date ?? '') ? 1 : -1))
+    .slice(0, 24)
+}
 
 export default function SearchableList({ entries }: { entries: Entry[] }) {
   const [query, setQuery] = useState('')
 
   const normalizedQuery = query.trim().toLowerCase()
-  const filtered = normalizedQuery
-    ? entries.filter((e) =>
-        [e.label, e.excerpt, e.date, e.category]
-          .filter(Boolean)
-          .join(' ')
-          .toLowerCase()
-          .includes(normalizedQuery),
-      )
-    : []
+  const searchIndex = useMemo(() => buildSearchIndex(entries), [entries])
+  const filtered = useMemo(
+    () => searchSimilar(entries, query, searchIndex),
+    [entries, query, searchIndex],
+  )
 
   return (
     <div className="w-full">
@@ -75,6 +197,9 @@ export default function SearchableList({ entries }: { entries: Entry[] }) {
                   {e.label}
                 </h3>
                 {e.excerpt && <p className="mt-auto line-clamp-3 text-xs leading-relaxed text-gray-500">{e.excerpt}</p>}
+                <span className="mt-3 text-[10px] font-mono text-gray-600">
+                  similarity {(Math.min(0.99, e.score) * 100).toFixed(0)}%
+                </span>
               </div>
             </Link>
           ))}

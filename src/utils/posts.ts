@@ -8,6 +8,7 @@ export interface BlogPost {
   title: string
   date: string
   excerpt: string
+  searchText?: string
   href: string
   category?: string
   protected?: boolean
@@ -51,8 +52,8 @@ const categoryLabels: Record<string, { label: string; group: string; desc?: stri
 /**
  * Markdownの本文からプレーンテキストの抜粋を生成する
  */
-export function createExcerpt(content: string, length: number = 120): string {
-  const plain = content
+export function createPlainText(content: string): string {
+  return content
     .replace(/^#+\s+(.*)$/gm, '$1')
     .replace(/!\[[^\]]*]\([^)]+\)/g, '')
     .replace(/\[([^\]]+)]\([^)]+\)/g, '$1')
@@ -61,9 +62,17 @@ export function createExcerpt(content: string, length: number = 120): string {
     .replace(/(\r\n|\n|\r)/gm, ' ')
     .replace(/\s+/g, ' ')
     .trim()
+}
+
+export function createExcerpt(content: string, length: number = 120): string {
+  const plain = createPlainText(content)
 
   if (plain.length <= length) return plain
   return `${plain.substring(0, length)}...`
+}
+
+function createSearchText(content: string, length: number = 5000): string {
+  return createPlainText(content).slice(0, length)
 }
 
 /**
@@ -157,6 +166,7 @@ async function readPost(filePath: string): Promise<BlogPost | null> {
       title: getTitle(content, basename, data.title),
       date: getDateFromFilename(path.basename(filePath), stats, data.date ?? data.updated),
       excerpt: createExcerpt(content),
+      searchText: createSearchText(content),
       href: hrefFromContentPath(filePath),
       category: slugParts[0],
       protected: Boolean(data.protected),
