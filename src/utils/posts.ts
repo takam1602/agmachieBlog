@@ -1,137 +1,85 @@
-import fs from 'fs/promises';
-import { Stats } from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import { exec } from 'child_process';
-import { promisify } from 'util';
-
-const execAsync = promisify(exec);
+import fs from 'fs/promises'
+import { Stats } from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
 
 export interface BlogPost {
-  slug: string;
-  title: string;
-  date: string; // YYYY-MM-DD
-  excerpt: string;
-  href: string;
+  slug: string
+  title: string
+  date: string
+  excerpt: string
+  href: string
+  category?: string
+  protected?: boolean
 }
 
-const CONTENT_DIR = path.join(process.cwd(), 'content');
-const BLOG_DIR = path.join(CONTENT_DIR, 'blog');
+export interface RepositorySection {
+  title: string
+  items: {
+    href: string
+    label: string
+    desc?: string
+    count?: number
+  }[]
+}
+
+const CONTENT_DIR = path.join(process.cwd(), 'content')
+const BLOG_DIR = path.join(CONTENT_DIR, 'blog')
+
+const categoryLabels: Record<string, { label: string; group: string; desc?: string }> = {
+  kaihatsu: { label: '北海道開発の機械', group: '日本の特色ある機械たち', desc: '北海道開拓とか' },
+  hachiro: { label: '八郎潟の機械', group: '日本の特色ある機械たち', desc: '大規模干拓地の機械' },
+  usa: { label: 'US', group: '各国の特色ある機械たち', desc: 'United States' },
+  Australia: { label: 'AUS', group: '各国の特色ある機械たち', desc: 'Australia' },
+  Thailand: { label: 'THAI', group: '各国の特色ある機械たち', desc: 'Thailand' },
+  uk: { label: 'UK', group: '各国の特色ある機械たち', desc: 'United Kingdom' },
+  Brazil: { label: 'BR', group: '各国の特色ある機械たち', desc: 'Brazil' },
+  France: { label: 'FR', group: '各国の特色ある機械たち', desc: 'France' },
+  Hungary: { label: 'HU', group: '各国の特色ある機械たち', desc: 'Hungary' },
+  deere: { label: 'John Deere', group: '農業機械のメーカー', desc: 'Nothing runs like a Deere' },
+  cat: { label: 'Caterpillar', group: '農業機械のメーカー', desc: 'Crawler tractors and more' },
+  claas: { label: 'Claas', group: '農業機械のメーカー', desc: 'Harvesting machines' },
+  morooka: { label: 'モロオカ', group: '農業機械のメーカー', desc: '農建トラクター' },
+  tcm: { label: '東洋運搬機', group: '農業機械のメーカー', desc: '独創' },
+  landLevel: { label: 'レベラー', group: '機械各論', desc: 'Leveling' },
+  landHarrow: { label: 'スペードブレードローラー', group: '機械各論', desc: 'Harrowing' },
+  landClearing: { label: '開拓 / Land Clearing', group: '機械各論', desc: 'Clearing' },
+  exhibition: { label: '展示会', group: '展示会・博物館・学会', desc: 'Exhibitions & Museums' },
+  jsam: { label: '農業食料工学会', group: '展示会・博物館・学会', desc: 'Academic notes' },
+}
 
 /**
  * Markdownの本文からプレーンテキストの抜粋を生成する
  */
-function createExcerpt(content: string, length: number = 100): string {
+export function createExcerpt(content: string, length: number = 120): string {
   const plain = content
-    .replace(/^#+\s+(.*)$/gm, '')
-    .replace(/!\s*\[.*?\]\(.*\)/g, '')
-    .replace(/.*\]\(.*\)/g, '$1')
+    .replace(/^#+\s+(.*)$/gm, '$1')
+    .replace(/!\[[^\]]*]\([^)]+\)/g, '')
+    .replace(/\[([^\]]+)]\([^)]+\)/g, '$1')
+    .replace(/`{1,3}[^`]*`{1,3}/g, '')
+    .replace(/<[^>]+>/g, '')
     .replace(/(\r\n|\n|\r)/gm, ' ')
     .replace(/\s+/g, ' ')
-    .trim();
+    .trim()
 
-  if (plain.length <= length) return plain;
-  return plain.substring(0, length) + '...';
+  if (plain.length <= length) return plain
+  return `${plain.substring(0, length)}...`
 }
 
 /**
  * ファイル名から日付を推測する
  */
-function getDateFromFilename(filename: string, stats: Stats): string {
-  const match = filename.match(/^(\d{2})(\d{2})(\d{2})(_\d+)?\.md$/);
+function getDateFromFilename(filename: string, stats: Stats, frontmatterDate?: unknown): string {
+  if (frontmatterDate instanceof Date) return frontmatterDate.toISOString().split('T')[0]
+  if (typeof frontmatterDate === 'string' && /^\d{4}-\d{2}-\d{2}/.test(frontmatterDate)) {
+    return frontmatterDate.slice(0, 10)
+  }
+
+  const match = filename.match(/^(\d{2})(\d{2})(\d{2})(?:_\d+)?\.mdx?$/)
   if (match) {
-    const year = parseInt(match[1], 10);
-    const month = match[2];
-    const day = match[3];
-    return `20${year}-${month}-${day}`;
+    return `20${match[1]}-${match[2]}-${match[3]}`
   }
-  return stats.mtime.toISOString().split('T')[0];
-}
-
-/**
- * Git履歴から最新の変更ファイルを取得する
- */
-export async function getGitRecentUpdates(limit: number = 5): Promise<BlogPost[]> {
-  try {
-    // content/ 以下の変更履歴を取得
-    // フォーマット: 日付\nファイルパス... (空行区切り)
-    // --name-only: ファイル名のみ表示
-    // --pretty=format:"%ad": 日付のみ表示
-    const { stdout } = await execAsync(
-      'git log --name-only --pretty=format:"GIT_LOG_DATE:%ad" --date=short -n 100 content/'
-    );
-
-    const lines = stdout.split('\n');
-    const updates = new Map<string, string>(); // filePath -> date (keep only latest) 
-    
-    let currentDate = '';
-
-    for (const line of lines) {
-      if (line.startsWith('GIT_LOG_DATE:')) {
-        currentDate = line.replace('GIT_LOG_DATE:', '').trim();
-        continue;
-      }
-      
-      const filePath = line.trim();
-      if (!filePath || !filePath.endsWith('.md')) continue;
-
-      // 既に登録済み（より新しい日付）があればスキップ
-      if (!updates.has(filePath)) {
-        updates.set(filePath, currentDate);
-      }
-      
-      if (updates.size >= limit * 2) break; // 少し多めに取って後でフィルタ
-    }
-
-    const results: BlogPost[] = [];
-    
-    for (const [relPath, date] of updates.entries()) {
-      if (results.length >= limit) break;
-
-      const fullPath = path.join(process.cwd(), relPath);
-      
-      try {
-        const fileContent = await fs.readFile(fullPath, 'utf8');
-        const { content } = matter(fileContent);
-
-        // Title extraction
-        const titleMatch = content.match(/^#\s+(.*)$/m);
-        const title = titleMatch ? titleMatch[1] : path.basename(relPath, '.md');
-        
-        // パスからカテゴリ的なものを付与してもいいかも
-        // 例: content/ag/usa/xxx.md -> [AG] xxx
-        
-        // Generate HREF
-        // content/blog/xxx.md -> /docs/blog/xxx/
-        // content/ag/usa/xxx.md -> /docs/ag/usa/xxx/
-        // remove 'content/' prefix and '.md' suffix
-        const urlPath = relPath.replace(/^content\//, '').replace(/\.md$/, '');
-        const href = `/docs/${urlPath}/`;
-        
-        // Excerpt
-        const excerpt = createExcerpt(content, 120);
-
-        results.push({
-          slug: urlPath.replace(/\//g, '-'), // dummy slug
-          title,
-          date,
-          excerpt,
-          href,
-        });
-
-      } catch {
-        // ファイルが削除されている場合などは無視
-        continue;
-      }
-    }
-
-    return results;
-
-  } catch (error) {
-    console.warn('Failed to get git log, falling back to fs stats:', error);
-    // Fallback: Just return blog posts sorted by filename date as before
-    return getAllPosts();
-  }
+  return stats.mtime.toISOString().split('T')[0]
 }
 
 /**
@@ -139,34 +87,151 @@ export async function getGitRecentUpdates(limit: number = 5): Promise<BlogPost[]
  */
 export async function getAllPosts(): Promise<BlogPost[]> {
   try {
-    const files = await fs.readdir(BLOG_DIR);
-    const posts: BlogPost[] = [];
+    const files = await fs.readdir(BLOG_DIR)
+    const posts = await Promise.all(
+      files
+        .filter((file) => /\.mdx?$/.test(file))
+        .map((file) => readPost(path.join(BLOG_DIR, file))),
+    )
 
-    for (const file of files) {
-      if (!file.endsWith('.md')) continue;
-
-      const filePath = path.join(BLOG_DIR, file);
-      const stats = await fs.stat(filePath);
-      const fileContent = await fs.readFile(filePath, 'utf8');
-      const { content } = matter(fileContent);
-
-      const titleMatch = content.match(/^#\s+(.*)$/m);
-      const title = titleMatch ? titleMatch[1] : file.replace('.md', '');
-      const date = getDateFromFilename(file, stats);
-      const excerpt = createExcerpt(content, 120);
-
-      posts.push({
-        slug: file.replace('.md', ''),
-        title,
-        date,
-        excerpt,
-        href: `/docs/blog/${file.replace('.md', '')}/`,
-      });
-    }
-
-    return posts.sort((a, b) => (a.date < b.date ? 1 : -1));
+    return posts
+      .filter((post): post is BlogPost => Boolean(post))
+      .filter((post) => !post.protected)
+      .sort((a, b) => (a.date < b.date ? 1 : -1))
   } catch (e) {
-    console.error('Error getting posts:', e);
-    return [];
+    console.error('Error getting posts:', e)
+    return []
   }
+}
+
+function getTitle(content: string, fallback: string, frontmatterTitle?: unknown) {
+  if (typeof frontmatterTitle === 'string' && frontmatterTitle.trim()) {
+    return frontmatterTitle.trim()
+  }
+
+  const titleMatch = content.match(/^#\s+(.*)$/m)
+  return titleMatch ? titleMatch[1].trim() : fallback
+}
+
+async function walkMarkdown(dir: string): Promise<string[]> {
+  const entries = await fs.readdir(dir, { withFileTypes: true })
+  const files = await Promise.all(
+    entries.map(async (entry) => {
+      const fullPath = path.join(dir, entry.name)
+      if (entry.isDirectory()) return walkMarkdown(fullPath)
+      if (entry.isFile() && /\.mdx?$/.test(entry.name)) return [fullPath]
+      return []
+    }),
+  )
+
+  return files.flat()
+}
+
+function hrefFromContentPath(filePath: string) {
+  const rel = path.relative(CONTENT_DIR, filePath).replaceAll(path.sep, '/')
+  const withoutExtension = rel.replace(/\.mdx?$/, '')
+  const docPath = withoutExtension === 'index' ? '' : withoutExtension.replace(/\/index$/, '')
+  return docPath ? `/docs/${docPath}/` : '/docs/'
+}
+
+export function slugFromContentPath(filePath: string) {
+  return path
+    .relative(CONTENT_DIR, filePath)
+    .replaceAll(path.sep, '/')
+    .replace(/\.mdx?$/, '')
+    .replace(/\/index$/, '')
+    .split('/')
+    .filter(Boolean)
+}
+
+async function readPost(filePath: string): Promise<BlogPost | null> {
+  try {
+    const stats = await fs.stat(filePath)
+    const fileContent = await fs.readFile(filePath, 'utf8')
+    const { content, data } = matter(fileContent)
+    const slugParts = slugFromContentPath(filePath)
+    const basename = path.basename(filePath).replace(/\.mdx?$/, '')
+
+    return {
+      slug: slugParts.join('-') || 'index',
+      title: getTitle(content, basename, data.title),
+      date: getDateFromFilename(path.basename(filePath), stats, data.date ?? data.updated),
+      excerpt: createExcerpt(content),
+      href: hrefFromContentPath(filePath),
+      category: slugParts[0],
+      protected: Boolean(data.protected),
+    }
+  } catch {
+    return null
+  }
+}
+
+export async function getAllContentPosts() {
+  const files = await walkMarkdown(CONTENT_DIR)
+  const posts = await Promise.all(files.map(readPost))
+  return posts
+    .filter((post): post is BlogPost => Boolean(post))
+    .filter((post) => post.href !== '/docs/')
+    .filter((post) => !post.protected)
+    .sort((a, b) => (a.date < b.date ? 1 : -1))
+}
+
+export async function getGitRecentUpdates(limit: number = 5): Promise<BlogPost[]> {
+  const posts = await getAllContentPosts()
+  return posts.slice(0, limit)
+}
+
+export async function getStaticDocParams() {
+  const files = await walkMarkdown(CONTENT_DIR)
+  const posts = await Promise.all(files.map(readPost))
+  return posts
+    .filter((post): post is BlogPost => Boolean(post))
+    .filter((post) => post.href !== '/docs/')
+    .filter((post) => !post.protected)
+    .map((post) => post.href.replace(/^\/docs\/|\/$/g, '').split('/').filter(Boolean))
+    .filter((slug) => slug.length > 0)
+    .map((slug) => ({ slug }))
+}
+
+export async function getRepositorySections(): Promise<RepositorySection[]> {
+  const agDir = path.join(CONTENT_DIR, 'ag')
+  const entries = await fs.readdir(agDir, { withFileTypes: true }).catch(() => [])
+  const groups = new Map<string, RepositorySection['items']>()
+
+  for (const entry of entries) {
+    if (!entry.isDirectory()) continue
+
+    const key = entry.name
+    const meta = categoryLabels[key] ?? {
+      label: key,
+      group: 'その他',
+      desc: 'Repository',
+    }
+    const files = await walkMarkdown(path.join(agDir, key)).catch(() => [])
+    const items = groups.get(meta.group) ?? []
+
+    items.push({
+      href: `/docs/ag/${key}/`,
+      label: meta.label,
+      desc: meta.desc,
+      count: files.length,
+    })
+    groups.set(meta.group, items)
+  }
+
+  const order = [
+    '日本の特色ある機械たち',
+    '各国の特色ある機械たち',
+    '農業機械のメーカー',
+    '機械各論',
+    '展示会・博物館・学会',
+    'その他',
+  ]
+
+  return order
+    .map((title) => ({
+      title,
+      items: (groups.get(title) ?? []).sort((a, b) => a.label.localeCompare(b.label, 'ja')),
+    }))
+    .filter((section) => section.items.length > 0)
 }

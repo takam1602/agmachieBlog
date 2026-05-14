@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { TypeAnimation } from 'react-type-animation'
 import Link from 'next/link'
 
@@ -8,7 +8,7 @@ import ImageCarousel from '@/components/ImageCarousel'
 import ImageLightbox from '@/components/ImageLightbox'
 import SearchableList from '@/components/SearchableList'
 import WhatsNew from '@/components/WhatsNew'
-import { BlogPost } from '@/utils/posts'
+import { BlogPost, RepositorySection } from '@/utils/posts'
 
 /* ---------- トップページ用画像 ---------- */
 const heroImages = [
@@ -27,14 +27,71 @@ const heroImages = [
 ]
 
 interface HomeClientProps {
-  blogEntries: { href: string; label: string; date: string; excerpt: string }[];
-  latestPosts: BlogPost[];
-  children?: React.ReactNode;
+  searchEntries: { href: string; label: string; date: string; excerpt: string; category?: string }[]
+  blogPosts: BlogPost[]
+  latestPosts: BlogPost[]
+  repositorySections: RepositorySection[]
+  children?: React.ReactNode
 }
 
-export default function HomeClient({ blogEntries, latestPosts, children }: HomeClientProps) {
+export default function HomeClient({
+  searchEntries,
+  blogPosts,
+  latestPosts,
+  repositorySections,
+  children,
+}: HomeClientProps) {
   const [lightboxImg, setLightboxImg] =
     useState<{ src: string; alt: string } | null>(null)
+
+  useEffect(() => {
+    const restoreSavedPosition = (clearFlag = false) => {
+      const restoreTarget = sessionStorage.getItem('agmachie:restoreSection')
+      const hashTarget = window.location.hash === '#blog'
+        ? 'blog'
+        : window.location.hash === '#topic-picks'
+          ? 'topic'
+          : ''
+      const targetKey = restoreTarget || hashTarget
+      const shouldRestore = Boolean(targetKey)
+      if (!shouldRestore) return
+
+      const selector = targetKey === 'blog' ? '#blog' : '#topic-picks'
+      const positionKey = targetKey === 'blog' ? 'agmachie:blogScrollY' : 'agmachie:topicScrollY'
+      const target = document.querySelector<HTMLElement>(selector)
+      const savedY = Number(sessionStorage.getItem(positionKey))
+
+      if (Number.isFinite(savedY) && savedY > 0) {
+        window.scrollTo({ top: savedY, behavior: 'auto' })
+      } else if (target) {
+        target.scrollIntoView({ block: 'start' })
+      } else {
+        return
+      }
+
+      if (clearFlag) {
+        sessionStorage.removeItem('agmachie:restoreTopic')
+        sessionStorage.removeItem('agmachie:restoreBlog')
+        sessionStorage.removeItem('agmachie:restoreSection')
+        sessionStorage.removeItem('agmachie:topicScrollY')
+        sessionStorage.removeItem('agmachie:blogScrollY')
+      }
+    }
+
+    const scheduleRestore = () => {
+      window.requestAnimationFrame(() => restoreSavedPosition())
+      window.setTimeout(() => restoreSavedPosition(), 80)
+      window.setTimeout(() => restoreSavedPosition(), 300)
+      window.setTimeout(() => restoreSavedPosition(true), 800)
+    }
+
+    scheduleRestore()
+    window.addEventListener('pageshow', scheduleRestore)
+
+    return () => {
+      window.removeEventListener('pageshow', scheduleRestore)
+    }
+  }, [])
 
   return (
     <>
@@ -48,10 +105,10 @@ export default function HomeClient({ blogEntries, latestPosts, children }: HomeC
       )}
 
       <div className="flex justify-center">
-        <main className="w-full max-w-6xl px-4 pb-12">
+        <main className="w-full max-w-7xl px-4 sm:px-6 pb-12">
 
           {/* HERO ---------------------------------------------------------- */}
-          <section className="pt-10 pb-6 text-center">
+          <section className="pt-10 pb-8 text-center">
             <h1 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-4 min-h-[60px] md:min-h-[70px]">
               <TypeAnimation
                 sequence={[
@@ -66,7 +123,7 @@ export default function HomeClient({ blogEntries, latestPosts, children }: HomeC
                 className="text-[var(--accent)]"
               />
             </h1>
-            <p className="text-gray-400 leading-relaxed max-w-2xl mx-auto text-sm md:text-base mb-8">
+            <p className="text-gray-300 leading-relaxed max-w-3xl mx-auto text-sm md:text-base mb-8">
               農業機械のリポジトリです．気になった機械・技術をまとめています．
             </p>
           </section>
@@ -89,69 +146,31 @@ export default function HomeClient({ blogEntries, latestPosts, children }: HomeC
 
           {/* Featured Topic (Below Carousel) ------------------------------- */}
           {children && (
-            <div className="py-8 w-full">
+            <div id="topic-picks" className="py-8 w-full scroll-mt-24">
               {children}
             </div>
           )}
 
+          {/* Search -------------------------------------------------------- */}
+          <section id="search" className="py-8 border-t border-[#333] scroll-mt-24">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl font-bold text-white">記事検索 / Repository Search</h2>
+              <p className="mt-2 text-sm text-gray-400">キーワードを入れると、該当する記事だけを下に表示します。</p>
+            </div>
+            <SearchableList entries={searchEntries} />
+          </section>
+
           {/* Repository Section (Grid Layout) ------------------------------ */}
-          <div id="repository" className="space-y-10 pt-8">
-            
-            {/* 日本の特色 */}
-            <Section title="日本の特色ある機械たち">
-               {[
-                { href: '/docs/ag/kaihatsu/', label: '北海道開発の機械', desc: '北海道開拓とか' },
-                { href: '/docs/ag/hachiro/', label: '八郎潟の機械', desc: '大規模干拓地の機械' },
-              ].map((item) => <Card key={item.href} {...item} />)}
-            </Section>
-
-            {/* 各国の特色 */}
-            <Section title="各国の特色ある機械たち">
-              {[
-                { href: '/docs/ag/usa/',       label: 'US', desc: 'United States' },
-                { href: '/docs/ag/Australia/', label: 'AUS', desc: 'Australia' },
-                { href: '/docs/ag/Thailand/',  label: 'THAI', desc: 'Thailand' },
-                { href: '/docs/ag/uk/',       label: 'UK', desc: 'United Kingdom' },
-                { href: '/docs/ag/Brazil/',    label: 'BR', desc: 'Brazil' },
-                { href: '/docs/ag/France/',    label: 'FR', desc: 'France' },
-                { href: '/docs/ag/Hungary/',    label: 'HU', desc: 'Hungary' },
-              ].map((item) => <Card key={item.href} {...item} />)}
-            </Section>
-
-            {/* メーカー */}
-            <Section title="農業機械のメーカー">
-               {[
-                { href: '/docs/ag/deere/',   label: 'John Deere', desc: 'Nothing runs like a Deere' },
-                { href: '/docs/ag/cat/',     label: 'Caterpillar', desc: '猫' },
-                { href: '/docs/ag/claas/',   label: 'Claas', desc: 'Knotter' },
-                { href: '/docs/ag/morooka/', label: 'モロオカ', desc: '農建トラクター' },
-                { href: '/docs/ag/tcm/',     label: '東洋運搬機', desc: '独創' },
-              ].map((item) => <Card key={item.href} {...item} />)}
-            </Section>
-
-            {/* 機械各論 */}
-             <Section title="機械各論">
-               {[
-                { href: '/docs/ag/landLevel/',    label: 'レベラー', desc: 'Leveling' },
-                { href: '/docs/ag/landHarrow/',   label: 'スペードブレードローラー', desc: 'Harrowing' },
-                { href: '/docs/ag/landClearing/', label: '開拓/Land Clearing', desc: 'Clearing' },
-              ].map((item) => <Card key={item.href} {...item} />)}
-            </Section>
-            
-            {/* 展示会 */}
-             <Section title="展示会・博物館・学会">
-               {[
-                { href: '/docs/ag/exhibition/',    label: '展示会', desc: 'Exhibitions & Museums' },
-              ].map((item) => <Card key={item.href} {...item} />)}
-            </Section>
-
+          <div id="repository" className="space-y-9 pt-8 scroll-mt-24">
+            {repositorySections.map((section) => (
+              <Section key={section.title} title={section.title}>
+                {section.items.map((item) => <Card key={item.href} {...item} />)}
+              </Section>
+            ))}
           </div>
 
-          {/* ブログ記事 (Tiles) -------------------------------------------- */}
-          <section className="py-12 mt-8 border-t border-[#333]">
-            <h2 className="text-2xl font-bold text-center mb-8 text-white">ブログ記事 / Notes</h2>
-            <SearchableList entries={blogEntries} />
-          </section>
+          {/* Blog ---------------------------------------------------------- */}
+          <BlogSection posts={blogPosts} />
         </main>
       </div>
     </>
@@ -164,23 +183,77 @@ function Section({ title, children }: { title: string, children: React.ReactNode
             <h2 className="text-xl font-bold mb-4 pl-3 border-l-4 border-[var(--accent)] text-white">
                 {title}
             </h2>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+            <div className="home-tile-grid">
                 {children}
             </div>
         </section>
     )
 }
 
-function Card({ href, label, desc }: { href: string, label: string, desc?: string }) {
+function Card({ href, label, desc, count }: { href: string, label: string, desc?: string, count?: number }) {
     return (
         <Link 
             href={href} 
-            className="group block p-4 rounded-lg bg-[#1a1a1a] border border-[#333] hover:border-[var(--accent)] transition-all duration-200 hover:bg-[#222]"
+            className="group block p-4 rounded-lg bg-[#1a1a1a] border border-[#333] hover:border-[var(--accent)] transition-all duration-200 hover:bg-[#222] min-h-[104px]"
         >
-            <h3 className="text-base font-bold text-gray-200 group-hover:text-[var(--accent)] transition-colors line-clamp-1">
-                {label}
-            </h3>
-            {desc && <p className="mt-1 text-xs text-gray-500 line-clamp-1">{desc}</p>}
+            <div className="flex items-start justify-between gap-3">
+              <h3 className="text-base font-bold text-gray-100 group-hover:text-[var(--accent)] transition-colors line-clamp-2">
+                  {label}
+              </h3>
+              {typeof count === 'number' && (
+                <span className="shrink-0 rounded-full border border-[#3a3a3a] px-2 py-0.5 text-[10px] font-mono text-gray-400">
+                  {count}
+                </span>
+              )}
+            </div>
+            {desc && <p className="mt-2 text-xs text-gray-500 line-clamp-2">{desc}</p>}
         </Link>
     )
+}
+
+function BlogSection({ posts }: { posts: BlogPost[] }) {
+  if (!posts.length) return null
+
+  const rememberBlogPosition = () => {
+    const blog = document.querySelector<HTMLElement>('#blog')
+    if (blog) {
+      const top = blog.getBoundingClientRect().top + window.scrollY - 80
+      sessionStorage.setItem('agmachie:blogScrollY', String(Math.max(0, top)))
+    }
+    sessionStorage.setItem('agmachie:restoreBlog', '1')
+    sessionStorage.setItem('agmachie:restoreSection', 'blog')
+  }
+
+  return (
+    <section id="blog" className="py-12 mt-8 border-t border-[#333] scroll-mt-24">
+      <h2 className="text-xl font-bold mb-4 pl-3 border-l-4 border-[var(--accent)] text-white">
+        ブログ
+      </h2>
+      <div className="home-tile-grid">
+        {posts.map((post) => (
+          <Link
+            key={post.href}
+            href={post.href}
+            onClick={rememberBlogPosition}
+            className="group block rounded-lg border border-[#333] bg-[#1a1a1a] p-4 transition-colors hover:border-[var(--accent)] hover:bg-[#202020]"
+          >
+            <div className="mb-2 flex items-center justify-between gap-3">
+              <span className="text-xs font-mono text-gray-500">{post.date}</span>
+              {post.category && (
+                <span className="shrink-0 rounded-full border border-[#3a3a3a] px-2 py-0.5 text-[10px] text-gray-500">
+                  {post.category}
+                </span>
+              )}
+            </div>
+            <h3 className="line-clamp-2 text-base font-bold leading-snug text-gray-100 transition-colors group-hover:text-[var(--accent)]">
+              {post.title}
+            </h3>
+            <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-gray-500">
+              {post.excerpt}
+            </p>
+          </Link>
+        ))}
+      </div>
+    </section>
+  )
 }

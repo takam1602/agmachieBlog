@@ -28,15 +28,26 @@ function slugify(input: string): string {
   return encodeURIComponent(ascii || base)
 }
 
+function createSlugger() {
+  const counts = new Map<string, number>()
+  return (text: string) => {
+    const base = slugify(text)
+    const count = counts.get(base) ?? 0
+    counts.set(base, count + 1)
+    return count === 0 ? base : `${base}-${count + 1}`
+  }
+}
+
 /** Markdown 文字列から #, ##, ### 見出しを抽出 */
 function extractHeadings(content: string): Heading[] {
   const headings: Heading[] = []
+  const getId = createSlugger()
   const re = /^(#{1,3})\s+(.+?)\s*$/gm
   let m: RegExpExecArray | null
   while ((m = re.exec(content)) !== null) {
     const level = m[1].length
     const text = m[2]
-    headings.push({ text, id: slugify(text), level })
+    headings.push({ text, id: getId(text), level })
   }
   return headings
 }
@@ -61,17 +72,19 @@ function toText(children: React.ReactNode): string {
 
 export default function DocInteractive({ source, dirUrl }: Props) {
   const headings = useMemo(() => extractHeadings(source), [source])
+  const headingSlugger = createSlugger()
+  const homeHref = useTopicReturnHomeHref()
 
   return (
-    <div className="w-full px-4 py-8 grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8">
+    <div className="w-full px-4 sm:px-6 xl:px-8 py-8 grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_300px] gap-8">
       
       {/* メインコンテンツ */}
       <div className="min-w-0 w-full">
          {/* 上部ナビゲーション (Mobile用) */}
-         <div className="flex flex-col gap-6 mb-8 lg:hidden">
+         <div className="flex flex-col gap-6 mb-8 xl:hidden">
             <div className="flex items-center justify-between gap-3">
               <Link
-                href="/"
+                href={homeHref}
                 className="text-sm px-3 py-1 rounded border border-[#333] hover:bg-[#1f1f1f] transition-colors"
               >
                 ← Home
@@ -81,7 +94,7 @@ export default function DocInteractive({ source, dirUrl }: Props) {
 
             {/* Mobile TOC (Always Visible) */}
             {headings.length > 0 && (
-              <nav className="p-4 border border-[#333] rounded bg-[#1a1a1a]">
+              <nav className="p-4 border border-[#333] rounded-lg bg-[#1a1a1a]">
                 <h4 className="font-bold text-gray-200 mb-3 text-sm uppercase tracking-wider border-b border-[#333] pb-2">Table of Contents</h4>
                  <ul className="space-y-1 max-h-60 overflow-y-auto">
                   {headings.map((h, i) => (
@@ -99,7 +112,7 @@ export default function DocInteractive({ source, dirUrl }: Props) {
             )}
         </div>
 
-        <article id="md-article" className="prose prose-invert max-w-none w-full">
+        <article id="md-article" className="md-article prose prose-invert w-full">
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
             components={{
@@ -110,9 +123,9 @@ export default function DocInteractive({ source, dirUrl }: Props) {
               },
 
               /* h1-h3 に id を自動付与 */
-              h1: ({ children, ...rest }) => <HeadingRenderer level={1} {...rest}>{children}</HeadingRenderer>,
-              h2: ({ children, ...rest }) => <HeadingRenderer level={2} {...rest}>{children}</HeadingRenderer>,
-              h3: ({ children, ...rest }) => <HeadingRenderer level={3} {...rest}>{children}</HeadingRenderer>,
+              h1: ({ children, ...rest }) => <HeadingRenderer level={1} getId={headingSlugger} {...rest}>{children}</HeadingRenderer>,
+              h2: ({ children, ...rest }) => <HeadingRenderer level={2} getId={headingSlugger} {...rest}>{children}</HeadingRenderer>,
+              h3: ({ children, ...rest }) => <HeadingRenderer level={3} getId={headingSlugger} {...rest}>{children}</HeadingRenderer>,
 
               /* <a> の描画（元の仕様を完全踏襲） */
               a(props) {
@@ -161,10 +174,10 @@ export default function DocInteractive({ source, dirUrl }: Props) {
       </div>
 
       {/* サイドバー (Desktop用 TOC & Search) */}
-      <aside className="hidden lg:block sticky top-24 h-fit max-h-[calc(100vh-6rem)] overflow-y-auto pr-2 w-full">
+      <aside className="hidden xl:block sticky top-24 h-fit max-h-[calc(100vh-6rem)] overflow-y-auto pr-2 w-full">
         <div className="mb-6">
             <Link
-                href="/"
+                href={homeHref}
                 className="inline-block text-sm text-gray-400 hover:text-white mb-4 transition-colors"
             >
                 ← Back to Home
@@ -195,18 +208,38 @@ export default function DocInteractive({ source, dirUrl }: Props) {
   )
 }
 
+function useTopicReturnHomeHref() {
+  const [href, setHref] = React.useState('/')
+
+  React.useEffect(() => {
+    const restoreSection = sessionStorage.getItem('agmachie:restoreSection')
+    if (restoreSection === 'blog' || sessionStorage.getItem('agmachie:restoreBlog')) {
+      setHref('/#blog')
+    } else if (restoreSection === 'topic' || sessionStorage.getItem('agmachie:restoreTopic')) {
+      setHref('/#topic-picks')
+    }
+  }, [])
+
+  return href
+}
+
 /* Helper to render headings with IDs */
 type HeadingProps = React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLHeadingElement>,
   HTMLHeadingElement
 > & { level: 1 | 2 | 3 | 4 | 5 | 6 }
 
-function HeadingRenderer({ level, children, ...rest }: HeadingProps) {
+function HeadingRenderer({
+  level,
+  children,
+  getId,
+  ...rest
+}: HeadingProps & { getId: (text: string) => string }) {
     const text = toText(children)
-    const id = slugify(text)
+    const id = getId(text)
     const Tag = `h${level}` as const
     return (
-        <Tag id={id} {...rest}>
+        <Tag id={id} className="scroll-mt-24" {...rest}>
             {children}
         </Tag>
     )

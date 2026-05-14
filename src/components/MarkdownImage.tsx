@@ -19,7 +19,7 @@ export default function MarkdownImage({ src, alt = '' }: { src: string; alt?: st
         )}
 
       <span
-        className="block relative w-full max-w-[800px] mx-auto my-6 cursor-pointer bg-[#222] border border-[#333] hover:border-[var(--accent)] transition-colors group rounded-lg overflow-hidden"
+        className="block relative w-full max-w-[1040px] mx-auto my-8 cursor-pointer bg-[#222] border border-[#333] hover:border-[var(--accent)] transition-colors group rounded-lg overflow-hidden"
         onClick={(e) => {
           e.preventDefault()
           e.stopPropagation()
@@ -32,7 +32,7 @@ export default function MarkdownImage({ src, alt = '' }: { src: string; alt?: st
             alt={alt}
             width={0}
             height={0}
-            sizes="(max-width: 800px) 100vw, 800px"
+            sizes="(max-width: 1040px) 100vw, 1040px"
             className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-300"
             onError={() => setIsError(true)}
             unoptimized={true}

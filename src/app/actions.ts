@@ -1,26 +1,32 @@
 'use server'
 
 import { cookies } from 'next/headers'
+import {
+  authCookieOptions,
+  createAuthToken,
+  getAuthConfigError,
+  validateCredentials,
+} from '@/utils/auth'
 
 export async function loginAction(formData: FormData) {
   const username = formData.get('username') as string
   const password = formData.get('password') as string
 
-  // 環境変数からクレデンシャルを取得（設定なければデフォルト値）
-  const VALID_USER = process.env.AUTH_USER || 'admin'
-  const VALID_PASS = process.env.AUTH_PASS || 'password'
+  const configError = getAuthConfigError()
+  if (configError) {
+    return { success: false, error: configError }
+  }
 
-  if (username === VALID_USER && password === VALID_PASS) {
-    // 認証成功：Cookieをセット
+  if (validateCredentials(username, password)) {
     const cookieStore = await cookies()
-    cookieStore.set('auth_token', 'secret_token', {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      maxAge: 60 * 60 * 24 * 7, // 1週間
-      path: '/',
-    })
+    cookieStore.set('auth_token', createAuthToken(), authCookieOptions)
     return { success: true }
   }
 
   return { success: false, error: 'Invalid username or password' }
+}
+
+export async function logoutAction() {
+  const cookieStore = await cookies()
+  cookieStore.delete('auth_token')
 }

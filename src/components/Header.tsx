@@ -2,23 +2,46 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const navItems = [
   { label: 'Home', href: '/' },
-  { label: 'Blog', href: '/docs/blog' }, // 暫定的にトップのブログセクションへ誘導する意図、あるいは専用ページがあればそちら
-  { label: 'Repository', href: '/#repository' }, // IDリンクなどで対応予定
+  { label: 'Repository', href: '/#repository' },
+  { label: 'Search', href: '/#search' },
 ]
 
 export default function Header() {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
+  const [homeHref, setHomeHref] = useState('/')
+
+  useEffect(() => {
+    const updateHomeHref = () => {
+      const restoreSection = sessionStorage.getItem('agmachie:restoreSection')
+      if (restoreSection === 'blog' || sessionStorage.getItem('agmachie:restoreBlog')) {
+        setHomeHref('/#blog')
+      } else if (restoreSection === 'topic' || sessionStorage.getItem('agmachie:restoreTopic')) {
+        setHomeHref('/#topic-picks')
+      } else {
+        setHomeHref('/')
+      }
+    }
+
+    updateHomeHref()
+    window.addEventListener('pageshow', updateHomeHref)
+    window.addEventListener('focus', updateHomeHref)
+
+    return () => {
+      window.removeEventListener('pageshow', updateHomeHref)
+      window.removeEventListener('focus', updateHomeHref)
+    }
+  }, [pathname])
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-[#333] bg-[#1a1a1a]/80 backdrop-blur-md">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo / Title */}
-        <Link href="/" className="text-xl font-bold tracking-tight text-white hover:text-green-400 transition">
+        <Link href={homeHref} className="text-xl font-bold tracking-tight text-white hover:text-green-400 transition">
           AgMachine
         </Link>
 
@@ -27,7 +50,7 @@ export default function Header() {
           {navItems.map((item) => (
             <Link
               key={item.href}
-              href={item.href}
+              href={item.href === '/' ? homeHref : item.href}
               className={`text-sm font-medium transition-colors hover:text-green-400 ${
                 pathname === item.href ? 'text-green-400' : 'text-gray-300'
               }`}
@@ -41,6 +64,8 @@ export default function Header() {
         <button
           className="md:hidden p-2 text-gray-300 hover:text-white"
           onClick={() => setIsOpen(!isOpen)}
+          aria-expanded={isOpen}
+          aria-controls="mobile-nav"
         >
           <span className="sr-only">Open menu</span>
           {isOpen ? (
@@ -57,12 +82,12 @@ export default function Header() {
 
       {/* Mobile Nav Dropdown */}
       {isOpen && (
-        <div className="md:hidden border-t border-[#333] bg-[#1a1a1a]">
+        <div id="mobile-nav" className="md:hidden border-t border-[#333] bg-[#1a1a1a]">
           <nav className="flex flex-col p-4 space-y-4">
             {navItems.map((item) => (
               <Link
                 key={item.href}
-                href={item.href}
+                href={item.href === '/' ? homeHref : item.href}
                 className={`text-sm font-medium transition-colors hover:text-green-400 ${
                   pathname === item.href ? 'text-green-400' : 'text-gray-300'
                 }`}

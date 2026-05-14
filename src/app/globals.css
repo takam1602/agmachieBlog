@@ -59,8 +59,45 @@ a:hover {
 
 /* ---- Tailwind Typography (Prose) カスタマイズ ---- */
 .prose {
-  max-width: 65ch;
   color: var(--text-secondary);
+}
+
+.md-article {
+  max-width: min(100%, 1180px);
+  margin-inline: auto;
+  font-size: clamp(1rem, 0.96rem + 0.18vw, 1.08rem);
+  line-height: 1.9;
+}
+
+.md-article > * {
+  max-width: min(100%, 88ch);
+  margin-inline: auto;
+}
+
+.md-article > table,
+.md-article > pre,
+.md-article > blockquote,
+.md-article > ul,
+.md-article > ol {
+  max-width: min(100%, 1040px);
+}
+
+.md-article > p:has(img),
+.md-article > p:has(a img),
+.md-article > p:has(span) {
+  max-width: min(100%, 1100px);
+}
+
+.md-article table {
+  display: block;
+  overflow-x: auto;
+  border-radius: 0.5rem;
+}
+
+.md-article pre {
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  background: #0f0f0f;
 }
 .prose strong { color: var(--text-primary); }
 .prose h1, .prose h2, .prose h3 { color: var(--text-primary); margin-top: 1.5em; }
@@ -103,4 +140,38 @@ a:hover {
 .prose p:has(a + a) img:hover {
   transform: scale(1.02);
   border-color: var(--accent);
+}
+
+/* ---- Top page tile grids ---- */
+.home-tile-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.whats-new-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 0.5rem;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .home-tile-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .whats-new-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-tile-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .whats-new-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
