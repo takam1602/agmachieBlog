@@ -2,6 +2,8 @@ import fs from 'fs/promises'
 import { Stats } from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { execFile } from 'child_process'
+import { promisify } from 'util'
 
 export interface BlogPost {
   slug: string
@@ -26,6 +28,7 @@ export interface RepositorySection {
 
 const CONTENT_DIR = path.join(process.cwd(), 'content')
 const BLOG_DIR = path.join(CONTENT_DIR, 'blog')
+const execFileAsync = promisify(execFile)
 
 const categoryLabels: Record<string, { label: string; group: string; desc?: string }> = {
   kaihatsu: { label: '北海道開発の機械', group: '日本の特色ある機械たち', desc: '北海道開拓とか' },
@@ -187,8 +190,35 @@ export async function getAllContentPosts() {
 }
 
 export async function getGitRecentUpdates(limit: number = 5): Promise<BlogPost[]> {
-  const posts = await getAllContentPosts()
-  return posts.slice(0, limit)
+  try {
+    const { stdout } = await execFileAsync('git', [
+      'diff-tree',
+      '--no-commit-id',
+      '--name-only',
+      '--diff-filter=AM',
+      '-r',
+      'HEAD',
+    ])
+
+    const changed = stdout
+      .split('\n')
+      .map((line) => line.trim())
+      .filter(Boolean)
+      .filter((file) => file.startsWith('content/'))
+      .filter((file) => /\.mdx?$/.test(file))
+
+    const posts = await Promise.all(changed.map((file) => readPost(path.join(process.cwd(), file))))
+
+    return posts
+      .filter((post): post is BlogPost => Boolean(post))
+      .filter((post) => post.href !== '/docs/')
+      .filter((post) => !post.protected)
+      .sort((a, b) => (a.date < b.date ? 1 : -1))
+      .slice(0, limit)
+  } catch (e) {
+    console.error('Error getting git recent updates:', e)
+    return []
+  }
 }
 
 export async function getStaticDocParams() {
