@@ -15,7 +15,20 @@
 
 ほんの数十年前に、秋田の加工な泥濘地帯で我々に食料を供給せんとあくせく動いていた機械・人、に思いを馳せ、八郎潟の干拓機械をここにまとめる。
 
+## 色々な雑誌リンク
+
+一番まとまっているのは、
+[八郎潟干拓地耕地整備委員会　総括報告書](https://ci.nii.ac.jp/ncid/BN03864635.amp)
+だと思う。
+
+他に、
+[建設の機械化1965年2月](https://jcmanet.or.jp/bunken/wp-content/uploads/1965/jcma-1965_02.pdf)
+などもよくまとまっている。
+
+# 特殊な機械たち
 ## Quality Marsh Equipment Co. Inc
+
+泥上車として、初期に色々持ってきていた。
 
 [King of the marshes](http://s4.e-monsite.com/2011/08/30/17716132quality-marsh-industries-amphibians-pdf.pdf)
 当時の貴重なカタログ。
@@ -25,6 +38,27 @@ DL版はここ
 
 八郎潟の干拓初期には、Wheel buggy, Amphibious four wheep drive carrier, 104W-HD-59, が導入されたのであろう。
 
+## Gurries GP40 
+
+干拓地を水田にするためには均平が必須、ということで、昔ながらのランドプレーンをアメリカから持ってきてNTK4 などで牽引していたようだ。
+[Gurries GP40](https://www.bigiron.com/Lots/GurriesGP4040LandPlane)
+
+このランドプレーンの運用については、1963年11月の建設の機械化に、佐野文彦氏が寄稿している。
+
+[建設の機械化1963年11月ランドプレーナについて](https://jcmanet.or.jp/bunken/wp-content/uploads/1963/jcma-1963_11.pdf)
+
+
+## Demag G161 
+
+小排水路の掘削のために、Demag のロータリートレンチャー、G161が用いられたらしい。
+
+[Demag G161](http://www.demag-bagger.de/G161/g161.htm)
+
+## Vendenende Drainmaster
+
+暗渠パイプ(塩ビパイプ)を敷設するために、オランダから持ってきた。
+
+[Drainmaster 90s](https://www.drainagemachine.co.uk/sold-machinery/vandenende-drainmaster/)
 
 ## Caterpillar
 ## York
@@ -32,3 +66,5 @@ DL版はここ
 ## フォード
 ## 佐々木農機
 ## 日熊工機
+
+
