@@ -1,8 +1,12 @@
 'use client'
 
-import { ComponentPropsWithoutRef } from 'react'
-import type { MDXComponents } from 'mdx/types'
+import type { ComponentPropsWithoutRef, ReactElement } from 'react'
 import MarkdownImage from '@/components/MarkdownImage'
+
+type MDXComponents = {
+  img?: (props: ComponentPropsWithoutRef<'img'>) => ReactElement
+  [key: string]: unknown
+}
 
 export function useMDXComponents(
   components: MDXComponents,
