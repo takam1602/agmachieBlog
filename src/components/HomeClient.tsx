@@ -9,6 +9,8 @@ import ImageLightbox from '@/components/ImageLightbox'
 import SearchableList from '@/components/SearchableList'
 import WhatsNew from '@/components/WhatsNew'
 import { BlogPost, RepositorySection } from '@/utils/posts'
+import WeeklyNews from '@/components/WeeklyNews'
+import { WeeklyNewsItem } from '@/utils/weeklyNews'
 
 /* ---------- トップページ用画像 ---------- */
 const heroImages = [
@@ -31,6 +33,8 @@ interface HomeClientProps {
   blogPosts: BlogPost[]
   latestPosts: BlogPost[]
   repositorySections: RepositorySection[]
+  weeklyNewsLatest: WeeklyNewsItem[]
+  weeklyNewsRandom: WeeklyNewsItem[]
   children?: React.ReactNode
 }
 
@@ -39,6 +43,8 @@ export default function HomeClient({
   blogPosts,
   latestPosts,
   repositorySections,
+  weeklyNewsLatest,
+  weeklyNewsRandom,
   children,
 }: HomeClientProps) {
   const [lightboxImg, setLightboxImg] =
@@ -124,7 +130,7 @@ export default function HomeClient({
               />
             </h1>
             <p className="text-gray-300 leading-relaxed max-w-3xl mx-auto text-sm md:text-base mb-8">
-              農業機械のリポジトリです．気になった機械・技術をまとめています．
+              農業機械のリポジトリです．いにしへ・さいしんの技術をまとめています．
             </p>
           </section>
 
@@ -151,11 +157,13 @@ export default function HomeClient({
             </div>
           )}
 
+          <WeeklyNews latest={weeklyNewsLatest} random={weeklyNewsRandom} />
+
           {/* Search -------------------------------------------------------- */}
           <section id="search" className="py-8 border-t border-[#333] scroll-mt-24">
             <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold text-white">記事検索 / Repository Search</h2>
-              <p className="mt-2 text-sm text-gray-400">キーワードを入れると、該当する記事だけを下に表示します。</p>
+              <h2 className="text-2xl font-bold text-white">Repository Search</h2>
+              <p className="mt-2 text-sm text-gray-400">キーワードに該当しそうな記事を表示します。</p>
             </div>
             <SearchableList entries={searchEntries} />
           </section>
