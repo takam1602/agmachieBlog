@@ -146,15 +146,15 @@ export default function SearchableList({ entries }: { entries: Entry[] }) {
     <div className="w-full">
       {/* Search Input */}
       <div className="relative mb-8 group max-w-4xl mx-auto">
-        <div className="absolute inset-y-0 left-0 pl-6 flex items-center pointer-events-none">
-          <Search size={28} className="text-gray-500 group-focus-within:text-[var(--accent)] transition-colors" />
+        <div className="repository-search-icon absolute inset-y-0 left-0 flex items-center pointer-events-none">
+          <Search size={32} className="text-gray-500 group-focus-within:text-[var(--accent)] transition-colors" />
         </div>
         <input
           type="text"
           placeholder="記事タイトル・本文・カテゴリを検索"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="w-full rounded-2xl border border-[#333] bg-[#1a1a1a] py-6 pl-16 pr-5 text-xl text-white outline-none transition-all placeholder:text-gray-500 focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)] md:text-2xl"
+          className="repository-search-input w-full rounded-2xl border border-[#333] bg-[#1a1a1a] text-white outline-none transition-all placeholder:text-gray-500 focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)]"
         />
       </div>
 
