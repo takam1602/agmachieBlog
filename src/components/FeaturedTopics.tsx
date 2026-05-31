@@ -26,7 +26,6 @@ export default function FeaturedTopics({ posts }: { posts: BlogPost[] }) {
   return (
     <section className="h-full">
        <h2 className="mb-4 flex items-center gap-3 border-l-4 border-[var(--accent)] pl-3 text-xl font-bold text-white">
-         トピック
          <span className="text-xs font-normal text-gray-400">Topic picks</span>
        </h2>
 

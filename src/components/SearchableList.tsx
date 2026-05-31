@@ -151,7 +151,7 @@ export default function SearchableList({ entries }: { entries: Entry[] }) {
         </div>
         <input
           type="text"
-          placeholder="記事タイトル・本文・カテゴリを検索"
+          placeholder="キーワードを入力"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           className="repository-search-input w-full rounded-2xl border border-[#333] bg-[#1a1a1a] text-white outline-none transition-all placeholder:text-gray-500 focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)]"
