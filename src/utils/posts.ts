@@ -14,6 +14,7 @@ export interface BlogPost {
   href: string
   category?: string
   protected?: boolean
+  updatedAt?: string
 }
 
 export interface RepositorySection {
@@ -94,6 +95,20 @@ function getDateFromFilename(filename: string, stats: Stats, frontmatterDate?: u
   return stats.mtime.toISOString().split('T')[0]
 }
 
+async function getGitUpdatedAt(filePath: string, stats: Stats) {
+  const relativePath = path.relative(process.cwd(), filePath)
+
+  try {
+    const { stdout } = await execFileAsync('git', ['log', '-1', '--format=%cI', '--', relativePath])
+    const updatedAt = stdout.trim()
+    if (updatedAt) return updatedAt.slice(0, 10)
+  } catch {
+    // Git metadata is not always available in every runtime. Fall back to filesystem mtime.
+  }
+
+  return stats.mtime.toISOString().split('T')[0]
+}
+
 /**
  * ブログ記事のみを取得 (既存機能維持)
  */
@@ -168,6 +183,7 @@ async function readPost(filePath: string): Promise<BlogPost | null> {
       slug: slugParts.join('-') || 'index',
       title: getTitle(content, basename, data.title),
       date: getDateFromFilename(path.basename(filePath), stats, data.date ?? data.updated),
+      updatedAt: await getGitUpdatedAt(filePath, stats),
       excerpt: createExcerpt(content),
       searchText: createSearchText(content),
       href: hrefFromContentPath(filePath),
@@ -187,6 +203,18 @@ export async function getAllContentPosts() {
     .filter((post) => post.href !== '/docs/')
     .filter((post) => !post.protected)
     .sort((a, b) => (a.date < b.date ? 1 : -1))
+}
+
+export async function getRecentlyUpdatedPosts(limit: number = 5): Promise<BlogPost[]> {
+  const files = await walkMarkdown(CONTENT_DIR)
+  const posts = await Promise.all(files.map(readPost))
+
+  return posts
+    .filter((post): post is BlogPost => Boolean(post))
+    .filter((post) => post.href !== '/docs/')
+    .filter((post) => !post.protected)
+    .sort((a, b) => ((a.updatedAt ?? a.date) < (b.updatedAt ?? b.date) ? 1 : -1))
+    .slice(0, limit)
 }
 
 export async function getGitRecentUpdates(limit: number = 5): Promise<BlogPost[]> {

@@ -20,6 +20,65 @@ const stopWords = new Set([
   'です', 'ます', 'これ', 'それ', 'ため', 'こと', 'もの', 'よう',
 ])
 
+const synonymGroups = [
+  ['スガノ', 'すがの', '菅野', '菅の', 'sugano', 'sugano農機', 'スガノ農機', '菅野農機'],
+  ['小西', 'こにし', 'コニシ', 'konishi', '小西農機'],
+  ['開発工建', 'かいはつこうけん', 'カイハツコウケン', '開発', 'kaihatsu'],
+  ['北海道開発局', '開発局', '北海道開発', 'ほっかいどうかいはつきょく'],
+  ['モロオカ', '諸岡', 'もろおか', 'morooka'],
+  ['東洋運搬機', 'tcm', 'TCM', 'とうよううんぱんき'],
+  ['ジョンディア', 'ジョン Deere', 'john deere', 'deere', 'jd', 'ディア'],
+  ['キャタピラー', 'カタピラー', 'caterpillar', 'cat', 'challenger', 'チャレンジャー'],
+  ['クラース', 'クラス', 'claas'],
+  ['プラウ', 'プラオ', 'plow', 'plough'],
+  ['サブソイラ', 'サブソイラー', 'subsoiler'],
+  ['レベラー', 'レベラ', 'leveler', 'leveller', 'land leveler'],
+  ['ランドハロー', 'land harrow', 'ハロー', 'harrow'],
+  ['コンバイン', 'combine', 'harvester', 'ハーベスタ', 'ハーベスター'],
+  ['トラクタ', 'トラクター', 'tractor'],
+]
+
+const synonymLookup = new Map<string, string[]>()
+
+function kanaToHiragana(text: string) {
+  return text.replace(/[ァ-ン]/g, (char) => String.fromCharCode(char.charCodeAt(0) - 0x60))
+}
+
+function compactText(text: string) {
+  return kanaToHiragana(normalizeText(text)).replace(/[\s\-_/ーｰ・.]/g, '')
+}
+
+function getSynonymLookup() {
+  if (synonymLookup.size) return synonymLookup
+
+  for (const group of synonymGroups) {
+    const variants = Array.from(new Set(group.flatMap((term) => [normalizeText(term), kanaToHiragana(normalizeText(term)), compactText(term)])))
+      .filter(Boolean)
+
+    for (const variant of variants) {
+      synonymLookup.set(variant, variants)
+    }
+  }
+
+  return synonymLookup
+}
+
+function expandSynonyms(text: string) {
+  const normalized = normalizeText(text)
+  const haystacks = new Set([normalized, kanaToHiragana(normalized), compactText(normalized)])
+  const expanded = new Set<string>()
+
+  for (const haystack of haystacks) {
+    for (const [variant, group] of getSynonymLookup()) {
+      if (haystack.includes(variant)) {
+        group.forEach((term) => expanded.add(term))
+      }
+    }
+  }
+
+  return Array.from(expanded).join(' ')
+}
+
 function normalizeText(text: string) {
   return text
     .normalize('NFKC')
@@ -37,19 +96,22 @@ function addToken(tokens: Map<string, number>, token: string, weight = 1) {
 
 function tokenize(text: string, baseWeight = 1) {
   const normalized = normalizeText(text)
+  const normalizedWithSynonyms = `${normalized} ${expandSynonyms(normalized)}`
   const tokens = new Map<string, number>()
 
-  for (const word of normalized.match(/[a-z0-9][a-z0-9-]{1,}/g) ?? []) {
-    addToken(tokens, word, baseWeight)
-  }
-
-  for (const word of normalized.match(/[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}ー]{2,}/gu) ?? []) {
-    addToken(tokens, word, baseWeight * 1.3)
-    for (let i = 0; i < word.length - 1; i += 1) {
-      addToken(tokens, word.slice(i, i + 2), baseWeight)
+  for (const phrase of [normalizedWithSynonyms, kanaToHiragana(normalizedWithSynonyms), compactText(normalizedWithSynonyms)]) {
+    for (const word of phrase.match(/[a-z0-9][a-z0-9-]{1,}/g) ?? []) {
+      addToken(tokens, word, baseWeight)
     }
-    for (let i = 0; i < word.length - 2; i += 1) {
-      addToken(tokens, word.slice(i, i + 3), baseWeight * 0.8)
+
+    for (const word of phrase.match(/[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}ー]{2,}/gu) ?? []) {
+      addToken(tokens, word, baseWeight * 1.3)
+      for (let i = 0; i < word.length - 1; i += 1) {
+        addToken(tokens, word.slice(i, i + 2), baseWeight)
+      }
+      for (let i = 0; i < word.length - 2; i += 1) {
+        addToken(tokens, word.slice(i, i + 3), baseWeight * 0.8)
+      }
     }
   }
 
@@ -94,7 +156,13 @@ function buildSearchIndex(entries: Entry[]) {
       const idf = Math.log(1 + totalDocs / (1 + (docFreq.get(token) ?? 0)))
       vector.set(token, (1 + Math.log(tf)) * idf)
     })
-    return { entry, vector, norm: vectorNorm(vector), normalizedText: normalizeText(`${entry.label} ${entry.excerpt ?? ''} ${entry.category ?? ''}`) }
+    const normalizedText = normalizeText(`${entry.label} ${entry.excerpt ?? ''} ${entry.category ?? ''} ${entry.searchText ?? ''}`)
+    return {
+      entry,
+      vector,
+      norm: vectorNorm(vector),
+      normalizedText: `${normalizedText} ${kanaToHiragana(normalizedText)} ${compactText(normalizedText)} ${expandSynonyms(normalizedText)}`,
+    }
   })
 
   return { indexedDocs, docFreq, totalDocs }
@@ -107,7 +175,12 @@ function vectorizeQuery(query: string, docFreq: Map<string, number>, totalDocs: 
     const idf = Math.log(1 + totalDocs / (1 + (docFreq.get(token) ?? 0)))
     vector.set(token, (1 + Math.log(tf)) * idf)
   })
-  return { vector, norm: vectorNorm(vector), normalizedQuery: normalizeText(query) }
+  const normalizedQuery = normalizeText(query)
+  return {
+    vector,
+    norm: vectorNorm(vector),
+    normalizedQuery: `${normalizedQuery} ${kanaToHiragana(normalizedQuery)} ${compactText(normalizedQuery)} ${expandSynonyms(normalizedQuery)}`,
+  }
 }
 
 function searchSimilar(entries: Entry[], query: string, index: ReturnType<typeof buildSearchIndex>): SearchResult[] {

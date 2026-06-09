@@ -21,7 +21,7 @@ export default function WhatsNew({ posts }: { posts: BlogPost[] }) {
                     <li key={post.slug} className="min-w-0">
                         <Link href={post.href} className="block rounded-md border border-[#333] bg-[#161616] p-3 text-gray-400 transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]">
                              <span className="block truncate text-sm font-medium text-gray-300">{post.title}</span>
-                             <span className="mt-1 block font-mono text-xs text-gray-600">{post.date}</span>
+                             <span className="mt-1 block font-mono text-xs text-gray-600">{post.updatedAt ?? post.date}</span>
                         </Link>
                     </li>
                 ))}
