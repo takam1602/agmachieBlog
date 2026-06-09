@@ -1,4 +1,4 @@
-import { getAllContentPosts, getAllPosts, getGitRecentUpdates, getRepositorySections } from '@/utils/posts';
+import { getAllContentPosts, getAllPosts, getRecentlyUpdatedPosts, getRepositorySections } from '@/utils/posts';
 import { getWeeklyNews } from '@/utils/weeklyNews';
 import HomeClient from '@/components/HomeClient';
 import FeaturedTopics from '@/components/FeaturedTopics';
@@ -7,7 +7,7 @@ export default async function Page() {
   const [posts, allContentPosts, recentUpdates, repositorySections, weeklyNews] = await Promise.all([
     getAllPosts(),
     getAllContentPosts(),
-    getGitRecentUpdates(5),
+    getRecentlyUpdatedPosts(5),
     getRepositorySections(),
     getWeeklyNews(),
   ]);
