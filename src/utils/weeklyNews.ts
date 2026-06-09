@@ -459,3 +459,9 @@ export async function getWeeklyNews() {
   await writeWeeklyNewsCache(payload)
   return payload
 }
+
+export async function refreshWeeklyNews() {
+  const payload = await buildWeeklyNewsPayload()
+  await writeWeeklyNewsCache(payload)
+  return payload
+}

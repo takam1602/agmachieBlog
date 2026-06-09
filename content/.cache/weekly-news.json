@@ -1,6 +1,6 @@
 {
-  "weekKey": "2026-05-31",
-  "generatedAt": "2026-05-31T06:45:28.686Z",
+  "weekKey": "2026-06-07",
+  "generatedAt": "2026-06-09T00:39:54.099Z",
   "latest": [
     {
       "title": "半自動運転が可能な Claas Xerion 12 を更新 - Farmers Weekly",
@@ -24,53 +24,53 @@
       "summary": "広告 広告"
     },
     {
-      "title": "ウィービングサーベルは12mまで",
-      "href": "https://www.profi.co.uk/news/weaving-sabre-goes-to-12m/",
+      "title": "クーン、新しいカラン噴霧器を発表",
+      "href": "https://www.profi.co.uk/news/kuhn-unveils-new-karan-sprayer/",
       "source": "profi",
-      "date": "2026-05-28",
+      "date": "2026-06-07",
       "score": 11,
-      "summary": "Weaving Machinery の新しい 12 メートル セイバー タイン ドリルは、ディドリー スクワット ファームで開催されるシリアル イベントでの発表に先立って、最終組み立て段階にあります。"
+      "summary": "クーンは、耕作農家や請負業者を対象とした他のいくつかの最新製品とともに、大容量カラン牽引式噴霧器をデビューさせます。"
     }
   ],
   "random": [
     {
-      "title": "John Deere、新しい F8 および F9 シリーズ自走式飼料ハーベスタを発売し、飼料の品質と運用効率に革命を起こす",
-      "href": "https://www.deere.com/en/news/all-news/new-self-propelled-forage-harvesters/",
-      "date": "2025-06-03",
+      "title": "John Deere、生産性とパフォーマンスの向上を実現する最大 540 馬力の新しい 8R および 8RX トラクターを発表",
+      "href": "https://www.deere.com/en/news/all-news/new-8r-8rx-tractors/",
+      "date": "2026-02-24",
       "source": "John Deere",
-      "score": 99,
-      "summary": "John Deere は、次世代のパフォーマンス、オペレーターの快適性、データ主導型インテリジェンスを現場にもたらす新しいマシンを発売します。"
-    },
-    {
-      "title": "半自動運転が可能な Claas Xerion 12 を更新 - Farmers Weekly",
-      "href": "https://www.fwi.co.uk/machinery/tractors/updated-claas-xerion-12-capable-of-semi-autonomous-driving",
-      "source": "Farmers Weekly",
-      "score": 9,
-      "summary": "Claas シリーズの最大のトラクター向けに、自律走行を含む一連のパワートレインとデジタル技術のアップグレードがリリースされています。"
-    },
-    {
-      "title": "1回の取引で20人の採集者",
-      "href": "https://www.profi.co.uk/news/20-foragers-in-one-deal/",
-      "source": "profi",
-      "date": "2026-05-24",
-      "score": 11,
-      "summary": "ツヴァイブリュッケン工場でこれまでに行われた最大の取引であると考えられています。20 台の John Deere F9 500 飼料収穫機がドイツの契約企業である Köhl Harvest に直接譲渡されました。"
-    },
-    {
-      "title": "Precea 精密エアシーダーと Venterra ローカルチベータの早期割引特典",
-      "href": "https://amazone.net/en/products-digital-solutions/promotion/aktionsangebote/early-bird-aktion-einzelkorn-saemaschine-precea",
-      "source": "AMAZONE",
-      "date": "2025-07-22",
-      "score": 13,
-      "summary": "農業機械および都市機械のメーカー、インテリジェントな作物生産のためのシステム プロバイダーである AMAZONE へようこそ。"
-    },
-    {
-      "title": "明日に力を与える: CNH がバイオガスで持続可能な農業をどのように革新するか",
-      "href": "https://media.cnh.com/North-America/cnh-industrial",
-      "date": "2025-09-29",
-      "source": "CNH",
       "score": 100,
-      "summary": "明日に力を与える: CNH がバイオガスで持続可能な農業をどのように革新するか"
+      "summary": "ディアは本日、追加の高馬力オプションを備えた 6 つの新しい 8R および 8RX トラクター モデルの発売を発表しました。根本的な再設計。パフォーマンス、操作性、多用途性が向上しました。"
+    },
+    {
+      "title": "ジョンディア、マゾッティ自走式噴霧機の操業を閉鎖 - ファーマーズウィークリー",
+      "href": "https://www.fwi.co.uk/machinery/spraying-and-fertilising/sprayers/john-deere-closes-mazzotti-self-propelled-sprayer-operation",
+      "source": "Farmers Weekly",
+      "score": 7,
+      "summary": "ジョンディアがマゾッティの閉鎖と清算を発表したことを受け、ジョンディアの自走式噴霧器の事業規模は縮小する見通しだ。ラヴェンナに拠点を置く同社"
+    },
+    {
+      "title": "ジョンディアスタンドの500R",
+      "href": "https://www.profi.co.uk/news/500r-on-john-deere-stand/",
+      "source": "profi",
+      "date": "2026-06-04",
+      "score": 11,
+      "summary": "John Deere の自走式 500R 噴霧器がシリアルズに初登場し、スプレーおよび噴霧器アリーナのデモンストレーションに参加します。"
+    },
+    {
+      "title": "土を耕す",
+      "href": "https://amazone.net/en/products-digital-solutions/agricultural-technology/cultivation",
+      "source": "AMAZONE",
+      "date": "2025-11-25",
+      "score": 9,
+      "summary": "AMAZONE は、最適な土壌耕耘を実現するために、あらゆる土壌タイプとあらゆる耕うんコンセプトに適したテクノロジーを提供します。受動的土壌耕耘用の取り付け式および半取り付け式リバーシブルプラウ、ディスクハロー、カルチベーター、ケンブリッジロールおよびローラーなどです。ロータリーハロー、ロータリーカルチベーター、取り付けられた深ほぐし機、および積極的に土壌を耕耘するためのさまざまな後続ローラー。"
+    },
+    {
+      "title": "AI が農業のイノベーションをどのように加速するか",
+      "href": "https://media.cnh.com/NORTH-AMERICA/cnh",
+      "date": "2025-10-09",
+      "source": "CNH",
+      "score": 99,
+      "summary": "AI が農業のイノベーションをどのように加速するか"
     }
   ],
   "all": [
@@ -96,51 +96,51 @@
       "summary": "広告 広告"
     },
     {
-      "title": "ウィービングサーベルは12mまで",
-      "href": "https://www.profi.co.uk/news/weaving-sabre-goes-to-12m/",
+      "title": "クーン、新しいカラン噴霧器を発表",
+      "href": "https://www.profi.co.uk/news/kuhn-unveils-new-karan-sprayer/",
       "source": "profi",
-      "date": "2026-05-28",
+      "date": "2026-06-07",
       "score": 11,
-      "summary": "Weaving Machinery の新しい 12 メートル セイバー タイン ドリルは、ディドリー スクワット ファームで開催されるシリアル イベントでの発表に先立って、最終組み立て段階にあります。"
+      "summary": "クーンは、耕作農家や請負業者を対象とした他のいくつかの最新製品とともに、大容量カラン牽引式噴霧器をデビューさせます。"
     },
     {
-      "title": "John Deere、新しい F8 および F9 シリーズ自走式飼料ハーベスタを発売し、飼料の品質と運用効率に革命を起こす",
-      "href": "https://www.deere.com/en/news/all-news/new-self-propelled-forage-harvesters/",
-      "date": "2025-06-03",
+      "title": "John Deere、生産性とパフォーマンスの向上を実現する最大 540 馬力の新しい 8R および 8RX トラクターを発表",
+      "href": "https://www.deere.com/en/news/all-news/new-8r-8rx-tractors/",
+      "date": "2026-02-24",
       "source": "John Deere",
-      "score": 99,
-      "summary": "John Deere は、次世代のパフォーマンス、オペレーターの快適性、データ主導型インテリジェンスを現場にもたらす新しいマシンを発売します。"
-    },
-    {
-      "title": "半自動運転が可能な Claas Xerion 12 を更新 - Farmers Weekly",
-      "href": "https://www.fwi.co.uk/machinery/tractors/updated-claas-xerion-12-capable-of-semi-autonomous-driving",
-      "source": "Farmers Weekly",
-      "score": 9,
-      "summary": "Claas シリーズの最大のトラクター向けに、自律走行を含む一連のパワートレインとデジタル技術のアップグレードがリリースされています。"
-    },
-    {
-      "title": "1回の取引で20人の採集者",
-      "href": "https://www.profi.co.uk/news/20-foragers-in-one-deal/",
-      "source": "profi",
-      "date": "2026-05-24",
-      "score": 11,
-      "summary": "ツヴァイブリュッケン工場でこれまでに行われた最大の取引であると考えられています。20 台の John Deere F9 500 飼料収穫機がドイツの契約企業である Köhl Harvest に直接譲渡されました。"
-    },
-    {
-      "title": "Precea 精密エアシーダーと Venterra ローカルチベータの早期割引特典",
-      "href": "https://amazone.net/en/products-digital-solutions/promotion/aktionsangebote/early-bird-aktion-einzelkorn-saemaschine-precea",
-      "source": "AMAZONE",
-      "date": "2025-07-22",
-      "score": 13,
-      "summary": "農業機械および都市機械のメーカー、インテリジェントな作物生産のためのシステム プロバイダーである AMAZONE へようこそ。"
-    },
-    {
-      "title": "明日に力を与える: CNH がバイオガスで持続可能な農業をどのように革新するか",
-      "href": "https://media.cnh.com/North-America/cnh-industrial",
-      "date": "2025-09-29",
-      "source": "CNH",
       "score": 100,
-      "summary": "明日に力を与える: CNH がバイオガスで持続可能な農業をどのように革新するか"
+      "summary": "ディアは本日、追加の高馬力オプションを備えた 6 つの新しい 8R および 8RX トラクター モデルの発売を発表しました。根本的な再設計。パフォーマンス、操作性、多用途性が向上しました。"
+    },
+    {
+      "title": "ジョンディア、マゾッティ自走式噴霧機の操業を閉鎖 - ファーマーズウィークリー",
+      "href": "https://www.fwi.co.uk/machinery/spraying-and-fertilising/sprayers/john-deere-closes-mazzotti-self-propelled-sprayer-operation",
+      "source": "Farmers Weekly",
+      "score": 7,
+      "summary": "ジョンディアがマゾッティの閉鎖と清算を発表したことを受け、ジョンディアの自走式噴霧器の事業規模は縮小する見通しだ。ラヴェンナに拠点を置く同社"
+    },
+    {
+      "title": "ジョンディアスタンドの500R",
+      "href": "https://www.profi.co.uk/news/500r-on-john-deere-stand/",
+      "source": "profi",
+      "date": "2026-06-04",
+      "score": 11,
+      "summary": "John Deere の自走式 500R 噴霧器がシリアルズに初登場し、スプレーおよび噴霧器アリーナのデモンストレーションに参加します。"
+    },
+    {
+      "title": "土を耕す",
+      "href": "https://amazone.net/en/products-digital-solutions/agricultural-technology/cultivation",
+      "source": "AMAZONE",
+      "date": "2025-11-25",
+      "score": 9,
+      "summary": "AMAZONE は、最適な土壌耕耘を実現するために、あらゆる土壌タイプとあらゆる耕うんコンセプトに適したテクノロジーを提供します。受動的土壌耕耘用の取り付け式および半取り付け式リバーシブルプラウ、ディスクハロー、カルチベーター、ケンブリッジロールおよびローラーなどです。ロータリーハロー、ロータリーカルチベーター、取り付けられた深ほぐし機、および積極的に土壌を耕耘するためのさまざまな後続ローラー。"
+    },
+    {
+      "title": "AI が農業のイノベーションをどのように加速するか",
+      "href": "https://media.cnh.com/NORTH-AMERICA/cnh",
+      "date": "2025-10-09",
+      "source": "CNH",
+      "score": 99,
+      "summary": "AI が農業のイノベーションをどのように加速するか"
     }
   ]
 }
