@@ -1,20 +1,20 @@
 {
-  "weekKey": "2026-07-05",
-  "generatedAt": "2026-07-05T16:07:39.202Z",
+  "weekKey": "2026-07-12",
+  "generatedAt": "2026-07-12T15:58:25.609Z",
   "latest": [
+    {
+      "title": "クラースが改良型 264-313 馬力 Axion 8 トラクターを完成させる - Farmers Weekly",
+      "href": "https://www.fwi.co.uk/machinery/tractors/claas-pulls-the-wraps-off-revamped-264-313hp-axion-8-tractors",
+      "source": "Farmers Weekly",
+      "score": 9,
+      "summary": "Claas は、トラクター製品全体にわたる更新プログラムの一環として、800 シリーズ機械の改良版を発売しました。 3 つの新しいバリエーション -"
+    },
     {
       "title": "屋根に取り付けられた PerPlant キットは自動レート調整を提供します - Farmers Weekly",
       "href": "https://www.fwi.co.uk/machinery/technology/roof-mounted-perplant-kit-offers-automatic-rate-adjustment",
       "source": "Farmers Weekly",
       "score": 9,
       "summary": "目に見えるものに合わせて作物の投入量を変更できるフィールドスキャンシステムが、ハンティンドンに拠点を置く精密農業専門家を通じて入手可能になりました"
-    },
-    {
-      "title": "Quicke はトラクターに取り付けられた Q シリーズローダーの計量を改善します - Farmers Weekly",
-      "href": "https://www.fwi.co.uk/machinery/tractors/quicke-improves-weighing-on-tractor-mounted-q-series-loaders",
-      "source": "Farmers Weekly",
-      "score": 9,
-      "summary": "Quicke の Q-companion デジタル システムの最新アップデートにより、トラクター ローダーの制御と自動化が新たな高みに到達したと考えられています。"
     },
     {
       "title": "テストセンターのアーカイブ",
@@ -24,12 +24,12 @@
       "summary": "広告 広告"
     },
     {
-      "title": "レムケン サフィール XMR",
-      "href": "https://www.profi.co.uk/news/lemken-saphir-xmr/",
+      "title": "12.5m クローネ スワドロのプロ トリートメント",
+      "href": "https://www.profi.co.uk/news/pro-treatment-for-12-5m-krone-swadro/",
       "source": "profi",
-      "date": "2026-07-03",
+      "date": "2026-07-08",
       "score": 11,
-      "summary": "レムケン氏は、Saphir XMR によって機械式シードドリル技術を次のレベルに引き上げたと考えています。"
+      "summary": "4 ローター Krone Swadro TC 1250 の新しい Pro バージョンは、多数の自動機能と運転支援機能を提供します。"
     }
   ],
   "random": [
@@ -39,54 +39,53 @@
       "date": "2026-02-24",
       "source": "John Deere",
       "score": 100,
-      "summary": "申し訳ございませんが、お探しのページは存在しないか、新しい場所に移動されました。"
+      "summary": "John Deere、生産性とパフォーマンスの向上を実現する最大 540 馬力の新しい 8R および 8RX トラクターを発表"
     },
     {
-      "title": "Kverneland、種子と肥料のツールバードリルを6mに延長 - Farmers Weekly",
-      "href": "https://www.fwi.co.uk/machinery/cultivation-drilling/cereal-drills/kverneland-extends-seed-and-fert-toolbar-drill-to-6m",
+      "title": "農業機械 – テレハンドラーのニュース、レビュー、テスト – Farmers Weekly",
+      "href": "https://www.fwi.co.uk/machinery/telehandlers",
       "source": "Farmers Weekly",
       "score": 7,
-      "summary": "Kverneland の 6m f ドリル ツールバーは、2 番目の分配ヘッドの追加により、種子と肥料を同時に敷設できるようになりました。の"
+      "summary": "テレハンドラーの最初のドライブ、マテリアルハンドリング、在庫建物の清掃、俵の積み込み、穀物の移動に関するユーザーレビューとテストについては、農業機械のページをご覧ください。"
     },
     {
-      "title": "6.0m クバーンランド F-ドリル",
-      "href": "https://www.profi.co.uk/news/6-0m-kverneland-f-drill/",
+      "title": "542馬力ベラルーシタイタンにゴーサイン",
+      "href": "https://www.profi.co.uk/news/green-light-for-542hp-belarus-titan/",
       "source": "profi",
-      "date": "2026-06-30",
+      "date": "2026-07-07",
       "score": 11,
-      "summary": "Kverneland は、電動ハロー ドリル コンビネーションのポートフォリオに新しい 6.0m F ドリルを追加しました。"
+      "summary": "ミンスク・トラクター工場（MTZ）は、来年初めに542馬力のベラルーシ5425の最初の生産ユニットを組み立てる予定だ。"
     },
     {
-      "title": "ニュースと製品イノベーション",
-      "href": "https://amazone.co.uk/en-gb/news/news-from-amazone/news-and-product-innovations",
+      "title": "ニュースと新製品",
+      "href": "https://amazone.de/de-de/news/neu-bei-amazone/aktuelles-und-produktneuheiten",
       "source": "AMAZONE",
-      "date": "2024-08-02",
       "score": 10,
       "summary": "農業機械および都市機械のメーカー、インテリジェントな作物生産のためのシステム プロバイダーである AMAZONE へようこそ。"
     },
     {
-      "title": "AI が農業分野のイノベーションをどのように加速するか",
-      "href": "https://media.cnh.com/NORTH-AMERICA/cnh",
-      "date": "2025-10-09",
+      "title": "明日に力を与える: CNH がバイオガスで持続可能な農業をどのように革新するか",
+      "href": "https://media.cnh.com/North-America/cnh-industrial",
+      "date": "2025-09-29",
       "source": "CNH",
-      "score": 99,
-      "summary": "AI が農業分野のイノベーションをどのように加速するか"
+      "score": 100,
+      "summary": "明日に力を与える: CNH がバイオガスで持続可能な農業をどのように革新するか"
     }
   ],
   "all": [
+    {
+      "title": "クラースが改良型 264-313 馬力 Axion 8 トラクターを完成させる - Farmers Weekly",
+      "href": "https://www.fwi.co.uk/machinery/tractors/claas-pulls-the-wraps-off-revamped-264-313hp-axion-8-tractors",
+      "source": "Farmers Weekly",
+      "score": 9,
+      "summary": "Claas は、トラクター製品全体にわたる更新プログラムの一環として、800 シリーズ機械の改良版を発売しました。 3 つの新しいバリエーション -"
+    },
     {
       "title": "屋根に取り付けられた PerPlant キットは自動レート調整を提供します - Farmers Weekly",
       "href": "https://www.fwi.co.uk/machinery/technology/roof-mounted-perplant-kit-offers-automatic-rate-adjustment",
       "source": "Farmers Weekly",
       "score": 9,
       "summary": "目に見えるものに合わせて作物の投入量を変更できるフィールドスキャンシステムが、ハンティンドンに拠点を置く精密農業専門家を通じて入手可能になりました"
-    },
-    {
-      "title": "Quicke はトラクターに取り付けられた Q シリーズローダーの計量を改善します - Farmers Weekly",
-      "href": "https://www.fwi.co.uk/machinery/tractors/quicke-improves-weighing-on-tractor-mounted-q-series-loaders",
-      "source": "Farmers Weekly",
-      "score": 9,
-      "summary": "Quicke の Q-companion デジタル システムの最新アップデートにより、トラクター ローダーの制御と自動化が新たな高みに到達したと考えられています。"
     },
     {
       "title": "テストセンターのアーカイブ",
@@ -96,12 +95,12 @@
       "summary": "広告 広告"
     },
     {
-      "title": "レムケン サフィール XMR",
-      "href": "https://www.profi.co.uk/news/lemken-saphir-xmr/",
+      "title": "12.5m クローネ スワドロのプロ トリートメント",
+      "href": "https://www.profi.co.uk/news/pro-treatment-for-12-5m-krone-swadro/",
       "source": "profi",
-      "date": "2026-07-03",
+      "date": "2026-07-08",
       "score": 11,
-      "summary": "レムケン氏は、Saphir XMR によって機械式シードドリル技術を次のレベルに引き上げたと考えています。"
+      "summary": "4 ローター Krone Swadro TC 1250 の新しい Pro バージョンは、多数の自動機能と運転支援機能を提供します。"
     },
     {
       "title": "John Deere、生産性とパフォーマンスの向上を実現する最大 540 馬力の新しい 8R および 8RX トラクターを発表",
@@ -109,38 +108,37 @@
       "date": "2026-02-24",
       "source": "John Deere",
       "score": 100,
-      "summary": "申し訳ございませんが、お探しのページは存在しないか、新しい場所に移動されました。"
+      "summary": "John Deere、生産性とパフォーマンスの向上を実現する最大 540 馬力の新しい 8R および 8RX トラクターを発表"
     },
     {
-      "title": "Kverneland、種子と肥料のツールバードリルを6mに延長 - Farmers Weekly",
-      "href": "https://www.fwi.co.uk/machinery/cultivation-drilling/cereal-drills/kverneland-extends-seed-and-fert-toolbar-drill-to-6m",
+      "title": "農業機械 – テレハンドラーのニュース、レビュー、テスト – Farmers Weekly",
+      "href": "https://www.fwi.co.uk/machinery/telehandlers",
       "source": "Farmers Weekly",
       "score": 7,
-      "summary": "Kverneland の 6m f ドリル ツールバーは、2 番目の分配ヘッドの追加により、種子と肥料を同時に敷設できるようになりました。の"
+      "summary": "テレハンドラーの最初のドライブ、マテリアルハンドリング、在庫建物の清掃、俵の積み込み、穀物の移動に関するユーザーレビューとテストについては、農業機械のページをご覧ください。"
     },
     {
-      "title": "6.0m クバーンランド F-ドリル",
-      "href": "https://www.profi.co.uk/news/6-0m-kverneland-f-drill/",
+      "title": "542馬力ベラルーシタイタンにゴーサイン",
+      "href": "https://www.profi.co.uk/news/green-light-for-542hp-belarus-titan/",
       "source": "profi",
-      "date": "2026-06-30",
+      "date": "2026-07-07",
       "score": 11,
-      "summary": "Kverneland は、電動ハロー ドリル コンビネーションのポートフォリオに新しい 6.0m F ドリルを追加しました。"
+      "summary": "ミンスク・トラクター工場（MTZ）は、来年初めに542馬力のベラルーシ5425の最初の生産ユニットを組み立てる予定だ。"
     },
     {
-      "title": "ニュースと製品イノベーション",
-      "href": "https://amazone.co.uk/en-gb/news/news-from-amazone/news-and-product-innovations",
+      "title": "ニュースと新製品",
+      "href": "https://amazone.de/de-de/news/neu-bei-amazone/aktuelles-und-produktneuheiten",
       "source": "AMAZONE",
-      "date": "2024-08-02",
       "score": 10,
       "summary": "農業機械および都市機械のメーカー、インテリジェントな作物生産のためのシステム プロバイダーである AMAZONE へようこそ。"
     },
     {
-      "title": "AI が農業分野のイノベーションをどのように加速するか",
-      "href": "https://media.cnh.com/NORTH-AMERICA/cnh",
-      "date": "2025-10-09",
+      "title": "明日に力を与える: CNH がバイオガスで持続可能な農業をどのように革新するか",
+      "href": "https://media.cnh.com/North-America/cnh-industrial",
+      "date": "2025-09-29",
       "source": "CNH",
-      "score": 99,
-      "summary": "AI が農業分野のイノベーションをどのように加速するか"
+      "score": 100,
+      "summary": "明日に力を与える: CNH がバイオガスで持続可能な農業をどのように革新するか"
     }
   ]
 }
