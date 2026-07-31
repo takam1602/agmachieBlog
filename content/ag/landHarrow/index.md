@@ -1,129 +1,1241 @@
-# 突如復活したランドハローに関する記事
+# 突如復活したランドハロー――スペードブレードローラーの系譜と現在
 
-70-80年にスガノ農機のカタログに現れたランドハロー．
-表層混和に特化した機械である．
+> 調査日：2026年7月31日  
+> 主な検索語：`spade roller harrow`、`shovel roller harrow`、`Spatenrollegge`、`Spatenrollenegge`、`lapiorullaäes`、`spadrullharv`、`Hankmo harrow`
 
-ヨーロッパにオリジナルの機械があるようだけれど，どんなものだろう．
-ということで調べてみた．
+1970〜80年代のスガノ農機のカタログに現れた**ランドハロー**。
 
-# スガノのランドハローはSampo のM tillerの...
+土を深く反転するのではなく、回転する刃付きローラーによって表層を切り、砕き、持ち上げ、残渣と混和する機械である。しばらく表舞台から消えていたように見えたが、近年のスガノ農機のカタログには、再び「表層混和」の作業機としてラインナップされている。
 
-昔は結構色々なメーカーのものが出ていたみたい．
-- Lawrence Edwards
-    - [Rotatilth](https://www.agrimanuals.com/lawrence-edwards--rotatilth-high-speed-rotary-harrow-brochure-42090-p.asp)
+一見すると昔の機械がそのまま復活したようにも見える。しかしヨーロッパを調べると、この構造は完全に途絶えていたわけではない。フィンランドでは20世紀初頭から続く長い系譜があり、現在もフィンランドやドイツ、イギリスで改良型が販売されている。
+
+この記事では、ランドハローに用いられる**スペードブレードローラー**、すなわちドイツ語でいう **Spatenrollegge** の歴史、構造、作業原理、ショートディスクやバーチカルティレッジ機との違い、そして現在再評価されている理由を整理する。
+
+---
+
+## 先に結論
+
+調べた範囲では、次のように整理できる。
+
+1. スガノのランドハローと同じ思想を持つ機械は、フィンランドの **Hankmo harrow** や **Sampo M-tiller** などに遡る。
+2. この機械形式は、フィンランド語では `lapiorullaäes`、ドイツ語では `Spatenrollegge`、英語では `spade roller harrow` または `shovel roller` と呼ばれる。
+3. 複数の刃付きローラーを進行方向に対して斜めに配置し、接地によって受動回転させ、表土を浅く切断・破砕・混和する。
+4. PTOを使わず、高速で作業でき、構造が比較的単純である。
+5. ショートディスクよりも土を全面的に反転・横移動させにくく、ストローハローよりも土を動かす。つまり、**極浅耕と残渣管理の中間に位置する機械**とみると分かりやすい。
+6. 近年の復活には、浅耕、カバークロップ、緑肥混和、スタブルマネジメント、機械除草、燃料削減といった要求が関係している。
+7. ただし、スガノの旧ランドハローがSampoから直接導入された、あるいはSampo M-tillerのOEMであったことを示す一次資料は、今回確認した公開資料だけでは見つからなかった。現時点では、**同じHankmo系の技術的系譜に属する可能性が高い**、という表現が妥当である。
+
+---
+
+# 1. まず名称が難しい
+
+この機械を探す際、最初の障壁になるのが名称である。
+
+| 言語・地域 | 主な名称 | 備考 |
+|---|---|---|
+| 日本 | ランドハロー | スガノ農機の商品名として使われている。一般名としては範囲が曖昧 |
+| 日本 | スペードローラーハロー | `spade roller harrow` の直訳的表現 |
+| 英語 | spade roller harrow | ドイツ語からの英訳として比較的分かりやすい |
+| 英語 | shovel roller / shovel roller harrow | Tumeが使用している表現 |
+| 英語 | rotary harrow | 広義。ただしPTO駆動のパワーハローを指す場合もあり、検索ノイズが多い |
+| ドイツ語 | Spatenrollegge | 最も検索しやすい名称 |
+| ドイツ語 | Spatenrollenegge | `Spatenrollegge` の別表記 |
+| フィンランド語 | lapiorullaäes | `lapio`＝shovel/spade、`rulla`＝roller、`äes`＝harrow |
+| スウェーデン語 | spadrullharv | フィンランドのスウェーデン語圏でも使われる |
+| フィンランド | Hankmo | 元は商品名だが、同形式のハロー全般を示す一般名のようにも使われた |
+
+英語の `rotary harrow` だけで検索すると、PTOで縦軸ローターを回すパワーハロー、横軸ロータリー、ロータリーホー、ローリングハローなどが混ざってしまう。
+
+この形式に絞って調べるなら、次の検索語が有効だった。
+
+```text
+"spade roller harrow"
+"shovel roller harrow"
+Spatenrollegge
+Spatenrollenegge
+lapiorullaäes
+spadrullharv
+Hankmo harrow
+Sampo M-tiller
+```
+
+---
+
+# 2. スガノの現行ランドハロー
+
+スガノ農機の2026年総合カタログでは、ランドハローは**耕起前処理―表層混和**の作業機に分類されている。
+
+[スガノ農機・ランドハロー製品ページ](https://www.sugano-net.co.jp/products/landharrow/index_241217new.php)
+
+[スガノ農機・2026年総合カタログ ランドハローページ](https://www.sugano-net.co.jp/products/catalog_2026/pageindices/index39.html)
+
+主な構成は次のとおりである。
+
+- 4列のナイフローラー
+- 1列あたり17個の刃
+- 作業幅：3.2 m
+- 標準作業深：5〜8 cm
+- 標準作業速度：8〜10 km/h
+- 参考馬力：100〜150 PS
+- 作業時はけん引式
+- 移動時はフレームを折りたたみ、3点リンク直装式として運搬
+- PTO動力は使用しない
+
+スガノは用途として、ワラなどの収穫残渣や裁断された緑肥を表層土と混和し、腐植化を促すこと、ならびにプラウ耕後の砕土を挙げている。
+
+この「4列の刃付きローラーをつづら折り状に配置する」「PTOを使わず、けん引によって回転させる」「5〜8 cm程度の表層を混和する」という構成は、フィンランドのHankmo、Sampo、Kronos、現在のTumeなどに見られるスペードローラーハローの基本構成とよく似ている。
+
+---
+
+# 3. スガノのランドハローはSampo M-tillerなのか
+
+昔のカタログを見ると、スガノのランドハローとフィンランドの **Sampo M-tiller** は、外観上かなり似ている。
+
+- [Sampo M-tiller brochure 1](https://www.agrimanuals.com/sampo-m-tiller-brochure-1303-p.asp)
+- [Sampo M-tiller brochure 2](https://www.agrimanuals.com/sampo---m-tiller-brochure-4846-p.asp)
+
+Sampoは現在、主としてコンバインで知られるフィンランドの農業機械ブランドである。現在のSampo Rosenlewは、ポリで1957年からコンバインを製造してきたとしている。
+
+- [Sampo Rosenlew: Company](https://www.sampo-rosenlew.fi/company/)
+
+一方、古いカタログにはM-tillerのような耕うん作業機も残されている。したがって、「Sampoは昔、コンバイン以外に耕うん機も扱っていた」という点は確認できる。
+
+ただし、次の点は分けて考えた方がよい。
+
+### 公開資料から確認できること
+
+- Sampo M-tillerというスペードローラー式の作業機が存在した。
+- スガノの旧ランドハローと、刃付きローラーの配置や折りたたみ構造に類似性がある。
+- 同形式の機械はフィンランドでHankmoを起源とする一大カテゴリーを形成していた。
+
+### 今回の調査では確認できなかったこと
+
+- スガノがSampoから製造権を購入したという記録
+- Sampo製完成機をスガノブランドで販売したという記録
+- 両社間の輸入契約、技術提携、OEM契約
+- スガノ旧型機とSampo M-tillerの型式・寸法・部品番号の一致
+
+したがって、記事の見出しは、
+
+> スガノのランドハローはSampo M-tillerのOEMだった
+
+と断定するより、
+
+> スガノのランドハローはSampo M-tillerと同じHankmo系の機械なのか
+
+あるいは、
+
+> スガノのランドハローのルーツをフィンランドに追う
+
+とする方が、現時点では正確である。
+
+直接の関係を突き止めるには、次の資料が必要になる。
+
+- スガノ農機の1970〜80年代の価格表・部品表
+- Sampo M-tillerの寸法入りカタログ・部品表
+- 機体銘板の製造者表記
+- 当時の輸入商社・農機新聞の記事
+- 実機の軸受、刃、フレーム接合部、折りたたみ機構の比較
+
+---
+
+# 4. 起源はフィンランドのHankmo harrow
+
+スペードローラーハローの歴史を遡ると、フィンランド西部のHankmo村周辺に行き着く。
+
+[Hankmo村の歴史](https://hankmo.net/historia/)
+
+[Västerhankmo Museum](https://www.museiportalosterbotten.fi/museum-a-o-en/museum/58-vasterhankmo-museum)
+
+20世紀初頭、鉄製プラウによって草地や未耕地を反転できるようになった一方、従来のハローでは、反転後の土を適度な播種床に仕上げることが難しかった。そこで、回転軸に切断刃を取り付けた「propeller harrow」と呼ばれる形式が試作されるようになった。
+
+Hankmo村の鍛冶技術を持つ農家 **Johannes Sand** は、回転軸上の刃形状とローラーの斜め配置を改良した。特に、ローラー軸の角度を調整できるようにしたことが重要だった。
+
+Hankmo村の記録によれば、
+
+- 1910年に農業展示会でHankmo harrowとして紹介
+- 1910年6月に特許を申請
+- 同年11月に特許が認められた
+- 1911年に製造権をJakobstads Mekaniska Verkstadへ譲渡
+- その後、フィンランド国内外へ大量に販売
+
+という流れで普及した。
+
+フィンランドの農機史を扱った記事では、さらに古い類似機として、1891年のWassのローラープラウや、1906年に特許を得たAhkeraなどが紹介されている。その後、Lundqvist、Björnvik、Sand、Forsbergらによって、曲げ・ねじりを持つ刃や3軸構成、軸角度調整機構が発展したとされる。
+
+[Maaseudun Tulevaisuus：フィンランドのlapiorullaäes史](https://www.maaseuduntulevaisuus.fi/koneet-ja-autot/1bd73c82-9fb7-479e-a8ef-ef4aa87d4fa1)
+
+## Hankmoが一般名になった
+
+Hankmo harrowは非常に普及し、フィンランドでは、実際のメーカーがHankmoでなくても、この形式のローラーハローを使うことを「Hankmoする」というように呼ぶ地域があったという。
+
+日本で、メーカーを問わず一部の作業機を商品名で呼ぶことがあるのと同じで、Hankmoは商品名から機械カテゴリー名に近い存在になった。
+
+---
+
+# 5. フィンランドでの発展と衰退
+
+フィンランドの農機史記事によれば、1920年代には次のようなメーカーがスペードローラーハロー市場へ参入した。
+
+- Hankmo
 - Sampo
-    - [Sampo M-tiller 1](https://www.agrimanuals.com/sampo-m-tiller-brochure-1303-p.asp)
-    - [Sampo M-tiller 2](https://www.agrimanuals.com/sampo---m-tiller-brochure-4846-p.asp)
-Sampo はフィンランドのンバインメーカー。
-昔はTillage equipment も作っていたようだ。
+- Tukeva
+- Oiva
+- Erppo
+- Kronos
 
-# きっかけはKnoche のカタログのローラーオプション
+当初は馬けん引式であったが、トラクタ化に伴って大型化が進んだ。
 
-現行には無いけれども，2005年のカタログにはコンビネーションハローのローラーオプションには，例のやつがオプションで用意してあった．
-ドイツ語では，"Spatenrolleggen", 英語では"spade roller". 
+- 1925年：機械式リフトを持つけん引式Traktori-Hankmoが登場
+- 1938年：トラクタ用Sampoの量産開始
+- 1950年代：3点リンク直装型が増加
+- 1963年：フィンランドで販売のピーク
+- 1971年：Sタインハローの販売がスペードローラーハローを上回る
 
-# ドイツ語でも，英語でも検索をかけてみた．
-- [Baarck](https://www.baarck-technik.de/start/produkte/spatenrolleggen/)
-- [HANKMO](https://www.a-t-g.at/HANKMO-Spatenrolleneggen.100.0.html)
-- [Kronos](https://kronos.fi/de/aktuelles/kronos-spatenrollegge-ihr-universalgeraet/)
-- [Kronos PDF](https://kronos.fi/wp-content/uploads/2019/11/harvar_de_2014_lores.pdf)
-- [Brix](https://brix-scheibeneggen.de/spatenrollegge/roll-x-pro)
-- [Tume](https://tumeagri.fi/en/cultivators/harrow-r/)
-- [Claydon](https://claydondrill.com/product/6m-terrastar/)
+1960年代まで、lapiorullaäesはフィンランドの代表的なハロー形式の一つだった。しかし、Sタインハロー、ディスクハロー、パワーハロー、ロータリーなどの普及により、主役の座から退いていった。
 
-まだ情報はあるし，なんなら，結構販売されている.
+それでも完全には消滅しなかった。現在もTumeとKronosがフィンランドで同形式を製造し、ドイツではBaarckやBrixが大型・高機能型を販売している。
 
+Tumeは現行Harrow Rについて、「120年以上使われ、2020年代に再び人気が高まっている」と説明している。
 
-# なぜショートディスクの時代に，あえてスペードブレードローラーなのか．
-耕しすぎないことがポイント.
-部分的な耕起によって，燃料消費を押えながら雑草・ボランティアクロップの発芽促進，残渣の混和を行う．
+[Tume Harrow R](https://tumeagri.fi/en/cultivators/harrow-r/)
 
-- machine is suitable for quick stubble tillage, seedbed preparation in spring, or incorporation of organic matter. 
-- eoncouraging volunteers and grass weeds to germinate.
-- ideal for mulching and incorporating crop or oher residues.
-- similar effect on soil with verticla tillage machine since minimum tillage (my own opinions)
-    - remain organic matters on top soil prevent water drying up and hold nutrients into soil
-    - save time and fuel costs
+つまり、スガノのランドハローだけが突然復活したのではなく、ヨーロッパでも同じ形式が**古い機械から、浅耕時代の機械へ読み替えられている**。
 
-## Claydon(イギリス)  よくまとまっている．
-Moving a little more soil than the Claydon Straw Harrow, the TerraStar plucks only divots from the top layer of soil leaving the structure intact and able to carry machines.
-The 80x80mm dibots are created by rotating "star" points fitted in a 200mm grid patten to two knife bars each side on the machine.
-These star points create a fine tilth, eoncouraging volunteers and grass weeds to germinate.
-The tilth can then be moved by the Claydon Straw Harrow, breaking off germinating plants at the one leaf stage, eliminating the need to spray while dound conditions allow harrowing.
-The TerraStar helps the surface layer of osil to drain, and depth wheels ensure precise depth control for multipe passes.
-This versatile tool can be used as a mechanical weeder, reduing the need of glyohosate.
-It makes stubbel management much easier and redeces slug populations.
+---
 
-The TerraStar is ideal for mulching and incorporating crop or oher residues.
-It can be used to produce more uniform seed beds, not only in unmoved soil, but behind any other cultivation equipment.
+# 6. スペードブレードローラーの構造
 
-The TerraStar is fast and effective and, like all the Claydon range, it incorporates a miniumum of wearing parts, making for extremely low-cost  operation.
+基本構造は単純である。
 
-## Baarck (ドイツ): ここが大手じゃないかな。
-> Der eigentliche Ursprung der Firma Baarck kommt aus dem Vetrieb und der Wartung von Spatenrolleggen aus Finnland. 
-> Seitdem hat sich vieles getan und entwickelt, so dass wir heute unsere eigenen Spatenrolleggen konzipieren und als fester Ansprechpartner auf nationaler Ebene für Ersatz- und Verschleißteile, sowie Umbau- und Reparaturarbeiten gelten. 
-> Zudem haben wir stets überarbeitete Geräte ab Hof verfügbar.
-> 
-> Die Arbeitsweise und das Bearbeitungsbild der Spatenrollegge überzeugt uns weiterhin. 
-> Speziell der geforderte und etablierte Anbau von Zwischenfrüchen bringt neuartige Konzepte der mechanischen Bodenbearbeitung mit sich. 
-> Die Spatenrollegge zeigt in diesem Zusammenhang ein gutes Arbeitsbild und arbeitet die Zwischenfrüche sehr gut ein.
-> 
-> Unser Angebotsportfolio umfasst Spatenrolleggen von 1,5m bis zu 12m Arbeitsbreite, wobei nur die hochwertigste Lagertechnologie verbaut wird. 
-> Auch führen wir jegliche Verschleiß- und Ersatzteile von Herstellern wie Hankmo, Sampo oder auch Kronus. 
-> Wir freuen uns auf Ihre Anfrage!
+1. フレームに2〜4本程度の横軸を設ける。
+2. 各軸に十字形、星形、プロペラ形、スコップ形の刃を一定間隔で取り付ける。
+3. 軸を進行方向に対して斜めに配置する。
+4. トラクタでけん引すると、刃が地面へ食い込み、接地反力で軸が回転する。
+5. 前列で切り起こした土を後列がさらに砕き、移動させ、残渣と混ぜる。
 
-The actual origin of the company Baarck comes from the distribution and maintenance of spade roller harrows from Finland. 
-Since then, much has happened and developed, so that today we design our own Spatenrolleggen and are considered a fixed contact on a national level for spare and wear parts, as well as conversion and repair work. 
-In addition, we always have refurbished equipment available from our yard.
+ローラーという名前ではあるが、一般的な鎮圧ローラーとは役割が逆である。円筒で土を押し固めるのではなく、離散的に配置された刃で土へ入り込み、切断と持ち上げを行う。
 
-The working method and the processing pattern of the Spatenrollegge continue to convince us. 
-Especially the required and established cultivation of catch crops brings new concepts of mechanical tillage. 
-In this context, the Spatenrollegge shows a good working pattern and cultivates the catch crops very well.
+## 軸が斜めに配置される理由
 
-Our product portfolio includes tine harrows from 1.5m up to 12m working width, using only the highest quality bearing technology. 
-We also carry any wear and spare parts from manufacturers such as Hankmo, Sampo or even Kronus. 
-We are looking forward to your inquiry!
+軸が進行方向に対して直角であれば、刃は主として前後方向に転がる。一方、軸を斜めにすると、刃には前後方向だけでなく横方向の作用が生じる。
 
-## Brix(ドイツ) のSpatenrolleggen に関する[Profi の記事](https://www.profi.de/aktuell/neuheiten/brix-roll-x-pro-11744104.html)
+その結果、
 
-> Die Roll-X-Pro von der Brix GmbH ist eine leichtzügige, X-förmig angeordnete Spatenrollegge mit großen Messern von 430 Millimetern Durchmesser.
-> Die gefederte Aufhängung der Segmente soll die einzelnen Bauteile vor Schlägen und Überbeanspruchung schützen.
-> Eine Besonderheit ist die stufenweise Verstellung der Messerwellen im Schnittwinkel.
-> Hierdurch soll die Roll-X-Pro unterschiedlichen Arbeitsanforderungen gerecht werden.
-> Die nachrüstbaren, klammerbaren Stützräder führen die Spatenrollegge in der Tiefe und ein optional erhältlicher, einreihiger Nachlaufstriegel ebnet den Boden nochmals ein. 
-> Laut Brix ist die Roll-X-Pro somit eine Allzweckmaschine für die Bodenbearbeitung, praktischerweise auch in Kombination mit dem Strohstriegel StrawMax-Pro.
-> Geeignet ist das Gerät zum schnellen Stoppelsturz, zur Saatbettbereitung im Frühjahr, oder zur Einarbeitung von organischen Substanzen. 
-> Die hohe Arbeitsgeschwindigkeit von 15 km/h gepaart mit der großen Arbeitsbreite soll für eine hohe Flächenleistung sorgen.
-> Die neue Spatenrollegge ist erhältlich in den Arbeitsbreiten 6,00 Meter, 6,35 Meter und 6,70 Meter. Durch die serienmäßige hydraulische Klappung beträgt die Transportbreite 2,98 Meter.
+- 土塊を切る
+- 表層土を持ち上げる
+- 土を横へずらす
+- 残渣と土の接触を増やす
+- 前後列で異なる方向から作用させる
 
-The Roll-X-Pro from Brix GmbH is a lightweight, X-shaped spade roller harrow with large 430 millimeter diameter blades.
-The spring suspension of the segments is designed to protect the individual components from impacts and overstressing.
-A special feature is the stepped adjustment of the blade shafts in the cutting angle.
-This is intended to enable the Roll-X-Pro to meet different work requirements.
-The retrofittable, clampable support wheels guide the spade roller harrow in depth, and an optionally available, single-row following harrow levels the ground even further. 
-According to Brix, the Roll-X-Pro is thus an all-purpose machine for soil cultivation, conveniently also in combination with the StrawMax-Pro straw harrow.
-The machine is suitable for quick stubble tillage, seedbed preparation in spring, or incorporation of organic matter. 
-The high working speed of 15 km/h coupled with the large working width is said to ensure high area output.
-The new spade roller harrow is available in working widths of 6.00 meters, 6.35 meters and 6.70 meters. 
-Thanks to the standard hydraulic folding system, the transport width is 2.98 meters.
+という複合作用が得られる。
 
-## Kronos(フィンランド) 
+多くの機械でローラー群がV字、X字、千鳥、つづら折りに配置されるのは、片方向への横流れや横力を打ち消し、圃場全体を均一に処理するためと考えられる。
 
-There is nothing like the scent of a freshly harrowed field an early summer evening.
-Jokes aside, after a long day’s work, the scent of grilled sausages might be slightly more appealing.
-Reconnecting to the art of farming.
-Do you have all the equipment needed now that the frost is clearing and spring farming is about to begin?
-Our harrow models, the universal tool for working the land, comes in four different sizes, with a work width ranging from 3,15 to 4,9 meters.
-We offer both models which are carried with 3p linkage, and models that are towed:
+## 切込み角の調整
 
-The Kronos rotary harrow is a multi-purpose tool in agriculture.
-It is available in four different sizes with working widths from 3.15 to 4.9 meters.
-Its open frame construction makes the harrow fast and efficient while the resilient shaft suspension suppresses shocks and vibraions.
-The harrows are avcailable in both hydralic and towed models.
-The excellent mixing ability of Kronos throughout the whole stratum is based on its blade movement.
-Kronos covers over straw, stubble and other plabnts evenly so that decomposition can start immediately.
-Kronos breaks even hard clods and tears the trash into pieces.
-It breaks and cuts the roots of weed plants efficiently, thus preventing nutrients from gatheriung around the weed root.
-Kronos destorys weeds on the spot.
+古いHankmo harrowの重要な特徴は、ローラー軸の角度を調整できたことである。現在のBrix Roll-X-Proにも、セグメントの切込み角を段階的に変更する機構がある。
 
+角度を大きくすると一般に、
 
+- 切断作用が強くなる
+- 横方向の土の移動が増える
+- 混和が強くなる
+- けん引抵抗が増える
+- 土壌水分によっては練り付けや過剰な土壌移動が生じやすくなる
+
+と考えられる。
+
+角度を小さくすると、
+
+- 転動性が高くなる
+- 抵抗が小さくなる
+- 作業が浅く穏やかになる
+- 残渣被覆を多く残しやすい
+
+と考えられる。
+
+これはディスクハローのギャング角調整と似た考え方だが、作用部が連続円盤ではなく、独立したスペード状の刃である点が異なる。
+
+---
+
+# 7. 土の中で何が起きているのか
+
+TumeはHarrow Rの4先端ブレードについて、土を**break、crush、mix、move**する一方、土塊は横方向へ自由に移動でき、鎮圧ローラーのような圧密作用を生じにくいと説明している。
+
+[Tume Harrow R](https://tumeagri.fi/en/cultivators/harrow-r/)
+
+Kronosは、刃の運動によって作土層内を混合し、ワラ、切株、植物残渣を均一に覆い、土塊を砕き、雑草根を切断すると説明している。
+
+[Kronos：農業用ハローの用途と構造](https://kronos.fi/environment/agriculture/)
+
+ただし、「圧密しない」「全面的に土壌構造を壊さない」という表現はメーカー説明として理解すべきである。実際の土壌反応は、次の条件に大きく左右される。
+
+- 土壌含水比
+- 土性
+- 作業深
+- 作業速度
+- 刃の角度
+- 機体重量
+- 走行回数
+- 前作残渣量
+- トラクタタイヤによる踏圧
+
+湿り過ぎた粘土質土壌では、浅い作業であっても刃の通過面に練り付けやスメアリングを生じる可能性がある。一方、乾燥し過ぎた硬い圃場では、刃が十分に貫入せず、表面を転がるだけになることも考えられる。
+
+---
+
+# 8. ショートディスクとの違い
+
+「浅く、高速で、残渣を混ぜる」という用途だけを見ると、現代のショートディスクハローと重なる。
+
+しかし作用の仕方はかなり異なる。
+
+| 項目 | スペードローラーハロー | ショートディスクハロー |
+|---|---|---|
+| 作用部 | 十字・星・スペード形の離散刃 | 凹面または波形の円盤 |
+| 駆動 | 接地による受動回転 | 接地による受動回転 |
+| 土壌への接触 | 点・線が断続的に接触 | 円盤刃が連続的に切断 |
+| 横方向移動 | 軸角度により発生するが、刃間に逃げがある | ディスク角・凹面により比較的大きい |
+| 反転・埋没 | 比較的弱い | 条件によって強い |
+| 混和 | 粗い、部分的、空間的に不均一な混和 | 比較的連続的で均一な混和 |
+| 残渣被覆 | 表面へ多く残しやすい | 埋没割合が増えやすい |
+| 土塊処理 | 切る・割る・持ち上げる | 切る・反転する・投げる |
+| 詰まり | 開放フレームなら残渣を逃がしやすい | ディスク間隔やスクレーパに左右される |
+| 必要けん引力 | 同じ深さ・幅なら比較的小さいとメーカーは説明 | 切込み・角度・重量によって大きくなる |
+| 仕上がり | 粗く、凹凸を残しやすい | 比較的全面を動かしやすい |
+
+スペードローラーハローの特徴は、**全面を均一に削るのではなく、刃が通った部分を断続的に動かす**ことである。
+
+このため、ショートディスクほど土を耕し過ぎず、それでもストローハローよりは確実に表土を動かせる。
+
+一方、強い残渣埋没、全面切削、雑草根の完全な切断を狙う場合には、ショートディスクやウイングシェア付きカルチベータの方が適することもある。
+
+---
+
+# 9. バーチカルティレッジとの違い
+
+スペードローラーハローを見て、バーチカルティレッジ機に近いと感じるのは自然である。
+
+共通する点は、
+
+- 浅い作業
+- 高速作業
+- 残渣を表面に残す
+- 深い反転を行わない
+- 土壌構造を全面的に崩すことを避ける
+
+といった思想である。
+
+ただし、厳密には一般的なバーチカルティレッジ機と同一ではない。
+
+バーチカルティレッジでは、波形コールタや比較的小さなディスクを進行方向に近い角度で使用し、横方向の土壌移動を抑えることが重要とされる。一方、スペードローラーハローは、軸を斜めにし、刃の回転によって意図的に切断・横移動・混和を起こす。
+
+したがって、
+
+> バーチカルティレッジに似た浅耕効果を持つ
+
+とは言えるが、
+
+> スペードローラーハローはバーチカルティレッジ機である
+
+と分類してしまうと、横方向の混和作用を見落とす。
+
+筆者としては、次のように表現するのが分かりやすい。
+
+> スペードローラーハローは、バーチカルティレッジに近い低攪乱思想を持ちながら、より積極的な表層混和を行う受動回転式ハローである。
+
+---
+
+# 10. PTO駆動機との違い
+
+スペードローラーハローは、ロータリーやパワーハローのようにPTOから強制駆動されない。
+
+| 項目 | スペードローラーハロー | ロータリー／パワーハロー |
+|---|---|---|
+| 駆動 | 走行・接地による受動回転 | PTOによる強制回転 |
+| 作業速度 | 8〜15 km/h程度の例が多い | 一般に低速 |
+| 砕土 | 粗い | 細かくできる |
+| 所要動力 | 主にけん引力 | PTO動力＋けん引力 |
+| 過砕土リスク | 比較的小さい | 条件によって高い |
+| 構造 | 比較的単純 | ギヤボックス、駆動軸、シール等が必要 |
+| 石への対応 | 軸懸架やばねで逃がす設計がある | ローター・爪・ギヤへの衝撃対策が必要 |
+| 混和均一性 | 粗い・部分的 | 比較的高い |
+
+PTOを使わないことは、単に燃料消費の問題だけではない。
+
+- トラクタのPTO容量に制約されにくい
+- 機体を広幅化しやすい
+- 作業速度を高めやすい
+- ギヤボックスやドライブシャフトが不要
+- 摩耗部品が刃、軸受、ブッシュに集約される
+
+という設計上の利点がある。
+
+一方で、受動回転であるため、硬い土壌や大量残渣の条件では、十分に回転・貫入しないこともある。ロータリーのように「強制的に砕く」能力はない。
+
+---
+
+# 11. なぜショートディスクの時代に再びスペードローラーなのか
+
+## 11.1 耕し過ぎない
+
+最も大きな理由は、**土を動かし過ぎずに、必要な表層だけを処理できること**だろう。
+
+プラウや重いディスクで深く耕す必要はない。しかし、ノーティルのままでは、
+
+- ワラが厚く残る
+- 緑肥が播種機に干渉する
+- 表層が冷たく湿ったままになる
+- ボランティアクロップの発芽が揃わない
+- 堆肥と土の接触が不足する
+
+といった場面がある。
+
+スペードローラーハローは、その中間を狙う。
+
+## 11.2 ボランティアクロップと雑草を発芽させる
+
+収穫直後の極浅耕は、落下した作物種子や雑草種子を発芽可能な表層へ置き、土との接触を作る。
+
+AHDBは、収穫後の浅い耕うんは、土壌水分が十分であれば雑草種子の発芽を促進し得るとしている。また、雑草の多くは土壌表面からおよそ5 cm以内で発芽するため、浅耕は古い種子を深層から大量に持ち上げず、新しく落ちた種子を発芽させる管理に向く。
+
+[AHDB：How cultivating affects the arable weed seedbank](https://ahdb.org.uk/knowledge-library/how-cultivating-affects-the-arable-weed-seedbank)
+
+これは、いわゆる**false seedbed**または**stale seedbed**を作る考え方である。
+
+ただし、浅耕しただけでは雑草防除は完結しない。発芽させた後に、
+
+- ストローハローで幼植物を抜く
+- 再度の浅耕で切断する
+- 播種を遅らせる
+- 必要に応じて除草剤を使う
+
+など、次の管理が必要である。
+
+発芽させた雑草を放置すれば、単に雑草を増やすことになる。
+
+## 11.3 残渣を完全に埋めず、土との接触を増やす
+
+残渣分解には、適度な水分、温度、窒素、微生物、そして土との接触が必要になる。
+
+スペードローラーハローは、ワラを完全に深く埋没させるのではなく、表層土を部分的に動かして残渣と土の接触点を増やす。
+
+Kronosは、穀物収穫後のワラや切株の混和、堆肥・厩肥の混和、浅耕播種床作りを主要用途として挙げている。
+
+[Kronos：Functions of the Rotary Harrow](https://kronos.fi/environment/agriculture/)
+
+表面被覆をある程度残すことで、降雨衝撃、風食、蒸発を抑えられる可能性がある。ただし、被覆量が多過ぎれば春の地温上昇や乾燥が遅れる。残渣を残すこと自体が常に正解なのではなく、**地域の水分条件に応じて残す量を調節する道具**と考えるべきである。
+
+[University of Minnesota Extension：Reducing tillage intensity](https://extension.umn.edu/soil-management-and-health/reducing-tillage-intensity)
+
+## 11.4 カバークロップ・緑肥の普及
+
+ドイツのBaarckは、同社の起源がフィンランド製スペードローラーハローの販売と整備にあり、現在は自社設計の機械を製造していると説明している。
+
+[Baarck Spatenrolleggen GBS / HEKTARGON](https://www.baarck-technik.de/start/produkte/spatenrolleggen/)
+
+同社は、近年の中間作物・カバークロップ栽培の定着によって、新しい機械的土壌処理の考え方が必要になり、スペードローラーハローが中間作物の混和に適した作業結果を示すとしている。
+
+緑肥を深く埋めるのではなく、表層で粗く切り、土と混ぜ、乾燥・分解を促す用途は、スペードローラーが得意とするところである。
+
+## 11.5 高速・広幅・低構造コスト
+
+現在の機械は10〜15 km/h程度の高速作業を前提とするものが多い。
+
+たとえば、
+
+- スガノ：8〜10 km/h
+- Kronos：通常条件で12〜15 km/h
+- Tume：15 km/h超、6.4 m幅で最大9 ha/hとして紹介
+- Brix：15 km/hを想定した製品紹介
+- Claydon TerraStar：15 km/h、最大7 ha/hの目安
+
+となっている。
+
+高速化しやすい理由は、PTO回転数に拘束されず、ローラーが前進速度に応じて受動回転するためである。また、深耕を行わないので、単位幅あたりの抵抗を抑えやすい。
+
+---
+
+# 12. 現在も販売されている主な機械
+
+## 12.1 Tume Harrow R――Hankmoの直系を名乗るフィンランド機
+
+[Tume Harrow R](https://tumeagri.fi/en/cultivators/harrow-r/)
+
+TumeはHarrow Rを `shovel roller` と呼んでいる。4先端の刃を持つローラーが、土を破砕、粉砕、混和、移動させる。
+
+### 現行仕様
+
+| 型式 | R460L | R640L |
+|---|---:|---:|
+| 作業幅 | 4.60 m | 6.40 m |
+| 輸送幅 | 2.77 m | 2.77 m |
+| 質量 | 1,500 kg | 1,800 kg |
+| ナイフ軸数 | 4 | 4 |
+| ナイフクロス数 | 48 | 68 |
+| ブレード長 | 42.5 cm | 42.5 cm |
+| 最低所要動力 | 90 kW | 115 kW |
+| 軸懸架 | ばね式 | ばね式 |
+
+Tumeは、
+
+- 雑草の根を表面へ持ち上げて乾燥させる
+- 雑草種子やこぼれ穀粒の発芽床を作る
+- 堆肥を混和する
+- 吸水しやすい膨軟な表面を作る
+- ディスクハローより軽く、けん引抵抗が小さい
+
+と説明している。
+
+なお、ウェブページ上の「no compacting effect」はメーカーによる機構説明であり、圃場全体で踏圧が全く生じないという意味ではない。
+
+---
+
+## 12.2 Kronos――現在も残るフィンランドの定番
+
+[Kronos Harrows](https://kronos.fi/de/environment/eggen/)
+
+[Kronos：Agriculture](https://kronos.fi/environment/agriculture/)
+
+Kronosは1914年に小さな鍛冶工場として始まり、現在も森林機械、チェーンマルチャー、ハローを製造している。
+
+現行のスペードローラーハローは、
+
+- Kronos 3150
+- Kronos 4200
+
+の2種類で、作業幅は3.15〜4.2 mである。
+
+特徴は、
+
+- 残渣が流れやすい開放的で高いフレーム
+- 刃・軸への衝撃を吸収する柔軟な軸懸架
+- けん引式構造
+- 12〜15 km/hの高速作業
+
+である。
+
+Kronosは用途として、
+
+- ミニマムティレッジ
+- スタブルカルチベーション
+- 播種床作り
+- 堆肥・コンポストの混和
+- 草地の通気改善
+
+を挙げている。
+
+古いカタログでは3.15〜4.9 mの4型式が示されていたが、2026年時点の製品ページでは3150と4200の2型式が掲載されている。旧カタログと現行ラインナップを混同しない方がよい。
+
+---
+
+## 12.3 Baarck――中古Hankmoの維持から自社開発へ
+
+[Baarck Spatenrolleggen](https://www.baarck-technik.de/start/produkte/spatenrolleggen/)
+
+Baarckはドイツのメーカーで、フィンランド製スペードローラーハローの販売・整備を起源とする。現在は、新品設計、中古機再生、改造、補修部品供給を行っている。
+
+同社の強みは、Hankmo、Sampo、Kronos、Tumeなどの旧型機に対しても摩耗部品を供給している点である。古い機械がまだ現役で使われていることを示す存在でもある。
+
+### GBS
+
+- 平たく、切断・混和する刃
+- 3点直装式またはけん引式
+- 2〜4軸
+- 固定式またはばね式石よけ
+- 刃径440または480 mm
+- ガイドホイール
+
+### HEKTARGON
+
+- 6つの突起を持つ独自ディスク
+- 直径500 mm
+- 板厚12 mm
+- わずかに湾曲
+- メンテナンスフリー軸受
+- 前後のローラー、ディスク、液肥散布装置などと組合せ可能
+
+Baarckの製品幅は1.5〜12 mと非常に広い。単純な昔のローラーハローから、複数作業を一工程で行うモジュラー型の浅耕機へ進化している。
+
+---
+
+## 12.4 Brix Roll-X-Pro――切込み角を調節できる大型機
+
+[Brix Roll-X-Pro](https://brix-scheibeneggen.de/spatenrollegge/roll-x-pro)
+
+BrixのRoll-X-Proは、ローラーをX字状に配置した大型スペードローラーハローである。
+
+- 刃径：430 mm
+- 軸：30 × 30 mm角軸
+- 大型複列円すいころ軸受
+- セグメントごとのばね懸架
+- 切込み角を段階調整可能
+- 支持輪による深さ制御
+- 1列リアハローをオプション設定
+
+| 型式 | 作業幅 | 刃数 | 軸受数 | 質量 | 所要馬力 |
+|---|---:|---:|---:|---:|---:|
+| Roll-X-Pro 600 | 6.00 m | 120 | 12 | 1,600 kg | 150 PS |
+| Roll-X-Pro 635 | 6.35 m | 128 | 16 | 1,720 kg | 170 PS |
+| Roll-X-Pro 670 | 6.70 m | 136 | 16 | 1,840 kg | 200 PS |
+
+ドイツ農機誌Profiの記事では、速いスタブル処理、春の播種床作り、有機物の混和に適し、15 km/hの作業速度と広い作業幅で高能率を狙う機械として紹介されている。
+
+[Profi：Brix Roll-X-Pro](https://www.profi.de/aktuell/neuheiten/brix-roll-x-pro-11744104.html)
+
+---
+
+## 12.5 HANKMO――機械形式そのものがブランドとして残る
+
+オーストリアの販売会社ATGには、HANKMOのSpatenrolleneggeが掲載されている。
+
+[HANKMO Spatenrolleneggen](https://www.a-t-g.at/HANKMO-Spatenrolleneggen.100.0.html)
+
+また中古市場ではHankmo 90、Hankmo 116、Hankmo 192、Hankmo 4600などの型式が流通し、Baarckが再生や部品供給を行っている。
+
+100年以上前に生まれた名称が、実機、補修部品、中古市場を通して現在まで続いているのは興味深い。
+
+---
+
+## 12.6 Claydon TerraStar――似ているが別系統の「点状浅耕」
+
+[Claydon TerraStar](https://claydondrill.com/terrastar/)
+
+[Claydon 6m TerraStar](https://claydondrill.com/product/6m-terrastar/)
+
+Claydon TerraStarは、スペードローラーハローと似た用途を持つが、構造はかなり異なる。
+
+一般的なSpatenrolleggeでは、横軸上に連続して刃を並べ、軸全体が回転する。一方、TerraStarでは星形ポイントを200 mmの格子状に配置し、表層から小さな土塊を点状に摘み取る。
+
+Claydonはこの作業跡を `egg-box effect` と表現している。
+
+### TerraStarの狙い
+
+- 表層から小さなdivotを抜き取る
+- 下層の土壌構造をなるべく乱さない
+- 走行可能な支持力を残す
+- 細かな浅耕土を部分的に作る
+- ボランティアクロップとイネ科雑草を発芽させる
+- 表面排水を改善する
+- ナメクジの生息環境を乱す
+- 残渣、堆肥を浅く混和する
+
+### 6 m機の主な仕様
+
+- 作業幅：6.4 m
+- 走行速度：15 km/h
+- 作業能率：最大7 ha/hの目安
+- 最低所要動力：150 hp
+- 質量：1,750 kg
+- 深さ制御輪を装備
+- 後部ハローをオプション設定
+
+TerraStarは、古典的なスペードローラーハローの直接的後継というより、同じ「必要な場所だけ浅く動かす」という思想を別の機構で実現した機械と考えるのがよい。
+
+---
+
+## 12.7 Lawrence Edwards Rotatilth
+
+イギリスにはLawrence Edwardsの `Rotatilth High Speed Rotary Harrow` というカタログが残されている。
+
+- [Lawrence Edwards Rotatilth High Speed Harrow brochure](https://www.agrimanuals.com/lawrence-edwards--rotatilth-high-speed-harrow-brochure-48380-p.asp)
+- [Lawrence Edwards Rotatilth High Speed Rotary Harrow brochure](https://www.agrimanuals.com/lawrence-edwards--rotatilth-high-speed-rotary-harrow-brochure-42090-p.asp)
+
+ただし、公開プレビューから確認できる情報は商品名とカタログの存在に限られる。刃形状、ローラー本数、製造年代、HankmoまたはSampoとの関係を確認するには、カタログ本体を入手する必要がある。
+
+外観だけで同一系統と判断せず、今後の調査対象として残しておきたい。
+
+---
+
+# 13. Knocheのコンビネーションハローに残っていたローラー
+
+調査のきっかけは、Knocheの古いカタログに掲載されていたコンビネーションハローのローラーオプションだった。
+
+2005年頃のカタログでは、後部ローラーの選択肢として、スペード状の刃を持つローラーが用意されていた。ドイツ語では `Spatenrollegge`、英語では `spade roller` と表記される。
+
+ここで重要なのは、スペードローラーが必ずしも単独作業機としてだけ使われるわけではないことである。
+
+- カルチベータの後部ローラー
+- 前部ディスク＋スペードローラー
+- スペードローラー＋ゴムローラー
+- スペードローラー＋ストローハロー
+- 液肥散布装置＋スペードローラー
+- 播種ユニット＋リアハロー
+
+など、他の作業部と組み合わせることができる。
+
+単独機としては粗い表層混和を行い、コンビネーション機では、前段の爪やディスクが動かした土を砕き、混ぜ、均す役割を担う。
+
+この「単独作業機」と「後部ローラー」の二つの顔が、名称をさらに分かりにくくしている。
+
+---
+
+# 14. Claydonの説明を整理する
+
+Claydonの説明は、この種の機械が現代の農法で何を期待されているかをよく示している。
+
+原文には誤植を含む転載が多いため、内容を日本語で整理すると次のようになる。
+
+> TerraStarはストローハローより少し多く土を動かすが、表層から小さな土塊だけを摘み取り、下層の構造と機械を支持する強度を残す。星形ポイントが浅い細土を作り、こぼれ穀粒やイネ科雑草の発芽を促す。発芽後はストローハローで幼植物を処理でき、条件が合えば除草剤への依存を抑えられる。深さ制御輪によって複数回の浅い作業を再現しやすく、残渣や堆肥の混和、播種床の均一化にも使用できる。
+
+ここでの重要語は、
+
+- `plucks only divots`
+- `leaving the structure intact`
+- `encouraging volunteers and grass weeds to germinate`
+- `mechanical weeder`
+- `mulching and incorporating residues`
+- `uniform seedbeds`
+
+である。
+
+単に「土を砕くハロー」ではなく、**発芽させる、残渣を管理する、次工程につなぐ**ための作業機として位置付けられている。
+
+---
+
+# 15. Baarckの説明から分かること
+
+Baarckの説明も興味深い。
+
+同社は、フィンランド製スペードローラーハローの販売・整備から始まり、現在では自社設計、摩耗部品供給、改造、修理、中古再生まで行う企業となった。
+
+この事実は、少なくともドイツでは、
+
+- 古いHankmoやSampoがまだ使われている
+- 補修部品に継続的な需要がある
+- 中間作物の普及によって新しい需要が生まれた
+- 単純な旧型機だけでなく、大型・複合型へ発展している
+
+ことを示す。
+
+Baarckは、伝統的なGBSだけでなく、6つの突起を持つ500 mmのHEKTARGONを開発し、前部ディスク、後部ローラー、液肥散布装置などと組み合わせている。
+
+つまり復活とは、昔の機械をそのまま再生産することではない。
+
+> 昔の受動回転式ローラーの低コスト性を残しながら、深さ制御、石よけ、折りたたみ、複合作業、広幅化、軸受技術を現代化すること
+
+が、現在のスペードローラーハローの進化である。
+
+---
+
+# 16. 作業条件の考え方
+
+スペードローラーハローは単純な構造だが、設定によって作業跡が大きく変わる。
+
+## 16.1 土壌水分
+
+最も重要なのは水分である。
+
+### 湿り過ぎ
+
+- 刃が土を切らずに押す
+- 刃の通過面を練り付ける
+- 表層を塊として持ち上げる
+- 残渣と泥がローラーへ付着する
+- 走行輪による踏圧が大きくなる
+
+### 乾き過ぎ
+
+- 刃が貫入しない
+- ローラーが跳ねる
+- 土塊を細かくできない
+- 刃、軸、軸受への衝撃が増える
+- 石による損傷リスクが増える
+
+手で握ると形になるが、軽く力を加えると崩れる程度の水分域が、一般には作業しやすい。ただし土性によって適水分は大きく異なる。
+
+## 16.2 作業深
+
+極浅耕の目的では、深く入れればよいわけではない。
+
+- 2〜3 cm：発芽床形成、表面クラスト破壊、軽い残渣接触
+- 3〜5 cm：スタブル処理、ボランティアクロップ発芽促進
+- 5〜8 cm：緑肥・堆肥の粗混和、やや強い砕土
+- 8 cm超：抵抗と土壌移動が増え、この機械の利点が薄れやすい
+
+現行スガノ機は標準深5〜8 cmである。一方、stale seedbedを狙う場合は、種子を深く埋めないため、さらに浅い設定が望ましい場合もある。
+
+## 16.3 作業速度
+
+速度を上げると、
+
+- 刃の衝撃が増える
+- 土塊破砕が強まる
+- 土の飛散・横移動が増える
+- 作業能率が上がる
+
+一方で、
+
+- 石による衝撃
+- ローラーの跳ね
+- フレーム振動
+- 深さのばらつき
+- 残渣の引きずり
+
+も増え得る。
+
+メーカー値の12〜15 km/hは、適切な水分、均一な圃場、十分なトラクタ質量、石の少ない条件を前提とした目安と考えるべきである。
+
+## 16.4 軸角度
+
+切込み角を調節できる機械では、まず小さい角度から試す方がよい。
+
+1. 浅い深度・小さい角度で試運転
+2. 土壌貫入と残渣の移動を確認
+3. 混和が不足すれば角度または深さを増やす
+4. 土が横へ寄る、練る、過剰に砕ける場合は戻す
+
+角度、深さ、速度を同時に変えると、どの設定が効いたか分からなくなる。一つずつ変更する。
+
+---
+
+# 17. よい作業跡の見方
+
+この機械の目的は、ロータリーのような全面的に細かい播種床を一回で作ることではない。
+
+よい作業跡の目安は、次のようになる。
+
+- 表層に粗い土と残渣が混在している
+- 残渣が完全に埋没せず、一部は表面に残る
+- 土とワラの接触点が増えている
+- ローラー間に未処理の筋が極端に残らない
+- 土が一方向へ畝状に寄っていない
+- 走行後に光沢のある練り面がない
+- 深い層の湿った土を表面へ大量に持ち上げていない
+- 目的とする深さに種子やこぼれ穀粒が留まっている
+- 数日後にボランティアクロップの発芽が揃う
+
+逆に、次のような場合は設定が強過ぎる可能性がある。
+
+- 表面が完全に裸地化する
+- ワラが深く埋まり過ぎる
+- 細土が増え過ぎて降雨後にクラスト化する
+- 大きな土塊を大量に掘り起こす
+- 深い湿土が表面に上がる
+- トラクタのスリップ率が大きい
+- 刃に土が付着してローラー径が大きくなる
+
+---
+
+# 18. 期待できる効果と注意点
+
+## 期待できる効果
+
+### 表層混和
+
+残渣、緑肥、堆肥、液肥を表層土と粗く接触させる。
+
+### 発芽床形成
+
+こぼれ穀粒や雑草種子に土壌水分を供給し、発芽を揃える。
+
+### 機械除草
+
+発芽した幼植物を後工程で処理する。Tumeは雑草根を表面へ持ち上げて乾燥させる用途も挙げている。
+
+### 表面排水
+
+表面クラストや浅い締まりを部分的に壊し、水が入る経路を作る。ただし、深い圧密層や暗渠不良を解決する機械ではない。
+
+### 高速作業
+
+PTOを使わず広幅化しやすいため、適条件では高い圃場作業量を得やすい。
+
+### 燃料・時間の削減
+
+深耕やPTO駆動機より浅く、工程を限定することで、燃料と作業時間を抑えられる可能性がある。
+
+## 注意点
+
+### 発芽促進は防除ではない
+
+雑草を発芽させた後の処理が必要である。
+
+### 浅耕は草種によって逆効果にもなる
+
+浅耕・不耕起は、表層発芽型の小粒種子雑草を増やす場合がある。AHDBは、ブラックグラスなどでは浅い非反転耕が種子を表層に残すため、後続防除を失敗すると個体数が急増し得ると説明している。
+
+[AHDB：Integrated management of black-grass](https://ahdb.org.uk/knowledge-library/integrated-management-of-black-grass)
+
+### 表面残渣には長所と短所がある
+
+残渣被覆は蒸発、風食、雨滴衝撃を抑える一方、寒冷地や排水不良地では春の乾燥・地温上昇を遅らせることがある。
+
+### 石の多い圃場
+
+ばね懸架があっても、大石では刃、軸、軸受へ衝撃が加わる。Kronosも、大石が多い場合は速度を落とすよう案内している。
+
+### 多量残渣
+
+開放フレームは詰まりにくいが、長いワラ、蔓、未細断の緑肥は軸へ巻き付く可能性がある。コンバインでのワラ細断・拡散を均一にしておくことが前提になる。
+
+### 深層問題は解決しない
+
+作業深が数cmであるため、耕盤、深い踏圧、排水不良、心土の緻密化は解消できない。
+
+---
+
+# 19. スペードローラーは「土を耕す機械」より「次工程を設計する機械」
+
+この機械を理解するうえで重要なのは、単独で最終仕上げまで行う機械と考えないことである。
+
+スペードローラーの役割は、
+
+- 収穫直後に土と種子を接触させる
+- 数日後に発芽させる
+- ストローハローや浅耕で幼植物を処理する
+- 必要ならカバークロップを播く
+- 残渣を適度に残したまま次作を播種する
+
+という一連の体系の最初の工程になり得る。
+
+ClaydonがTerraStarとStraw Harrowを組み合わせて説明しているのも、このためである。
+
+1. TerraStarで少量の細土を作り、発芽を促す。
+2. 発芽後にStraw Harrowで幼植物を切る・抜く。
+3. 必要な被覆と土壌支持力を残して播種する。
+
+同様に、スガノのランドハローも、単に「残渣を混ぜる作業機」ではなく、
+
+- 緑肥処理
+- 表層乾燥
+- 腐植化
+- 後続耕起の軽減
+- 発芽管理
+- 播種床準備
+
+をつなぐ作業機として評価すると、現代的な意味が見えてくる。
+
+---
+
+# 20. 日本の北海道で考えられる使い方
+
+日本、とくに北海道での利用を考えると、ヨーロッパの用途をそのまま当てはめるだけでは不十分である。気候、土壌、降水、作物体系が異なるためである。
+
+それでも、次の用途は検討に値する。
+
+## 麦類収穫後の浅耕
+
+- こぼれ麦の発芽促進
+- 麦稈と土の接触
+- 秋まき作物前の表層処理
+- ストローハローより強く、ショートディスクより弱い処理
+
+## 緑肥の粗混和
+
+- ヘアリーベッチ
+- えん麦
+- ライ麦
+- ソルガム
+- クローバ類
+- からしな類
+
+ただし、長大・多量の緑肥では、事前のフレールモア、チョッパー、ローラークリンパーなどが必要になる可能性がある。
+
+## 堆肥の浅層混和
+
+堆肥を深く埋めず、表層で土と接触させる。風による飛散や臭気を抑えつつ、深耕を避けたい場合に適する可能性がある。
+
+## プラウ後の一次砕土
+
+スガノが挙げる用途である。ロータリーで細かく砕き過ぎる前に、大きな土塊を割る粗砕土工程として使う。
+
+## 春の乾土促進
+
+表層だけを動かして乾燥・昇温を促す。ただし、乾かし過ぎや風食に注意する必要がある。
+
+## 機械除草体系
+
+ボランティアクロップを発芽させ、浅耕やハローで処理する。除草剤削減の可能性はあるが、日本の草種、発生時期、降雨条件での実証が必要である。
+
+---
+
+# 21. 研究対象としても面白い
+
+スペードローラーハローは、見た目は単純だが、土壌―刃―残渣の相互作用は複雑である。
+
+研究テーマとしては次のようなものが考えられる。
+
+## 21.1 刃の通過率と土壌攪乱率
+
+全面を耕うんしないため、作業幅のうち実際に刃が通過した面積、体積を定量化できる。
+
+- 表面攪乱面積率
+- 深さ別攪乱体積率
+- 未攪乱域の連続性
+- 刃間隔と走行速度の関係
+
+## 21.2 3Dスキャンによる作業跡評価
+
+作業前後の地表面をLiDAR、SfM、3Dスキャナで計測し、
+
+- 表面粗さ
+- 凹凸波長
+- 土塊径分布
+- くぼみ体積
+- 畝方向性
+- 土壌移動量
+
+を評価できる。
+
+Claydonがいう `egg-box effect` や、スペードローラー特有の断続的な作業跡は、平均粗さだけでは表現しにくい。空間周波数、方向性、局所曲率などを用いると、ショートディスクやストローハローとの差が明確になる可能性がある。
+
+## 21.3 残渣被覆率と土壌接触率
+
+単なる被覆率だけでなく、
+
+- 土に接触している残渣割合
+- 完全に埋没した残渣割合
+- 表面に露出した残渣割合
+- 残渣の平均切断長
+- 残渣分布の均一性
+
+を画像・3D計測で求める。
+
+## 21.4 消費エネルギー
+
+- けん引抵抗
+- トラクタスリップ率
+- 燃料消費量
+- 単位土壌攪乱体積あたりエネルギー
+- 単位残渣混和量あたりエネルギー
+
+をショートディスク、チゼル、ストローハロー、ロータリーと比較する。
+
+## 21.5 発芽と雑草防除
+
+- ボランティアクロップの発芽率
+- 発芽の時間的集中度
+- 発芽深度
+- 二回目作業後の残存率
+- 除草剤使用量の削減可能性
+
+を測定する。
+
+## 21.6 含水率・土性との相互作用
+
+同じ設定でも、砂質土、火山性土、重粘土で作用は大きく異なる。
+
+- 含水比
+- 塑性指数
+- 土壌硬度
+- コーン指数
+- 団粒安定性
+- 砕土率
+- スメアリング発生
+
+と作業性能の関係を整理すると、適作業条件を定量化できる。
+
+---
+
+# 22. 設計上の観察ポイント
+
+古い機械と現行機を比較する際は、全体外観だけでなく、次の部分を見ると系譜が分かりやすい。
+
+## ローラー軸
+
+- 軸数
+- 軸径
+- 丸軸か角軸か
+- 軸の分割方法
+- 左右の軸角
+- 角度調整の有無
+
+## 刃
+
+- 1組あたりの刃数
+- 十字、四つ刃、六つ刃、星形
+- 曲率
+- ねじり角
+- 刃先幅
+- 直径
+- 板厚
+- ボルト式か溶接式か
+
+## 軸受
+
+- すべり軸受か転がり軸受か
+- 円すいころ軸受か玉軸受か
+- シール構造
+- グリースポイント
+- 軸受間隔
+
+## 石よけ
+
+- 軸全体がばねで逃げるか
+- セグメントごとに逃げるか
+- ゴムブロックかコイルばねか
+- 固定式か
+
+## 深さ制御
+
+- 機体重量のみか
+- 支持輪か
+- 後部ローラーか
+- 油圧フロートか
+
+## 折りたたみ
+
+- つづら折り
+- X折り
+- 垂直折り
+- けん引／直装切替
+- 輸送幅
+
+スガノ旧型機とSampo M-tillerを比較する場合、特に**刃の枚数、角軸寸法、軸受ハウジング、折りたたみリンク**が一致するかを見ると、単なる類似設計か、部品共通性を持つ機械かを判断しやすい。
+
+---
+
+# 23. 各機械の位置付け
+
+極めて大まかに、土を動かす強さで並べると次のようになる。
+
+```text
+ストローハロー
+    ↓ 土壌攪乱：極小
+Claydon TerraStarのような点状浅耕機
+    ↓
+スペードローラーハロー
+    ↓
+浅いバーチカルティレッジ機
+    ↓
+ショートディスクハロー
+    ↓
+浅耕カルチベータ
+    ↓
+チゼルプラウ／ディスクチゼル
+    ↓
+プラウ・ロータリー
+    ↓ 土壌攪乱：大
+```
+
+ただし、これは機種名だけで一意に決まらない。
+
+- 作業深
+- 刃角
+- ディスク角
+- 速度
+- 機体重量
+- 圃場水分
+
+によって順序が入れ替わる。
+
+たとえば、切込み角を最大にした重いスペードローラーハローは、浅く設定したバーチカルティレッジ機より多く土を動かす可能性がある。
+
+したがって、「機械カテゴリー」だけで比較するのではなく、**実際にどれだけの土壌体積を動かしたか**で比較する方が本質的である。
+
+---
+
+# 24. 突如復活したのではなく、必要性が一周した
+
+スペードローラーハローは、かつてはプラウ後の砕土や播種床作りの主力だった。
+
+その後、
+
+- Sタインハロー
+- ディスクハロー
+- ロータリー
+- パワーハロー
+- 大型コンビネーション耕うん機
+
+に置き換えられた。
+
+しかし現在は、求められる作業が再び変わっている。
+
+- 深く耕し過ぎたくない
+- 残渣を全部埋めたくない
+- カバークロップを粗く混ぜたい
+- ボランティアクロップを発芽させたい
+- 除草剤への依存を減らしたい
+- 高速・低燃費で処理したい
+- 土壌構造と機械支持力を残したい
+
+この要求に対して、100年前の構造が再び合理的になった。
+
+機械そのものが新しいのではない。
+
+> 農法の目的が変化したことで、古い機械の長所が別の意味を持ち始めた。
+
+これが、ランドハローが「突如復活した」ように見える理由ではないだろうか。
+
+---
+
+# 25. 今後さらに調べたいこと
+
+今回の公開資料調査だけでは、まだ分からないことも多い。
+
+1. スガノ旧ランドハローの製造開始年と終了年
+2. スガノとSampo、Hankmo、Kronosの取引関係
+3. Sampo M-tillerの正確な製造年代と型式展開
+4. Lawrence Edwards Rotatilthの構造と製造年代
+5. Knocheがスペードローラーを採用した時期と供給元
+6. 日本国内で販売された実機数
+7. 北海道での利用作物と評価
+8. 旧型スガノ機と現行LH335Qの設計上の連続性
+9. なぜスガノが現代に再投入したのか
+10. 現行機の刃が国内製造か、海外調達か
+
+特に、スガノ旧カタログ、Sampo M-tillerカタログ、機体銘板の3つを並べれば、かなりの部分が判明しそうである。
+
+---
+
+# 参考リンク
+
+## スガノ農機
+
+- [ランドハロー製品ページ](https://www.sugano-net.co.jp/products/landharrow/index_241217new.php)
+- [2026年総合カタログ・ランドハロー](https://www.sugano-net.co.jp/products/catalog_2026/pageindices/index39.html)
+
+## 歴史・旧機種
+
+- [Hankmo村の歴史](https://hankmo.net/historia/)
+- [Västerhankmo Museum](https://www.museiportalosterbotten.fi/museum-a-o-en/museum/58-vasterhankmo-museum)
+- [Maaseudun Tulevaisuus：フィンランドのlapiorullaäes史](https://www.maaseuduntulevaisuus.fi/koneet-ja-autot/1bd73c82-9fb7-479e-a8ef-ef4aa87d4fa1)
+- [Sampo M-tiller brochure 1](https://www.agrimanuals.com/sampo-m-tiller-brochure-1303-p.asp)
+- [Sampo M-tiller brochure 2](https://www.agrimanuals.com/sampo---m-tiller-brochure-4846-p.asp)
+- [Lawrence Edwards Rotatilth brochure 1](https://www.agrimanuals.com/lawrence-edwards--rotatilth-high-speed-harrow-brochure-48380-p.asp)
+- [Lawrence Edwards Rotatilth brochure 2](https://www.agrimanuals.com/lawrence-edwards--rotatilth-high-speed-rotary-harrow-brochure-42090-p.asp)
+
+## 現行メーカー
+
+- [Tume Harrow R](https://tumeagri.fi/en/cultivators/harrow-r/)
+- [Kronos Harrows](https://kronos.fi/de/environment/eggen/)
+- [Kronos Agriculture](https://kronos.fi/environment/agriculture/)
+- [Baarck Spatenrolleggen](https://www.baarck-technik.de/start/produkte/spatenrolleggen/)
+- [Brix Roll-X-Pro](https://brix-scheibeneggen.de/spatenrollegge/roll-x-pro)
+- [Profi：Brix Roll-X-Pro](https://www.profi.de/aktuell/neuheiten/brix-roll-x-pro-11744104.html)
+- [HANKMO Spatenrolleneggen](https://www.a-t-g.at/HANKMO-Spatenrolleneggen.100.0.html)
+- [Claydon TerraStar](https://claydondrill.com/terrastar/)
+- [Claydon 6m TerraStar](https://claydondrill.com/product/6m-terrastar/)
+
+## 浅耕・雑草・土壌管理
+
+- [AHDB：How cultivating affects the arable weed seedbank](https://ahdb.org.uk/knowledge-library/how-cultivating-affects-the-arable-weed-seedbank)
+- [AHDB：Integrated management of black-grass](https://ahdb.org.uk/knowledge-library/integrated-management-of-black-grass)
+- [University of Minnesota Extension：Reducing tillage intensity](https://extension.umn.edu/soil-management-and-health/reducing-tillage-intensity)
+- [University of Minnesota Extension：Tillage implements, purpose and ideal use](https://extension.umn.edu/soil-management-and-health/tillage-implements-purpose-and-ideal-use)
+
+---
+
+## まとめ
+
+ランドハローは、日本だけで孤立して生まれた特殊な機械ではなく、フィンランドで100年以上続いてきたHankmo系スペードローラーハローの思想と強く重なる。
+
+この形式は、全面を反転・攪拌する機械ではない。刃付きローラーで表層を断続的に切り、持ち上げ、粗く混ぜる。
+
+その中途半端さが、かつては弱点だったのかもしれない。
+
+しかし現在、
+
+- 耕し過ぎない
+- 残渣を残す
+- 発芽を制御する
+- 緑肥を浅く混ぜる
+- 高速・低燃費で作業する
+
+ことが求められるようになり、その「中途半端さ」がちょうどよい作用として再評価されている。
+
+ランドハローは、昔の機械の復刻ではない。
+
+**古い構造を、現代の浅耕・残渣管理体系の中で使い直した機械**なのである。
