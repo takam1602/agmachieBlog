@@ -1,7 +1,7 @@
 'use client'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
-import { Search } from 'lucide-react'
+import { ArrowUpRight, Search, X } from 'lucide-react'
 
 // Updated to accept more data if available, but keeping it compatible
 type Entry = {
@@ -14,6 +14,14 @@ type Entry = {
 }
 
 type SearchResult = Entry & { score: number }
+
+const categoryLabels: Record<string, string> = {
+  ag: '農業機械',
+  blog: 'ブログ',
+  autoDownloadMachineFinder: '機械データ',
+}
+
+const getCategoryLabel = (category: string) => categoryLabels[category] ?? category
 
 const stopWords = new Set([
   'the', 'and', 'for', 'with', 'from', 'this', 'that', 'have', 'has', 'was', 'were',
@@ -207,81 +215,164 @@ function searchSimilar(entries: Entry[], query: string, index: ReturnType<typeof
 
 export default function SearchableList({ entries }: { entries: Entry[] }) {
   const [query, setQuery] = useState('')
+  const [category, setCategory] = useState('')
+  const inputRef = useRef<HTMLInputElement>(null)
 
   const normalizedQuery = query.trim().toLowerCase()
   const searchIndex = useMemo(() => buildSearchIndex(entries), [entries])
-  const filtered = useMemo(
-    () => searchSimilar(entries, query, searchIndex),
-    [entries, query, searchIndex],
-  )
+  const categories = useMemo(() => (
+    Array.from(new Set(entries.map((entry) => entry.category).filter(Boolean) as string[]))
+      .sort((a, b) => a.localeCompare(b, 'ja'))
+  ), [entries])
+  const filtered = useMemo(() => {
+    const candidates = normalizedQuery
+      ? searchSimilar(entries, query, searchIndex)
+      : entries.map((entry) => ({ ...entry, score: 0 }))
+
+    return candidates
+      .filter((entry) => !category || entry.category === category)
+      .slice(0, 24)
+  }, [category, entries, normalizedQuery, query, searchIndex])
+  const isSearching = Boolean(normalizedQuery || category)
+
+  useEffect(() => {
+    const focusFromShortcut = (event: KeyboardEvent) => {
+      const target = event.target as HTMLElement | null
+      const isTyping = target?.matches('input, textarea, select, [contenteditable="true"]')
+      if (event.key === '/' && !isTyping) {
+        event.preventDefault()
+        inputRef.current?.focus()
+      }
+    }
+
+    if (window.location.hash === '#search') {
+      window.setTimeout(() => inputRef.current?.focus(), 350)
+    }
+    window.addEventListener('keydown', focusFromShortcut)
+    return () => window.removeEventListener('keydown', focusFromShortcut)
+  }, [])
+
+  const reset = () => {
+    setQuery('')
+    setCategory('')
+    inputRef.current?.focus()
+  }
 
   return (
     <div className="w-full">
-      {/* Search Input */}
-      <div className="relative mb-8 group max-w-4xl mx-auto">
+      <div className="relative group max-w-4xl mx-auto">
         <div className="repository-search-icon absolute inset-y-0 left-0 flex items-center pointer-events-none">
-          <Search size={32} className="text-gray-500 group-focus-within:text-[var(--accent)] transition-colors" />
+          <Search size={24} className="text-gray-500 group-focus-within:text-[var(--accent)] transition-colors" />
         </div>
         <input
+          ref={inputRef}
           type="text"
-          placeholder="キーワードを入力"
+          inputMode="search"
+          enterKeyHint="search"
+          autoComplete="off"
+          aria-label="リポジトリ内を検索"
+          placeholder="機械名・メーカー・国などで検索"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="repository-search-input w-full rounded-2xl border border-[#333] bg-[#1a1a1a] text-white outline-none transition-all placeholder:text-gray-500 focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)]"
+          className="repository-search-input w-full rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] text-white outline-none transition-all placeholder:text-gray-500 focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent)]/10"
         />
+        {(query || category) && (
+          <button
+            type="button"
+            onClick={reset}
+            aria-label="検索条件をクリア"
+            className="absolute inset-y-0 right-3 my-auto flex h-9 w-9 items-center justify-center rounded-full text-gray-500 transition-colors hover:bg-white/5 hover:text-white"
+          >
+            <X size={18} />
+          </button>
+        )}
       </div>
 
-      {!normalizedQuery && (
-        <p className="text-center text-sm text-gray-500">
-          検索語を入力すると、ヒットした記事だけがここに表示されます。
-        </p>
-      )}
+      <div className="mx-auto mt-4 flex max-w-4xl flex-wrap items-center justify-center gap-2" aria-label="カテゴリで絞り込み">
+        {categories.map((item) => (
+          <button
+            key={item}
+            type="button"
+            aria-pressed={category === item}
+            onClick={() => setCategory((current) => current === item ? '' : item)}
+            className={category === item
+              ? 'rounded-full border border-[var(--accent)] bg-[var(--accent)]/15 px-3 py-1.5 text-xs text-[var(--accent)] transition-colors'
+              : 'rounded-full border border-[var(--border)] bg-white/[0.02] px-3 py-1.5 text-xs text-gray-400 transition-colors hover:border-gray-500 hover:text-gray-200'
+            }
+          >
+            {getCategoryLabel(item)}
+          </button>
+        ))}
+      </div>
 
-      {normalizedQuery && (
-        <p className="mb-4 text-center text-sm text-gray-500">
-          {filtered.length}件ヒット
-        </p>
-      )}
-
-      {/* Grid Layout (Compact Tiles) */}
-      {normalizedQuery && (
-        <div className="home-tile-grid">
-          {filtered.map((e) => (
-            <Link
-              key={e.href}
-              href={e.href}
-              className="group flex h-full flex-col overflow-hidden rounded-lg border border-[#333] bg-[#1a1a1a] transition-all duration-200 hover:-translate-y-1 hover:border-[var(--accent)] hover:shadow-md hover:shadow-[var(--accent)]/5"
+      {!isSearching && (
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-2 text-xs text-gray-500">
+          <span>検索例:</span>
+          {['トラクター', 'コンバイン', '北海道開発'].map((suggestion) => (
+            <button
+              key={suggestion}
+              type="button"
+              onClick={() => {
+                setQuery(suggestion)
+                inputRef.current?.focus()
+              }}
+              className="rounded-full bg-white/[0.04] px-3 py-1.5 text-gray-400 transition-colors hover:bg-white/[0.08] hover:text-white"
             >
-              {/* Card Content - Title Focused */}
+              {suggestion}
+            </button>
+          ))}
+          <span className="hidden sm:inline">・ / キーで入力欄へ</span>
+        </div>
+      )}
+
+      {isSearching && (
+        <p className="mb-4 mt-7 text-center text-sm text-gray-400" aria-live="polite">
+          <span className="font-semibold text-white">{filtered.length}</span> 件を表示
+          {category && <span> ・ {getCategoryLabel(category)}</span>}
+        </p>
+      )}
+
+      {isSearching && (
+        <div className="home-tile-grid">
+          {filtered.map((entry) => (
+            <Link
+              key={entry.href}
+              href={entry.href}
+              className="group flex h-full flex-col overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--surface)] transition-all duration-200 hover:-translate-y-1 hover:border-[var(--accent)] hover:shadow-lg hover:shadow-black/20"
+            >
               <div className="flex h-full min-h-[150px] flex-col p-4">
                 <div className="mb-2 flex items-center justify-between gap-2">
-                  {e.category && (
-                    <span className="rounded-full bg-[#222] px-2 py-0.5 text-[10px] uppercase tracking-wide text-gray-500">
-                      {e.category}
+                  {entry.category && (
+                    <span className="rounded-full bg-white/[0.04] px-2 py-0.5 text-[10px] uppercase tracking-wide text-gray-500">
+                      {getCategoryLabel(entry.category)}
                     </span>
                   )}
-                  {e.date && (
+                  {entry.date && (
                     <span className="ml-auto text-[10px] font-mono text-gray-600 transition-colors group-hover:text-gray-500">
-                        {e.date}
+                      {entry.date}
                     </span>
                   )}
                 </div>
                 <h3 className="mb-2 line-clamp-3 text-sm font-bold leading-snug text-gray-200 transition-colors group-hover:text-[var(--accent)] md:text-base">
-                  {e.label}
+                  {entry.label}
                 </h3>
-                {e.excerpt && <p className="mt-auto line-clamp-3 text-xs leading-relaxed text-gray-500">{e.excerpt}</p>}
-                <span className="mt-3 text-[10px] font-mono text-gray-600">
-                  similarity {(Math.min(0.99, e.score) * 100).toFixed(0)}%
+                {entry.excerpt && <p className="mt-auto line-clamp-3 text-xs leading-relaxed text-gray-500">{entry.excerpt}</p>}
+                <span className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-[var(--accent)]">
+                  記事を読む <ArrowUpRight size={13} aria-hidden="true" />
                 </span>
               </div>
             </Link>
           ))}
         </div>
       )}
-      
-      {normalizedQuery && filtered.length === 0 && (
-        <div className="text-center py-16 text-gray-500 bg-[#1a1a1a]/50 rounded-lg border border-dashed border-[#333]">
-          <p>該当する記事はありません。</p>
+
+      {isSearching && filtered.length === 0 && (
+        <div className="rounded-xl border border-dashed border-[var(--border)] bg-[var(--surface)]/50 py-14 text-center text-gray-500">
+          <p className="text-gray-300">該当する記事は見つかりませんでした。</p>
+          <p className="mt-2 text-sm">表記を短くするか、カテゴリを外してお試しください。</p>
+          <button type="button" onClick={reset} className="mt-5 text-sm font-medium text-[var(--accent)] hover:underline">
+            検索条件をクリア
+          </button>
         </div>
       )}
     </div>
