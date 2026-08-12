@@ -110,6 +110,14 @@ a:hover {
   pointer-events: none;
 }
 
+.hero-carousel-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at center, rgba(5, 13, 9, 0.5), rgba(5, 10, 8, 0.82) 72%),
+    linear-gradient(180deg, rgba(4, 10, 7, 0.18), rgba(4, 10, 7, 0.8));
+}
+
 .prose {
   color: var(--text-secondary);
 }
