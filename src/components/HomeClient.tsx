@@ -1,11 +1,10 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, BookOpen, ChevronDown, Compass, Database, Search } from 'lucide-react'
 
-import ImageCarousel from '@/components/ImageCarousel'
-import ImageLightbox from '@/components/ImageLightbox'
 import SearchableList from '@/components/SearchableList'
 import WhatsNew from '@/components/WhatsNew'
 import { BlogPost, RepositorySection } from '@/utils/posts'
@@ -53,9 +52,6 @@ export default function HomeClient({
   weeklyNewsRandom,
   children,
 }: HomeClientProps) {
-  const [lightboxImg, setLightboxImg] =
-    useState<{ src: string; alt: string } | null>(null)
-
   useEffect(() => {
     const restoreSavedPosition = (clearFlag = false) => {
       const restoreTarget = sessionStorage.getItem('agmachie:restoreSection')
@@ -109,19 +105,10 @@ export default function HomeClient({
   ]
 
   return (
-    <>
-      {lightboxImg && (
-        <ImageLightbox
-          src={lightboxImg.src}
-          alt={lightboxImg.alt}
-          onClose={() => setLightboxImg(null)}
-        />
-      )}
-
-      <div className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6">
-        <section className="relative overflow-hidden pb-12 pt-14 sm:pb-16 sm:pt-20">
-          <div className="hero-glow" aria-hidden="true" />
-          <div className="relative mx-auto max-w-4xl text-center">
+    <div className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6">
+      <section className="relative -mx-4 flex min-h-[620px] items-center overflow-hidden border-b border-[var(--border)] px-4 py-16 sm:-mx-6 sm:min-h-[650px] sm:px-6 sm:py-24 lg:mx-0 lg:rounded-3xl lg:border">
+        <HeroBackgroundCarousel images={heroImages} interval={5000} />
+        <div className="relative mx-auto w-full max-w-4xl text-center">
             <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-[var(--accent)]/25 bg-[var(--accent)]/[0.07] px-3 py-1.5 text-xs font-semibold tracking-[0.16em] text-[var(--accent)]">
               AGRICULTURAL MACHINERY ARCHIVE
             </p>
@@ -157,9 +144,9 @@ export default function HomeClient({
               ))}
             </dl>
           </div>
-        </section>
+      </section>
 
-        <section id="search" className="scroll-mt-24 rounded-3xl border border-[var(--border)] bg-[var(--surface)]/90 px-4 py-8 shadow-2xl shadow-black/20 sm:px-8 sm:py-10">
+      <section id="search" className="scroll-mt-24 rounded-3xl border border-[var(--border)] bg-[var(--surface)]/90 px-4 py-8 shadow-2xl shadow-black/20 sm:px-8 sm:py-10">
           <SectionIntro
             eyebrow="EXPLORE"
             title="リポジトリを検索"
@@ -182,23 +169,14 @@ export default function HomeClient({
           <SectionIntro
             eyebrow="DISCOVER"
             title="偶然の発見から読む"
-            description="写真とランダムな記事から、普段とは違う入口でアーカイブを巡れます。"
+            description="ランダムな一記事から、普段とは違う入口でアーカイブを巡れます。"
             align="left"
           />
-          <div className="grid items-stretch gap-6 lg:grid-cols-[1.35fr_1fr]">
-            <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-3 sm:p-4">
-              <ImageCarousel
-                images={heroImages}
-                interval={4500}
-                onImageClick={(image) => setLightboxImg({ src: image.src, alt: image.alt ?? '' })}
-              />
+          {children && (
+            <div id="topic-picks" className="mx-auto max-w-3xl scroll-mt-24">
+              {children}
             </div>
-            {children && (
-              <div id="topic-picks" className="scroll-mt-24">
-                {children}
-              </div>
-            )}
-          </div>
+          )}
         </section>
 
         <div id="news" className="scroll-mt-24">
@@ -223,7 +201,54 @@ export default function HomeClient({
 
         <BlogSection posts={blogPosts} />
       </div>
-    </>
+  )
+}
+
+function HeroBackgroundCarousel({
+  images,
+  interval,
+}: {
+  images: typeof heroImages
+  interval: number
+}) {
+  const [activeIndex, setActiveIndex] = useState(0)
+  const [reduceMotion, setReduceMotion] = useState(false)
+
+  useEffect(() => {
+    const media = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const updatePreference = () => setReduceMotion(media.matches)
+    updatePreference()
+    media.addEventListener('change', updatePreference)
+    return () => media.removeEventListener('change', updatePreference)
+  }, [])
+
+  useEffect(() => {
+    if (images.length < 2 || reduceMotion) return
+    const timer = window.setInterval(() => {
+      setActiveIndex((current) => (current + 1) % images.length)
+    }, interval)
+    return () => window.clearInterval(timer)
+  }, [images.length, interval, reduceMotion])
+
+  return (
+    <div className="absolute inset-0 bg-[#08100c]" aria-hidden="true">
+      {images.map((image, index) => (
+        <Image
+          key={image.src}
+          src={image.src}
+          alt=""
+          fill
+          priority={index === 0}
+          sizes="(max-width: 1280px) 100vw, 1280px"
+          className={
+            'object-cover transition-opacity duration-[1400ms] motion-reduce:transition-none ' +
+            (index === activeIndex ? 'opacity-55' : 'opacity-0')
+          }
+        />
+      ))}
+      <div className="hero-carousel-overlay" />
+      <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[var(--bg-primary)] to-transparent" />
+    </div>
   )
 }
 
