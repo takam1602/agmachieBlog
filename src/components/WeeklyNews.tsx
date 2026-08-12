@@ -1,5 +1,5 @@
 import { ArrowUpRight } from 'lucide-react'
-import { WeeklyNewsItem } from '@/utils/weeklyNews'
+import type { WeeklyNewsItem } from '@/utils/weeklyNews'
 
 export default function WeeklyNews({
   latest,
@@ -16,13 +16,13 @@ export default function WeeklyNews({
         <p className="mb-2 text-[11px] font-bold tracking-[0.2em] text-[var(--accent)]">AROUND THE WORLD</p>
         <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">Weekly News</h2>
         <p className="mt-2 max-w-2xl text-sm leading-6 text-gray-500">
-          世界の農業機械メディアから集めたニュース。毎週日曜日に更新しています。
+          海外4媒体の農業機械ニュースを記事単位で収集し、農機用語を補正した日本語要約で紹介。毎週月曜日に更新します。
         </p>
       </div>
 
       <div className="grid gap-6 xl:grid-cols-2">
-        <NewsGroup title="最新ニュース" subtitle="profi / Farmers Weekly から" items={latest} />
-        <NewsGroup title="アーカイブから発見" subtitle="幅広いソースからランダムに" items={random} />
+        <NewsGroup title="今週の新着" subtitle="公開日順・媒体ごとに最大2件" items={latest} />
+        <NewsGroup title="注目トピック" subtitle="技術・製品・現場の話題を厳選" items={random} />
       </div>
     </section>
   )
@@ -59,9 +59,16 @@ function NewsGroup({
             className="group block rounded-xl border border-transparent bg-black/10 p-4 transition-colors hover:border-[var(--border-strong)] hover:bg-white/[0.025]"
           >
             <div className="mb-2 flex items-center justify-between gap-3">
-              <span className="rounded-full bg-[var(--accent)]/[0.08] px-2.5 py-1 text-[9px] font-semibold uppercase tracking-[0.14em] text-[var(--accent)]">
-                {item.source}
-              </span>
+              <div className="flex min-w-0 items-center gap-1.5">
+                <span className="truncate rounded-full bg-[var(--accent)]/[0.08] px-2.5 py-1 text-[9px] font-semibold uppercase tracking-[0.14em] text-[var(--accent)]">
+                  {item.source}
+                </span>
+                {item.topic && (
+                  <span className="shrink-0 rounded-full bg-white/[0.04] px-2 py-1 text-[9px] font-medium text-gray-500">
+                    {item.topic}
+                  </span>
+                )}
+              </div>
               <span className="font-mono text-[10px] text-gray-600">{item.date ?? 'latest'}</span>
             </div>
             <div className="flex items-start gap-3">
@@ -69,6 +76,11 @@ function NewsGroup({
                 <h4 className="line-clamp-2 text-sm font-semibold leading-6 text-gray-200 transition-colors group-hover:text-white">
                   {item.title}
                 </h4>
+                {item.originalTitle && item.originalTitle !== item.title && (
+                  <p lang="en" className="mt-1 line-clamp-1 text-[10px] leading-4 text-gray-600">
+                    {item.originalTitle}
+                  </p>
+                )}
                 {item.summary && item.summary !== item.title && (
                   <p className="mt-1.5 line-clamp-2 text-xs leading-5 text-gray-500">{item.summary}</p>
                 )}
