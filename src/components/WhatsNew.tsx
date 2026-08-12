@@ -1,33 +1,42 @@
-import Link from 'next/link';
-import { BlogPost } from '@/utils/posts';
+import Link from 'next/link'
+import { ArrowUpRight } from 'lucide-react'
+import { BlogPost } from '@/utils/posts'
 
 export default function WhatsNew({ posts }: { posts: BlogPost[] }) {
-  // Take top 5
-  const latestPosts = posts.slice(0, 5);
+  const latestPosts = posts.slice(0, 5)
+
+  if (!latestPosts.length) {
+    return (
+      <p className="rounded-xl border border-dashed border-[var(--border)] py-10 text-center text-sm text-gray-500">
+        更新された記事はまだありません。
+      </p>
+    )
+  }
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 mb-4">
-      <div className="bg-[#1a1a1a]/80 backdrop-blur-sm border border-[#333] rounded-lg p-3 flex flex-col gap-4 text-sm">
-        
-        <div className="flex items-center gap-2 flex-shrink-0">
-            <span className="bg-[var(--accent)] text-[#121212] font-bold px-2 py-0.5 rounded text-xs uppercase tracking-wider">
-                What&apos;s new !!
+    <ul className="whats-new-grid">
+      {latestPosts.map((post, index) => (
+        <li key={post.slug} className="min-w-0">
+          <Link
+            href={post.href}
+            className="group flex min-h-[118px] flex-col rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4 transition-all hover:-translate-y-0.5 hover:border-[var(--accent)] hover:bg-[var(--surface-strong)]"
+          >
+            <div className="mb-3 flex items-center justify-between gap-3">
+              <span className={index === 0
+                ? 'rounded-full bg-[var(--accent)]/10 px-2 py-1 text-[9px] font-bold tracking-[0.12em] text-[var(--accent)]'
+                : 'rounded-full bg-white/[0.03] px-2 py-1 text-[9px] font-bold tracking-[0.12em] text-gray-600'
+              }>
+                {index === 0 ? 'LATEST' : 'UPDATED'}
+              </span>
+              <span className="font-mono text-[10px] text-gray-600">{post.updatedAt ?? post.date}</span>
+            </div>
+            <span className="line-clamp-2 text-sm font-semibold leading-6 text-gray-300 transition-colors group-hover:text-white">
+              {post.title}
             </span>
-        </div>
-
-        <div className="w-full overflow-hidden">
-            <ul className="whats-new-grid">
-                {latestPosts.map((post) => (
-                    <li key={post.slug} className="min-w-0">
-                        <Link href={post.href} className="block rounded-md border border-[#333] bg-[#161616] p-3 text-gray-400 transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]">
-                             <span className="block truncate text-sm font-medium text-gray-300">{post.title}</span>
-                             <span className="mt-1 block font-mono text-xs text-gray-600">{post.updatedAt ?? post.date}</span>
-                        </Link>
-                    </li>
-                ))}
-            </ul>
-        </div>
-      </div>
-    </div>
-  );
+            <ArrowUpRight size={14} className="mt-auto self-end text-gray-600 transition-colors group-hover:text-[var(--accent)]" aria-hidden="true" />
+          </Link>
+        </li>
+      ))}
+    </ul>
+  )
 }

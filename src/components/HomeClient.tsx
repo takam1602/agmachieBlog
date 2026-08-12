@@ -1,8 +1,8 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { TypeAnimation } from 'react-type-animation'
 import Link from 'next/link'
+import { ArrowRight, BookOpen, ChevronDown, Compass, Database, Search } from 'lucide-react'
 
 import ImageCarousel from '@/components/ImageCarousel'
 import ImageLightbox from '@/components/ImageLightbox'
@@ -12,24 +12,30 @@ import { BlogPost, RepositorySection } from '@/utils/posts'
 import WeeklyNews from '@/components/WeeklyNews'
 import { WeeklyNewsItem } from '@/utils/weeklyNews'
 
-/* ---------- トップページ用画像 ---------- */
 const heroImages = [
-  { src: '/img/front/1.jpg',  alt: 'v',         width: 640, height: 480 },
-  { src: '/img/front/2.jpg',  alt: 'カルチ',     width: 640, height: 480 },
-  { src: '/img/front/3.JPG',  alt: '芋',         width: 640, height: 480 },
-  { src: '/img/front/4.jpg',  alt: '栃木',       width: 640, height: 480 },
-  { src: '/img/front/5.JPG',  alt: 'ディスク',   width: 640, height: 480 },
-  { src: '/img/front/6.JPG',  alt: 'チゼル',     width: 640, height: 480 },
-  { src: '/img/front/7.JPG',  alt: '9750',       width: 640, height: 480 },
-  { src: '/img/front/8.JPG',  alt: 'タイ',       width: 640, height: 480 },
-  { src: '/img/front/9.JPG',  alt: 'マンモス',   width: 640, height: 480 },
-  { src: '/img/front/10.JPG', alt: 'wagga',      width: 640, height: 480 },
-  { src: '/img/front/11.JPG', alt: '中国',       width: 640, height: 480 },
-  { src: '/img/front/12.JPG', alt: '中国',       width: 640, height: 480 },
+  { src: '/img/front/1.jpg',  alt: '農業機械の作業風景', width: 640, height: 480 },
+  { src: '/img/front/2.jpg',  alt: 'カルチベーター', width: 640, height: 480 },
+  { src: '/img/front/3.JPG',  alt: 'いも収穫機', width: 640, height: 480 },
+  { src: '/img/front/4.jpg',  alt: '栃木の農業機械', width: 640, height: 480 },
+  { src: '/img/front/5.JPG',  alt: 'ディスクハロー', width: 640, height: 480 },
+  { src: '/img/front/6.JPG',  alt: 'チゼルプラウ', width: 640, height: 480 },
+  { src: '/img/front/7.JPG',  alt: '大型コンバイン 9750', width: 640, height: 480 },
+  { src: '/img/front/8.JPG',  alt: 'タイの農業機械', width: 640, height: 480 },
+  { src: '/img/front/9.JPG',  alt: '大型農業機械', width: 640, height: 480 },
+  { src: '/img/front/10.JPG', alt: 'オーストラリア Wagga Wagga の農業', width: 640, height: 480 },
+  { src: '/img/front/11.JPG', alt: '中国の農業機械', width: 640, height: 480 },
+  { src: '/img/front/12.JPG', alt: '中国の農作業風景', width: 640, height: 480 },
 ]
 
 interface HomeClientProps {
-  searchEntries: { href: string; label: string; date: string; excerpt: string; category?: string }[]
+  searchEntries: {
+    href: string
+    label: string
+    date: string
+    excerpt: string
+    category?: string
+    searchText?: string
+  }[]
   blogPosts: BlogPost[]
   latestPosts: BlogPost[]
   repositorySections: RepositorySection[]
@@ -59,8 +65,7 @@ export default function HomeClient({
           ? 'topic'
           : ''
       const targetKey = restoreTarget || hashTarget
-      const shouldRestore = Boolean(targetKey)
-      if (!shouldRestore) return
+      if (!targetKey) return
 
       const selector = targetKey === 'blog' ? '#blog' : '#topic-picks'
       const positionKey = targetKey === 'blog' ? 'agmachie:blogScrollY' : 'agmachie:topicScrollY'
@@ -93,15 +98,18 @@ export default function HomeClient({
 
     scheduleRestore()
     window.addEventListener('pageshow', scheduleRestore)
-
-    return () => {
-      window.removeEventListener('pageshow', scheduleRestore)
-    }
+    return () => window.removeEventListener('pageshow', scheduleRestore)
   }, [])
+
+  const repositoryCount = repositorySections.reduce((total, section) => total + section.items.length, 0)
+  const stats = [
+    { value: searchEntries.length, label: '公開記事', icon: BookOpen },
+    { value: repositoryCount, label: 'コレクション', icon: Database },
+    { value: blogPosts.length, label: 'ブログ', icon: Compass },
+  ]
 
   return (
     <>
-      {/* ライトボックス */}
       {lightboxImg && (
         <ImageLightbox
           src={lightboxImg.src}
@@ -110,118 +118,173 @@ export default function HomeClient({
         />
       )}
 
-      <div className="flex justify-center">
-        <main className="w-full max-w-7xl px-4 sm:px-6 pb-12">
-
-          {/* HERO ---------------------------------------------------------- */}
-          <section className="pt-10 pb-8 text-center">
-            <h1 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-4 min-h-[60px] md:min-h-[70px]">
-              <TypeAnimation
-                sequence={[
-                  'AgMachine Repository', 1500,
-                  'Welcome, curious engineer.', 1500,
-                  '農業機械　リポジトリ', 1500,
-                ]}
-                speed={{ type: 'keyStrokeDelayInMs', value: 150 }}
-                repeat={Infinity}
-                wrapper="span"
-                cursor={true}
-                className="text-[var(--accent)]"
-              />
-            </h1>
-            <p className="text-gray-300 leading-relaxed max-w-3xl mx-auto text-sm md:text-base mb-8">
-              農業機械のリポジトリです．いにしへ・さいしんの技術をまとめています．
+      <div className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6">
+        <section className="relative overflow-hidden pb-12 pt-14 sm:pb-16 sm:pt-20">
+          <div className="hero-glow" aria-hidden="true" />
+          <div className="relative mx-auto max-w-4xl text-center">
+            <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-[var(--accent)]/25 bg-[var(--accent)]/[0.07] px-3 py-1.5 text-xs font-semibold tracking-[0.16em] text-[var(--accent)]">
+              AGRICULTURAL MACHINERY ARCHIVE
             </p>
-          </section>
+            <h1 className="text-balance text-4xl font-bold leading-[1.15] tracking-[-0.04em] text-white sm:text-6xl">
+              農業機械の知識を、
+              <span className="text-[var(--accent)]">次の現場へ。</span>
+            </h1>
+            <p className="mx-auto mt-6 max-w-2xl text-pretty text-sm leading-7 text-gray-400 sm:text-base">
+              新旧の技術、地域ごとの特色、メーカーの記録をMarkdownで蓄積する、
+              農業機械のためのオープンなリポジトリです。
+            </p>
 
-          {/* What's New (Above Carousel) ----------------------------------- */}
-          <section className="mb-2">
-            <WhatsNew posts={latestPosts} />
-          </section>
-
-          {/* Carousel ------------------------------------------------------ */}
-          <section className="py-4">
-            <ImageCarousel
-              images={heroImages}
-              interval={3000}
-              onImageClick={(img) =>
-                setLightboxImg({ src: img.src, alt: img.alt ?? '' })
-              }
-            />
-          </section>
-
-          {/* Featured Topic (Below Carousel) ------------------------------- */}
-          {children && (
-            <div id="topic-picks" className="py-8 w-full scroll-mt-24">
-              {children}
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Link href="#search" style={{ color: '#07140f' }} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-6 text-sm font-bold text-[#07140f] transition-transform hover:-translate-y-0.5 hover:bg-[var(--accent-hover)] hover:text-[#07140f]">
+                <Search size={17} aria-hidden="true" />
+                記事を探す
+              </Link>
+              <Link href="#repository" className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-[var(--border-strong)] bg-white/[0.03] px-6 text-sm font-medium text-gray-200 transition-colors hover:border-gray-500 hover:bg-white/[0.06] hover:text-white">
+                コレクションを見る
+                <ArrowRight size={16} aria-hidden="true" />
+              </Link>
             </div>
-          )}
 
+            <dl className="mx-auto mt-10 grid max-w-xl grid-cols-3 divide-x divide-[var(--border)] rounded-2xl border border-[var(--border)] bg-black/10 py-4 backdrop-blur-sm">
+              {stats.map(({ value, label, icon: Icon }) => (
+                <div key={label} className="flex flex-col items-center px-2">
+                  <dt className="order-2 mt-1 text-[10px] tracking-wide text-gray-500 sm:text-xs">{label}</dt>
+                  <dd className="order-1 flex items-center gap-1.5 text-lg font-bold text-gray-100 sm:text-xl">
+                    <Icon size={14} className="text-[var(--accent)]" aria-hidden="true" />
+                    {value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </section>
+
+        <section id="search" className="scroll-mt-24 rounded-3xl border border-[var(--border)] bg-[var(--surface)]/90 px-4 py-8 shadow-2xl shadow-black/20 sm:px-8 sm:py-10">
+          <SectionIntro
+            eyebrow="EXPLORE"
+            title="リポジトリを検索"
+            description="表記ゆれにも対応。機械名、メーカー、国・地域、本文中の言葉から探せます。"
+          />
+          <SearchableList entries={searchEntries} />
+        </section>
+
+        <section id="latest" className="scroll-mt-24 py-12 sm:py-16">
+          <SectionIntro
+            eyebrow="RECENTLY UPDATED"
+            title="最近更新された記録"
+            description="新規追加と更新のあったページをまとめています。"
+            align="left"
+          />
+          <WhatsNew posts={latestPosts} />
+        </section>
+
+        <section id="discover" className="border-t border-[var(--border)] py-12 sm:py-16">
+          <SectionIntro
+            eyebrow="DISCOVER"
+            title="偶然の発見から読む"
+            description="写真とランダムな記事から、普段とは違う入口でアーカイブを巡れます。"
+            align="left"
+          />
+          <div className="grid items-stretch gap-6 lg:grid-cols-[1.35fr_1fr]">
+            <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-3 sm:p-4">
+              <ImageCarousel
+                images={heroImages}
+                interval={4500}
+                onImageClick={(image) => setLightboxImg({ src: image.src, alt: image.alt ?? '' })}
+              />
+            </div>
+            {children && (
+              <div id="topic-picks" className="scroll-mt-24">
+                {children}
+              </div>
+            )}
+          </div>
+        </section>
+
+        <div id="news" className="scroll-mt-24">
           <WeeklyNews latest={weeklyNewsLatest} random={weeklyNewsRandom} />
+        </div>
 
-          {/* Search -------------------------------------------------------- */}
-          <section id="search" className="py-8 border-t border-[#333] scroll-mt-24">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold text-white">Repository Search</h2>
-              <p className="mt-2 text-sm text-gray-400">キーワードに該当しそうな記事を表示します。</p>
-            </div>
-            <SearchableList entries={searchEntries} />
-          </section>
-
-          {/* Repository Section (Grid Layout) ------------------------------ */}
-          <div id="repository" className="space-y-9 pt-8 scroll-mt-24">
+        <section id="repository" className="scroll-mt-24 border-t border-[var(--border)] py-12 sm:py-16">
+          <SectionIntro
+            eyebrow="COLLECTIONS"
+            title="テーマから辿る"
+            description="地域、メーカー、機械の用途ごとに整理されたコレクションです。"
+            align="left"
+          />
+          <div className="space-y-10">
             {repositorySections.map((section) => (
-              <Section key={section.title} title={section.title}>
-                {section.items.map((item) => <Card key={item.href} {...item} />)}
-              </Section>
+              <RepositoryGroup key={section.title} title={section.title}>
+                {section.items.map((item) => <RepositoryCard key={item.href} {...item} />)}
+              </RepositoryGroup>
             ))}
           </div>
+        </section>
 
-          {/* Blog ---------------------------------------------------------- */}
-          <BlogSection posts={blogPosts} />
-        </main>
+        <BlogSection posts={blogPosts} />
       </div>
     </>
   )
 }
 
-function Section({ title, children }: { title: string, children: React.ReactNode }) {
-    return (
-        <section className="border-t border-[#333] pt-6">
-            <h2 className="text-xl font-bold mb-4 pl-3 border-l-4 border-[var(--accent)] text-white">
-                {title}
-            </h2>
-            <div className="home-tile-grid">
-                {children}
-            </div>
-        </section>
-    )
+function SectionIntro({
+  eyebrow,
+  title,
+  description,
+  align = 'center',
+}: {
+  eyebrow: string
+  title: string
+  description: string
+  align?: 'left' | 'center'
+}) {
+  const alignment = align === 'left' ? 'items-start text-left' : 'items-center text-center'
+  return (
+    <div className={'mb-7 flex flex-col ' + alignment}>
+      <p className="mb-2 text-[11px] font-bold tracking-[0.2em] text-[var(--accent)]">{eyebrow}</p>
+      <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">{title}</h2>
+      <p className="mt-2 max-w-2xl text-sm leading-6 text-gray-500">{description}</p>
+    </div>
+  )
 }
 
-function Card({ href, label, desc, count }: { href: string, label: string, desc?: string, count?: number }) {
-    return (
-        <Link 
-            href={href} 
-            className="group block p-4 rounded-lg bg-[#1a1a1a] border border-[#333] hover:border-[var(--accent)] transition-all duration-200 hover:bg-[#222] min-h-[104px]"
-        >
-            <div className="flex items-start justify-between gap-3">
-              <h3 className="text-base font-bold text-gray-100 group-hover:text-[var(--accent)] transition-colors line-clamp-2">
-                  {label}
-              </h3>
-              {typeof count === 'number' && (
-                <span className="shrink-0 rounded-full border border-[#3a3a3a] px-2 py-0.5 text-[10px] font-mono text-gray-400">
-                  {count}
-                </span>
-              )}
-            </div>
-            {desc && <p className="mt-2 text-xs text-gray-500 line-clamp-2">{desc}</p>}
-        </Link>
-    )
+function RepositoryGroup({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <section aria-labelledby={'collection-' + title}>
+      <div className="mb-4 flex items-center gap-3">
+        <h3 id={'collection-' + title} className="text-base font-bold text-gray-200 sm:text-lg">{title}</h3>
+        <span className="h-px flex-1 bg-[var(--border)]" />
+      </div>
+      <div className="home-tile-grid">{children}</div>
+    </section>
+  )
+}
+
+function RepositoryCard({ href, label, desc, count }: { href: string; label: string; desc?: string; count?: number }) {
+  return (
+    <Link
+      href={href}
+      className="group flex min-h-[112px] flex-col rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--accent)] hover:bg-[var(--surface-strong)]"
+    >
+      <div className="flex items-start justify-between gap-3">
+        <h4 className="line-clamp-2 text-base font-bold text-gray-100 transition-colors group-hover:text-[var(--accent)]">{label}</h4>
+        {typeof count === 'number' && (
+          <span className="shrink-0 rounded-full border border-[var(--border)] px-2 py-0.5 text-[10px] font-mono text-gray-500">
+            {count} docs
+          </span>
+        )}
+      </div>
+      {desc && <p className="mt-2 line-clamp-2 text-xs leading-5 text-gray-500">{desc}</p>}
+      <ArrowRight size={15} className="mt-auto self-end text-gray-600 transition-all group-hover:translate-x-1 group-hover:text-[var(--accent)]" aria-hidden="true" />
+    </Link>
+  )
 }
 
 function BlogSection({ posts }: { posts: BlogPost[] }) {
+  const [showAll, setShowAll] = useState(false)
   if (!posts.length) return null
 
+  const visiblePosts = showAll ? posts : posts.slice(0, 12)
   const rememberBlogPosition = () => {
     const blog = document.querySelector<HTMLElement>('#blog')
     if (blog) {
@@ -233,35 +296,46 @@ function BlogSection({ posts }: { posts: BlogPost[] }) {
   }
 
   return (
-    <section id="blog" className="py-12 mt-8 border-t border-[#333] scroll-mt-24">
-      <h2 className="text-xl font-bold mb-4 pl-3 border-l-4 border-[var(--accent)] text-white">
-        ブログ
-      </h2>
+    <section id="blog" className="scroll-mt-24 border-t border-[var(--border)] py-12 sm:py-16">
+      <SectionIntro
+        eyebrow="FIELD NOTES"
+        title="ブログ"
+        description="現場で考えたこと、調査の途中経過、農業機械にまつわるメモ。"
+        align="left"
+      />
       <div className="home-tile-grid">
-        {posts.map((post) => (
+        {visiblePosts.map((post) => (
           <Link
             key={post.href}
             href={post.href}
             onClick={rememberBlogPosition}
-            className="group block rounded-lg border border-[#333] bg-[#1a1a1a] p-4 transition-colors hover:border-[var(--accent)] hover:bg-[#202020]"
+            className="group flex min-h-[170px] flex-col rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4 transition-all hover:-translate-y-0.5 hover:border-[var(--accent)] hover:bg-[var(--surface-strong)]"
           >
-            <div className="mb-2 flex items-center justify-between gap-3">
-              <span className="text-xs font-mono text-gray-500">{post.date}</span>
+            <div className="mb-3 flex items-center justify-between gap-3">
+              <span className="text-xs font-mono text-gray-600">{post.date}</span>
               {post.category && (
-                <span className="shrink-0 rounded-full border border-[#3a3a3a] px-2 py-0.5 text-[10px] text-gray-500">
-                  {post.category}
-                </span>
+                <span className="shrink-0 rounded-full bg-white/[0.04] px-2 py-1 text-[10px] text-gray-500">{post.category}</span>
               )}
             </div>
-            <h3 className="line-clamp-2 text-base font-bold leading-snug text-gray-100 transition-colors group-hover:text-[var(--accent)]">
-              {post.title}
-            </h3>
-            <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-gray-500">
-              {post.excerpt}
-            </p>
+            <h3 className="line-clamp-2 text-base font-bold leading-snug text-gray-100 transition-colors group-hover:text-[var(--accent)]">{post.title}</h3>
+            <p className="mt-2 line-clamp-3 text-xs leading-relaxed text-gray-500">{post.excerpt}</p>
+            <span className="mt-auto pt-3 text-xs font-medium text-[var(--accent)]">読む →</span>
           </Link>
         ))}
       </div>
+      {posts.length > 12 && (
+        <div className="mt-7 flex justify-center">
+          <button
+            type="button"
+            onClick={() => setShowAll((current) => !current)}
+            aria-expanded={showAll}
+            className="inline-flex min-h-11 items-center gap-2 rounded-full border border-[var(--border-strong)] bg-white/[0.03] px-5 text-sm font-medium text-gray-300 transition-colors hover:border-gray-500 hover:bg-white/[0.06] hover:text-white"
+          >
+            {showAll ? '表示を戻す' : 'すべてのブログを見る'}
+            <ChevronDown size={16} className={showAll ? 'rotate-180 transition-transform' : 'transition-transform'} aria-hidden="true" />
+          </button>
+        </div>
+      )}
     </section>
   )
 }
