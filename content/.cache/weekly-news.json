@@ -1,142 +1,253 @@
 {
+  "version": 2,
   "weekKey": "2026-08-09",
-  "generatedAt": "2026-08-09T15:29:31.335Z",
+  "generatedAt": "2026-08-12T06:38:07.999Z",
   "latest": [
     {
-      "title": "臍帯の記事 - ファーマーズ ウィークリー",
-      "href": "https://www.fwi.co.uk/machinery/spraying-and-fertilising/umbilical",
-      "source": "Farmers Weekly",
-      "score": 9,
-      "summary": "申し訳ありません... このサイトには JavaScript が有効なブラウザが必要です。"
-    },
-    {
-      "title": "Wox Tempest C は 600m リーラーと 400CFM コン​​プレッサーを組み合わせています - Farmers Weekly",
-      "href": "https://www.fwi.co.uk/machinery/spraying-and-fertilising/umbilical/wox-tempest-c-combines-600m-reeler-and-400cfm-compressor",
-      "source": "Farmers Weekly",
-      "score": 9,
-      "summary": "スラリーを圧送する際にトラクターのフロントリンケージを有効に活用するために、Wox Agri Services は Tempest C を導入しました。このリーラーとコンプレッサーの組み合わせは"
-    },
-    {
-      "title": "テストセンターのアーカイブ",
-      "href": "https://www.profi.co.uk/test-centre/",
+      "title": "ポータブル CTEK バッテリー ブースター",
+      "originalTitle": "Portable CTEK battery boosters",
+      "href": "https://www.profi.co.uk/news/portable-ctek-battery-boosters/",
       "source": "profi",
-      "score": 15,
-      "summary": "広告 広告"
+      "date": "2026-08-11",
+      "summary": "CTEK の新しい RB3000 および RB4000 バッテリー ブースターは、小型のジャンプ スターターでは対応できない重量農業機械の始動に必要なパフォーマンスを提供すると言われています。",
+      "originalSummary": "CTEK’s new RB3000 and RB4000 battery boosters are said to provide the performance needed to start heavy agricultural machinery that smaller jump starters simply cannot handle.",
+      "topic": "動力・環境",
+      "score": 11
     },
     {
-      "title": "ダマン氏が潜在的な投資家と協議中",
-      "href": "https://www.profi.co.uk/news/dammann-in-talks-with-potential-investors/",
+      "title": "Bushel Plus がグローバル ブランド名を BranValt に変更",
+      "originalTitle": "Bushel Plus changes global brand name to BranValt",
+      "href": "https://www.futurefarming.com/smart-farming/industry-updates/bushel-plus-changes-global-brand-name-to-branvalt/",
+      "source": "Future Farming",
+      "date": "2026-08-11",
+      "summary": "カナダの収穫技術会社 Bushel Plus は、正式に社名を BranValt に変更した。",
+      "originalSummary": "Canadian harvest technology company Bushel Plus has officially changed its name to BranValt.",
+      "topic": "収穫・飼料",
+      "score": 11
+    },
+    {
+      "title": "Kverneland がラウンドベーラーをラインナップに追加",
+      "originalTitle": "Kverneland adds round balers to the range",
+      "href": "https://www.profi.co.uk/news/kverneland-adds-round-balers-to-the-range/",
       "source": "profi",
-      "date": "2026-08-06",
-      "score": 11,
-      "summary": "ドイツの噴霧器メーカー、ダムマンは、自主管理手続きで進行中のリストラを継続する中で、多くの潜在的な投資家との交渉を進めている。"
+      "date": "2026-08-10",
+      "summary": "ディーラーや顧客からの要望により、Kverneland は一連の固定室・可変室ラウンドベーラーで製品ポートフォリオを拡張しました。",
+      "originalSummary": "Requests from dealers and customers has prompted Kverneland to extend its product portfolio with a range of fixed and variable chamber round balers.",
+      "topic": "収穫・飼料",
+      "score": 20
+    },
+    {
+      "title": "コンバインの専門家が解説するメンテナンス・修理・保管のポイント",
+      "originalTitle": "A combine harvester specialist shares top tips for maintenance, repair and storage",
+      "href": "https://www.fwi.co.uk/machinery/farm-maintenance/workshop-skills/combine-specialists-top-tips-for-maintenance-repair-and-storage",
+      "source": "Farmers Weekly",
+      "date": "2026-08-10",
+      "summary": "1990 年代半ばにレンタル会社 APH で入社したベン ペインターは、CNH コンバインについてある程度の知識を持っています。",
+      "originalSummary": "Having cut his teeth at hire firm APH in the mid-1990s, Ben Painter knows a thing or two about CNH combines.",
+      "topic": "収穫・飼料",
+      "score": 17
+    },
+    {
+      "title": "Agtecnic、SenseSprayプラットフォームにグリーン・オン・グリーンのスポットスプレーを追加",
+      "originalTitle": "Agtecnic to add green-on-green spot spraying to SenseSpray platform",
+      "href": "https://www.futurefarming.com/smart-farming/agtecnic-to-add-green-on-green-spot-spraying-to-sensespray-platform/",
+      "source": "Future Farming",
+      "date": "2026-08-10",
+      "summary": "オーストラリアの企業 Agtecnic は、自社の SenseSprayプラットフォーム向けにグリーン・オン・グリーンのターゲットを絞ったスポット散布に取り組んでいることを明らかにした。これは、裸の土壌や切り株だけでなく、立った作物の内部に生えている雑草をシステムが検出して除去できるようにするステップである。",
+      "originalSummary": "Australian company Agtecnic has revealed it is working on green-on-green targeted spot spraying for its SenseSpray platform, a step that would let the system detect and eliminate weeds growing inside standing crops rather than just on bare soil or stubble.",
+      "topic": "作業機",
+      "score": 13
+    },
+    {
+      "title": "新しいスプレーヤーが鶏舎の消毒をどのように強化したか",
+      "originalTitle": "How new sprayer lifted poultry shed disinfection",
+      "href": "https://www.fwi.co.uk/machinery/how-new-sprayer-lifted-poultry-shed-disinfection",
+      "source": "Farmers Weekly",
+      "date": "2026-08-09",
+      "summary": "ヘレフォードシャー州の養鶏会社ファームポイントは、高水準の福祉とバイオセキュリティを維持するため、鶏舎の消毒を行うための XTA エアブラスト牽引式スプレーヤーに投資しました。",
+      "originalSummary": "In a bid to maintain its high standards of welfare and bio-security, Herefordshire bird producer Farmpoint has invested in an XTA air-blast trailed sprayer to carry out poultry shed disinfection.",
+      "topic": "作業機",
+      "score": 15
     }
   ],
   "random": [
     {
-      "title": "コンテンツライブラリ",
-      "href": "https://www.deere.com/en/news/all-news/new-self-propelled-forage-harvesters/",
-      "date": "2025-06-03",
-      "source": "John Deere",
-      "score": 99,
-      "summary": "農業、建設、テクノロジー、持続可能性、イノベーションに関する John Deere の情報を調べて、生産性を向上させましょう。"
+      "title": "ある農場が小型自動トラクターで年間 40 万ドルの収益を上げた方法",
+      "originalTitle": "How one farm returned $400k in a year with a small autonomous tractor",
+      "href": "https://www.futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/smaller-tractor-bigger-return-a-kentucky-farm-s-case-for-going-autonomous/",
+      "source": "Future Farming",
+      "date": "2026-08-03",
+      "summary": "米国のケンタッキー州にある家族経営の農場では、シンプルな仕様の 135 馬力の John Deere 6135E が自動で播種作業を行い、1 センチメートル以内の精度で農場が労働力を再配分できるようになりました。",
+      "originalSummary": "At a family farm in Kentucky, in the United States, a no-frills 135-horsepower John Deere 6135E now plants itself - accurate to within a centimetre and allowing the farm to reallocate labour. An autonomous retrofit kit, from US company Sabanto, has let farmer Quint Pottinger swap out 2 300-horsepower tractors, 2 40-foot planters and a second combine for a smaller, self-driving setup that finished planting 10 days faster.",
+      "topic": "スマート農業",
+      "score": 38
     },
     {
-      "title": "Guttler の 6 メートルのコンパクトな Greenmaster が油圧調整機能を追加 - Farmers Weekly",
-      "href": "https://www.fwi.co.uk/machinery/cultivation-drilling/cultivators-drills-cultivators/guttlers-6m-compact-greenmaster-gains-hydraulic-adjustment",
-      "source": "Farmers Weekly",
-      "score": 7,
-      "summary": "レベリングボード、頑丈なタイン、空気圧播種機を備えた Guttler の GreenMaster 600 Compact は、簡単な改造作業を約束します。"
-    },
-    {
-      "title": "タイヤとトラックのアーカイブ",
-      "href": "https://www.profi.co.uk/tyres-tracks-2/",
+      "title": "20万台目のCLAASコンバインが修復され、再び稼働",
+      "originalTitle": "200,000th Claas combine restored and back in action",
+      "href": "https://www.profi.co.uk/news/200000th-claas-combine-restored-and-back-in-action/",
       "source": "profi",
-      "score": 9,
-      "summary": "広告 広告"
+      "date": "2026-08-05",
+      "summary": "創設者オーガスト CLAAS は、58 年前に 200,000 台目の CLAAS コンバイン、1968 年Senator モデルを発表しました。修復された機械は現在、収穫作業に復帰しています。",
+      "originalSummary": "Founder August CLAAS presented the 200,000th CLAAS combine, a 1968 Senator model, 58 years ago. The restored machine has now returned to harvest work.",
+      "topic": "収穫・飼料",
+      "score": 23
     },
     {
-      "title": "ニュースと新製品",
-      "href": "https://amazone.de/de-de/news/neu-bei-amazone/aktuelles-und-produktneuheiten",
-      "source": "AMAZONE",
-      "score": 10,
-      "summary": "農業機械および都市機械のメーカー、インテリジェントな作物生産のためのシステム プロバイダーである AMAZONE へようこそ。"
+      "title": "XAG、RM80無人芝刈り機を発売",
+      "originalTitle": "XAG launches RM80 unmanned mower",
+      "href": "https://www.futurefarming.com/smart-farming/xag-launches-rm80-unmanned-mower-unveils-new-x-series-drone-system/",
+      "source": "Future Farming",
+      "date": "2026-07-10",
+      "summary": "XAG は、新世代の農業用ドローンと並行して、全電気式無人草刈りロボット RM80 を導入しました。",
+      "originalSummary": "XAG has introduced the RM80, an all-electric unmanned mowing robot, alongside a new generation of agricultural drones.",
+      "topic": "スマート農業",
+      "score": 21
     },
     {
-      "title": "明日に力を与える: CNH がバイオガスで持続可能な農業をどのように革新するか",
-      "href": "https://media.cnh.com/North-America/cnh-industrial",
-      "date": "2025-09-29",
-      "source": "CNH",
-      "score": 100,
-      "summary": "明日に力を与える: CNH がバイオガスで持続可能な農業をどのように革新するか"
+      "title": "マウント型 AMAZONE カルチベーターにフレキシリングパッカーオプションが追加されました",
+      "originalTitle": "Mounted Amazone cultivators get flexi-ring packer option",
+      "href": "https://www.fwi.co.uk/machinery/cultivation-drilling/cultivators-drills-cultivators/mounted-amazone-cultivators-get-flexi-ring-packer-option",
+      "source": "Farmers Weekly",
+      "date": "2026-07-31",
+      "summary": "砂質・ローム質土壌向けに、AMAZONEのマウント型カルチベーターへ新しいリングローラーが追加されました。",
+      "originalSummary": "Farms operating on sandy and loamy soils might welcome the addition of a new ring roller option for Amazone’s mounted cultivators.",
+      "topic": "作業機",
+      "score": 20
+    },
+    {
+      "title": "Wox Tempest C は 600m リーラーと 400CFM コンプレッサーを組み合わせています",
+      "originalTitle": "Wox Tempest C combines 600m reeler and 400CFM compressor",
+      "href": "https://www.fwi.co.uk/machinery/spraying-and-fertilising/umbilical/wox-tempest-c-combines-600m-reeler-and-400cfm-compressor",
+      "source": "Farmers Weekly",
+      "date": "2026-08-08",
+      "summary": "スラリーを圧送する際にトラクターのフロントリンケージを有効に活用するために、Wox Agri Services は Tempest C を導入しました。",
+      "originalSummary": "To make good use of a tractor’s front linkage when pumping slurry, Wox Agri Services has introduced the Tempest C.",
+      "topic": "作業機",
+      "score": 19
     }
   ],
   "all": [
     {
-      "title": "臍帯の記事 - ファーマーズ ウィークリー",
-      "href": "https://www.fwi.co.uk/machinery/spraying-and-fertilising/umbilical",
-      "source": "Farmers Weekly",
-      "score": 9,
-      "summary": "申し訳ありません... このサイトには JavaScript が有効なブラウザが必要です。"
+      "title": "ポータブル CTEK バッテリー ブースター",
+      "originalTitle": "Portable CTEK battery boosters",
+      "href": "https://www.profi.co.uk/news/portable-ctek-battery-boosters/",
+      "source": "profi",
+      "date": "2026-08-11",
+      "summary": "CTEK の新しい RB3000 および RB4000 バッテリー ブースターは、小型のジャンプ スターターでは対応できない重量農業機械の始動に必要なパフォーマンスを提供すると言われています。",
+      "originalSummary": "CTEK’s new RB3000 and RB4000 battery boosters are said to provide the performance needed to start heavy agricultural machinery that smaller jump starters simply cannot handle.",
+      "topic": "動力・環境",
+      "score": 11
     },
     {
-      "title": "Wox Tempest C は 600m リーラーと 400CFM コン​​プレッサーを組み合わせています - Farmers Weekly",
+      "title": "Bushel Plus がグローバル ブランド名を BranValt に変更",
+      "originalTitle": "Bushel Plus changes global brand name to BranValt",
+      "href": "https://www.futurefarming.com/smart-farming/industry-updates/bushel-plus-changes-global-brand-name-to-branvalt/",
+      "source": "Future Farming",
+      "date": "2026-08-11",
+      "summary": "カナダの収穫技術会社 Bushel Plus は、正式に社名を BranValt に変更した。",
+      "originalSummary": "Canadian harvest technology company Bushel Plus has officially changed its name to BranValt.",
+      "topic": "収穫・飼料",
+      "score": 11
+    },
+    {
+      "title": "Kverneland がラウンドベーラーをラインナップに追加",
+      "originalTitle": "Kverneland adds round balers to the range",
+      "href": "https://www.profi.co.uk/news/kverneland-adds-round-balers-to-the-range/",
+      "source": "profi",
+      "date": "2026-08-10",
+      "summary": "ディーラーや顧客からの要望により、Kverneland は一連の固定室・可変室ラウンドベーラーで製品ポートフォリオを拡張しました。",
+      "originalSummary": "Requests from dealers and customers has prompted Kverneland to extend its product portfolio with a range of fixed and variable chamber round balers.",
+      "topic": "収穫・飼料",
+      "score": 20
+    },
+    {
+      "title": "コンバインの専門家が解説するメンテナンス・修理・保管のポイント",
+      "originalTitle": "A combine harvester specialist shares top tips for maintenance, repair and storage",
+      "href": "https://www.fwi.co.uk/machinery/farm-maintenance/workshop-skills/combine-specialists-top-tips-for-maintenance-repair-and-storage",
+      "source": "Farmers Weekly",
+      "date": "2026-08-10",
+      "summary": "1990 年代半ばにレンタル会社 APH で入社したベン ペインターは、CNH コンバインについてある程度の知識を持っています。",
+      "originalSummary": "Having cut his teeth at hire firm APH in the mid-1990s, Ben Painter knows a thing or two about CNH combines.",
+      "topic": "収穫・飼料",
+      "score": 17
+    },
+    {
+      "title": "Agtecnic、SenseSprayプラットフォームにグリーン・オン・グリーンのスポットスプレーを追加",
+      "originalTitle": "Agtecnic to add green-on-green spot spraying to SenseSpray platform",
+      "href": "https://www.futurefarming.com/smart-farming/agtecnic-to-add-green-on-green-spot-spraying-to-sensespray-platform/",
+      "source": "Future Farming",
+      "date": "2026-08-10",
+      "summary": "オーストラリアの企業 Agtecnic は、自社の SenseSprayプラットフォーム向けにグリーン・オン・グリーンのターゲットを絞ったスポット散布に取り組んでいることを明らかにした。これは、裸の土壌や切り株だけでなく、立った作物の内部に生えている雑草をシステムが検出して除去できるようにするステップである。",
+      "originalSummary": "Australian company Agtecnic has revealed it is working on green-on-green targeted spot spraying for its SenseSpray platform, a step that would let the system detect and eliminate weeds growing inside standing crops rather than just on bare soil or stubble.",
+      "topic": "作業機",
+      "score": 13
+    },
+    {
+      "title": "新しいスプレーヤーが鶏舎の消毒をどのように強化したか",
+      "originalTitle": "How new sprayer lifted poultry shed disinfection",
+      "href": "https://www.fwi.co.uk/machinery/how-new-sprayer-lifted-poultry-shed-disinfection",
+      "source": "Farmers Weekly",
+      "date": "2026-08-09",
+      "summary": "ヘレフォードシャー州の養鶏会社ファームポイントは、高水準の福祉とバイオセキュリティを維持するため、鶏舎の消毒を行うための XTA エアブラスト牽引式スプレーヤーに投資しました。",
+      "originalSummary": "In a bid to maintain its high standards of welfare and bio-security, Herefordshire bird producer Farmpoint has invested in an XTA air-blast trailed sprayer to carry out poultry shed disinfection.",
+      "topic": "作業機",
+      "score": 15
+    },
+    {
+      "title": "ある農場が小型自動トラクターで年間 40 万ドルの収益を上げた方法",
+      "originalTitle": "How one farm returned $400k in a year with a small autonomous tractor",
+      "href": "https://www.futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/smaller-tractor-bigger-return-a-kentucky-farm-s-case-for-going-autonomous/",
+      "source": "Future Farming",
+      "date": "2026-08-03",
+      "summary": "米国のケンタッキー州にある家族経営の農場では、シンプルな仕様の 135 馬力の John Deere 6135E が自動で播種作業を行い、1 センチメートル以内の精度で農場が労働力を再配分できるようになりました。",
+      "originalSummary": "At a family farm in Kentucky, in the United States, a no-frills 135-horsepower John Deere 6135E now plants itself - accurate to within a centimetre and allowing the farm to reallocate labour. An autonomous retrofit kit, from US company Sabanto, has let farmer Quint Pottinger swap out 2 300-horsepower tractors, 2 40-foot planters and a second combine for a smaller, self-driving setup that finished planting 10 days faster.",
+      "topic": "スマート農業",
+      "score": 38
+    },
+    {
+      "title": "20万台目のCLAASコンバインが修復され、再び稼働",
+      "originalTitle": "200,000th Claas combine restored and back in action",
+      "href": "https://www.profi.co.uk/news/200000th-claas-combine-restored-and-back-in-action/",
+      "source": "profi",
+      "date": "2026-08-05",
+      "summary": "創設者オーガスト CLAAS は、58 年前に 200,000 台目の CLAAS コンバイン、1968 年Senator モデルを発表しました。修復された機械は現在、収穫作業に復帰しています。",
+      "originalSummary": "Founder August CLAAS presented the 200,000th CLAAS combine, a 1968 Senator model, 58 years ago. The restored machine has now returned to harvest work.",
+      "topic": "収穫・飼料",
+      "score": 23
+    },
+    {
+      "title": "XAG、RM80無人芝刈り機を発売",
+      "originalTitle": "XAG launches RM80 unmanned mower",
+      "href": "https://www.futurefarming.com/smart-farming/xag-launches-rm80-unmanned-mower-unveils-new-x-series-drone-system/",
+      "source": "Future Farming",
+      "date": "2026-07-10",
+      "summary": "XAG は、新世代の農業用ドローンと並行して、全電気式無人草刈りロボット RM80 を導入しました。",
+      "originalSummary": "XAG has introduced the RM80, an all-electric unmanned mowing robot, alongside a new generation of agricultural drones.",
+      "topic": "スマート農業",
+      "score": 21
+    },
+    {
+      "title": "マウント型 AMAZONE カルチベーターにフレキシリングパッカーオプションが追加されました",
+      "originalTitle": "Mounted Amazone cultivators get flexi-ring packer option",
+      "href": "https://www.fwi.co.uk/machinery/cultivation-drilling/cultivators-drills-cultivators/mounted-amazone-cultivators-get-flexi-ring-packer-option",
+      "source": "Farmers Weekly",
+      "date": "2026-07-31",
+      "summary": "砂質・ローム質土壌向けに、AMAZONEのマウント型カルチベーターへ新しいリングローラーが追加されました。",
+      "originalSummary": "Farms operating on sandy and loamy soils might welcome the addition of a new ring roller option for Amazone’s mounted cultivators.",
+      "topic": "作業機",
+      "score": 20
+    },
+    {
+      "title": "Wox Tempest C は 600m リーラーと 400CFM コンプレッサーを組み合わせています",
+      "originalTitle": "Wox Tempest C combines 600m reeler and 400CFM compressor",
       "href": "https://www.fwi.co.uk/machinery/spraying-and-fertilising/umbilical/wox-tempest-c-combines-600m-reeler-and-400cfm-compressor",
       "source": "Farmers Weekly",
-      "score": 9,
-      "summary": "スラリーを圧送する際にトラクターのフロントリンケージを有効に活用するために、Wox Agri Services は Tempest C を導入しました。このリーラーとコンプレッサーの組み合わせは"
-    },
-    {
-      "title": "テストセンターのアーカイブ",
-      "href": "https://www.profi.co.uk/test-centre/",
-      "source": "profi",
-      "score": 15,
-      "summary": "広告 広告"
-    },
-    {
-      "title": "ダマン氏が潜在的な投資家と協議中",
-      "href": "https://www.profi.co.uk/news/dammann-in-talks-with-potential-investors/",
-      "source": "profi",
-      "date": "2026-08-06",
-      "score": 11,
-      "summary": "ドイツの噴霧器メーカー、ダムマンは、自主管理手続きで進行中のリストラを継続する中で、多くの潜在的な投資家との交渉を進めている。"
-    },
-    {
-      "title": "コンテンツライブラリ",
-      "href": "https://www.deere.com/en/news/all-news/new-self-propelled-forage-harvesters/",
-      "date": "2025-06-03",
-      "source": "John Deere",
-      "score": 99,
-      "summary": "農業、建設、テクノロジー、持続可能性、イノベーションに関する John Deere の情報を調べて、生産性を向上させましょう。"
-    },
-    {
-      "title": "Guttler の 6 メートルのコンパクトな Greenmaster が油圧調整機能を追加 - Farmers Weekly",
-      "href": "https://www.fwi.co.uk/machinery/cultivation-drilling/cultivators-drills-cultivators/guttlers-6m-compact-greenmaster-gains-hydraulic-adjustment",
-      "source": "Farmers Weekly",
-      "score": 7,
-      "summary": "レベリングボード、頑丈なタイン、空気圧播種機を備えた Guttler の GreenMaster 600 Compact は、簡単な改造作業を約束します。"
-    },
-    {
-      "title": "タイヤとトラックのアーカイブ",
-      "href": "https://www.profi.co.uk/tyres-tracks-2/",
-      "source": "profi",
-      "score": 9,
-      "summary": "広告 広告"
-    },
-    {
-      "title": "ニュースと新製品",
-      "href": "https://amazone.de/de-de/news/neu-bei-amazone/aktuelles-und-produktneuheiten",
-      "source": "AMAZONE",
-      "score": 10,
-      "summary": "農業機械および都市機械のメーカー、インテリジェントな作物生産のためのシステム プロバイダーである AMAZONE へようこそ。"
-    },
-    {
-      "title": "明日に力を与える: CNH がバイオガスで持続可能な農業をどのように革新するか",
-      "href": "https://media.cnh.com/North-America/cnh-industrial",
-      "date": "2025-09-29",
-      "source": "CNH",
-      "score": 100,
-      "summary": "明日に力を与える: CNH がバイオガスで持続可能な農業をどのように革新するか"
+      "date": "2026-08-08",
+      "summary": "スラリーを圧送する際にトラクターのフロントリンケージを有効に活用するために、Wox Agri Services は Tempest C を導入しました。",
+      "originalSummary": "To make good use of a tractor’s front linkage when pumping slurry, Wox Agri Services has introduced the Tempest C.",
+      "topic": "作業機",
+      "score": 19
     }
   ]
 }
