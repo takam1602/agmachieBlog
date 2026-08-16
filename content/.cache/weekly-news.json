@@ -1,77 +1,88 @@
 {
   "version": 2,
-  "weekKey": "2026-08-09",
-  "generatedAt": "2026-08-12T06:38:07.999Z",
+  "weekKey": "2026-08-16",
+  "generatedAt": "2026-08-16T15:19:29.002Z",
   "latest": [
     {
-      "title": "ポータブル CTEK バッテリー ブースター",
-      "originalTitle": "Portable CTEK battery boosters",
-      "href": "https://www.profi.co.uk/news/portable-ctek-battery-boosters/",
-      "source": "profi",
-      "date": "2026-08-11",
-      "summary": "CTEK の新しい RB3000 および RB4000 バッテリー ブースターは、小型のジャンプ スターターでは対応できない重量農業機械の始動に必要なパフォーマンスを提供すると言われています。",
-      "originalSummary": "CTEK’s new RB3000 and RB4000 battery boosters are said to provide the performance needed to start heavy agricultural machinery that smaller jump starters simply cannot handle.",
-      "topic": "動力・環境",
-      "score": 11
-    },
-    {
-      "title": "Bushel Plus がグローバル ブランド名を BranValt に変更",
-      "originalTitle": "Bushel Plus changes global brand name to BranValt",
-      "href": "https://www.futurefarming.com/smart-farming/industry-updates/bushel-plus-changes-global-brand-name-to-branvalt/",
-      "source": "Future Farming",
-      "date": "2026-08-11",
-      "summary": "カナダの収穫技術会社 Bushel Plus は、正式に社名を BranValt に変更した。",
-      "originalSummary": "Canadian harvest technology company Bushel Plus has officially changed its name to BranValt.",
+      "title": "Fendtの理想的なコンバイン範囲を更新 - ファーマーズガイド",
+      "originalTitle": "Fendt updates its Ideal combine range - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/machinery/combines-forage-harvesting/fendt-updates-its-ideal-combine-range/",
+      "source": "Farmers Guide",
+      "date": "2026-08-15",
+      "summary": "Fendtは、イギリスとアイルランドの事業者向けに、洗浄能力の向上、分離エリアの拡大、総所有コストの削減を特徴とする、アイデアルコンバインシリーズのさらなるアップデートを導入しました。",
+      "originalSummary": "Fendt has introduced further updates to its Ideal combine range, featuring increased cleaning capacity, a greater separation area and a lower total cost of ownership for UK and Irish operators.",
       "topic": "収穫・飼料",
-      "score": 11
+      "score": 25
     },
     {
-      "title": "Kverneland がラウンドベーラーをラインナップに追加",
-      "originalTitle": "Kverneland adds round balers to the range",
-      "href": "https://www.profi.co.uk/news/kverneland-adds-round-balers-to-the-range/",
-      "source": "profi",
-      "date": "2026-08-10",
-      "summary": "ディーラーや顧客からの要望により、Kverneland は一連の固定室・可変室ラウンドベーラーで製品ポートフォリオを拡張しました。",
-      "originalSummary": "Requests from dealers and customers has prompted Kverneland to extend its product portfolio with a range of fixed and variable chamber round balers.",
-      "topic": "収穫・飼料",
-      "score": 20
-    },
-    {
-      "title": "コンバインの専門家が解説するメンテナンス・修理・保管のポイント",
-      "originalTitle": "A combine harvester specialist shares top tips for maintenance, repair and storage",
-      "href": "https://www.fwi.co.uk/machinery/farm-maintenance/workshop-skills/combine-specialists-top-tips-for-maintenance-repair-and-storage",
+      "title": "Kverneland が Tersus フレイルチョッパーにシンプルなドライブラインを提供",
+      "originalTitle": "Kverneland gives Tersus flail choppers a simpler driveline",
+      "href": "https://www.fwi.co.uk/machinery/farm-maintenance/kverneland-gives-tersus-flail-choppers-a-simpler-driveline",
       "source": "Farmers Weekly",
-      "date": "2026-08-10",
-      "summary": "1990 年代半ばにレンタル会社 APH で入社したベン ペインターは、CNH コンバインについてある程度の知識を持っています。",
-      "originalSummary": "Having cut his teeth at hire firm APH in the mid-1990s, Ben Painter knows a thing or two about CNH combines.",
-      "topic": "収穫・飼料",
-      "score": 17
+      "date": "2026-08-15",
+      "summary": "ドライブラインの改善と新しいストーンガードオプションは、植生制御用のクバーンランドの最新のトラクター搭載フレールチョッパーに顕著に表れています。 3 モデルの Tersus ラインナップは、以前の FRO シリーズに代わるもので、2 をカバーします。",
+      "originalSummary": "Driveline improvements and a new stone guard option are evident on Kverneland’s latest tractor-mounted flail choppers for vegetation control. The three-model Tersus line-up replaces the preceding FRO range, covering 2.",
+      "topic": "トラクター",
+      "score": 9
     },
     {
-      "title": "Agtecnic、SenseSprayプラットフォームにグリーン・オン・グリーンのスポットスプレーを追加",
-      "originalTitle": "Agtecnic to add green-on-green spot spraying to SenseSpray platform",
-      "href": "https://www.futurefarming.com/smart-farming/agtecnic-to-add-green-on-green-spot-spraying-to-sensespray-platform/",
-      "source": "Future Farming",
-      "date": "2026-08-10",
-      "summary": "オーストラリアの企業 Agtecnic は、自社の SenseSprayプラットフォーム向けにグリーン・オン・グリーンのターゲットを絞ったスポット散布に取り組んでいることを明らかにした。これは、裸の土壌や切り株だけでなく、立った作物の内部に生えている雑草をシステムが検出して除去できるようにするステップである。",
-      "originalSummary": "Australian company Agtecnic has revealed it is working on green-on-green targeted spot spraying for its SenseSpray platform, a step that would let the system detect and eliminate weeds growing inside standing crops rather than just on bare soil or stubble.",
+      "title": "6.0m イマンツ搭載ロータリーカルチベータ",
+      "originalTitle": "6.0m Imants mounted rotary cultivator",
+      "href": "https://www.profi.co.uk/news/6-0m-imants-mounted-rotary-cultivator/",
+      "source": "profi",
+      "date": "2026-08-14",
+      "summary": "オランダのメーカー Imants の FWX 搭載回転式耕耘機は、6.0 m の回転式耕耘機の能力と搭載型機械の実用的な利点を組み合わせています。",
+      "originalSummary": "The FWX mounted rotary cultivator from Dutch manufacturer Imants combines the capacity of a 6.0m rotary cultivator with the practical advantages of a mounted machine.",
       "topic": "作業機",
+      "score": 19
+    },
+    {
+      "title": "Fendt Vario 832 Gen5: 適切な組み合わせ",
+      "originalTitle": "Fendt Vario 832 Gen5: The right mix",
+      "href": "https://www.profi.co.uk/test-centre/fendt-vario-832-gen5-the-right-mix/",
+      "source": "profi",
+      "date": "2026-08-14",
+      "summary": "トラクターテスト: 1年前にFendtがサイズとパワーのバランスが取れた最新世代のVario 800を発表したとき、大きな話題になりました。今月、私たちは理論をテストし、3 つのモデルのうち最大の 832 にスポットライトを当て、それが何を提供するのかを確認しました。",
+      "originalSummary": "TRACTOR TEST: There was huge hype when Fendt unveiled the newest generation Vario 800s a year ago, with a good match of size and power. We put the theory to the test this month, directing our spotlight at the biggest of the three models, the 832, to see what it has to offer.",
+      "topic": "トラクター",
+      "score": 9
+    },
+    {
+      "title": "WEED-IT スポットスプレーの米国直接サポートが Rometron から利用可能になりました",
+      "originalTitle": "Direct US support for WEED-IT spot spraying now available from Rometron",
+      "href": "https://www.futurefarming.com/crop-solutions/rometron-establishes-weed-it-usa-to-expand-spot-spraying-support/",
+      "source": "Future Farming",
+      "date": "2026-08-13",
+      "summary": "オランダの精密スプレー専門家 Rometron は、WEED-IT スポットスプレー技術のサポートを拡大するために米国子会社を設立しました。",
+      "originalSummary": "Dutch precision spraying specialist Rometron has established a US subsidiary to expand support for its WEED-IT spot spraying technology.",
+      "topic": "スマート農業",
       "score": 13
     },
     {
-      "title": "新しいスプレーヤーが鶏舎の消毒をどのように強化したか",
-      "originalTitle": "How new sprayer lifted poultry shed disinfection",
-      "href": "https://www.fwi.co.uk/machinery/how-new-sprayer-lifted-poultry-shed-disinfection",
-      "source": "Farmers Weekly",
-      "date": "2026-08-09",
-      "summary": "ヘレフォードシャー州の養鶏会社ファームポイントは、高水準の福祉とバイオセキュリティを維持するため、鶏舎の消毒を行うための XTA エアブラスト牽引式スプレーヤーに投資しました。",
-      "originalSummary": "In a bid to maintain its high standards of welfare and bio-security, Herefordshire bird producer Farmpoint has invested in an XTA air-blast trailed sprayer to carry out poultry shed disinfection.",
-      "topic": "作業機",
-      "score": 15
+      "title": "ウルマナの鍬は手除草で 6 万 5,000 ユーロを節約: 農家は数年で回収できると期待",
+      "originalTitle": "Ullmanna hoe saves €65K in hand weeding: farmer expects payback in a few years",
+      "href": "https://www.futurefarming.com/smart-farming/ullmanna-hoe-pays-for-itself-within-a-few-years/",
+      "source": "Future Farming",
+      "date": "2026-08-13",
+      "summary": "今シーズン、ウルマンナ鍬は、オランダの村オースターヘッセレン（ドレンテ州）にあるジェラルド・ランティングの農場でバレリアンとエキナセアで稼働している。アルゴリズムのトレーニングには予想以上に時間がかかっています。時間通りに始めることは、バレリアンを雑草から適切に区別するのに確かに役立ちます。",
+      "originalSummary": "This season, the Ullmanna hoe is operating in valerian and echinacea at Gerard Lanting’s farm in the Dutch village of Oosterhesselen (Drenthe province). Training the algorithms is taking more time than expected. Starting on time certainly helps to distinguish valerian properly from weeds.",
+      "topic": "スマート農業",
+      "score": 5
     }
   ],
   "random": [
     {
+      "title": "ドリルとカルチベーター: 準備完了、セット、ドリル!",
+      "originalTitle": "Drills and cultivators: Ready, set, drill!",
+      "href": "https://www.profi.co.uk/test-centre/drills-and-cultivators-ready-set-drill/",
+      "source": "profi",
+      "date": "2026-08-13",
+      "summary": "調整: 収穫が早く終わったことで、種まき機を動かす時間ができたかもしれません...秋の播種キャンペーンを少しでもスムーズに進めるために。ここでは、プロフィ読者仲間からのインスピレーションをいくつか提供します。",
+      "originalSummary": "TUNING: With harvest wrapped up early, you might just have gained some time to give your seed drill a fettle ... to make the autumn sowing campaign go that little bit smoother. Here we provide some inspiration from your fellow profi readers.",
+      "topic": "収穫・飼料",
+      "score": 30
+    },
+    {
       "title": "ある農場が小型自動トラクターで年間 40 万ドルの収益を上げた方法",
       "originalTitle": "How one farm returned $400k in a year with a small autonomous tractor",
       "href": "https://www.futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/smaller-tractor-bigger-return-a-kentucky-farm-s-case-for-going-autonomous/",
@@ -83,13 +94,13 @@
       "score": 38
     },
     {
-      "title": "20万台目のCLAASコンバインが修復され、再び稼働",
-      "originalTitle": "200,000th Claas combine restored and back in action",
-      "href": "https://www.profi.co.uk/news/200000th-claas-combine-restored-and-back-in-action/",
-      "source": "profi",
+      "title": "1968年 CLAASSenatorがサフォークの収穫のために帰還 - ファーマーズガイド",
+      "originalTitle": "1968 Claas Senator returns for Suffolk harvest - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/machinery/vintage/1968-claas-senator-returns-for-suffolk-harvest/",
+      "source": "Farmers Guide",
       "date": "2026-08-05",
-      "summary": "創設者オーガスト CLAAS は、58 年前に 200,000 台目の CLAAS コンバイン、1968 年Senator モデルを発表しました。修復された機械は現在、収穫作業に復帰しています。",
-      "originalSummary": "Founder August CLAAS presented the 200,000th CLAAS combine, a 1968 Senator model, 58 years ago. The restored machine has now returned to harvest work.",
+      "summary": "CLAAS の創設者である August CLAAS による記念式典から 58 年後、これまでに建設された 200,000 台目の CLAAS コンバイン (1968 年Senator) が再び畑に戻り、収穫を行っています。",
+      "originalSummary": "58 years after its ceremonial presentation by Claas founder August Claas, the 200,000th Claas combine ever built – a 1968 Senator – is back on the field and harvesting.",
       "topic": "収穫・飼料",
       "score": 23
     },
@@ -103,52 +114,6 @@
       "originalSummary": "XAG has introduced the RM80, an all-electric unmanned mowing robot, alongside a new generation of agricultural drones.",
       "topic": "スマート農業",
       "score": 21
-    },
-    {
-      "title": "マウント型 AMAZONE カルチベーターにフレキシリングパッカーオプションが追加されました",
-      "originalTitle": "Mounted Amazone cultivators get flexi-ring packer option",
-      "href": "https://www.fwi.co.uk/machinery/cultivation-drilling/cultivators-drills-cultivators/mounted-amazone-cultivators-get-flexi-ring-packer-option",
-      "source": "Farmers Weekly",
-      "date": "2026-07-31",
-      "summary": "砂質・ローム質土壌向けに、AMAZONEのマウント型カルチベーターへ新しいリングローラーが追加されました。",
-      "originalSummary": "Farms operating on sandy and loamy soils might welcome the addition of a new ring roller option for Amazone’s mounted cultivators.",
-      "topic": "作業機",
-      "score": 20
-    },
-    {
-      "title": "Wox Tempest C は 600m リーラーと 400CFM コンプレッサーを組み合わせています",
-      "originalTitle": "Wox Tempest C combines 600m reeler and 400CFM compressor",
-      "href": "https://www.fwi.co.uk/machinery/spraying-and-fertilising/umbilical/wox-tempest-c-combines-600m-reeler-and-400cfm-compressor",
-      "source": "Farmers Weekly",
-      "date": "2026-08-08",
-      "summary": "スラリーを圧送する際にトラクターのフロントリンケージを有効に活用するために、Wox Agri Services は Tempest C を導入しました。",
-      "originalSummary": "To make good use of a tractor’s front linkage when pumping slurry, Wox Agri Services has introduced the Tempest C.",
-      "topic": "作業機",
-      "score": 19
-    }
-  ],
-  "all": [
-    {
-      "title": "ポータブル CTEK バッテリー ブースター",
-      "originalTitle": "Portable CTEK battery boosters",
-      "href": "https://www.profi.co.uk/news/portable-ctek-battery-boosters/",
-      "source": "profi",
-      "date": "2026-08-11",
-      "summary": "CTEK の新しい RB3000 および RB4000 バッテリー ブースターは、小型のジャンプ スターターでは対応できない重量農業機械の始動に必要なパフォーマンスを提供すると言われています。",
-      "originalSummary": "CTEK’s new RB3000 and RB4000 battery boosters are said to provide the performance needed to start heavy agricultural machinery that smaller jump starters simply cannot handle.",
-      "topic": "動力・環境",
-      "score": 11
-    },
-    {
-      "title": "Bushel Plus がグローバル ブランド名を BranValt に変更",
-      "originalTitle": "Bushel Plus changes global brand name to BranValt",
-      "href": "https://www.futurefarming.com/smart-farming/industry-updates/bushel-plus-changes-global-brand-name-to-branvalt/",
-      "source": "Future Farming",
-      "date": "2026-08-11",
-      "summary": "カナダの収穫技術会社 Bushel Plus は、正式に社名を BranValt に変更した。",
-      "originalSummary": "Canadian harvest technology company Bushel Plus has officially changed its name to BranValt.",
-      "topic": "収穫・飼料",
-      "score": 11
     },
     {
       "title": "Kverneland がラウンドベーラーをラインナップに追加",
@@ -160,39 +125,85 @@
       "originalSummary": "Requests from dealers and customers has prompted Kverneland to extend its product portfolio with a range of fixed and variable chamber round balers.",
       "topic": "収穫・飼料",
       "score": 20
-    },
+    }
+  ],
+  "all": [
     {
-      "title": "コンバインの専門家が解説するメンテナンス・修理・保管のポイント",
-      "originalTitle": "A combine harvester specialist shares top tips for maintenance, repair and storage",
-      "href": "https://www.fwi.co.uk/machinery/farm-maintenance/workshop-skills/combine-specialists-top-tips-for-maintenance-repair-and-storage",
-      "source": "Farmers Weekly",
-      "date": "2026-08-10",
-      "summary": "1990 年代半ばにレンタル会社 APH で入社したベン ペインターは、CNH コンバインについてある程度の知識を持っています。",
-      "originalSummary": "Having cut his teeth at hire firm APH in the mid-1990s, Ben Painter knows a thing or two about CNH combines.",
+      "title": "Fendtの理想的なコンバイン範囲を更新 - ファーマーズガイド",
+      "originalTitle": "Fendt updates its Ideal combine range - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/machinery/combines-forage-harvesting/fendt-updates-its-ideal-combine-range/",
+      "source": "Farmers Guide",
+      "date": "2026-08-15",
+      "summary": "Fendtは、イギリスとアイルランドの事業者向けに、洗浄能力の向上、分離エリアの拡大、総所有コストの削減を特徴とする、アイデアルコンバインシリーズのさらなるアップデートを導入しました。",
+      "originalSummary": "Fendt has introduced further updates to its Ideal combine range, featuring increased cleaning capacity, a greater separation area and a lower total cost of ownership for UK and Irish operators.",
       "topic": "収穫・飼料",
-      "score": 17
+      "score": 25
     },
     {
-      "title": "Agtecnic、SenseSprayプラットフォームにグリーン・オン・グリーンのスポットスプレーを追加",
-      "originalTitle": "Agtecnic to add green-on-green spot spraying to SenseSpray platform",
-      "href": "https://www.futurefarming.com/smart-farming/agtecnic-to-add-green-on-green-spot-spraying-to-sensespray-platform/",
-      "source": "Future Farming",
-      "date": "2026-08-10",
-      "summary": "オーストラリアの企業 Agtecnic は、自社の SenseSprayプラットフォーム向けにグリーン・オン・グリーンのターゲットを絞ったスポット散布に取り組んでいることを明らかにした。これは、裸の土壌や切り株だけでなく、立った作物の内部に生えている雑草をシステムが検出して除去できるようにするステップである。",
-      "originalSummary": "Australian company Agtecnic has revealed it is working on green-on-green targeted spot spraying for its SenseSpray platform, a step that would let the system detect and eliminate weeds growing inside standing crops rather than just on bare soil or stubble.",
+      "title": "Kverneland が Tersus フレイルチョッパーにシンプルなドライブラインを提供",
+      "originalTitle": "Kverneland gives Tersus flail choppers a simpler driveline",
+      "href": "https://www.fwi.co.uk/machinery/farm-maintenance/kverneland-gives-tersus-flail-choppers-a-simpler-driveline",
+      "source": "Farmers Weekly",
+      "date": "2026-08-15",
+      "summary": "ドライブラインの改善と新しいストーンガードオプションは、植生制御用のクバーンランドの最新のトラクター搭載フレールチョッパーに顕著に表れています。 3 モデルの Tersus ラインナップは、以前の FRO シリーズに代わるもので、2 をカバーします。",
+      "originalSummary": "Driveline improvements and a new stone guard option are evident on Kverneland’s latest tractor-mounted flail choppers for vegetation control. The three-model Tersus line-up replaces the preceding FRO range, covering 2.",
+      "topic": "トラクター",
+      "score": 9
+    },
+    {
+      "title": "6.0m イマンツ搭載ロータリーカルチベータ",
+      "originalTitle": "6.0m Imants mounted rotary cultivator",
+      "href": "https://www.profi.co.uk/news/6-0m-imants-mounted-rotary-cultivator/",
+      "source": "profi",
+      "date": "2026-08-14",
+      "summary": "オランダのメーカー Imants の FWX 搭載回転式耕耘機は、6.0 m の回転式耕耘機の能力と搭載型機械の実用的な利点を組み合わせています。",
+      "originalSummary": "The FWX mounted rotary cultivator from Dutch manufacturer Imants combines the capacity of a 6.0m rotary cultivator with the practical advantages of a mounted machine.",
       "topic": "作業機",
+      "score": 19
+    },
+    {
+      "title": "Fendt Vario 832 Gen5: 適切な組み合わせ",
+      "originalTitle": "Fendt Vario 832 Gen5: The right mix",
+      "href": "https://www.profi.co.uk/test-centre/fendt-vario-832-gen5-the-right-mix/",
+      "source": "profi",
+      "date": "2026-08-14",
+      "summary": "トラクターテスト: 1年前にFendtがサイズとパワーのバランスが取れた最新世代のVario 800を発表したとき、大きな話題になりました。今月、私たちは理論をテストし、3 つのモデルのうち最大の 832 にスポットライトを当て、それが何を提供するのかを確認しました。",
+      "originalSummary": "TRACTOR TEST: There was huge hype when Fendt unveiled the newest generation Vario 800s a year ago, with a good match of size and power. We put the theory to the test this month, directing our spotlight at the biggest of the three models, the 832, to see what it has to offer.",
+      "topic": "トラクター",
+      "score": 9
+    },
+    {
+      "title": "WEED-IT スポットスプレーの米国直接サポートが Rometron から利用可能になりました",
+      "originalTitle": "Direct US support for WEED-IT spot spraying now available from Rometron",
+      "href": "https://www.futurefarming.com/crop-solutions/rometron-establishes-weed-it-usa-to-expand-spot-spraying-support/",
+      "source": "Future Farming",
+      "date": "2026-08-13",
+      "summary": "オランダの精密スプレー専門家 Rometron は、WEED-IT スポットスプレー技術のサポートを拡大するために米国子会社を設立しました。",
+      "originalSummary": "Dutch precision spraying specialist Rometron has established a US subsidiary to expand support for its WEED-IT spot spraying technology.",
+      "topic": "スマート農業",
       "score": 13
     },
     {
-      "title": "新しいスプレーヤーが鶏舎の消毒をどのように強化したか",
-      "originalTitle": "How new sprayer lifted poultry shed disinfection",
-      "href": "https://www.fwi.co.uk/machinery/how-new-sprayer-lifted-poultry-shed-disinfection",
-      "source": "Farmers Weekly",
-      "date": "2026-08-09",
-      "summary": "ヘレフォードシャー州の養鶏会社ファームポイントは、高水準の福祉とバイオセキュリティを維持するため、鶏舎の消毒を行うための XTA エアブラスト牽引式スプレーヤーに投資しました。",
-      "originalSummary": "In a bid to maintain its high standards of welfare and bio-security, Herefordshire bird producer Farmpoint has invested in an XTA air-blast trailed sprayer to carry out poultry shed disinfection.",
-      "topic": "作業機",
-      "score": 15
+      "title": "ウルマナの鍬は手除草で 6 万 5,000 ユーロを節約: 農家は数年で回収できると期待",
+      "originalTitle": "Ullmanna hoe saves €65K in hand weeding: farmer expects payback in a few years",
+      "href": "https://www.futurefarming.com/smart-farming/ullmanna-hoe-pays-for-itself-within-a-few-years/",
+      "source": "Future Farming",
+      "date": "2026-08-13",
+      "summary": "今シーズン、ウルマンナ鍬は、オランダの村オースターヘッセレン（ドレンテ州）にあるジェラルド・ランティングの農場でバレリアンとエキナセアで稼働している。アルゴリズムのトレーニングには予想以上に時間がかかっています。時間通りに始めることは、バレリアンを雑草から適切に区別するのに確かに役立ちます。",
+      "originalSummary": "This season, the Ullmanna hoe is operating in valerian and echinacea at Gerard Lanting’s farm in the Dutch village of Oosterhesselen (Drenthe province). Training the algorithms is taking more time than expected. Starting on time certainly helps to distinguish valerian properly from weeds.",
+      "topic": "スマート農業",
+      "score": 5
+    },
+    {
+      "title": "ドリルとカルチベーター: 準備完了、セット、ドリル!",
+      "originalTitle": "Drills and cultivators: Ready, set, drill!",
+      "href": "https://www.profi.co.uk/test-centre/drills-and-cultivators-ready-set-drill/",
+      "source": "profi",
+      "date": "2026-08-13",
+      "summary": "調整: 収穫が早く終わったことで、種まき機を動かす時間ができたかもしれません...秋の播種キャンペーンを少しでもスムーズに進めるために。ここでは、プロフィ読者仲間からのインスピレーションをいくつか提供します。",
+      "originalSummary": "TUNING: With harvest wrapped up early, you might just have gained some time to give your seed drill a fettle ... to make the autumn sowing campaign go that little bit smoother. Here we provide some inspiration from your fellow profi readers.",
+      "topic": "収穫・飼料",
+      "score": 30
     },
     {
       "title": "ある農場が小型自動トラクターで年間 40 万ドルの収益を上げた方法",
@@ -206,13 +217,13 @@
       "score": 38
     },
     {
-      "title": "20万台目のCLAASコンバインが修復され、再び稼働",
-      "originalTitle": "200,000th Claas combine restored and back in action",
-      "href": "https://www.profi.co.uk/news/200000th-claas-combine-restored-and-back-in-action/",
-      "source": "profi",
+      "title": "1968年 CLAASSenatorがサフォークの収穫のために帰還 - ファーマーズガイド",
+      "originalTitle": "1968 Claas Senator returns for Suffolk harvest - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/machinery/vintage/1968-claas-senator-returns-for-suffolk-harvest/",
+      "source": "Farmers Guide",
       "date": "2026-08-05",
-      "summary": "創設者オーガスト CLAAS は、58 年前に 200,000 台目の CLAAS コンバイン、1968 年Senator モデルを発表しました。修復された機械は現在、収穫作業に復帰しています。",
-      "originalSummary": "Founder August CLAAS presented the 200,000th CLAAS combine, a 1968 Senator model, 58 years ago. The restored machine has now returned to harvest work.",
+      "summary": "CLAAS の創設者である August CLAAS による記念式典から 58 年後、これまでに建設された 200,000 台目の CLAAS コンバイン (1968 年Senator) が再び畑に戻り、収穫を行っています。",
+      "originalSummary": "58 years after its ceremonial presentation by Claas founder August Claas, the 200,000th Claas combine ever built – a 1968 Senator – is back on the field and harvesting.",
       "topic": "収穫・飼料",
       "score": 23
     },
@@ -228,26 +239,15 @@
       "score": 21
     },
     {
-      "title": "マウント型 AMAZONE カルチベーターにフレキシリングパッカーオプションが追加されました",
-      "originalTitle": "Mounted Amazone cultivators get flexi-ring packer option",
-      "href": "https://www.fwi.co.uk/machinery/cultivation-drilling/cultivators-drills-cultivators/mounted-amazone-cultivators-get-flexi-ring-packer-option",
-      "source": "Farmers Weekly",
-      "date": "2026-07-31",
-      "summary": "砂質・ローム質土壌向けに、AMAZONEのマウント型カルチベーターへ新しいリングローラーが追加されました。",
-      "originalSummary": "Farms operating on sandy and loamy soils might welcome the addition of a new ring roller option for Amazone’s mounted cultivators.",
-      "topic": "作業機",
+      "title": "Kverneland がラウンドベーラーをラインナップに追加",
+      "originalTitle": "Kverneland adds round balers to the range",
+      "href": "https://www.profi.co.uk/news/kverneland-adds-round-balers-to-the-range/",
+      "source": "profi",
+      "date": "2026-08-10",
+      "summary": "ディーラーや顧客からの要望により、Kverneland は一連の固定室・可変室ラウンドベーラーで製品ポートフォリオを拡張しました。",
+      "originalSummary": "Requests from dealers and customers has prompted Kverneland to extend its product portfolio with a range of fixed and variable chamber round balers.",
+      "topic": "収穫・飼料",
       "score": 20
-    },
-    {
-      "title": "Wox Tempest C は 600m リーラーと 400CFM コンプレッサーを組み合わせています",
-      "originalTitle": "Wox Tempest C combines 600m reeler and 400CFM compressor",
-      "href": "https://www.fwi.co.uk/machinery/spraying-and-fertilising/umbilical/wox-tempest-c-combines-600m-reeler-and-400cfm-compressor",
-      "source": "Farmers Weekly",
-      "date": "2026-08-08",
-      "summary": "スラリーを圧送する際にトラクターのフロントリンケージを有効に活用するために、Wox Agri Services は Tempest C を導入しました。",
-      "originalSummary": "To make good use of a tractor’s front linkage when pumping slurry, Wox Agri Services has introduced the Tempest C.",
-      "topic": "作業機",
-      "score": 19
     }
   ]
 }
