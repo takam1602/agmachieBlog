@@ -177,5 +177,41 @@ export async function saveGithubNote(input: {
     throw new Error(`Failed to save note: ${putResponse.status} ${createPlainText(detail).slice(0, 200)}`)
   }
 
+  const savedData = await putResponse.json() as { content?: { sha?: string } }
+  return parseNote(filePath, savedData.content?.sha ?? existingData?.sha ?? '', source)
+}
+
+export async function deleteGithubNote(input: { slug: string }) {
+  const slug = safeSlug(input.slug)
+  const filePath = `${getNotesPath()}/${slug}.md`
+  const existing = await fetch(apiUrl(filePath), {
+    headers: githubHeaders(),
+    cache: 'no-store',
+  })
+
+  if (existing.status === 404) throw new Error('Note not found.')
+  if (!existing.ok) throw new Error(`Failed to inspect note: ${existing.status}`)
+
+  const existingData = await existing.json() as { sha?: string }
+  if (!existingData.sha) throw new Error('Note sha is missing.')
+
+  const deleteResponse = await fetch(apiUrl(filePath), {
+    method: 'DELETE',
+    headers: {
+      ...githubHeaders(),
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      message: `Delete note: ${slug}`,
+      sha: existingData.sha,
+      branch: process.env.GITHUB_REPO_BRANCH,
+    }),
+  })
+
+  if (!deleteResponse.ok) {
+    const detail = await deleteResponse.text()
+    throw new Error(`Failed to delete note: ${deleteResponse.status} ${createPlainText(detail).slice(0, 200)}`)
+  }
+
   return { slug, path: filePath }
 }
