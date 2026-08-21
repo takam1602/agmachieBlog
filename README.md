@@ -38,3 +38,10 @@ GitHub OAuth App の callback URL は、公開 URL に合わせて `https://exam
 `![alt](https://imagedelivery.net/.../public)` の Markdown を挿入します。
 そのため、保存したメモ Markdown を `content/blog` に移動しても画像 URL はそのまま使えます。
 
+## 画像もあげられる
+```bash
+  CLOUDFLARE_ACCOUNT_ID=
+  CLOUDFLARE_IMAGES_API_TOKEN=
+  CLOUDFLARE_IMAGES_ACCOUNT_HASH=
+  CLOUDFLARE_IMAGES_VARIANT=public
+```
