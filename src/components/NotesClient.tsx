@@ -79,38 +79,25 @@ export default function NotesClient({
     setIsUploadingImage(true)
     setStatus('')
 
-    const directResponse = await fetch('/api/notes/images/direct-upload', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ filename: file.name, contentType: file.type }),
-    })
-    const directData = await directResponse.json() as {
-      error?: string
-      uploadUrl?: string
-      imageUrl?: string
-    }
-
-    if (!directResponse.ok || !directData.uploadUrl || !directData.imageUrl) {
-      setStatus(directData.error ?? '画像アップロード URL の作成に失敗しました。')
-      setIsUploadingImage(false)
-      return
-    }
-
     const form = new FormData()
     form.set('file', file)
-    const uploadResponse = await fetch(directData.uploadUrl, {
+    const uploadResponse = await fetch('/api/notes/images/direct-upload', {
       method: 'POST',
       body: form,
     })
+    const uploadData = await uploadResponse.json() as {
+      error?: string
+      imageUrl?: string
+    }
 
-    if (!uploadResponse.ok) {
-      setStatus(`画像アップロードに失敗しました: ${uploadResponse.status}`)
+    if (!uploadResponse.ok || !uploadData.imageUrl) {
+      setStatus(uploadData.error ?? '画像アップロードに失敗しました。')
       setIsUploadingImage(false)
       return
     }
 
     const alt = file.name.replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' ').trim() || 'image'
-    insertMarkdown(`![${alt}](${directData.imageUrl})`)
+    insertMarkdown(`![${alt}](${uploadData.imageUrl})`)
     setStatus('画像をアップロードして Markdown に挿入しました。')
     setIsUploadingImage(false)
   }

@@ -19,7 +19,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'imagedelivery.net',
+        hostname: 'pub-906e51e4bcd34953a92347dad61b514c.r2.dev',
         pathname: '/**',
       },
     ],
