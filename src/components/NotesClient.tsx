@@ -1,9 +1,9 @@
 'use client'
 
-import { FormEvent, useMemo, useState } from 'react'
+import { ChangeEvent, FormEvent, useMemo, useRef, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-import { Edit3, Eye, Github, LogOut, Plus, Save } from 'lucide-react'
+import { Edit3, Eye, Github, ImagePlus, LogOut, Plus, Save } from 'lucide-react'
 
 import type { GithubNote } from '@/utils/githubNotes'
 import type { GithubNotesUser } from '@/utils/githubNotesAuth'
@@ -34,12 +34,85 @@ export default function NotesClient({
   const [slug, setSlug] = useState('')
   const [status, setStatus] = useState('')
   const [isSaving, setIsSaving] = useState(false)
+  const [isUploadingImage, setIsUploadingImage] = useState(false)
+  const textareaRef = useRef<HTMLTextAreaElement>(null)
+  const fileInputRef = useRef<HTMLInputElement>(null)
 
   const startEdit = (note?: GithubNote) => {
     setTitle(note?.title ?? '')
     setBody(note?.body ?? '')
     setSlug(note?.slug ?? '')
     setStatus('')
+  }
+
+  const insertMarkdown = (markdown: string) => {
+    const textarea = textareaRef.current
+    if (!textarea) {
+      setBody((current) => `${current}${current.endsWith('\n') || !current ? '' : '\n\n'}${markdown}`)
+      return
+    }
+
+    const { selectionStart, selectionEnd } = textarea
+    const before = body.slice(0, selectionStart)
+    const after = body.slice(selectionEnd)
+    const prefix = before && !before.endsWith('\n') ? '\n\n' : ''
+    const suffix = after && !after.startsWith('\n') ? '\n\n' : ''
+    const nextBody = `${before}${prefix}${markdown}${suffix}${after}`
+    const nextCursor = before.length + prefix.length + markdown.length
+    setBody(nextBody)
+    window.setTimeout(() => {
+      textarea.focus()
+      textarea.setSelectionRange(nextCursor, nextCursor)
+    }, 0)
+  }
+
+  const uploadImage = async (event: ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0]
+    event.target.value = ''
+    if (!file) return
+
+    if (!file.type.startsWith('image/')) {
+      setStatus('画像ファイルを選択してください。')
+      return
+    }
+
+    setIsUploadingImage(true)
+    setStatus('')
+
+    const directResponse = await fetch('/api/notes/images/direct-upload', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ filename: file.name, contentType: file.type }),
+    })
+    const directData = await directResponse.json() as {
+      error?: string
+      uploadUrl?: string
+      imageUrl?: string
+    }
+
+    if (!directResponse.ok || !directData.uploadUrl || !directData.imageUrl) {
+      setStatus(directData.error ?? '画像アップロード URL の作成に失敗しました。')
+      setIsUploadingImage(false)
+      return
+    }
+
+    const form = new FormData()
+    form.set('file', file)
+    const uploadResponse = await fetch(directData.uploadUrl, {
+      method: 'POST',
+      body: form,
+    })
+
+    if (!uploadResponse.ok) {
+      setStatus(`画像アップロードに失敗しました: ${uploadResponse.status}`)
+      setIsUploadingImage(false)
+      return
+    }
+
+    const alt = file.name.replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' ').trim() || 'image'
+    insertMarkdown(`![${alt}](${directData.imageUrl})`)
+    setStatus('画像をアップロードして Markdown に挿入しました。')
+    setIsUploadingImage(false)
   }
 
   const submit = async (event: FormEvent<HTMLFormElement>) => {
@@ -152,9 +225,19 @@ export default function NotesClient({
             </div>
             <label className="mt-3 grid gap-1.5 text-xs font-semibold text-gray-400">
               Markdown
-              <textarea value={body} onChange={(event) => setBody(event.target.value)} required rows={12} className="min-h-64 resize-y rounded-lg border border-[var(--border)] bg-[#0a0d0b] px-3 py-3 font-mono text-sm leading-6 text-white outline-none focus:border-[var(--accent)]" />
+              <textarea ref={textareaRef} value={body} onChange={(event) => setBody(event.target.value)} required rows={12} className="min-h-64 resize-y rounded-lg border border-[var(--border)] bg-[#0a0d0b] px-3 py-3 font-mono text-sm leading-6 text-white outline-none focus:border-[var(--accent)]" />
             </label>
             <div className="mt-3 flex flex-wrap items-center gap-3">
+              <input ref={fileInputRef} type="file" accept="image/*" onChange={uploadImage} className="hidden" />
+              <button
+                type="button"
+                disabled={isUploadingImage}
+                onClick={() => fileInputRef.current?.click()}
+                className="inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border border-[var(--border-strong)] px-4 text-sm font-semibold text-gray-200 hover:border-[var(--accent)] hover:text-[var(--accent)] disabled:cursor-not-allowed disabled:opacity-60"
+              >
+                <ImagePlus size={16} />
+                {isUploadingImage ? '画像アップロード中' : '画像を追加'}
+              </button>
               <button type="submit" disabled={isSaving} className="inline-flex min-h-10 items-center justify-center gap-2 rounded-lg bg-[var(--accent)] px-5 text-sm font-bold text-[#07140f] disabled:cursor-not-allowed disabled:opacity-60">
                 <Save size={16} />
                 {isSaving ? '保存中' : 'GitHubに保存'}
@@ -167,6 +250,13 @@ export default function NotesClient({
               )}
               {status && <p className="text-sm text-gray-400">{status}</p>}
             </div>
+            {body.trim() && (
+              <div className="mt-4 rounded-lg border border-[var(--border)] bg-[#0a0d0b]/80 p-4">
+                <div className="prose prose-invert max-w-none prose-img:rounded-lg prose-img:border prose-img:border-[var(--border)]">
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>{body}</ReactMarkdown>
+                </div>
+              </div>
+            )}
           </form>
         )}
 
