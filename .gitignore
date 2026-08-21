@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# scraper artifacts that may contain cookies or request tokens
+content/autoDownloadMachineFinder/*_raw.html
+content/autoDownloadMachineFinder/log*.txt
