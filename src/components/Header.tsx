@@ -10,6 +10,7 @@ const navItems = [
   { label: 'ニュース', href: '/#news' },
   { label: 'コレクション', href: '/#repository' },
   { label: 'ブログ', href: '/#blog' },
+  { label: 'メモ', href: '/notes' },
 ]
 
 export default function Header() {
