@@ -3,7 +3,7 @@
 import { ChangeEvent, FormEvent, useMemo, useRef, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-import { Edit3, Eye, Github, ImagePlus, LogOut, Plus, Save } from 'lucide-react'
+import { Edit3, Eye, Github, ImagePlus, LogOut, Plus, Save, Trash2 } from 'lucide-react'
 
 import type { GithubNote } from '@/utils/githubNotes'
 import type { GithubNotesUser } from '@/utils/githubNotesAuth'
@@ -35,6 +35,7 @@ export default function NotesClient({
   const [status, setStatus] = useState('')
   const [isSaving, setIsSaving] = useState(false)
   const [isUploadingImage, setIsUploadingImage] = useState(false)
+  const [isDeleting, setIsDeleting] = useState(false)
   const textareaRef = useRef<HTMLTextAreaElement>(null)
   const fileInputRef = useRef<HTMLInputElement>(null)
 
@@ -112,7 +113,7 @@ export default function NotesClient({
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ title, body, slug: slug || undefined }),
     })
-    const data = await response.json() as { error?: string; note?: { slug: string } }
+    const data = await response.json() as { error?: string; note?: GithubNote }
 
     if (!response.ok) {
       setStatus(data.error ?? '保存に失敗しました。')
@@ -120,14 +121,44 @@ export default function NotesClient({
       return
     }
 
-    const refresh = await fetch('/api/notes')
-    const refreshed = await refresh.json() as { notes?: GithubNote[] }
-    const nextNotes = refreshed.notes ?? notes
-    setNotes(nextNotes)
-    setActiveSlug(data.note?.slug ?? nextNotes[0]?.slug ?? '')
-    setSlug(data.note?.slug ?? slug)
+    if (data.note) {
+      const nextNotes = [data.note, ...notes.filter((note) => note.slug !== data.note?.slug)]
+        .sort((a, b) => (a.updatedAt ?? '') < (b.updatedAt ?? '') ? 1 : -1)
+      setNotes(nextNotes)
+      setActiveSlug(data.note.slug)
+      setSlug(data.note.slug)
+    }
     setStatus('GitHub に保存しました。')
     setIsSaving(false)
+  }
+
+  const deleteActiveNote = async () => {
+    if (!activeNote || isDeleting) return
+    const ok = window.confirm('メモ「' + activeNote.title + '」を削除しますか？')
+    if (!ok) return
+
+    setIsDeleting(true)
+    setStatus('')
+    const response = await fetch('/api/notes', {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ slug: activeNote.slug }),
+    })
+    const data = await response.json() as { error?: string; note?: { slug: string } }
+
+    if (!response.ok) {
+      setStatus(data.error ?? '削除に失敗しました。')
+      setIsDeleting(false)
+      return
+    }
+
+    const deletedSlug = data.note?.slug ?? activeNote.slug
+    const nextNotes = notes.filter((note) => note.slug !== deletedSlug)
+    setNotes(nextNotes)
+    setActiveSlug(nextNotes[0]?.slug ?? '')
+    if (slug === deletedSlug) startEdit()
+    setStatus('メモを削除しました。')
+    setIsDeleting(false)
   }
 
   return (
@@ -233,6 +264,17 @@ export default function NotesClient({
                 <button type="button" onClick={() => startEdit(activeNote)} className="inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border border-[var(--border-strong)] px-4 text-sm font-semibold text-gray-200 hover:border-[var(--accent)] hover:text-[var(--accent)]">
                   <Edit3 size={16} />
                   表示中のメモを編集
+                </button>
+              )}
+              {activeNote && (
+                <button
+                  type="button"
+                  disabled={isDeleting}
+                  onClick={deleteActiveNote}
+                  className="inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border border-red-500/40 px-4 text-sm font-semibold text-red-200 hover:border-red-400 hover:text-red-100 disabled:cursor-not-allowed disabled:opacity-60"
+                >
+                  <Trash2 size={16} />
+                  {isDeleting ? '削除中' : '表示中のメモを削除'}
                 </button>
               )}
               {status && <p className="text-sm text-gray-400">{status}</p>}
