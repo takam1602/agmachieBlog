@@ -1,88 +1,77 @@
 {
   "version": 2,
-  "weekKey": "2026-08-23",
-  "generatedAt": "2026-08-23T15:19:48.711Z",
+  "weekKey": "2026-08-30",
+  "generatedAt": "2026-08-30T18:24:38.376Z",
   "latest": [
     {
-      "title": "Simtech TJG-300 tine direct drill gains bigger 1,000-litre hopper",
-      "originalTitle": "Simtech TJG-300 tine direct drill gains bigger 1,000-litre hopper",
-      "href": "https://www.fwi.co.uk/machinery/cultivation-drilling/cereal-drills/simtech-tjg-300-tine-direct-drill-gains-bigger-1000-litre-hopper",
-      "source": "Farmers Weekly",
-      "date": "2026-08-22",
+      "title": "John Deere to celebrate 60 years at Newark Vintage Tractor & Heritage Show - Farmers Guide",
+      "originalTitle": "John Deere to celebrate 60 years at Newark Vintage Tractor & Heritage Show - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/machinery/tractors/john-deere-to-celebrate-60-years-at-newark-vintage-tractor-heritage-show/",
+      "source": "Farmers Guide",
+      "date": "2026-08-30",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Growers who want a compact direct drill but have the tractor linkage capacity to lift a sizeable hopper and its contents are being catered for by Opico’s latest Simtech T-Sem.",
-      "topic": "作業機",
-      "score": 16
-    },
-    {
-      "title": "TH White appointed as an Amazone dealer",
-      "originalTitle": "TH White appointed as an Amazone dealer",
-      "href": "https://www.profi.co.uk/news/amazone-franchise-for-t-h-white/",
-      "source": "profi",
-      "date": "2026-08-22",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Amazone has added T H White Agriculture to its dealer network for the Shrewsbury and Fosse Cross areas.",
-      "topic": "スマート農業",
-      "score": 15
-    },
-    {
-      "title": "Horizon franchise for WJW Engineering",
-      "originalTitle": "Horizon franchise for WJW Engineering",
-      "href": "https://www.profi.co.uk/news/horizon-franchise-for-wjw-engineering/",
-      "source": "profi",
-      "date": "2026-08-22",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Cirencester-based WJW Engineering has joined the Horizon dealer network to cover Buckinghamshire, Oxfordshire, Berkshire and Hampshire.",
-      "topic": "作業機",
-      "score": 8
-    },
-    {
-      "title": "Agtonomy adds autonomous multi-point turning and expands data capabilities",
-      "originalTitle": "Agtonomy adds autonomous multi-point turning and expands data capabilities",
-      "href": "https://www.futurefarming.com/tech-in-focus/autonomous-semi-autosteering-systems/agtonomy-adds-autonomous-multi-point-turning-and-expands-data-capabilities/",
-      "source": "Future Farming",
-      "date": "2026-08-21",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "U.S. company Agtonomy has announced two updates to its autonomy stack for factory-level automation: new autonomous multi-point turning capability and expanded passive data collection across its fleet. Agtonomy does not build tractors itself. It embeds its autonomy stack into machines built by partner OEMs, currently Kubota and Bobcat, supplying the perception, navigation, task-planning and remote-monitoring […]",
-      "topic": "スマート農業",
-      "score": 9
-    },
-    {
-      "title": "The Claas machinery prototypes that never made it",
-      "originalTitle": "The Claas machinery prototypes that never made it",
-      "href": "https://www.fwi.co.uk/machinery/the-claas-machinery-prototypes-that-never-made-it",
-      "source": "Farmers Weekly",
-      "date": "2026-08-21",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "A recent Claas tractor launch provided the rare opportunity for a nosey at the overspill from the German manufacturer's museum collection.",
+      "originalSummary": "John Deere will celebrate 60 years of business in the UK and Ireland during a special class at this year’s Newark Vintage Tractor & Heritage Show.",
       "topic": "トラクター",
-      "score": 9
+      "score": 17
     },
     {
-      "title": "AgBot trial: Less soil compaction & better fuel efficiency",
-      "originalTitle": "AgBot trial: Less soil compaction & better fuel efficiency",
-      "href": "https://www.futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/less-soil-compaction-with-autonomous-tractor/",
-      "source": "Future Farming",
-      "date": "2026-08-20",
+      "title": "Claas launches refreshed 145-180hp Arion 5 tractors",
+      "originalTitle": "Claas launches refreshed 145-180hp Arion 5 tractors",
+      "href": "https://www.fwi.co.uk/machinery/tractors/claas-launches-refreshed-145-180hp-arion-5-tractors",
+      "source": "Farmers Weekly",
+      "date": "2026-08-28",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "British grower Will Mumford compared an AgBot from AgXeed on his farm with a wheeled tractor with plough and a Challenger tracked tractor. The AgBot proves to be very soil-friendly.",
+      "originalSummary": "Claas has revamped its middleweight Arion tractors with a nose-job and a bunch of driver-friendly features.",
+      "topic": "トラクター",
+      "score": 19
+    },
+    {
+      "title": "Amazone KG3001 Special and Centaya 3000C Special combination drill: Heavyweight performer",
+      "originalTitle": "Amazone KG3001 Special and Centaya 3000C Special combination drill: Heavyweight performer",
+      "href": "https://www.profi.co.uk/test-centre/amazone-kg3001-special-and-centaya-3000c-special-combination-drill-heavyweight-performer/",
+      "source": "profi",
+      "date": "2026-08-28",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "PRACTICAL TEST: Amazone has adapted its Centaya Special pneumatic drill with a split hopper and dual metering unit that can handle different types of seed or both grain and fert. We put the 3.0m combi drill through its paces to find out what else it has to offer.",
+      "topic": "作業機",
+      "score": 17
+    },
+    {
+      "title": "GUSS sprayers to get new lidar to navigate orchards beyond GPS",
+      "originalTitle": "GUSS sprayers to get new lidar to navigate orchards beyond GPS",
+      "href": "https://www.futurefarming.com/tech-in-focus/guss-to-add-native-color-lidar-to-autonomous-orchard-sprayers/",
+      "source": "Future Farming",
+      "date": "2026-08-28",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "GUSS Automation, a John Deere subsidiary, plans to equip the next generation of its autonomous orchard machines with Ouster’s new Rev8 OS0 lidar. The sensor should improve navigation and obstacle detection in orchards and vineyards, particularly where GPS alone cannot provide sufficient positioning information. GUSS plans to integrate the Rev8 OS0 digital lidar into its […]",
       "topic": "スマート農業",
-      "score": 11
+      "score": 19
+    },
+    {
+      "title": "Krone Swativo T1040 Pro merger: Go with the flow",
+      "originalTitle": "Krone Swativo T1040 Pro merger: Go with the flow",
+      "href": "https://www.profi.co.uk/test-centre/krone-swativo-t1040-pro-merger-go-with-the-flow/",
+      "source": "profi",
+      "date": "2026-08-28",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "DRIVING IMPRESSION: Krone is now in the growing merger market with its fresh-out-of-the-box Swativo T1040 Pro. A combination of existing pick-up tech and a new transfer rotor is designed to lift delicate leafy crops and other forage for delivery to the centre or sides. Here is our exclusive first look.",
+      "topic": "収穫・飼料",
+      "score": 12
+    },
+    {
+      "title": "A drill that helped change the system - Farmers Guide",
+      "originalTitle": "A drill that helped change the system - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/machinery/drills/a-drill-that-helped-change-the-system/",
+      "source": "Farmers Guide",
+      "date": "2026-08-27",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "For Kent farmer Richard Budd, the Sumo DTS is a key machine behind a long-term shift in establishment strategy, helping the business move away from higher-disturbance cultivations.",
+      "topic": "作業機",
+      "score": 13
     }
   ],
   "random": [
     {
-      "title": "Fendt Ideal breaks harvesting record",
-      "originalTitle": "Fendt Ideal breaks harvesting record",
-      "href": "https://www.profi.co.uk/news/fendt-ideal-breaks-harvesting-record/",
-      "source": "profi",
-      "date": "2026-08-21",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "A Fendt Ideal 9T has set a new Brazilian harvesting record processing 2,599t of maize grain in 24 hours.",
-      "topic": "収穫・飼料",
-      "score": 30
-    },
-    {
       "title": "How one farm returned $400k in a year with a small autonomous tractor",
       "originalTitle": "How one farm returned $400k in a year with a small autonomous tractor",
       "href": "https://www.futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/smaller-tractor-bigger-return-a-kentucky-farm-s-case-for-going-autonomous/",
@@ -94,94 +83,15 @@
       "score": 38
     },
     {
-      "title": "Pöttinger updates grass harvesting app",
-      "originalTitle": "Pöttinger updates grass harvesting app",
-      "href": "https://www.profi.co.uk/news/pottinger-updates-grass-harvesting-app/",
+      "title": "Combine harvester converted to serve beer",
+      "originalTitle": "Combine harvester converted to serve beer",
+      "href": "https://www.profi.co.uk/news/combine-harvester-converted-to-serve-beer/",
       "source": "profi",
-      "date": "2026-08-19",
+      "date": "2026-08-25",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "The 4.0 version of the Harvest Assist app displays new information, such as fields and clamps, to simplify things for grass silage harvesting contractors.",
-      "topic": "スマート農業",
-      "score": 28
-    },
-    {
-      "title": "Fendt updates its Ideal combine range - Farmers Guide",
-      "originalTitle": "Fendt updates its Ideal combine range - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/machinery/combines-forage-harvesting/fendt-updates-its-ideal-combine-range/",
-      "source": "Farmers Guide",
-      "date": "2026-08-15",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Fendt has introduced further updates to its Ideal combine range, featuring increased cleaning capacity, a greater separation area and a lower total cost of ownership for UK and Irish operators.",
+      "originalSummary": "American beer brewer Anheuscher-Bush has converted a John Deere combine to a mobile beer tap.",
       "topic": "収穫・飼料",
-      "score": 25
-    },
-    {
-      "title": "Wox Tempest C combines 600m reeler and 400CFM compressor",
-      "originalTitle": "Wox Tempest C combines 600m reeler and 400CFM compressor",
-      "href": "https://www.fwi.co.uk/machinery/spraying-and-fertilising/umbilical/wox-tempest-c-combines-600m-reeler-and-400cfm-compressor",
-      "source": "Farmers Weekly",
-      "date": "2026-08-08",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "To make good use of a tractor’s front linkage when pumping slurry, Wox Agri Services has introduced the Tempest C.",
-      "topic": "作業機",
-      "score": 19
-    }
-  ],
-  "all": [
-    {
-      "title": "Simtech TJG-300 tine direct drill gains bigger 1,000-litre hopper",
-      "originalTitle": "Simtech TJG-300 tine direct drill gains bigger 1,000-litre hopper",
-      "href": "https://www.fwi.co.uk/machinery/cultivation-drilling/cereal-drills/simtech-tjg-300-tine-direct-drill-gains-bigger-1000-litre-hopper",
-      "source": "Farmers Weekly",
-      "date": "2026-08-22",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Growers who want a compact direct drill but have the tractor linkage capacity to lift a sizeable hopper and its contents are being catered for by Opico’s latest Simtech T-Sem.",
-      "topic": "作業機",
-      "score": 16
-    },
-    {
-      "title": "TH White appointed as an Amazone dealer",
-      "originalTitle": "TH White appointed as an Amazone dealer",
-      "href": "https://www.profi.co.uk/news/amazone-franchise-for-t-h-white/",
-      "source": "profi",
-      "date": "2026-08-22",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Amazone has added T H White Agriculture to its dealer network for the Shrewsbury and Fosse Cross areas.",
-      "topic": "スマート農業",
-      "score": 15
-    },
-    {
-      "title": "Horizon franchise for WJW Engineering",
-      "originalTitle": "Horizon franchise for WJW Engineering",
-      "href": "https://www.profi.co.uk/news/horizon-franchise-for-wjw-engineering/",
-      "source": "profi",
-      "date": "2026-08-22",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Cirencester-based WJW Engineering has joined the Horizon dealer network to cover Buckinghamshire, Oxfordshire, Berkshire and Hampshire.",
-      "topic": "作業機",
-      "score": 8
-    },
-    {
-      "title": "Agtonomy adds autonomous multi-point turning and expands data capabilities",
-      "originalTitle": "Agtonomy adds autonomous multi-point turning and expands data capabilities",
-      "href": "https://www.futurefarming.com/tech-in-focus/autonomous-semi-autosteering-systems/agtonomy-adds-autonomous-multi-point-turning-and-expands-data-capabilities/",
-      "source": "Future Farming",
-      "date": "2026-08-21",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "U.S. company Agtonomy has announced two updates to its autonomy stack for factory-level automation: new autonomous multi-point turning capability and expanded passive data collection across its fleet. Agtonomy does not build tractors itself. It embeds its autonomy stack into machines built by partner OEMs, currently Kubota and Bobcat, supplying the perception, navigation, task-planning and remote-monitoring […]",
-      "topic": "スマート農業",
-      "score": 9
-    },
-    {
-      "title": "The Claas machinery prototypes that never made it",
-      "originalTitle": "The Claas machinery prototypes that never made it",
-      "href": "https://www.fwi.co.uk/machinery/the-claas-machinery-prototypes-that-never-made-it",
-      "source": "Farmers Weekly",
-      "date": "2026-08-21",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "A recent Claas tractor launch provided the rare opportunity for a nosey at the overspill from the German manufacturer's museum collection.",
-      "topic": "トラクター",
-      "score": 9
+      "score": 28
     },
     {
       "title": "AgBot trial: Less soil compaction & better fuel efficiency",
@@ -195,15 +105,94 @@
       "score": 11
     },
     {
-      "title": "Fendt Ideal breaks harvesting record",
-      "originalTitle": "Fendt Ideal breaks harvesting record",
-      "href": "https://www.profi.co.uk/news/fendt-ideal-breaks-harvesting-record/",
-      "source": "profi",
-      "date": "2026-08-21",
+      "title": "Fendt updates its Ideal combine range - Farmers Guide",
+      "originalTitle": "Fendt updates its Ideal combine range - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/machinery/combines-forage-harvesting/fendt-updates-its-ideal-combine-range/",
+      "source": "Farmers Guide",
+      "date": "2026-08-15",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "A Fendt Ideal 9T has set a new Brazilian harvesting record processing 2,599t of maize grain in 24 hours.",
+      "originalSummary": "Fendt has introduced further updates to its Ideal combine range, featuring increased cleaning capacity, a greater separation area and a lower total cost of ownership for UK and Irish operators.",
       "topic": "収穫・飼料",
-      "score": 30
+      "score": 25
+    },
+    {
+      "title": "UK used farm machinery finds new markets overseas - Farmers Guide",
+      "originalTitle": "UK used farm machinery finds new markets overseas - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/machinery/uk-used-farm-machinery-finds-new-markets-overseas/",
+      "source": "Farmers Guide",
+      "date": "2026-08-25",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "Older farm machinery from the UK is finding new owner overseas as tighter regulations across Europe drive used equipment into emerging markets. Ritchie Bros. data shows strong international demand for tractors and other agricultural machinery, with buyers attracted by the durability, reliability and ease of maintenance offered by older models.",
+      "topic": "トラクター",
+      "score": 21
+    }
+  ],
+  "all": [
+    {
+      "title": "John Deere to celebrate 60 years at Newark Vintage Tractor & Heritage Show - Farmers Guide",
+      "originalTitle": "John Deere to celebrate 60 years at Newark Vintage Tractor & Heritage Show - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/machinery/tractors/john-deere-to-celebrate-60-years-at-newark-vintage-tractor-heritage-show/",
+      "source": "Farmers Guide",
+      "date": "2026-08-30",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "John Deere will celebrate 60 years of business in the UK and Ireland during a special class at this year’s Newark Vintage Tractor & Heritage Show.",
+      "topic": "トラクター",
+      "score": 17
+    },
+    {
+      "title": "Claas launches refreshed 145-180hp Arion 5 tractors",
+      "originalTitle": "Claas launches refreshed 145-180hp Arion 5 tractors",
+      "href": "https://www.fwi.co.uk/machinery/tractors/claas-launches-refreshed-145-180hp-arion-5-tractors",
+      "source": "Farmers Weekly",
+      "date": "2026-08-28",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "Claas has revamped its middleweight Arion tractors with a nose-job and a bunch of driver-friendly features.",
+      "topic": "トラクター",
+      "score": 19
+    },
+    {
+      "title": "Amazone KG3001 Special and Centaya 3000C Special combination drill: Heavyweight performer",
+      "originalTitle": "Amazone KG3001 Special and Centaya 3000C Special combination drill: Heavyweight performer",
+      "href": "https://www.profi.co.uk/test-centre/amazone-kg3001-special-and-centaya-3000c-special-combination-drill-heavyweight-performer/",
+      "source": "profi",
+      "date": "2026-08-28",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "PRACTICAL TEST: Amazone has adapted its Centaya Special pneumatic drill with a split hopper and dual metering unit that can handle different types of seed or both grain and fert. We put the 3.0m combi drill through its paces to find out what else it has to offer.",
+      "topic": "作業機",
+      "score": 17
+    },
+    {
+      "title": "GUSS sprayers to get new lidar to navigate orchards beyond GPS",
+      "originalTitle": "GUSS sprayers to get new lidar to navigate orchards beyond GPS",
+      "href": "https://www.futurefarming.com/tech-in-focus/guss-to-add-native-color-lidar-to-autonomous-orchard-sprayers/",
+      "source": "Future Farming",
+      "date": "2026-08-28",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "GUSS Automation, a John Deere subsidiary, plans to equip the next generation of its autonomous orchard machines with Ouster’s new Rev8 OS0 lidar. The sensor should improve navigation and obstacle detection in orchards and vineyards, particularly where GPS alone cannot provide sufficient positioning information. GUSS plans to integrate the Rev8 OS0 digital lidar into its […]",
+      "topic": "スマート農業",
+      "score": 19
+    },
+    {
+      "title": "Krone Swativo T1040 Pro merger: Go with the flow",
+      "originalTitle": "Krone Swativo T1040 Pro merger: Go with the flow",
+      "href": "https://www.profi.co.uk/test-centre/krone-swativo-t1040-pro-merger-go-with-the-flow/",
+      "source": "profi",
+      "date": "2026-08-28",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "DRIVING IMPRESSION: Krone is now in the growing merger market with its fresh-out-of-the-box Swativo T1040 Pro. A combination of existing pick-up tech and a new transfer rotor is designed to lift delicate leafy crops and other forage for delivery to the centre or sides. Here is our exclusive first look.",
+      "topic": "収穫・飼料",
+      "score": 12
+    },
+    {
+      "title": "A drill that helped change the system - Farmers Guide",
+      "originalTitle": "A drill that helped change the system - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/machinery/drills/a-drill-that-helped-change-the-system/",
+      "source": "Farmers Guide",
+      "date": "2026-08-27",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "For Kent farmer Richard Budd, the Sumo DTS is a key machine behind a long-term shift in establishment strategy, helping the business move away from higher-disturbance cultivations.",
+      "topic": "作業機",
+      "score": 13
     },
     {
       "title": "How one farm returned $400k in a year with a small autonomous tractor",
@@ -217,15 +206,26 @@
       "score": 38
     },
     {
-      "title": "Pöttinger updates grass harvesting app",
-      "originalTitle": "Pöttinger updates grass harvesting app",
-      "href": "https://www.profi.co.uk/news/pottinger-updates-grass-harvesting-app/",
+      "title": "Combine harvester converted to serve beer",
+      "originalTitle": "Combine harvester converted to serve beer",
+      "href": "https://www.profi.co.uk/news/combine-harvester-converted-to-serve-beer/",
       "source": "profi",
-      "date": "2026-08-19",
+      "date": "2026-08-25",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "The 4.0 version of the Harvest Assist app displays new information, such as fields and clamps, to simplify things for grass silage harvesting contractors.",
-      "topic": "スマート農業",
+      "originalSummary": "American beer brewer Anheuscher-Bush has converted a John Deere combine to a mobile beer tap.",
+      "topic": "収穫・飼料",
       "score": 28
+    },
+    {
+      "title": "AgBot trial: Less soil compaction & better fuel efficiency",
+      "originalTitle": "AgBot trial: Less soil compaction & better fuel efficiency",
+      "href": "https://www.futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/less-soil-compaction-with-autonomous-tractor/",
+      "source": "Future Farming",
+      "date": "2026-08-20",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "British grower Will Mumford compared an AgBot from AgXeed on his farm with a wheeled tractor with plough and a Challenger tracked tractor. The AgBot proves to be very soil-friendly.",
+      "topic": "スマート農業",
+      "score": 11
     },
     {
       "title": "Fendt updates its Ideal combine range - Farmers Guide",
@@ -239,15 +239,15 @@
       "score": 25
     },
     {
-      "title": "Wox Tempest C combines 600m reeler and 400CFM compressor",
-      "originalTitle": "Wox Tempest C combines 600m reeler and 400CFM compressor",
-      "href": "https://www.fwi.co.uk/machinery/spraying-and-fertilising/umbilical/wox-tempest-c-combines-600m-reeler-and-400cfm-compressor",
-      "source": "Farmers Weekly",
-      "date": "2026-08-08",
+      "title": "UK used farm machinery finds new markets overseas - Farmers Guide",
+      "originalTitle": "UK used farm machinery finds new markets overseas - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/machinery/uk-used-farm-machinery-finds-new-markets-overseas/",
+      "source": "Farmers Guide",
+      "date": "2026-08-25",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "To make good use of a tractor’s front linkage when pumping slurry, Wox Agri Services has introduced the Tempest C.",
-      "topic": "作業機",
-      "score": 19
+      "originalSummary": "Older farm machinery from the UK is finding new owner overseas as tighter regulations across Europe drive used equipment into emerging markets. Ritchie Bros. data shows strong international demand for tractors and other agricultural machinery, with buyers attracted by the durability, reliability and ease of maintenance offered by older models.",
+      "topic": "トラクター",
+      "score": 21
     }
   ]
 }
