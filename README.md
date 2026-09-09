@@ -14,6 +14,8 @@ gemini の力を借りています。
 
 `/notes` は GitHub 認証付きの公開メモ帳です。閲覧は `/notes` で行い、`GITHUB_ALLOWED_LOGINS` に含まれる GitHub アカウントでログインした場合だけ Markdown の作成・更新ができます。保存先は既定で `content/notes/*.md` です。
 
+保存済みのメモは編集画面の「blogへ追加」からブログ記事へ昇格できます。昇格時は東京時間の日付を使って `content/blog/YYMMDD.md` に保存し、同日の記事がある場合は `YYMMDD_2.md`、`YYMMDD_3.md` のように連番を付けます。ブログの作成と元メモの削除はGitHub上の1コミットで行われます。
+
 必要な環境変数:
 
 ```bash

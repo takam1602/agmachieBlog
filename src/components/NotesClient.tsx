@@ -3,9 +3,9 @@
 import { ChangeEvent, FormEvent, useMemo, useRef, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-import { Edit3, Eye, Github, ImagePlus, LogOut, Plus, Save, Trash2 } from 'lucide-react'
+import { BookUp, Edit3, Eye, Github, ImagePlus, LogOut, Plus, Save, Trash2 } from 'lucide-react'
 
-import type { GithubNote } from '@/utils/githubNotes'
+import type { GithubNote, GithubNotePromotion } from '@/utils/githubNotes'
 import type { GithubNotesUser } from '@/utils/githubNotesAuth'
 
 interface NotesClientProps {
@@ -36,6 +36,7 @@ export default function NotesClient({
   const [isSaving, setIsSaving] = useState(false)
   const [isUploadingImage, setIsUploadingImage] = useState(false)
   const [isDeleting, setIsDeleting] = useState(false)
+  const [isPromoting, setIsPromoting] = useState(false)
   const textareaRef = useRef<HTMLTextAreaElement>(null)
   const fileInputRef = useRef<HTMLInputElement>(null)
 
@@ -161,6 +162,43 @@ export default function NotesClient({
     setIsDeleting(false)
   }
 
+  const promoteActiveNote = async () => {
+    if (!activeNote || isPromoting) return
+    const ok = window.confirm(
+      `メモ「${activeNote.title}」をblogへ追加し、メモ一覧から削除しますか？`,
+    )
+    if (!ok) return
+
+    setIsPromoting(true)
+    setStatus('')
+    try {
+      const response = await fetch('/api/notes/promote', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ slug: activeNote.slug }),
+      })
+      const data = await response.json() as {
+        error?: string
+        promotion?: GithubNotePromotion
+      }
+
+      if (!response.ok || !data.promotion) {
+        setStatus(data.error ?? 'blogへの追加に失敗しました。')
+        return
+      }
+
+      const nextNotes = notes.filter((note) => note.slug !== data.promotion?.noteSlug)
+      setNotes(nextNotes)
+      setActiveSlug(nextNotes[0]?.slug ?? '')
+      if (slug === data.promotion.noteSlug) startEdit()
+      setStatus(`${data.promotion.blogPath} に追加しました。公開ページへの反映をお待ちください。`)
+    } catch {
+      setStatus('通信エラーのため、blogへの追加に失敗しました。')
+    } finally {
+      setIsPromoting(false)
+    }
+  }
+
   return (
     <div className="mx-auto grid w-full max-w-7xl gap-6 px-4 py-6 sm:px-6 lg:grid-cols-[320px_1fr] lg:py-10">
       <aside className="rounded-lg border border-[var(--border)] bg-[var(--surface)]/80">
@@ -269,7 +307,18 @@ export default function NotesClient({
               {activeNote && (
                 <button
                   type="button"
-                  disabled={isDeleting}
+                  disabled={isPromoting || isDeleting}
+                  onClick={promoteActiveNote}
+                  className="inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border border-[var(--accent)]/50 bg-[var(--accent)]/10 px-4 text-sm font-semibold text-[var(--accent)] hover:border-[var(--accent)] hover:bg-[var(--accent)]/15 disabled:cursor-not-allowed disabled:opacity-60"
+                >
+                  <BookUp size={16} />
+                  {isPromoting ? 'blogへ追加中' : 'blogへ追加'}
+                </button>
+              )}
+              {activeNote && (
+                <button
+                  type="button"
+                  disabled={isDeleting || isPromoting}
                   onClick={deleteActiveNote}
                   className="inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border border-red-500/40 px-4 text-sm font-semibold text-red-200 hover:border-red-400 hover:text-red-100 disabled:cursor-not-allowed disabled:opacity-60"
                 >
