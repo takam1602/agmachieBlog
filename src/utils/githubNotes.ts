@@ -15,7 +15,15 @@ export interface GithubNote {
   sha: string
 }
 
+export interface GithubNotePromotion {
+  noteSlug: string
+  blogPath: string
+  blogHref: string
+  commitSha: string
+}
+
 const DEFAULT_NOTES_PATH = 'content/notes'
+const BLOG_PATH = 'content/blog'
 
 function githubHeaders() {
   return {
@@ -34,6 +42,13 @@ function getRepoConfig() {
   const repo = process.env.GITHUB_REPO_NAME
   if (!owner || !repo) throw new Error('GitHub repository is not configured.')
   return { owner, repo }
+}
+
+function repoApiUrl(resource: string) {
+  const { owner, repo } = getRepoConfig()
+  return new URL(
+    `https://api.github.com/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/${resource.replace(/^\/+/, '')}`,
+  )
 }
 
 function apiUrl(filePath = getNotesPath()) {
@@ -76,6 +91,46 @@ function safeSlug(slug: string) {
     throw new Error('Invalid note slug.')
   }
   return cleaned
+}
+
+async function githubError(response: Response) {
+  const detail = await response.text().catch(() => '')
+  return `${response.status} ${createPlainText(detail).slice(0, 200)}`.trim()
+}
+
+async function getRepoBranch() {
+  const configured = process.env.GITHUB_REPO_BRANCH?.trim()
+  if (configured) return configured
+
+  const response = await fetch(repoApiUrl(''), {
+    headers: githubHeaders(),
+    cache: 'no-store',
+  })
+  if (!response.ok) throw new Error(`Failed to read repository: ${await githubError(response)}`)
+
+  const data = await response.json() as { default_branch?: string }
+  if (!data.default_branch) throw new Error('GitHub default branch is missing.')
+  return data.default_branch
+}
+
+function getTokyoDate() {
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Asia/Tokyo',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(new Date())
+}
+
+function chooseBlogFilename(existingNames: Set<string>, date: string) {
+  const stem = date.replaceAll('-', '').slice(2)
+  let index = 1
+
+  while (true) {
+    const filename = index === 1 ? `${stem}.md` : `${stem}_${index}.md`
+    if (!existingNames.has(filename)) return filename
+    index += 1
+  }
 }
 
 function parseNote(filePath: string, sha: string, raw: string): GithubNote {
@@ -214,4 +269,138 @@ export async function deleteGithubNote(input: { slug: string }) {
   }
 
   return { slug, path: filePath }
+}
+
+export async function promoteGithubNote(input: {
+  slug: string
+  author: string
+}): Promise<GithubNotePromotion> {
+  const slug = safeSlug(input.slug)
+  const notePath = `${getNotesPath()}/${slug}.md`
+  const branch = await getRepoBranch()
+
+  const encodedBranch = branch.split('/').map(encodeURIComponent).join('/')
+  const refResponse = await fetch(repoApiUrl(`git/ref/heads/${encodedBranch}`), {
+    headers: githubHeaders(),
+    cache: 'no-store',
+  })
+  if (!refResponse.ok) throw new Error(`Failed to read branch: ${await githubError(refResponse)}`)
+  const refData = await refResponse.json() as { object?: { sha?: string } }
+  const parentSha = refData.object?.sha
+  if (!parentSha) throw new Error('GitHub branch commit is missing.')
+
+  const noteUrl = apiUrl(notePath)
+  noteUrl.searchParams.set('ref', parentSha)
+  const blogDirectoryUrl = apiUrl(BLOG_PATH)
+  blogDirectoryUrl.searchParams.set('ref', parentSha)
+  const [noteResponse, blogDirectoryResponse] = await Promise.all([
+    fetch(noteUrl, { headers: githubHeaders(), cache: 'no-store' }),
+    fetch(blogDirectoryUrl, { headers: githubHeaders(), cache: 'no-store' }),
+  ])
+
+  if (noteResponse.status === 404) throw new Error('Note not found.')
+  if (!noteResponse.ok) {
+    throw new Error(`Failed to load note: ${await githubError(noteResponse)}`)
+  }
+  if (!blogDirectoryResponse.ok && blogDirectoryResponse.status !== 404) {
+    throw new Error(`Failed to inspect blog directory: ${await githubError(blogDirectoryResponse)}`)
+  }
+
+  const noteData = await noteResponse.json() as {
+    content?: string
+    encoding?: string
+    sha?: string
+  }
+  if (!noteData.content || noteData.encoding !== 'base64' || !noteData.sha) {
+    throw new Error('Note content is invalid.')
+  }
+
+  const rawNote = Buffer.from(noteData.content.replace(/\s/g, ''), 'base64').toString('utf8')
+  const note = parseNote(notePath, noteData.sha, rawNote)
+  const blogEntries = blogDirectoryResponse.ok
+    ? await blogDirectoryResponse.json() as { name?: string; type?: string }[]
+    : []
+  const existingNames = new Set(
+    blogEntries
+      .filter((entry) => entry.type === 'file' && entry.name)
+      .map((entry) => entry.name as string),
+  )
+  const date = getTokyoDate()
+  const filename = chooseBlogFilename(existingNames, date)
+  const blogPath = `${BLOG_PATH}/${filename}`
+  const articleBody = /^#\s+.+$/m.test(note.body)
+    ? note.body
+    : `# ${note.title}\n\n${note.body}`
+  const blogSource = matter.stringify(articleBody, {
+    title: note.title,
+    date,
+    author: input.author,
+  })
+
+  const commitResponse = await fetch(repoApiUrl(`git/commits/${parentSha}`), {
+    headers: githubHeaders(),
+    cache: 'no-store',
+  })
+  if (!commitResponse.ok) {
+    throw new Error(`Failed to read branch commit: ${await githubError(commitResponse)}`)
+  }
+  const commitData = await commitResponse.json() as { tree?: { sha?: string } }
+  const baseTreeSha = commitData.tree?.sha
+  if (!baseTreeSha) throw new Error('GitHub base tree is missing.')
+
+  const blobResponse = await fetch(repoApiUrl('git/blobs'), {
+    method: 'POST',
+    headers: { ...githubHeaders(), 'Content-Type': 'application/json' },
+    body: JSON.stringify({ content: blogSource, encoding: 'utf-8' }),
+  })
+  if (!blobResponse.ok) throw new Error(`Failed to create blog content: ${await githubError(blobResponse)}`)
+  const blobData = await blobResponse.json() as { sha?: string }
+  if (!blobData.sha) throw new Error('GitHub blog blob is missing.')
+
+  const treeResponse = await fetch(repoApiUrl('git/trees'), {
+    method: 'POST',
+    headers: { ...githubHeaders(), 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      base_tree: baseTreeSha,
+      tree: [
+        { path: blogPath, mode: '100644', type: 'blob', sha: blobData.sha },
+        { path: notePath, mode: '100644', type: 'blob', sha: null },
+      ],
+    }),
+  })
+  if (!treeResponse.ok) throw new Error(`Failed to prepare note promotion: ${await githubError(treeResponse)}`)
+  const treeData = await treeResponse.json() as { sha?: string }
+  if (!treeData.sha) throw new Error('GitHub promotion tree is missing.')
+
+  const promotionCommitResponse = await fetch(repoApiUrl('git/commits'), {
+    method: 'POST',
+    headers: { ...githubHeaders(), 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      message: `Promote note to blog: ${note.title}`,
+      tree: treeData.sha,
+      parents: [parentSha],
+    }),
+  })
+  if (!promotionCommitResponse.ok) {
+    throw new Error(`Failed to commit note promotion: ${await githubError(promotionCommitResponse)}`)
+  }
+  const promotionCommit = await promotionCommitResponse.json() as { sha?: string }
+  if (!promotionCommit.sha) throw new Error('GitHub promotion commit is missing.')
+
+  const updateRefResponse = await fetch(repoApiUrl(`git/refs/heads/${encodedBranch}`), {
+    method: 'PATCH',
+    headers: { ...githubHeaders(), 'Content-Type': 'application/json' },
+    body: JSON.stringify({ sha: promotionCommit.sha, force: false }),
+  })
+  if (!updateRefResponse.ok) {
+    throw new Error(`Failed to publish note promotion: ${await githubError(updateRefResponse)}`)
+  }
+
+  const blogSlug = filename.replace(/\.md$/, '')
+  return {
+    noteSlug: slug,
+    blogPath,
+    blogHref: `/docs/blog/${blogSlug}/`,
+    commitSha: promotionCommit.sha,
+  }
 }
