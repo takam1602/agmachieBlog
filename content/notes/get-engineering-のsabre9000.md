@@ -1,0 +1,25 @@
+---
+title: GET ENGINEERING のSabre9000
+updated: '2026-09-10T13:33:15.938Z'
+author: takam1602
+---
+# デカすぎ
+
+まずは画像を。
+![ビコンのブロキャス？](https://pub-906e51e4bcd34953a92347dad61b514c.r2.dev/notes/2026/09/edf58cfc-9339-4351-80a9-ca692cd208d2-IMG_7311.jpeg)
+
+![幅は9m](https://pub-906e51e4bcd34953a92347dad61b514c.r2.dev/notes/2026/09/8e5cbd7c-332d-4c00-b49a-941e30ed2312-IMG_7312.jpeg)
+
+[GET ENGINEERING](https://www.facebook.com/share/v/1cBMcEPyDT/?mibextid=wwXIfr)はクイーンズランドの会社。
+
+[D475A](https://www.komatsu.jp/ja/newsroom/2022/20220111)
+で引っ張ってる。112トン900馬力。
+
+- Sabre 8000 Blade Plough by GET Engineering Pty Ltd, Emerald. 
+- This is the 4th plough for Len and Krissy Hicks of LKH Grazing, Queensland.                    
+- The Sabre 8000 has an 8mtr cut to a depth of 350mm. 
+- Pulled by a Komatsu 475A-8 Dozer.                                             
+- Also mounted is a Viacom seeder/spreader converted to 24V electric drive with variable speed          
+- The Sabre 8000 has been proven to be superior at soil improvement.  Leaves the countryside in better condition and controls regrowth. Enables organic matter to improve soils and promotes better soil moisture. Leaving the country far more efficient at supporting livestock. 
+
+とのこと。
