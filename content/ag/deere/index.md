@@ -76,7 +76,7 @@ deere のドリルのほとんどはコモディティカート引っ張って�
 
 or
 
-[PDF](./brochure/boxDrill_1508.pdf)
+[PDF](/brochure/boxDrill_1508.pdf)
 
 - 1590はどうか．
 
