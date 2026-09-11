@@ -39,6 +39,27 @@ const CONTENT_TYPES = {
   zip: 'application/zip',
 }
 
+/**
+ * .env.local を読み込む。素の node は Next.js と違って自動で読まないため、
+ * 依存を増やさずに最小限のパースを行う。既存の環境変数は上書きしない。
+ */
+function loadEnvLocal() {
+  let text
+  try {
+    text = readFileSync(join(ROOT, '.env.local'), 'utf8')
+  } catch {
+    return
+  }
+  for (const line of text.split(/\r?\n/)) {
+    const m = line.match(/^\s*(?:export\s+)?([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*)$/)
+    if (!m) continue
+    let value = m[2].trim()
+    if (/^(['"]).*\1$/s.test(value)) value = value.slice(1, -1)
+    else value = value.replace(/\s+#.*$/, '').trim()
+    if (process.env[m[1]] === undefined) process.env[m[1]] = value
+  }
+}
+
 function requireEnv() {
   const missing = [
     'CLOUDFLARE_ACCOUNT_ID',
@@ -174,6 +195,7 @@ function rewriteText(text, mapping) {
 /* ---------- メイン ---------- */
 
 async function main() {
+  loadEnvLocal()
   requireEnv()
 
   const files = []
