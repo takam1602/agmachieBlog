@@ -4,7 +4,7 @@
 
 -  [ba](/pdf/challenger_BA_ProductSpecs.pdf)
 -  [lb](/pdf/challenger_LB_Brochure.pdf)                        
--  [mt200](/pdf/challenger_mt200_Brochure.pfd)
+-  [mt200](/pdf/challenger_mt200_Brochure.pdf)
 -  [mt200 spec](/pdf/challenger_mt200_ProductSpecs.pdf)
 -  [mt400B spec](/pdf/challenger_mt400_ProductSpecs.pdf)
 -  [mt500B](/pdf/challenger_mt500_Brochure.pdf)
