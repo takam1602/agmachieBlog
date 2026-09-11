@@ -200,8 +200,9 @@ class ScraperApp:
         md += f"{details.get('Description', 'N/A')}\n\n"
         md += "## Photos\n"
         for path in photo_paths:
-            # OSのパス区切り文字(\)をURL形式(/)に統一
-            md += f"![]({path.replace(os.sep, '/')})\n"
+            # OSのパス区切り文字(\)をURL形式(/)に統一し、先頭に / を付けて
+            # サイト絶対パスにする。相対パスのままだとページ URL 基準で解決される。
+            md += f"![](/{path.replace(os.sep, '/')})\n"
         return md
 
     def update_status(self, message):

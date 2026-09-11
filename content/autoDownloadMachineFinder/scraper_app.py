@@ -575,7 +575,7 @@ class ScraperApp:
     # ==============================
     def generate_markdown(self, details, photo_paths, source_url, columns=3):
         """
-        写真は 1 行 1 枚の Markdown 形式で出力（例: ![](img/xxx.png)）。
+        写真は 1 行 1 枚の Markdown 形式で出力（例: ![](/img/xxx.png)）。
         columns 引数は現在未使用（互換のため残置）。
         """
         year, manu, model = details.get("Year", "N/A"), details.get("Manufacturer", "N/A"), details.get("Model", "N/A")
@@ -595,7 +595,9 @@ class ScraperApp:
             return md
 
         for path in photo_paths:
-            md += f"![]({path.replace(os.sep, '/')})\n"
+            # 先頭に / を付けてサイト絶対パスにする。相対パスのままだとページ URL
+            # 基準で解決されるため、/docs/... 配下のページから画像に届かない。
+            md += f"![](/{path.replace(os.sep, '/')})\n"
         return md
 
     @staticmethod
