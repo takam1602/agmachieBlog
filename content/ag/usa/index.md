@@ -26,7 +26,7 @@ HPは非常に簡素だが，作ってる機械はかなりマニアック．
 
 日本だとタウンビーバーとかに投げ入れて粉砕するのだろうけど，アメリカはそうも行かない．
 
-- EDSについて: [Broshure](/pdf/EDS%20sheet%202010%20mobile.pdf)
+- EDSについて: [Broshure](https://pub-906e51e4bcd34953a92347dad61b514c.r2.dev/docs/pdf/EDS%20sheet%202010%20mobile.pdf)
 
 A super duty flail in every respect. 
 The self powered Engine Shredder will take rows of orchard brush and process down to splinters. 

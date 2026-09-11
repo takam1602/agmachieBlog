@@ -8,9 +8,9 @@
 
 ### [TAMCO](https://www.tamcotrading.com/)
 一番タイっぽいコンバインかも．
-- [S5000](/brochure/S5000_A4_Eng.pdf)
-- [S7000](/brochure/S7000_A4_Eng.pdf)
-- [S9000](/brochure/S9000_A3_Eng.pdf)
+- [S5000](https://pub-906e51e4bcd34953a92347dad61b514c.r2.dev/docs/brochure/S5000_A4_Eng.pdf)
+- [S7000](https://pub-906e51e4bcd34953a92347dad61b514c.r2.dev/docs/brochure/S7000_A4_Eng.pdf)
+- [S9000](https://pub-906e51e4bcd34953a92347dad61b514c.r2.dev/docs/brochure/S9000_A3_Eng.pdf)
 
 ### [THAI SENG AGRICULTURE ](https://thaisengyont.co.th/en/homepage/)
 TAMCO といい勝負

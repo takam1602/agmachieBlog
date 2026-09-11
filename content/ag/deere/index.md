@@ -76,7 +76,7 @@ deere のドリルのほとんどはコモディティカート引っ張って�
 
 or
 
-[PDF](/brochure/boxDrill_1508.pdf)
+[PDF](https://pub-906e51e4bcd34953a92347dad61b514c.r2.dev/docs/brochure/boxDrill_1508.pdf)
 
 - 1590はどうか．
 
@@ -109,7 +109,7 @@ CRP ground のような狭い土地での播種に向いている．
 
 [Online](https://www.deere.com/assets/publications/index.html?id=ec2fcd6f)
 or 
-[PDF](/brochure/airSeeding_2021.pdf)
+[PDF](https://pub-906e51e4bcd34953a92347dad61b514c.r2.dev/docs/brochure/airSeeding_2021.pdf)
 
 - N500C series
 

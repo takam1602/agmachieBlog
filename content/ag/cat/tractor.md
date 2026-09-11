@@ -332,8 +332,8 @@ Way back machine で調べると，[農業機械部門の製品紹介ページ](
 では見られない．
 おそらく，予定通り，2002年の第1期, 4月か5月でAgco に全て移管したということだろう．
 
-[1st Quarter の報告書](/pdf/1q02_cat_inc.pdf)と
-[2nd Quarter の報告書](/pdf/2q02_cat_inc.pdf)
+[1st Quarter の報告書](https://pub-906e51e4bcd34953a92347dad61b514c.r2.dev/docs/pdf/1q02_cat_inc.pdf)と
+[2nd Quarter の報告書](https://pub-906e51e4bcd34953a92347dad61b514c.r2.dev/docs/pdf/2q02_cat_inc.pdf)
 も一応乗っけておく．
 
 - [2002年3月29日のFarmers weekly の記事](https://www.fwi.co.uk/news/agco-wraps-up-challenger-deal)
