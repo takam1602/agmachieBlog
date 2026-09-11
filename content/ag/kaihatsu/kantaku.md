@@ -11,7 +11,7 @@ PTOを使わずに、牽引式のプラウであり排水路の深さはそれ�
 カタログを見つけたが、その写真でもカスバードソンのプラウを引っ張っているようだ。
 [Fandom](https://tractors.fandom.com/wiki/County_Extended_Swamp_crawler)
 
-![](./fordson_county_swamp.png)
+![](/img/fordson_county_swamp.png)
 
 カスバードソンは、cuthbertson、カスバートソンであり、湿地用の機械を色々作っていた会社であるようだ。
 
