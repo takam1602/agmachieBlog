@@ -4,13 +4,14 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Github, Menu, Search, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 
 const navItems = [
-  { label: '最近の更新', href: '/#latest' },
-  { label: 'ニュース', href: '/#news' },
-  { label: 'コレクション', href: '/#repository' },
-  { label: 'ブログ', href: '/#blog' },
-  { label: 'メモ', href: '/notes' },
+  { label: 'NEW!!', href: '/#latest' },
+  { label: '農機ニュース', href: '/#news' },
+  { label: '記事一覧', href: '/#repository' },
+  { label: '思ったことなどメモ', href: '/#blog' },
+  { label: 'tmpノート', href: '/notes' },
 ]
 
 export default function Header() {
@@ -34,9 +35,21 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-[var(--border)] bg-[var(--bg-primary)]/85 backdrop-blur-xl">
       <div className="mx-auto flex h-[68px] max-w-7xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="group flex items-center gap-3 text-white" aria-label="AgMachine Repository ホーム">
+          {/*
           <span className="grid h-9 w-9 place-items-center rounded-xl border border-[var(--accent)]/25 bg-[var(--accent)]/10 text-sm font-black text-[var(--accent)] transition-colors group-hover:bg-[var(--accent)]/15">
             AG
           </span>
+          */}
+          
+          <Image
+          src="/img/logo_main.jpg"
+          alt=""
+          width={36}
+          height={36}
+          className="h-9 w-9 shrink-0 rounded-xl object-contain"
+          priority
+          />
+
           <span className="leading-none">
             <span className="block text-sm font-bold tracking-wide text-gray-100 group-hover:text-white">AgMachine</span>
             <span className="mt-1 block text-[9px] font-medium tracking-[0.2em] text-gray-600">REPOSITORY</span>
