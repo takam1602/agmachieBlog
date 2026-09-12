@@ -229,9 +229,9 @@ a:hover {
   box-shadow: 0 16px 45px -24px rgba(0, 0, 0, 0.8);
 }
 
+/* MarkdownImage renders its image and caption as sibling spans, not gallery items. */
 .prose p:has(img + img),
-.prose p:has(a + a),
-.prose p:has(span + span) {
+.prose p:has(a + a) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
   gap: 1rem;
@@ -239,8 +239,7 @@ a:hover {
 }
 
 .prose p:has(img + img) img,
-.prose p:has(a + a) img,
-.prose p:has(span + span) img {
+.prose p:has(a + a) img {
   width: 100%;
   height: 220px;
   margin: 0;
