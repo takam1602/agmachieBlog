@@ -113,21 +113,21 @@ export default function HomeClient({
               AGRICULTURAL MACHINERY ARCHIVE
             </p>
             <h1 className="text-balance text-4xl font-bold leading-[1.15] tracking-[-0.04em] text-white sm:text-6xl">
-              農業機械の知識を、
-              <span className="text-[var(--accent)]">次の現場へ。</span>
+              旧きを温めて
+              <span className="text-[var(--accent)]">新しきを知る</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-pretty text-sm leading-7 text-gray-400 sm:text-base">
-              新旧の技術、地域ごとの特色、メーカーの記録をMarkdownで蓄積する、
-              農業機械のためのオープンなリポジトリです。
+              あれなんだっけ，と思った時に参照する
+              「農業機械」専門のリポジトリです．
             </p>
 
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link href="#search" style={{ color: '#07140f' }} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-6 text-sm font-bold text-[#07140f] transition-transform hover:-translate-y-0.5 hover:bg-[var(--accent-hover)] hover:text-[#07140f]">
                 <Search size={17} aria-hidden="true" />
-                記事を探す
+                検索
               </Link>
               <Link href="#repository" className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-[var(--border-strong)] bg-white/[0.03] px-6 text-sm font-medium text-gray-200 transition-colors hover:border-gray-500 hover:bg-white/[0.06] hover:text-white">
-                コレクションを見る
+                記事を見る
                 <ArrowRight size={16} aria-hidden="true" />
               </Link>
             </div>
@@ -149,8 +149,8 @@ export default function HomeClient({
       <section id="search" className="scroll-mt-24 rounded-3xl border border-[var(--border)] bg-[var(--surface)]/90 px-4 py-8 shadow-2xl shadow-black/20 sm:px-8 sm:py-10">
           <SectionIntro
             eyebrow="EXPLORE"
-            title="リポジトリを検索"
-            description="表記ゆれにも対応。機械名、メーカー、国・地域、本文中の言葉から探せます。"
+            title="検索"
+            description="気になる機械やメーカー，作業内容等の単語を入力してください．"
           />
           <SearchableList entries={searchEntries} />
         </section>
@@ -158,8 +158,8 @@ export default function HomeClient({
         <section id="latest" className="scroll-mt-24 py-12 sm:py-16">
           <SectionIntro
             eyebrow="RECENTLY UPDATED"
-            title="最近更新された記録"
-            description="新規追加と更新のあったページをまとめています。"
+            title="新しい更新"
+            description="追加や更新したページ"
             align="left"
           />
           <WhatsNew posts={latestPosts} />
@@ -167,9 +167,9 @@ export default function HomeClient({
 
         <section id="discover" className="border-t border-[var(--border)] py-12 sm:py-16">
           <SectionIntro
-            eyebrow="DISCOVER"
-            title="偶然の発見から読む"
-            description="ランダムな一記事から、普段とは違う入口でアーカイブを巡れます。"
+            eyebrow="RAMDON NEWS"
+            title="ランダムネス"
+            description="記事を無作為に表示させます"
             align="left"
           />
           {children && (
@@ -185,9 +185,9 @@ export default function HomeClient({
 
         <section id="repository" className="scroll-mt-24 border-t border-[var(--border)] py-12 sm:py-16">
           <SectionIntro
-            eyebrow="COLLECTIONS"
-            title="テーマから辿る"
-            description="地域、メーカー、機械の用途ごとに整理されたコレクションです。"
+            eyebrow="ARTICLE"
+            title="記事一覧"
+            description="地域やメーカー，機械の用途で整理した記事です。"
             align="left"
           />
           <div className="space-y-10">
@@ -325,7 +325,7 @@ function BlogSection({ posts }: { posts: BlogPost[] }) {
       <SectionIntro
         eyebrow="FIELD NOTES"
         title="ブログ"
-        description="現場で考えたこと、調査の途中経過、農業機械にまつわるメモ。"
+        description="記事までは行かない，短編メモです．"
         align="left"
       />
       <div className="home-tile-grid">
