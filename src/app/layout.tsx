@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     locale: 'ja_JP',
     siteName: 'AgMachine Repository',
     title: 'AgMachine Repository',
-    description: '農業機械の情報をまとめる、Markdownベースのオープンなリポジトリ。',
+    description: '農業機械の俺俺リポジトリ。',
   },
 }
 
@@ -42,12 +42,12 @@ export default function RootLayout({
             <div>
               <p className="text-sm font-bold text-gray-300">AgMachine Repository</p>
               <p className="mt-2 max-w-md text-xs leading-5 text-gray-600">
-                農業機械の技術と記録を、Markdownから継続的に公開するアーカイブ。
+                農業機械の技術と記録。
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-gray-500">
               <Link href="/#search" className="text-gray-500 hover:text-gray-200">検索</Link>
-              <Link href="/#repository" className="text-gray-500 hover:text-gray-200">コレクション</Link>
+              <Link href="/#repository" className="text-gray-500 hover:text-gray-200">記事一覧</Link>
               <a
                 href="https://github.com/takam1602/agmachieBlog"
                 target="_blank"
