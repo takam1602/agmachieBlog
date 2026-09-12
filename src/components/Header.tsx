@@ -8,10 +8,10 @@ import Image from 'next/image'
 
 const navItems = [
   { label: 'NEW!!', href: '/#latest' },
-  { label: '農機ニュース', href: '/#news' },
-  { label: '記事一覧', href: '/#repository' },
-  { label: '思ったことなどメモ', href: '/#blog' },
-  { label: 'tmpノート', href: '/notes' },
+  { label: 'ニュース', href: '/#news' },
+  { label: '記事', href: '/#repository' },
+  { label: 'ブログ', href: '/#blog' },
+  { label: 'ノート', href: '/notes' },
 ]
 
 export default function Header() {

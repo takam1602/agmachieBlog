@@ -110,14 +110,14 @@ export default function HomeClient({
         <HeroBackgroundCarousel images={heroImages} interval={5000} />
         <div className="relative mx-auto w-full max-w-4xl text-center">
             <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-[var(--accent)]/25 bg-[var(--accent)]/[0.07] px-3 py-1.5 text-xs font-semibold tracking-[0.16em] text-[var(--accent)]">
-              AGRICULTURAL MACHINERY ARCHIVE
+              AGRICULTURAL MACHINERY REPOSITORY
             </p>
             <h1 className="text-balance text-4xl font-bold leading-[1.15] tracking-[-0.04em] text-white sm:text-6xl">
               旧きを温めて
               <span className="text-[var(--accent)]">新しきを知る</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-pretty text-sm leading-7 text-gray-400 sm:text-base">
-              あれなんだっけ，と思った時に参照する
+              「あれなんだっけ」の時に参照する
               「農業機械」専門のリポジトリです．
             </p>
 
