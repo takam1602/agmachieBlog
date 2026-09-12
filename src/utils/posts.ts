@@ -213,6 +213,8 @@ export async function getRecentlyUpdatedPosts(limit: number = 5): Promise<BlogPo
     .filter((post): post is BlogPost => Boolean(post))
     .filter((post) => post.href !== '/docs/')
     .filter((post) => !post.protected)
+    // notes のメモは blog に追加してから更新一覧に掲載する。
+    .filter((post) => post.category !== 'notes')
     .sort((a, b) => ((a.updatedAt ?? a.date) < (b.updatedAt ?? b.date) ? 1 : -1))
     .slice(0, limit)
 }
@@ -241,6 +243,7 @@ export async function getGitRecentUpdates(limit: number = 5): Promise<BlogPost[]
       .filter((post): post is BlogPost => Boolean(post))
       .filter((post) => post.href !== '/docs/')
       .filter((post) => !post.protected)
+      .filter((post) => post.category !== 'notes')
       .sort((a, b) => (a.date < b.date ? 1 : -1))
       .slice(0, limit)
   } catch (e) {
