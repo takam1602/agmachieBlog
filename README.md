@@ -7,4 +7,3 @@ Agricultural Maninary Repository
 vercel 様様。
 
 clound flare にもお世話になってます．
-
