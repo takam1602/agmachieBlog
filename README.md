@@ -6,43 +6,5 @@ Agricultural Maninary Repository
 
 vercel 様様。
 
-## GitHub メモ機能
+clound flare にもお世話になってます．
 
-`/notes` は GitHub 認証付きの公開メモ帳です。閲覧は `/notes` で行い、`GITHUB_ALLOWED_LOGINS` に含まれる GitHub アカウントでログインした場合だけ Markdown の作成・更新ができます。保存先は既定で `content/notes/*.md` です。
-
-保存済みのメモは編集画面の「blogへ追加」からブログ記事へ昇格できます。昇格時は東京時間の日付を使って `content/blog/YYMMDD.md` に保存し、同日の記事がある場合は `YYMMDD_2.md`、`YYMMDD_3.md` のように連番を付けます。ブログの作成と元メモの削除はGitHub上の1コミットで行われます。
-
-必要な環境変数:
-
-```bash
-AUTH_SECRET=任意の長いランダム文字列
-GITHUB_CLIENT_ID=GitHub OAuth App の Client ID
-GITHUB_CLIENT_SECRET=GitHub OAuth App の Client Secret
-GITHUB_ALLOWED_LOGINS=takam1602
-GITHUB_TOKEN=repo contents write 権限を持つ fine-grained personal access token
-GITHUB_REPO_OWNER=takam1602
-GITHUB_REPO_NAME=agmachieBlog
-GITHUB_REPO_BRANCH=main
-GITHUB_NOTES_PATH=content/notes
-CLOUDFLARE_ACCOUNT_ID=Cloudflare Account ID
-CLOUDFLARE_R2_ACCESS_KEY_ID=R2 API token の Access Key ID
-CLOUDFLARE_R2_SECRET_ACCESS_KEY=R2 API token の Secret Access Key
-CLOUDFLARE_R2_BUCKET=agmachine-img
-CLOUDFLARE_R2_PUBLIC_BASE_URL=https://pub-906e51e4bcd34953a92347dad61b514c.r2.dev
-CLOUDFLARE_R2_PREFIX=notes
-```
-
-GitHub OAuth App の callback URL は、公開 URL に合わせて `https://example.com/api/auth/github/callback` にします。Vercel では同じ値を Project Settings の Environment Variables に登録してください。
-
-メモ編集画面の画像追加は Cloudflare R2 の `agmachine-img` bucket にアップロードし、本文には
-`![alt](https://pub-906e51e4bcd34953a92347dad61b514c.r2.dev/notes/...)` の Markdown を挿入します。
-そのため、保存したメモ Markdown を `content/blog` に移動しても画像 URL はそのまま使えます。
-
-## 画像もあげられる
-```bash
-  CLOUDFLARE_ACCOUNT_ID=
-  CLOUDFLARE_R2_ACCESS_KEY_ID=
-  CLOUDFLARE_R2_SECRET_ACCESS_KEY=
-  CLOUDFLARE_R2_BUCKET=agmachine-img
-  CLOUDFLARE_R2_PUBLIC_BASE_URL=https://pub-906e51e4bcd34953a92347dad61b514c.r2.dev
-```
