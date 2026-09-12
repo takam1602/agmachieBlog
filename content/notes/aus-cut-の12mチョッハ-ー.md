@@ -1,0 +1,19 @@
+---
+title: AUS CUT の12mチョッパー
+updated: '2026-09-12T08:37:22.845Z'
+author: takam1602
+---
+# 12mのチョッパー
+[Auscut社](https://www.auscutglobal.com.au/?fbclid=IwVERFWAUR7E5wZG9mBWZkaWQWUOS7wHouUutoqi5bv9BuUvEmVvEpVWV4dG4DYWVtAjEwAHNydGMGYXBwX2lkCjY2Mjg1NjgzNzkAAR5xWUy15ajHlwTUJ5Rk8afYjw73eg9x9szA8Q9u2v2MuC6Cnlh75wox5Mdh4A_aem_7nvMrIpdtSWc3aev4dDKPA)
+
+知らんかったけど、Cowraにあるらしい。
+ロータリーカッターですね。
+
+18mまで展開してる。400馬力のPTO、もげそう。
+
+
+![ストビューでも見れる](https://pub-906e51e4bcd34953a92347dad61b514c.r2.dev/notes/2026/09/303bd453-0e6b-4d02-90d0-640ed8a1a224-IMG_7462.jpeg)
+
+![IMG 7463](https://pub-906e51e4bcd34953a92347dad61b514c.r2.dev/notes/2026/09/8f2dfca0-ecbc-4934-97c1-1183196579c5-IMG_7463.jpeg)
+
+ロータリーカッターだから、ローンモワーと考え方は同じなのだろうけど、回転し始める時の慣性大きそう。エンストしないように回さないとね。
