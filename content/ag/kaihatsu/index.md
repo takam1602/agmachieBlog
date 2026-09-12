@@ -58,8 +58,8 @@
 [訃報](https://www.jstage.jst.go.jp/article/sagopalm/20/1/20_1/_pdf/-char/en)
 
 # 開発局
-- [バンブーハーベスタ](./landDevJP.md)
-- [カスバードソンのドレネージプラウ](./kankantaku.md)
+- [バンブーハーベスタ](./bamburHarverster.md)
+- [カスバードソンのドレネージプラウ](./dranagePlough.md)
 
 
 # 北海道の農業機械化
