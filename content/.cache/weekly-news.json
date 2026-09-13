@@ -1,72 +1,72 @@
 {
   "version": 2,
-  "weekKey": "2026-09-06",
-  "generatedAt": "2026-09-06T17:30:34.941Z",
+  "weekKey": "2026-09-13",
+  "generatedAt": "2026-09-13T17:55:16.178Z",
   "latest": [
     {
-      "title": "Harvest Assist app records bale weight, moisture and location",
-      "originalTitle": "Harvest Assist app records bale weight, moisture and location",
-      "href": "https://www.fwi.co.uk/machinery/grassland-maize/balers-wrappers/harvest-assist-app-records-bale-weight-moisture-and-location",
+      "title": "Pottinger’s mounted rake trails in corners for neater swaths",
+      "originalTitle": "Pottinger’s mounted rake trails in corners for neater swaths",
+      "href": "https://www.fwi.co.uk/machinery/grassland-maize/grassland-equipment-rakes/pottingers-mounted-rake-trails-in-corners-for-neater-swaths",
       "source": "Farmers Weekly",
-      "date": "2026-09-05",
+      "date": "2026-09-12",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Baling contractors and operators keen to learn more about the efficiency of their operations can gather a whole load of potentially useful data by using the latest version of Pottinger’s.",
+      "originalSummary": "For neatly laid swaths that a baler, forage harvester or silage wagon can easily follow through corners, Pottinger’s latest tractor-mounted rake behaves like a trailed unit.",
       "topic": "収穫・飼料",
-      "score": 20
+      "score": 18
     },
     {
-      "title": "Machinery demonstrations at Tillage-Live 2026",
-      "originalTitle": "Machinery demonstrations at Tillage-Live 2026",
-      "href": "https://www.profi.co.uk/news/machinery-demonstrations-at-tillage-live-2026/",
-      "source": "profi",
-      "date": "2026-09-04",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Live field demonstrations remain at the heart of Tillage-Live 2026, providing an opportunity to see some of the latest equipment at work.",
-      "topic": "作業機",
-      "score": 27
-    },
-    {
-      "title": "Home-made toolbar drill adds versatility to contracting fleet",
-      "originalTitle": "Home-made toolbar drill adds versatility to contracting fleet",
-      "href": "https://www.fwi.co.uk/machinery/cultivation-drilling/cereal-drills/home-made-toolbar-drill-adds-versatility-to-contracting-fleet",
-      "source": "Farmers Weekly",
-      "date": "2026-09-04",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Whether conditions are wet, dry or Goldilocks-perfect, Warwickshire farmer and contractor Lawrence Trivett has a drill to fit the bill.",
-      "topic": "作業機",
-      "score": 13
-    },
-    {
-      "title": "John Deere to showcase high-horsepower tractor line-up at Tillage-Live 2026 - Farmers Guide",
-      "originalTitle": "John Deere to showcase high-horsepower tractor line-up at Tillage-Live 2026 - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/machinery/tractors/john-deere-to-showcase-high-horsepower-tractor-line-up-at-tillage-live-2026/",
+      "title": "How Ben Burgess Keeps Combines Moving During Harvest",
+      "originalTitle": "How Ben Burgess Keeps Combines Moving During Harvest",
+      "href": "https://www.farmersguide.co.uk/machinery/machinery-dealers/behind-the-breakdown-how-dealers-keep-harvest-moving/",
       "source": "Farmers Guide",
-      "date": "2026-09-03",
+      "date": "2026-09-12",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Visitors to Tillage-Live will have a chance to see John Deere’s new high-horsepower tractor range together for the first time.",
+      "originalSummary": "When a combine stops during harvest, every minute matters. Daniel Hodge visited Ben Burgess’ Norwich depot to see how connected machinery, parts logistics and experienced technicians transformed harvest support.",
+      "topic": "収穫・飼料",
+      "score": 24
+    },
+    {
+      "title": "Bridgestone goes XXL with VT-Tractor farm tyres",
+      "originalTitle": "Bridgestone goes XXL with VT-Tractor farm tyres",
+      "href": "https://www.fwi.co.uk/machinery/tractors/bridgestone-goes-xxl-with-vt-tractor-farm-tyres",
+      "source": "Farmers Weekly",
+      "date": "2026-09-11",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "Larger, more powerful tractors are the target for Bridgestone’s latest farm tyre additions – XXL versions of the VT-Tractor radials in 44in and 46in rim sizes with corresponding 38in and.",
+      "topic": "トラクター",
+      "score": 24
+    },
+    {
+      "title": "Develon upgrades DX35Z-7 mini excavator",
+      "originalTitle": "Develon upgrades DX35Z-7 mini excavator",
+      "href": "https://www.profi.co.uk/news/develon-upgrades-dx35z-7-mini-excavator/",
+      "source": "profi",
+      "date": "2026-09-11",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "The latest version of the 4-tonne class mini excavator has a more powerful engine and tweaks to the boom and cab improve operator visibility.",
+      "topic": "農業機械",
+      "score": 7
+    },
+    {
+      "title": "Wox Agri opens doors on slurry and grassland range - Farmers Guide",
+      "originalTitle": "Wox Agri opens doors on slurry and grassland range - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/machinery/wox-agri-opens-doors-on-slurry-and-grassland-range/",
+      "source": "Farmers Guide",
+      "date": "2026-09-11",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "Wox Agri Services opened the doors of its Northumberland headquarters to showcase its slurry handling and Güttler grassland machinery, including the new Tempest front mounted hose reeler with an integrated PTO driven compressor.",
       "topic": "作業機",
-      "score": 28
+      "score": 5
     },
     {
-      "title": "How much extra driving does a solar roof provide for this electric tractor?",
-      "originalTitle": "How much extra driving does a solar roof provide for this electric tractor?",
-      "href": "https://www.futurefarming.com/smart-farming/electric-tractor-from-india-charges-in-the-sun/",
-      "source": "Future Farming",
-      "date": "2026-09-03",
+      "title": "Sepp Knüsel unveils Rigitrac SKH 743",
+      "originalTitle": "Sepp Knüsel unveils Rigitrac SKH 743",
+      "href": "https://www.profi.co.uk/news/sepp-knusel-unveils-rigitrac-skh-743/",
+      "source": "profi",
+      "date": "2026-09-10",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Sceptics will laugh, but it is on its way: an electric tractor with solar panels. US distributor GoSun is set to sell the Moonrider 27.",
-      "topic": "動力・環境",
-      "score": 15
-    },
-    {
-      "title": "4 Autonomous systems tested: what do fruit growers think?",
-      "originalTitle": "4 Autonomous systems tested: what do fruit growers think?",
-      "href": "https://www.futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/4-autonomous-systems-tested-what-do-fruit-growers-think/",
-      "source": "Future Farming",
-      "date": "2026-09-02",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Autonomous machines are increasingly being promoted for orchard work, but what happens when growers get behind the controls themselves?",
-      "topic": "スマート農業",
+      "originalSummary": "The SKH 743 was the highlight at the 50th anniversary event of Sepp Knüsel, the Swiss company that builds the Rigitrac tractors.",
+      "topic": "トラクター",
       "score": 10
     }
   ],
@@ -94,74 +94,6 @@
       "score": 38
     },
     {
-      "title": "Tom Dirom revisit, Harewood Mill: Cost fixer",
-      "originalTitle": "Tom Dirom revisit, Harewood Mill: Cost fixer",
-      "href": "https://www.profi.co.uk/test-centre/tom-dirom-revisit-harewood-mill-cost-fixer/",
-      "source": "profi",
-      "date": "2026-08-31",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "REPORT: When we last visited Yorkshire contractor Tom Dirom, his tractor choices leant towards the Finnish Valtra brand, topped by a 400hp reverse-drive S-series. As the business and its workload has evolved, so too has the firm’s machinery choices, with Case IH models now accounting for five of the firm’s eight model fleet.",
-      "topic": "収穫・飼料",
-      "score": 22
-    },
-    {
-      "title": "UK used farm machinery finds new markets overseas - Farmers Guide",
-      "originalTitle": "UK used farm machinery finds new markets overseas - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/machinery/uk-used-farm-machinery-finds-new-markets-overseas/",
-      "source": "Farmers Guide",
-      "date": "2026-08-25",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Older farm machinery from the UK is finding new owner overseas as tighter regulations across Europe drive used equipment into emerging markets. Ritchie Bros. data shows strong international demand for tractors and other agricultural machinery, with buyers attracted by the durability, reliability and ease of maintenance offered by older models.",
-      "topic": "トラクター",
-      "score": 21
-    },
-    {
-      "title": "Claas launches refreshed 145-180hp Arion 5 tractors",
-      "originalTitle": "Claas launches refreshed 145-180hp Arion 5 tractors",
-      "href": "https://www.fwi.co.uk/machinery/tractors/claas-launches-refreshed-145-180hp-arion-5-tractors",
-      "source": "Farmers Weekly",
-      "date": "2026-08-28",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Claas has revamped its middleweight Arion tractors with a nose-job and a bunch of driver-friendly features.",
-      "topic": "トラクター",
-      "score": 19
-    }
-  ],
-  "all": [
-    {
-      "title": "Harvest Assist app records bale weight, moisture and location",
-      "originalTitle": "Harvest Assist app records bale weight, moisture and location",
-      "href": "https://www.fwi.co.uk/machinery/grassland-maize/balers-wrappers/harvest-assist-app-records-bale-weight-moisture-and-location",
-      "source": "Farmers Weekly",
-      "date": "2026-09-05",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Baling contractors and operators keen to learn more about the efficiency of their operations can gather a whole load of potentially useful data by using the latest version of Pottinger’s.",
-      "topic": "収穫・飼料",
-      "score": 20
-    },
-    {
-      "title": "Machinery demonstrations at Tillage-Live 2026",
-      "originalTitle": "Machinery demonstrations at Tillage-Live 2026",
-      "href": "https://www.profi.co.uk/news/machinery-demonstrations-at-tillage-live-2026/",
-      "source": "profi",
-      "date": "2026-09-04",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Live field demonstrations remain at the heart of Tillage-Live 2026, providing an opportunity to see some of the latest equipment at work.",
-      "topic": "作業機",
-      "score": 27
-    },
-    {
-      "title": "Home-made toolbar drill adds versatility to contracting fleet",
-      "originalTitle": "Home-made toolbar drill adds versatility to contracting fleet",
-      "href": "https://www.fwi.co.uk/machinery/cultivation-drilling/cereal-drills/home-made-toolbar-drill-adds-versatility-to-contracting-fleet",
-      "source": "Farmers Weekly",
-      "date": "2026-09-04",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Whether conditions are wet, dry or Goldilocks-perfect, Warwickshire farmer and contractor Lawrence Trivett has a drill to fit the bill.",
-      "topic": "作業機",
-      "score": 13
-    },
-    {
       "title": "John Deere to showcase high-horsepower tractor line-up at Tillage-Live 2026 - Farmers Guide",
       "originalTitle": "John Deere to showcase high-horsepower tractor line-up at Tillage-Live 2026 - Farmers Guide",
       "href": "https://www.farmersguide.co.uk/machinery/tractors/john-deere-to-showcase-high-horsepower-tractor-line-up-at-tillage-live-2026/",
@@ -173,25 +105,93 @@
       "score": 28
     },
     {
-      "title": "How much extra driving does a solar roof provide for this electric tractor?",
-      "originalTitle": "How much extra driving does a solar roof provide for this electric tractor?",
-      "href": "https://www.futurefarming.com/smart-farming/electric-tractor-from-india-charges-in-the-sun/",
-      "source": "Future Farming",
-      "date": "2026-09-03",
+      "title": "Sky Agri creates dry-soil tine seeder from precision cultivator",
+      "originalTitle": "Sky Agri creates dry-soil tine seeder from precision cultivator",
+      "href": "https://www.fwi.co.uk/machinery/cultivation-drilling/cereal-drills/sky-agri-creates-dry-soil-tine-seeder-from-precision-cultivator",
+      "source": "Farmers Weekly",
+      "date": "2026-09-10",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Sceptics will laugh, but it is on its way: an electric tractor with solar panels. US distributor GoSun is set to sell the Moonrider 27.",
-      "topic": "動力・環境",
-      "score": 15
+      "originalSummary": "Sky Agriculture has created a new tine seeder for sowing into stony and very dry soils by equipping its Methys PCS cultivator with a seed distribution system and new slimline.",
+      "topic": "スマート農業",
+      "score": 27
     },
     {
-      "title": "4 Autonomous systems tested: what do fruit growers think?",
-      "originalTitle": "4 Autonomous systems tested: what do fruit growers think?",
-      "href": "https://www.futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/4-autonomous-systems-tested-what-do-fruit-growers-think/",
-      "source": "Future Farming",
-      "date": "2026-09-02",
+      "title": "Machinery demonstrations at Tillage-Live 2026",
+      "originalTitle": "Machinery demonstrations at Tillage-Live 2026",
+      "href": "https://www.profi.co.uk/news/machinery-demonstrations-at-tillage-live-2026/",
+      "source": "profi",
+      "date": "2026-09-04",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Autonomous machines are increasingly being promoted for orchard work, but what happens when growers get behind the controls themselves?",
-      "topic": "スマート農業",
+      "originalSummary": "Live field demonstrations remain at the heart of Tillage-Live 2026, providing an opportunity to see some of the latest equipment at work.",
+      "topic": "作業機",
+      "score": 27
+    }
+  ],
+  "all": [
+    {
+      "title": "Pottinger’s mounted rake trails in corners for neater swaths",
+      "originalTitle": "Pottinger’s mounted rake trails in corners for neater swaths",
+      "href": "https://www.fwi.co.uk/machinery/grassland-maize/grassland-equipment-rakes/pottingers-mounted-rake-trails-in-corners-for-neater-swaths",
+      "source": "Farmers Weekly",
+      "date": "2026-09-12",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "For neatly laid swaths that a baler, forage harvester or silage wagon can easily follow through corners, Pottinger’s latest tractor-mounted rake behaves like a trailed unit.",
+      "topic": "収穫・飼料",
+      "score": 18
+    },
+    {
+      "title": "How Ben Burgess Keeps Combines Moving During Harvest",
+      "originalTitle": "How Ben Burgess Keeps Combines Moving During Harvest",
+      "href": "https://www.farmersguide.co.uk/machinery/machinery-dealers/behind-the-breakdown-how-dealers-keep-harvest-moving/",
+      "source": "Farmers Guide",
+      "date": "2026-09-12",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "When a combine stops during harvest, every minute matters. Daniel Hodge visited Ben Burgess’ Norwich depot to see how connected machinery, parts logistics and experienced technicians transformed harvest support.",
+      "topic": "収穫・飼料",
+      "score": 24
+    },
+    {
+      "title": "Bridgestone goes XXL with VT-Tractor farm tyres",
+      "originalTitle": "Bridgestone goes XXL with VT-Tractor farm tyres",
+      "href": "https://www.fwi.co.uk/machinery/tractors/bridgestone-goes-xxl-with-vt-tractor-farm-tyres",
+      "source": "Farmers Weekly",
+      "date": "2026-09-11",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "Larger, more powerful tractors are the target for Bridgestone’s latest farm tyre additions – XXL versions of the VT-Tractor radials in 44in and 46in rim sizes with corresponding 38in and.",
+      "topic": "トラクター",
+      "score": 24
+    },
+    {
+      "title": "Develon upgrades DX35Z-7 mini excavator",
+      "originalTitle": "Develon upgrades DX35Z-7 mini excavator",
+      "href": "https://www.profi.co.uk/news/develon-upgrades-dx35z-7-mini-excavator/",
+      "source": "profi",
+      "date": "2026-09-11",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "The latest version of the 4-tonne class mini excavator has a more powerful engine and tweaks to the boom and cab improve operator visibility.",
+      "topic": "農業機械",
+      "score": 7
+    },
+    {
+      "title": "Wox Agri opens doors on slurry and grassland range - Farmers Guide",
+      "originalTitle": "Wox Agri opens doors on slurry and grassland range - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/machinery/wox-agri-opens-doors-on-slurry-and-grassland-range/",
+      "source": "Farmers Guide",
+      "date": "2026-09-11",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "Wox Agri Services opened the doors of its Northumberland headquarters to showcase its slurry handling and Güttler grassland machinery, including the new Tempest front mounted hose reeler with an integrated PTO driven compressor.",
+      "topic": "作業機",
+      "score": 5
+    },
+    {
+      "title": "Sepp Knüsel unveils Rigitrac SKH 743",
+      "originalTitle": "Sepp Knüsel unveils Rigitrac SKH 743",
+      "href": "https://www.profi.co.uk/news/sepp-knusel-unveils-rigitrac-skh-743/",
+      "source": "profi",
+      "date": "2026-09-10",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "The SKH 743 was the highlight at the 50th anniversary event of Sepp Knüsel, the Swiss company that builds the Rigitrac tractors.",
+      "topic": "トラクター",
       "score": 10
     },
     {
@@ -217,37 +217,37 @@
       "score": 38
     },
     {
-      "title": "Tom Dirom revisit, Harewood Mill: Cost fixer",
-      "originalTitle": "Tom Dirom revisit, Harewood Mill: Cost fixer",
-      "href": "https://www.profi.co.uk/test-centre/tom-dirom-revisit-harewood-mill-cost-fixer/",
-      "source": "profi",
-      "date": "2026-08-31",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "REPORT: When we last visited Yorkshire contractor Tom Dirom, his tractor choices leant towards the Finnish Valtra brand, topped by a 400hp reverse-drive S-series. As the business and its workload has evolved, so too has the firm’s machinery choices, with Case IH models now accounting for five of the firm’s eight model fleet.",
-      "topic": "収穫・飼料",
-      "score": 22
-    },
-    {
-      "title": "UK used farm machinery finds new markets overseas - Farmers Guide",
-      "originalTitle": "UK used farm machinery finds new markets overseas - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/machinery/uk-used-farm-machinery-finds-new-markets-overseas/",
+      "title": "John Deere to showcase high-horsepower tractor line-up at Tillage-Live 2026 - Farmers Guide",
+      "originalTitle": "John Deere to showcase high-horsepower tractor line-up at Tillage-Live 2026 - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/machinery/tractors/john-deere-to-showcase-high-horsepower-tractor-line-up-at-tillage-live-2026/",
       "source": "Farmers Guide",
-      "date": "2026-08-25",
+      "date": "2026-09-03",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Older farm machinery from the UK is finding new owner overseas as tighter regulations across Europe drive used equipment into emerging markets. Ritchie Bros. data shows strong international demand for tractors and other agricultural machinery, with buyers attracted by the durability, reliability and ease of maintenance offered by older models.",
-      "topic": "トラクター",
-      "score": 21
+      "originalSummary": "Visitors to Tillage-Live will have a chance to see John Deere’s new high-horsepower tractor range together for the first time.",
+      "topic": "作業機",
+      "score": 28
     },
     {
-      "title": "Claas launches refreshed 145-180hp Arion 5 tractors",
-      "originalTitle": "Claas launches refreshed 145-180hp Arion 5 tractors",
-      "href": "https://www.fwi.co.uk/machinery/tractors/claas-launches-refreshed-145-180hp-arion-5-tractors",
+      "title": "Sky Agri creates dry-soil tine seeder from precision cultivator",
+      "originalTitle": "Sky Agri creates dry-soil tine seeder from precision cultivator",
+      "href": "https://www.fwi.co.uk/machinery/cultivation-drilling/cereal-drills/sky-agri-creates-dry-soil-tine-seeder-from-precision-cultivator",
       "source": "Farmers Weekly",
-      "date": "2026-08-28",
+      "date": "2026-09-10",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Claas has revamped its middleweight Arion tractors with a nose-job and a bunch of driver-friendly features.",
-      "topic": "トラクター",
-      "score": 19
+      "originalSummary": "Sky Agriculture has created a new tine seeder for sowing into stony and very dry soils by equipping its Methys PCS cultivator with a seed distribution system and new slimline.",
+      "topic": "スマート農業",
+      "score": 27
+    },
+    {
+      "title": "Machinery demonstrations at Tillage-Live 2026",
+      "originalTitle": "Machinery demonstrations at Tillage-Live 2026",
+      "href": "https://www.profi.co.uk/news/machinery-demonstrations-at-tillage-live-2026/",
+      "source": "profi",
+      "date": "2026-09-04",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "Live field demonstrations remain at the heart of Tillage-Live 2026, providing an opportunity to see some of the latest equipment at work.",
+      "topic": "作業機",
+      "score": 27
     }
   ]
 }
