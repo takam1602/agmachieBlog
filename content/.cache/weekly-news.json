@@ -1,73 +1,73 @@
 {
   "version": 2,
-  "weekKey": "2026-09-20",
-  "generatedAt": "2026-09-20T17:57:19.906Z",
+  "weekKey": "2026-09-27",
+  "generatedAt": "2026-09-27T18:53:49.378Z",
   "latest": [
     {
-      "title": "Horsch invests in spot- and patch-spraying technology",
-      "originalTitle": "Horsch invests in spot- and patch-spraying technology",
-      "href": "https://www.fwi.co.uk/machinery/technology/horsch-invests-in-spot-and-patch-spraying-technology",
-      "source": "Farmers Weekly",
-      "date": "2026-09-19",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "German business Sam-Dimension, which is developing artificial intelligence-assisted weed map generation for spot and patch herbicide spraying, has attracted Horsch as an investor.",
-      "topic": "作業機",
-      "score": 19
-    },
-    {
-      "title": "Retired surveyor’s John Deere toy collection goes to auction - Farmers Guide",
-      "originalTitle": "Retired surveyor’s John Deere toy collection goes to auction - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/machinery/vintage/retired-surveyors-john-deere-toy-collection-goes-to-auction/",
-      "source": "Farmers Guide",
-      "date": "2026-09-19",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "More than 500 John Deere toy tractors and implements collected over the past 12 years by a retired building surveyor from Essex are set to go under the hammer next month.",
-      "topic": "トラクター",
-      "score": 12
-    },
-    {
-      "title": "Valtra factory keeps producing first-gen Vario transmission",
-      "originalTitle": "Valtra factory keeps producing first-gen Vario transmission",
-      "href": "https://www.fwi.co.uk/machinery/tractors/valtra-factory-keeps-producing-first-gen-vario-transmission",
-      "source": "Farmers Weekly",
-      "date": "2026-09-18",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Agco’s Valtra factory in Finland is supplementing production of the first-generation ML-series Vario transmission for installation in some of its own tractors.",
-      "topic": "トラクター",
-      "score": 24
-    },
-    {
-      "title": "New paint shop for Vervaet",
-      "originalTitle": "New paint shop for Vervaet",
-      "href": "https://www.profi.co.uk/news/new-paint-shop-for-vervaet/",
+      "title": "Harvest big hitters",
+      "originalTitle": "Harvest big hitters",
+      "href": "https://www.profi.co.uk/test-centre/harvest-big-hitters/",
       "source": "profi",
-      "date": "2026-09-18",
+      "date": "2026-09-27",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Vervaet is spending around €6 million on a new paint and powder coating facility at its Dutch site in Biervliet.",
-      "topic": "農業機械",
-      "score": 7
+      "originalSummary": "REPORT: With many farms reducing their combinable area to take advantage of environmental support payments or grow other crops, added to two ‘easy’ harvests which have minimised wear and tear on these machines it is unsurprising that the combine market is at best, steady.",
+      "topic": "収穫・飼料",
+      "score": 27
     },
     {
-      "title": "Claas Lexion 7000 and 8000 series combines: More choice. More buying homework",
-      "originalTitle": "Claas Lexion 7000 and 8000 series combines: More choice. More buying homework",
-      "href": "https://www.profi.co.uk/test-centre/claas-lexion-7000-and-8000-series-combines-more-choice-more-buying-homework/",
+      "title": "Mengele SF6600: Time to wake up",
+      "originalTitle": "Mengele SF6600: Time to wake up",
+      "href": "https://www.profi.co.uk/test-centre/mengele-sf6600-time-to-wake-up/",
       "source": "profi",
-      "date": "2026-09-17",
+      "date": "2026-09-27",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "USED MACHINERY: If you home in on a Claas Lexion hybrid as your next used combine choice, take a deep breath. When we last looked at buying a Lexion 700 back in 2017, matters were relatively straightforward. Fast forward to 2026, and the narrow body Lexion 7000 (and wide body 8000) are rather different to their predecessors. Add a broader range of header types, the wide adoption of tracks plus numerous other options and the points to consider may be more involved than you might think.",
+      "originalSummary": "REPORT: A spur of the moment deal and bags of spanner-wielding determination led to the comeback of a 354hp Mengele SF6600. We find out the details of the story.",
+      "topic": "収穫・飼料",
+      "score": 8
+    },
+    {
+      "title": "Massey Ferguson ramps up combine spec packages",
+      "originalTitle": "Massey Ferguson ramps up combine spec packages",
+      "href": "https://www.fwi.co.uk/machinery/harvest-equipment/combines/massey-ferguson-ramps-up-combine-spec-packages",
+      "source": "Farmers Weekly",
+      "date": "2026-09-25",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "Selected optional equipment is being included as standard on a limited run of Massey Ferguson Next Edition combines.",
       "topic": "収穫・飼料",
       "score": 20
     },
     {
-      "title": "CLAAS Eastern and CLAAS Manns bring the latest CLAAS tractors to the field - Farmers Guide",
-      "originalTitle": "CLAAS Eastern and CLAAS Manns bring the latest CLAAS tractors to the field - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/machinery/claas-eastern-and-claas-manns-bring-the-latest-claas-tractors-to-the-field/",
-      "source": "Farmers Guide",
-      "date": "2026-09-17",
+      "title": "CNH adopts Canadian-made Bourgault air seeders",
+      "originalTitle": "CNH adopts Canadian-made Bourgault air seeders",
+      "href": "https://www.fwi.co.uk/machinery/cultivation-drilling/cereal-drills/cnh-adopts-canadian-made-bourgault-air-seeders",
+      "source": "Farmers Weekly",
+      "date": "2026-09-23",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Farmers across the East of England, Midlands and Yorkshire will have the opportunity to get behind the wheel of the latest high-horsepower tractors from CLAAS this September, as CLAAS Manns and CLAAS Eastern join forces to host three hands-on tractor events.",
-      "topic": "トラクター",
-      "score": 17
+      "originalSummary": "Production of wide-working air seeders at CNH’s factory in Saskatchewan, Canada, is being wound down in favour of a distribution agreement with Bourgault Industries, part of the Linamar group.",
+      "topic": "作業機",
+      "score": 20
+    },
+    {
+      "title": "Trust is the basis for adopting new technology",
+      "originalTitle": "Trust is the basis for adopting new technology",
+      "href": "https://www.futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/trust-is-the-basis-for-adopting-new-technology/",
+      "source": "Future Farming",
+      "date": "2026-09-23",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "Dutch fruit grower Peter Baars works with an autonomously driven tractor, and he is pleased with it. It could be even better if the tractor and implement communicated and worked together as a single unit.",
+      "topic": "スマート農業",
+      "score": 15
+    },
+    {
+      "title": "RTK has changed: Its price should too - Farmers Guide",
+      "originalTitle": "RTK has changed: Its price should too - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/machinery/rtk-has-changed-its-price-should-too/",
+      "source": "Farmers Guide",
+      "date": "2026-09-21",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "RTK Solutions makes precision farming more accessible with reliable, affordable RTK corrections and its new Base V.2 system.",
+      "topic": "スマート農業",
+      "score": 5
     }
   ],
   "random": [
@@ -105,52 +105,6 @@
       "score": 11
     },
     {
-      "title": "Bridgestone goes XXL with VT-Tractor farm tyres",
-      "originalTitle": "Bridgestone goes XXL with VT-Tractor farm tyres",
-      "href": "https://www.fwi.co.uk/machinery/tractors/bridgestone-goes-xxl-with-vt-tractor-farm-tyres",
-      "source": "Farmers Weekly",
-      "date": "2026-09-11",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Larger, more powerful tractors are the target for Bridgestone’s latest farm tyre additions – XXL versions of the VT-Tractor radials in 44in and 46in rim sizes with corresponding 38in and.",
-      "topic": "トラクター",
-      "score": 24
-    },
-    {
-      "title": "Claas launches new Arion 5 Cmatic tractor range - Farmers Guide",
-      "originalTitle": "Claas launches new Arion 5 Cmatic tractor range - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/machinery/tractors/claas-launches-new-180hp-arion-5-cmatic-tractor-range/",
-      "source": "Farmers Guide",
-      "date": "2026-09-08",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Claas has launched its new three-model Arion 5 Cmatic tractor range, offering maximum outputs from 145hp to 180hp and a continuously variable transmission.",
-      "topic": "トラクター",
-      "score": 24
-    }
-  ],
-  "all": [
-    {
-      "title": "Horsch invests in spot- and patch-spraying technology",
-      "originalTitle": "Horsch invests in spot- and patch-spraying technology",
-      "href": "https://www.fwi.co.uk/machinery/technology/horsch-invests-in-spot-and-patch-spraying-technology",
-      "source": "Farmers Weekly",
-      "date": "2026-09-19",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "German business Sam-Dimension, which is developing artificial intelligence-assisted weed map generation for spot and patch herbicide spraying, has attracted Horsch as an investor.",
-      "topic": "作業機",
-      "score": 19
-    },
-    {
-      "title": "Retired surveyor’s John Deere toy collection goes to auction - Farmers Guide",
-      "originalTitle": "Retired surveyor’s John Deere toy collection goes to auction - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/machinery/vintage/retired-surveyors-john-deere-toy-collection-goes-to-auction/",
-      "source": "Farmers Guide",
-      "date": "2026-09-19",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "More than 500 John Deere toy tractors and implements collected over the past 12 years by a retired building surveyor from Essex are set to go under the hammer next month.",
-      "topic": "トラクター",
-      "score": 12
-    },
-    {
       "title": "Valtra factory keeps producing first-gen Vario transmission",
       "originalTitle": "Valtra factory keeps producing first-gen Vario transmission",
       "href": "https://www.fwi.co.uk/machinery/tractors/valtra-factory-keeps-producing-first-gen-vario-transmission",
@@ -162,37 +116,83 @@
       "score": 24
     },
     {
-      "title": "New paint shop for Vervaet",
-      "originalTitle": "New paint shop for Vervaet",
-      "href": "https://www.profi.co.uk/news/new-paint-shop-for-vervaet/",
+      "title": "New Holland CR960: Combine Revived",
+      "originalTitle": "New Holland CR960: Combine Revived",
+      "href": "https://www.profi.co.uk/test-centre/new-holland-cr960-combine-revived/",
       "source": "profi",
-      "date": "2026-09-18",
+      "date": "2026-09-26",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Vervaet is spending around €6 million on a new paint and powder coating facility at its Dutch site in Biervliet.",
-      "topic": "農業機械",
-      "score": 7
+      "originalSummary": "WORKSHOP: Although organic farmer Anton Maier had his eye on a new combine, he decided to buy a used machine and embark on a major DIY repair job.",
+      "topic": "収穫・飼料",
+      "score": 22
+    }
+  ],
+  "all": [
+    {
+      "title": "Harvest big hitters",
+      "originalTitle": "Harvest big hitters",
+      "href": "https://www.profi.co.uk/test-centre/harvest-big-hitters/",
+      "source": "profi",
+      "date": "2026-09-27",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "REPORT: With many farms reducing their combinable area to take advantage of environmental support payments or grow other crops, added to two ‘easy’ harvests which have minimised wear and tear on these machines it is unsurprising that the combine market is at best, steady.",
+      "topic": "収穫・飼料",
+      "score": 27
     },
     {
-      "title": "Claas Lexion 7000 and 8000 series combines: More choice. More buying homework",
-      "originalTitle": "Claas Lexion 7000 and 8000 series combines: More choice. More buying homework",
-      "href": "https://www.profi.co.uk/test-centre/claas-lexion-7000-and-8000-series-combines-more-choice-more-buying-homework/",
+      "title": "Mengele SF6600: Time to wake up",
+      "originalTitle": "Mengele SF6600: Time to wake up",
+      "href": "https://www.profi.co.uk/test-centre/mengele-sf6600-time-to-wake-up/",
       "source": "profi",
-      "date": "2026-09-17",
+      "date": "2026-09-27",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "USED MACHINERY: If you home in on a Claas Lexion hybrid as your next used combine choice, take a deep breath. When we last looked at buying a Lexion 700 back in 2017, matters were relatively straightforward. Fast forward to 2026, and the narrow body Lexion 7000 (and wide body 8000) are rather different to their predecessors. Add a broader range of header types, the wide adoption of tracks plus numerous other options and the points to consider may be more involved than you might think.",
+      "originalSummary": "REPORT: A spur of the moment deal and bags of spanner-wielding determination led to the comeback of a 354hp Mengele SF6600. We find out the details of the story.",
+      "topic": "収穫・飼料",
+      "score": 8
+    },
+    {
+      "title": "Massey Ferguson ramps up combine spec packages",
+      "originalTitle": "Massey Ferguson ramps up combine spec packages",
+      "href": "https://www.fwi.co.uk/machinery/harvest-equipment/combines/massey-ferguson-ramps-up-combine-spec-packages",
+      "source": "Farmers Weekly",
+      "date": "2026-09-25",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "Selected optional equipment is being included as standard on a limited run of Massey Ferguson Next Edition combines.",
       "topic": "収穫・飼料",
       "score": 20
     },
     {
-      "title": "CLAAS Eastern and CLAAS Manns bring the latest CLAAS tractors to the field - Farmers Guide",
-      "originalTitle": "CLAAS Eastern and CLAAS Manns bring the latest CLAAS tractors to the field - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/machinery/claas-eastern-and-claas-manns-bring-the-latest-claas-tractors-to-the-field/",
-      "source": "Farmers Guide",
-      "date": "2026-09-17",
+      "title": "CNH adopts Canadian-made Bourgault air seeders",
+      "originalTitle": "CNH adopts Canadian-made Bourgault air seeders",
+      "href": "https://www.fwi.co.uk/machinery/cultivation-drilling/cereal-drills/cnh-adopts-canadian-made-bourgault-air-seeders",
+      "source": "Farmers Weekly",
+      "date": "2026-09-23",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Farmers across the East of England, Midlands and Yorkshire will have the opportunity to get behind the wheel of the latest high-horsepower tractors from CLAAS this September, as CLAAS Manns and CLAAS Eastern join forces to host three hands-on tractor events.",
-      "topic": "トラクター",
-      "score": 17
+      "originalSummary": "Production of wide-working air seeders at CNH’s factory in Saskatchewan, Canada, is being wound down in favour of a distribution agreement with Bourgault Industries, part of the Linamar group.",
+      "topic": "作業機",
+      "score": 20
+    },
+    {
+      "title": "Trust is the basis for adopting new technology",
+      "originalTitle": "Trust is the basis for adopting new technology",
+      "href": "https://www.futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/trust-is-the-basis-for-adopting-new-technology/",
+      "source": "Future Farming",
+      "date": "2026-09-23",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "Dutch fruit grower Peter Baars works with an autonomously driven tractor, and he is pleased with it. It could be even better if the tractor and implement communicated and worked together as a single unit.",
+      "topic": "スマート農業",
+      "score": 15
+    },
+    {
+      "title": "RTK has changed: Its price should too - Farmers Guide",
+      "originalTitle": "RTK has changed: Its price should too - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/machinery/rtk-has-changed-its-price-should-too/",
+      "source": "Farmers Guide",
+      "date": "2026-09-21",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "RTK Solutions makes precision farming more accessible with reliable, affordable RTK corrections and its new Base V.2 system.",
+      "topic": "スマート農業",
+      "score": 5
     },
     {
       "title": "Is Claas testing its next autonomous tractor?",
@@ -228,26 +228,26 @@
       "score": 11
     },
     {
-      "title": "Bridgestone goes XXL with VT-Tractor farm tyres",
-      "originalTitle": "Bridgestone goes XXL with VT-Tractor farm tyres",
-      "href": "https://www.fwi.co.uk/machinery/tractors/bridgestone-goes-xxl-with-vt-tractor-farm-tyres",
+      "title": "Valtra factory keeps producing first-gen Vario transmission",
+      "originalTitle": "Valtra factory keeps producing first-gen Vario transmission",
+      "href": "https://www.fwi.co.uk/machinery/tractors/valtra-factory-keeps-producing-first-gen-vario-transmission",
       "source": "Farmers Weekly",
-      "date": "2026-09-11",
+      "date": "2026-09-18",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Larger, more powerful tractors are the target for Bridgestone’s latest farm tyre additions – XXL versions of the VT-Tractor radials in 44in and 46in rim sizes with corresponding 38in and.",
+      "originalSummary": "Agco’s Valtra factory in Finland is supplementing production of the first-generation ML-series Vario transmission for installation in some of its own tractors.",
       "topic": "トラクター",
       "score": 24
     },
     {
-      "title": "Claas launches new Arion 5 Cmatic tractor range - Farmers Guide",
-      "originalTitle": "Claas launches new Arion 5 Cmatic tractor range - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/machinery/tractors/claas-launches-new-180hp-arion-5-cmatic-tractor-range/",
-      "source": "Farmers Guide",
-      "date": "2026-09-08",
+      "title": "New Holland CR960: Combine Revived",
+      "originalTitle": "New Holland CR960: Combine Revived",
+      "href": "https://www.profi.co.uk/test-centre/new-holland-cr960-combine-revived/",
+      "source": "profi",
+      "date": "2026-09-26",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Claas has launched its new three-model Arion 5 Cmatic tractor range, offering maximum outputs from 145hp to 180hp and a continuously variable transmission.",
-      "topic": "トラクター",
-      "score": 24
+      "originalSummary": "WORKSHOP: Although organic farmer Anton Maier had his eye on a new combine, he decided to buy a used machine and embark on a major DIY repair job.",
+      "topic": "収穫・飼料",
+      "score": 22
     }
   ]
 }
