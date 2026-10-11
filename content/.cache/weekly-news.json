@@ -1,30 +1,76 @@
 {
   "version": 2,
-  "weekKey": "2026-10-04",
-  "generatedAt": "2026-10-04T18:32:33.209Z",
+  "weekKey": "2026-10-11",
+  "generatedAt": "2026-10-11T19:20:54.780Z",
   "latest": [
     {
-      "title": "Valtra moves up to T6",
-      "originalTitle": "Valtra moves up to T6",
-      "href": "https://www.profi.co.uk/news/valtra-t-time-change/",
-      "source": "profi",
-      "date": "2026-10-02",
+      "title": "Horsch develops 18m Joker cultivator and Serto drill - Farmers Guide",
+      "originalTitle": "Horsch develops 18m Joker cultivator and Serto drill - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/machinery/horsch-develops-18m-joker-cultivator-and-serto-drill/",
+      "source": "Farmers Guide",
+      "date": "2026-10-10",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "The sixth generation T series is described as the most significant new introduction in Valtra’s history - 99% of the tractor is new, the unchanged 1% is the cab frame!",
-      "topic": "スマート農業",
-      "score": 19
+      "originalSummary": "In response to growing demand for 18m variants of its existing products, Horsch confirmed it is developing an 18m Joker cultivator and 18m Serto drill.",
+      "topic": "作業機",
+      "score": 28
     },
     {
-      "title": "Case IH Optum suspension receives EIMA technical award - Farmers Guide",
-      "originalTitle": "Case IH Optum suspension receives EIMA technical award - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/machinery/tractors/case-ih-optum-suspension-receives-eima-technical-award/",
-      "source": "Farmers Guide",
-      "date": "2026-10-02",
+      "title": "Krone refreshes Big Pack baler line-up with Plus and Pro models",
+      "originalTitle": "Krone refreshes Big Pack baler line-up with Plus and Pro models",
+      "href": "https://www.fwi.co.uk/machinery/grassland-maize/balers-wrappers/krone-refreshes-big-pack-baler-line-up-with-plus-and-pro-models",
+      "source": "Farmers Weekly",
+      "date": "2026-10-09",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Case IH has received an EIMA Technical Evolution award for the Advanced Vehicle Suspension system available on its Optum 360–440 series tractors.",
-      "topic": "トラクター",
-      "score": 9
+      "originalSummary": "The beefed-up flagship in Krone’s Big Pack square baler line-up is being joined by more “Gen6” models with uprated features and two levels of specification to suit different user needs.",
+      "topic": "収穫・飼料",
+      "score": 17
     },
+    {
+      "title": "CNH overhauls its UK dealer network in major brand strategy shift - Farmers Guide",
+      "originalTitle": "CNH overhauls its UK dealer network in major brand strategy shift - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/machinery/tractors/cnh-overhauls-its-uk-dealer-network-in-major-brand-strategy-shift/",
+      "source": "Farmers Guide",
+      "date": "2026-10-09",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "Case New Holland’s ambitious dual-brand strategy has prompted a major overhaul of its UK tractor dealer network.",
+      "topic": "トラクター",
+      "score": 13
+    },
+    {
+      "title": "Kubota to sell Kilter AX-1 in Europe",
+      "originalTitle": "Kubota to sell Kilter AX-1 in Europe",
+      "href": "https://www.profi.co.uk/news/kubota-to-sell-kilter-ax-1-in-europe/",
+      "source": "profi",
+      "date": "2026-10-09",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "Kubota and Norwegian startup Kilter have signed a European agreement for the sale and distribution of the AX-1 autonomous spot spraying robot.",
+      "topic": "スマート農業",
+      "score": 12
+    },
+    {
+      "title": "Seederal close to launching electric tractor",
+      "originalTitle": "Seederal close to launching electric tractor",
+      "href": "https://www.profi.co.uk/news/seederal-close-to-launching-electric-tractor/",
+      "source": "profi",
+      "date": "2026-10-08",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "French company Seederal is in advanced stages of development with its first electric tractor. The first deliveries are planned for 2028.",
+      "topic": "動力・環境",
+      "score": 20
+    },
+    {
+      "title": "Vermeer Bale Hawk collects 257 bales in 24-hour test",
+      "originalTitle": "Vermeer Bale Hawk collects 257 bales in 24-hour test",
+      "href": "https://www.futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/vermeer-bale-hawk-collects-257-bales-in-24-hour-test/",
+      "source": "Future Farming",
+      "date": "2026-10-08",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "Vermeer has completed a 24-hour field test with its autonomous Bale Hawk, collecting 257 round bales during the trial.",
+      "topic": "スマート農業",
+      "score": 10
+    }
+  ],
+  "random": [
     {
       "title": "Kuhn Apex direct and min-till drill",
       "originalTitle": "Kuhn Apex direct and min-till drill",
@@ -37,118 +83,116 @@
       "score": 23
     },
     {
-      "title": "Valtra launches sixth-generation T Series - Farmers Guide",
-      "originalTitle": "Valtra launches sixth-generation T Series - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/machinery/tractors/valtra-launches-sixth-generation-t-series/",
-      "source": "Farmers Guide",
-      "date": "2026-10-01",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Valtra has unveiled the sixth generation of its T Series tractor range, introducing a new engine, transmission options, updated controls and a range of technology and customisation features.",
-      "topic": "トラクター",
-      "score": 17
-    },
-    {
-      "title": "Ecorobotix reports 84% spray-volume reduction in grass seed trial",
-      "originalTitle": "Ecorobotix reports 84% spray-volume reduction in grass seed trial",
-      "href": "https://www.futurefarming.com/smart-farming/ecorobotix-reports-84-spray-volume-reduction-in-grass-seed-trial/",
-      "source": "Future Farming",
-      "date": "2026-10-01",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Ecorobotix has reported positive results from a US field trial with its ARA spot sprayer in a tall fescue crop grown for seed.",
-      "topic": "作業機",
-      "score": 13
-    },
-    {
-      "title": "Kilter: AX-1 weeding avoids 1M liters herbicide. What to know before investing.",
-      "originalTitle": "Kilter: AX-1 weeding avoids 1M liters herbicide. What to know before investing.",
-      "href": "https://www.futurefarming.com/smart-farming/future-farming-five-what-autonomous-weeding-taught-kilter/",
-      "source": "Future Farming",
-      "date": "2026-10-01",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Kilter’s AX-1 robots apply herbicide in precise micro-droplets directly onto weeds, and have helped growers avoid spraying more than 1 million litres of herbicide mixture compared to what conventional broadcast spraying would have used. Future Farming asks the Norwegian company how this number was calculated, which growers benefit most from the AX-1, and what buyers should consider before investing.",
-      "topic": "スマート農業",
-      "score": 8
-    }
-  ],
-  "random": [
-    {
-      "title": "Is Claas testing its next autonomous tractor?",
-      "originalTitle": "Is Claas testing its next autonomous tractor?",
-      "href": "https://www.futurefarming.com/tech-in-focus/is-claas-testing-its-next-autonomous-tractor/",
-      "source": "Future Farming",
-      "date": "2026-08-31",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "A heavily disguised Claas tractor spotted during field tests in Germany raises an intriguing question: is this another step towards a driverless Claas tractor? Is Claas testing a new tractor? That is certainly what it looks like when you look at the spy photos by Laurens Leeuwerik. He spotted a suspicious-looking Claas tractor at work […]",
-      "topic": "スマート農業",
-      "score": 30
-    },
-    {
-      "title": "Valtra factory keeps producing first-gen Vario transmission",
-      "originalTitle": "Valtra factory keeps producing first-gen Vario transmission",
-      "href": "https://www.fwi.co.uk/machinery/tractors/valtra-factory-keeps-producing-first-gen-vario-transmission",
+      "title": "Massey Ferguson ramps up combine spec packages",
+      "originalTitle": "Massey Ferguson ramps up combine spec packages",
+      "href": "https://www.fwi.co.uk/machinery/harvest-equipment/combines/massey-ferguson-ramps-up-combine-spec-packages",
       "source": "Farmers Weekly",
-      "date": "2026-09-18",
+      "date": "2026-09-25",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Agco’s Valtra factory in Finland is supplementing production of the first-generation ML-series Vario transmission for installation in some of its own tractors.",
-      "topic": "トラクター",
-      "score": 24
-    },
-    {
-      "title": "Mid-range Agco Ideal combines get performance upgrades",
-      "originalTitle": "Mid-range Agco Ideal combines get performance upgrades",
-      "href": "https://www.fwi.co.uk/machinery/harvest-equipment/combines/mid-range-agco-ideal-combines-get-performance-upgrades",
-      "source": "Farmers Weekly",
-      "date": "2026-09-18",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "An increase in separation area for the mid-range models in Agco’s Ideal combine range builds on the cleaning performance upgrades introduced on all four variants for this year’s harvest.",
+      "originalSummary": "Selected optional equipment is being included as standard on a limited run of Massey Ferguson Next Edition combines.",
       "topic": "収穫・飼料",
-      "score": 22
+      "score": 20
     },
     {
-      "title": "New FD60 brings autonomous seeding and weeding to larger farms",
-      "originalTitle": "New FD60 brings autonomous seeding and weeding to larger farms",
-      "href": "https://www.futurefarming.com/tech-in-focus/field-robots/droid-scales-up-new-fd60-brings-autonomous-seeding-and-weeding-to-larger-farms/",
-      "source": "Future Farming",
-      "date": "2026-09-01",
+      "title": "CNH adopts Canadian-made Bourgault air seeders",
+      "originalTitle": "CNH adopts Canadian-made Bourgault air seeders",
+      "href": "https://www.fwi.co.uk/machinery/cultivation-drilling/cereal-drills/cnh-adopts-canadian-made-bourgault-air-seeders",
+      "source": "Farmers Weekly",
+      "date": "2026-09-23",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Danish agricultural robotics company FarmDroid has introduced the FD60. The machine was launched on 1 September 2026.",
+      "originalSummary": "Production of wide-working air seeders at CNH’s factory in Saskatchewan, Canada, is being wound down in favour of a distribution agreement with Bourgault Industries, part of the Linamar group.",
+      "topic": "作業機",
+      "score": 20
+    },
+    {
+      "title": "Valtra moves up to T6",
+      "originalTitle": "Valtra moves up to T6",
+      "href": "https://www.profi.co.uk/news/valtra-t-time-change/",
+      "source": "profi",
+      "date": "2026-10-02",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "The sixth generation T series is described as the most significant new introduction in Valtra’s history - 99% of the tractor is new, the unchanged 1% is the cab frame!",
       "topic": "スマート農業",
-      "score": 18
+      "score": 19
     },
     {
-      "title": "Claas Night Edition joins Suffolk charity tractor run - Farmers Guide",
-      "originalTitle": "Claas Night Edition joins Suffolk charity tractor run - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/rural/charity/claas-night-edition-joins-suffolk-charity-tractor-run/",
+      "title": "Massey Ferguson and International Tractors to create low-horsepower tractor range - Farmers Guide",
+      "originalTitle": "Massey Ferguson and International Tractors to create low-horsepower tractor range - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/machinery/tractors/massey-ferguson-and-international-tractors-to-create-low-horsepower-tractor-range/",
       "source": "Farmers Guide",
-      "date": "2026-09-29",
+      "date": "2026-10-07",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Suffolk farmer Ellen Perry had the opportunity to drive a limited-edition Claas Axion 830 Night Edition during a recent Suffolk charity road run.",
+      "originalSummary": "Massey Ferguson has announced a strategic supply partnership with International Tractors Limited (ITL), a manufacturer of low-horsepower and compact tractors, to expand its portfolio with a new tractor range.",
       "topic": "トラクター",
       "score": 17
     }
   ],
   "all": [
     {
-      "title": "Valtra moves up to T6",
-      "originalTitle": "Valtra moves up to T6",
-      "href": "https://www.profi.co.uk/news/valtra-t-time-change/",
-      "source": "profi",
-      "date": "2026-10-02",
+      "title": "Horsch develops 18m Joker cultivator and Serto drill - Farmers Guide",
+      "originalTitle": "Horsch develops 18m Joker cultivator and Serto drill - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/machinery/horsch-develops-18m-joker-cultivator-and-serto-drill/",
+      "source": "Farmers Guide",
+      "date": "2026-10-10",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "The sixth generation T series is described as the most significant new introduction in Valtra’s history - 99% of the tractor is new, the unchanged 1% is the cab frame!",
-      "topic": "スマート農業",
-      "score": 19
+      "originalSummary": "In response to growing demand for 18m variants of its existing products, Horsch confirmed it is developing an 18m Joker cultivator and 18m Serto drill.",
+      "topic": "作業機",
+      "score": 28
     },
     {
-      "title": "Case IH Optum suspension receives EIMA technical award - Farmers Guide",
-      "originalTitle": "Case IH Optum suspension receives EIMA technical award - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/machinery/tractors/case-ih-optum-suspension-receives-eima-technical-award/",
-      "source": "Farmers Guide",
-      "date": "2026-10-02",
+      "title": "Krone refreshes Big Pack baler line-up with Plus and Pro models",
+      "originalTitle": "Krone refreshes Big Pack baler line-up with Plus and Pro models",
+      "href": "https://www.fwi.co.uk/machinery/grassland-maize/balers-wrappers/krone-refreshes-big-pack-baler-line-up-with-plus-and-pro-models",
+      "source": "Farmers Weekly",
+      "date": "2026-10-09",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Case IH has received an EIMA Technical Evolution award for the Advanced Vehicle Suspension system available on its Optum 360–440 series tractors.",
+      "originalSummary": "The beefed-up flagship in Krone’s Big Pack square baler line-up is being joined by more “Gen6” models with uprated features and two levels of specification to suit different user needs.",
+      "topic": "収穫・飼料",
+      "score": 17
+    },
+    {
+      "title": "CNH overhauls its UK dealer network in major brand strategy shift - Farmers Guide",
+      "originalTitle": "CNH overhauls its UK dealer network in major brand strategy shift - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/machinery/tractors/cnh-overhauls-its-uk-dealer-network-in-major-brand-strategy-shift/",
+      "source": "Farmers Guide",
+      "date": "2026-10-09",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "Case New Holland’s ambitious dual-brand strategy has prompted a major overhaul of its UK tractor dealer network.",
       "topic": "トラクター",
-      "score": 9
+      "score": 13
+    },
+    {
+      "title": "Kubota to sell Kilter AX-1 in Europe",
+      "originalTitle": "Kubota to sell Kilter AX-1 in Europe",
+      "href": "https://www.profi.co.uk/news/kubota-to-sell-kilter-ax-1-in-europe/",
+      "source": "profi",
+      "date": "2026-10-09",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "Kubota and Norwegian startup Kilter have signed a European agreement for the sale and distribution of the AX-1 autonomous spot spraying robot.",
+      "topic": "スマート農業",
+      "score": 12
+    },
+    {
+      "title": "Seederal close to launching electric tractor",
+      "originalTitle": "Seederal close to launching electric tractor",
+      "href": "https://www.profi.co.uk/news/seederal-close-to-launching-electric-tractor/",
+      "source": "profi",
+      "date": "2026-10-08",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "French company Seederal is in advanced stages of development with its first electric tractor. The first deliveries are planned for 2028.",
+      "topic": "動力・環境",
+      "score": 20
+    },
+    {
+      "title": "Vermeer Bale Hawk collects 257 bales in 24-hour test",
+      "originalTitle": "Vermeer Bale Hawk collects 257 bales in 24-hour test",
+      "href": "https://www.futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/vermeer-bale-hawk-collects-257-bales-in-24-hour-test/",
+      "source": "Future Farming",
+      "date": "2026-10-08",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "Vermeer has completed a 24-hour field test with its autonomous Bale Hawk, collecting 257 round bales during the trial.",
+      "topic": "スマート農業",
+      "score": 10
     },
     {
       "title": "Kuhn Apex direct and min-till drill",
@@ -162,90 +206,46 @@
       "score": 23
     },
     {
-      "title": "Valtra launches sixth-generation T Series - Farmers Guide",
-      "originalTitle": "Valtra launches sixth-generation T Series - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/machinery/tractors/valtra-launches-sixth-generation-t-series/",
-      "source": "Farmers Guide",
-      "date": "2026-10-01",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Valtra has unveiled the sixth generation of its T Series tractor range, introducing a new engine, transmission options, updated controls and a range of technology and customisation features.",
-      "topic": "トラクター",
-      "score": 17
-    },
-    {
-      "title": "Ecorobotix reports 84% spray-volume reduction in grass seed trial",
-      "originalTitle": "Ecorobotix reports 84% spray-volume reduction in grass seed trial",
-      "href": "https://www.futurefarming.com/smart-farming/ecorobotix-reports-84-spray-volume-reduction-in-grass-seed-trial/",
-      "source": "Future Farming",
-      "date": "2026-10-01",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Ecorobotix has reported positive results from a US field trial with its ARA spot sprayer in a tall fescue crop grown for seed.",
-      "topic": "作業機",
-      "score": 13
-    },
-    {
-      "title": "Kilter: AX-1 weeding avoids 1M liters herbicide. What to know before investing.",
-      "originalTitle": "Kilter: AX-1 weeding avoids 1M liters herbicide. What to know before investing.",
-      "href": "https://www.futurefarming.com/smart-farming/future-farming-five-what-autonomous-weeding-taught-kilter/",
-      "source": "Future Farming",
-      "date": "2026-10-01",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Kilter’s AX-1 robots apply herbicide in precise micro-droplets directly onto weeds, and have helped growers avoid spraying more than 1 million litres of herbicide mixture compared to what conventional broadcast spraying would have used. Future Farming asks the Norwegian company how this number was calculated, which growers benefit most from the AX-1, and what buyers should consider before investing.",
-      "topic": "スマート農業",
-      "score": 8
-    },
-    {
-      "title": "Is Claas testing its next autonomous tractor?",
-      "originalTitle": "Is Claas testing its next autonomous tractor?",
-      "href": "https://www.futurefarming.com/tech-in-focus/is-claas-testing-its-next-autonomous-tractor/",
-      "source": "Future Farming",
-      "date": "2026-08-31",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "A heavily disguised Claas tractor spotted during field tests in Germany raises an intriguing question: is this another step towards a driverless Claas tractor? Is Claas testing a new tractor? That is certainly what it looks like when you look at the spy photos by Laurens Leeuwerik. He spotted a suspicious-looking Claas tractor at work […]",
-      "topic": "スマート農業",
-      "score": 30
-    },
-    {
-      "title": "Valtra factory keeps producing first-gen Vario transmission",
-      "originalTitle": "Valtra factory keeps producing first-gen Vario transmission",
-      "href": "https://www.fwi.co.uk/machinery/tractors/valtra-factory-keeps-producing-first-gen-vario-transmission",
+      "title": "Massey Ferguson ramps up combine spec packages",
+      "originalTitle": "Massey Ferguson ramps up combine spec packages",
+      "href": "https://www.fwi.co.uk/machinery/harvest-equipment/combines/massey-ferguson-ramps-up-combine-spec-packages",
       "source": "Farmers Weekly",
-      "date": "2026-09-18",
+      "date": "2026-09-25",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Agco’s Valtra factory in Finland is supplementing production of the first-generation ML-series Vario transmission for installation in some of its own tractors.",
-      "topic": "トラクター",
-      "score": 24
-    },
-    {
-      "title": "Mid-range Agco Ideal combines get performance upgrades",
-      "originalTitle": "Mid-range Agco Ideal combines get performance upgrades",
-      "href": "https://www.fwi.co.uk/machinery/harvest-equipment/combines/mid-range-agco-ideal-combines-get-performance-upgrades",
-      "source": "Farmers Weekly",
-      "date": "2026-09-18",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "An increase in separation area for the mid-range models in Agco’s Ideal combine range builds on the cleaning performance upgrades introduced on all four variants for this year’s harvest.",
+      "originalSummary": "Selected optional equipment is being included as standard on a limited run of Massey Ferguson Next Edition combines.",
       "topic": "収穫・飼料",
-      "score": 22
+      "score": 20
     },
     {
-      "title": "New FD60 brings autonomous seeding and weeding to larger farms",
-      "originalTitle": "New FD60 brings autonomous seeding and weeding to larger farms",
-      "href": "https://www.futurefarming.com/tech-in-focus/field-robots/droid-scales-up-new-fd60-brings-autonomous-seeding-and-weeding-to-larger-farms/",
-      "source": "Future Farming",
-      "date": "2026-09-01",
+      "title": "CNH adopts Canadian-made Bourgault air seeders",
+      "originalTitle": "CNH adopts Canadian-made Bourgault air seeders",
+      "href": "https://www.fwi.co.uk/machinery/cultivation-drilling/cereal-drills/cnh-adopts-canadian-made-bourgault-air-seeders",
+      "source": "Farmers Weekly",
+      "date": "2026-09-23",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Danish agricultural robotics company FarmDroid has introduced the FD60. The machine was launched on 1 September 2026.",
+      "originalSummary": "Production of wide-working air seeders at CNH’s factory in Saskatchewan, Canada, is being wound down in favour of a distribution agreement with Bourgault Industries, part of the Linamar group.",
+      "topic": "作業機",
+      "score": 20
+    },
+    {
+      "title": "Valtra moves up to T6",
+      "originalTitle": "Valtra moves up to T6",
+      "href": "https://www.profi.co.uk/news/valtra-t-time-change/",
+      "source": "profi",
+      "date": "2026-10-02",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "The sixth generation T series is described as the most significant new introduction in Valtra’s history - 99% of the tractor is new, the unchanged 1% is the cab frame!",
       "topic": "スマート農業",
-      "score": 18
+      "score": 19
     },
     {
-      "title": "Claas Night Edition joins Suffolk charity tractor run - Farmers Guide",
-      "originalTitle": "Claas Night Edition joins Suffolk charity tractor run - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/rural/charity/claas-night-edition-joins-suffolk-charity-tractor-run/",
+      "title": "Massey Ferguson and International Tractors to create low-horsepower tractor range - Farmers Guide",
+      "originalTitle": "Massey Ferguson and International Tractors to create low-horsepower tractor range - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/machinery/tractors/massey-ferguson-and-international-tractors-to-create-low-horsepower-tractor-range/",
       "source": "Farmers Guide",
-      "date": "2026-09-29",
+      "date": "2026-10-07",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Suffolk farmer Ellen Perry had the opportunity to drive a limited-edition Claas Axion 830 Night Edition during a recent Suffolk charity road run.",
+      "originalSummary": "Massey Ferguson has announced a strategic supply partnership with International Tractors Limited (ITL), a manufacturer of low-horsepower and compact tractors, to expand its portfolio with a new tractor range.",
       "topic": "トラクター",
       "score": 17
     }
