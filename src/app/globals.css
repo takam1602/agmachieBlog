@@ -289,24 +289,12 @@
   line-height: 1.9;
 }
 
-/* rem, not ch: ch scales with each heading's font size and made h1/h2 wider than the text. */
+/* rem, not ch: ch scales with each heading's font size and made h1/h2 wider than the text.
+   Every block (tables, lists, images, code) shares this width so the column stays aligned;
+   wide tables and code scroll horizontally inside their own boxes. */
 .md-article > * {
   max-width: min(100%, 50rem);
   margin-inline: auto;
-}
-
-.md-article > .md-table-scroll,
-.md-article > pre,
-.md-article > blockquote,
-.md-article > ul,
-.md-article > ol {
-  max-width: min(100%, 1040px);
-}
-
-.md-article > p:has(img),
-.md-article > p:has(a img),
-.md-article > p:has(span) {
-  max-width: min(100%, 1100px);
 }
 
 .prose h1 {

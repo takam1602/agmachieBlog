@@ -336,15 +336,27 @@ function RepositoryCard({ href, label, desc, count }: { href: string; label: str
 
 function BlogSection({ posts }: { posts: BlogPost[] }) {
   const [showAll, setShowAll] = useState(false)
+
+  // 記事から戻ったときに「すべて表示」の状態を復元する
+  useEffect(() => {
+    if (sessionStorage.getItem('agmachie:blogShowAll') === '1') setShowAll(true)
+  }, [])
+
   if (!posts.length) return null
 
   const visiblePosts = showAll ? posts : posts.slice(0, 12)
-  const rememberBlogPosition = () => {
-    const blog = document.querySelector<HTMLElement>('#blog')
-    if (blog) {
-      const top = blog.getBoundingClientRect().top + window.scrollY - 80
-      sessionStorage.setItem('agmachie:blogScrollY', String(Math.max(0, top)))
+  const toggleShowAll = () => {
+    const next = !showAll
+    setShowAll(next)
+    if (next) {
+      sessionStorage.setItem('agmachie:blogShowAll', '1')
+    } else {
+      sessionStorage.removeItem('agmachie:blogShowAll')
     }
+  }
+  const rememberBlogPosition = () => {
+    // クリックした記事の位置に戻れるよう、現在のスクロール位置を保存する
+    sessionStorage.setItem('agmachie:blogScrollY', String(window.scrollY))
     sessionStorage.setItem('agmachie:restoreBlog', '1')
     sessionStorage.setItem('agmachie:restoreSection', 'blog')
   }
@@ -382,7 +394,7 @@ function BlogSection({ posts }: { posts: BlogPost[] }) {
         <div className="mt-8 flex justify-center">
           <button
             type="button"
-            onClick={() => setShowAll((current) => !current)}
+            onClick={toggleShowAll}
             aria-expanded={showAll}
             className="btn-secondary"
           >
