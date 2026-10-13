@@ -32,9 +32,9 @@ export default function Header() {
   }, [isOpen])
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-[var(--border)] bg-[var(--bg-primary)]/85 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 w-full border-b border-line bg-page">
       <div className="mx-auto flex h-[68px] max-w-7xl items-center justify-between px-4 sm:px-6">
-        <Link href="/" className="group flex items-center gap-3 text-white" aria-label="AgMachine Repository ホーム">
+        <Link href="/" className="group flex items-center gap-3 text-ink hover:text-ink" aria-label="AgMachine Repository ホーム">
           {/*
           <span className="grid h-9 w-9 place-items-center rounded-xl border border-[var(--accent)]/25 bg-[var(--accent)]/10 text-sm font-black text-[var(--accent)] transition-colors group-hover:bg-[var(--accent)]/15">
             AG
@@ -46,23 +46,23 @@ export default function Header() {
           alt=""
           width={36}
           height={36}
-          className="h-9 w-9 shrink-0 rounded-xl object-contain"
+          className="h-9 w-9 shrink-0 object-contain"
           priority
           />
 
           <span className="leading-none">
-            <span className="block text-sm font-bold tracking-wide text-gray-100 group-hover:text-white">AgMachine</span>
-            <span className="mt-1 block text-[9px] font-medium tracking-[0.2em] text-gray-600">REPOSITORY</span>
+            <span className="block text-base font-bold text-ink">AgMachine</span>
+            <span className="mt-1 block text-[10px] font-bold tracking-[0.12em] text-brand-text">REPOSITORY</span>
           </span>
         </Link>
 
-        <div className="hidden items-center gap-1 md:flex">
-          <nav className="mr-2 flex items-center" aria-label="メインナビゲーション">
+        <div className="hidden h-full items-center gap-2 md:flex">
+          <nav className="mr-2 flex h-full items-stretch" aria-label="メインナビゲーション">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-lg px-3 py-2 text-xs font-medium text-gray-400 transition-colors hover:bg-white/[0.04] hover:text-white lg:text-sm"
+                className="flex items-center border-b-4 border-transparent px-3 pt-1 text-sm font-bold text-ink transition-colors hover:border-yellow hover:text-ink lg:px-4"
               >
                 {item.label}
               </Link>
@@ -73,23 +73,20 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHubでソースを見る"
-            className="grid h-10 w-10 place-items-center rounded-full text-gray-500 transition-colors hover:bg-white/[0.05] hover:text-white"
+            className="grid h-10 w-10 place-items-center text-ink-2 transition-colors hover:text-brand-text"
           >
             <Github size={18} />
           </a>
-          <Link
-            href="/#search"
-            className="ml-1 inline-flex min-h-10 items-center gap-2 rounded-full border border-[var(--border-strong)] bg-white/[0.04] px-4 text-xs font-semibold text-gray-200 transition-colors hover:border-[var(--accent)] hover:bg-[var(--accent)]/10 hover:text-[var(--accent)]"
-          >
+          <Link href="/#search" className="btn-primary min-h-10 px-4 text-sm">
             <Search size={15} aria-hidden="true" />
             検索
-            <kbd className="hidden rounded border border-white/10 bg-black/20 px-1.5 py-0.5 font-mono text-[9px] font-normal text-gray-600 lg:inline">/</kbd>
+            <kbd className="hidden border border-on-yellow/40 px-1.5 py-0.5 font-mono text-[10px] font-normal lg:inline">/</kbd>
           </Link>
         </div>
 
         <button
           type="button"
-          className="grid h-11 w-11 place-items-center rounded-full text-gray-300 transition-colors hover:bg-white/[0.05] hover:text-white md:hidden"
+          className="grid h-11 w-11 place-items-center text-ink transition-colors hover:text-brand-text md:hidden"
           onClick={() => setIsOpen((current) => !current)}
           aria-expanded={isOpen}
           aria-controls="mobile-nav"
@@ -100,25 +97,25 @@ export default function Header() {
       </div>
 
       {isOpen && (
-        <div id="mobile-nav" className="border-t border-[var(--border)] bg-[var(--bg-primary)] md:hidden">
-          <nav className="mx-auto grid max-w-7xl gap-1 px-4 py-4" aria-label="モバイルナビゲーション">
-            <Link href="/" className="rounded-xl px-4 py-3 text-sm font-medium text-gray-300 hover:bg-white/[0.04] hover:text-white">
+        <div id="mobile-nav" className="border-t border-line bg-page md:hidden">
+          <nav className="mx-auto grid max-w-7xl px-4 py-2" aria-label="モバイルナビゲーション">
+            <Link href="/" className="border-b border-line px-1 py-3.5 text-base font-bold text-ink hover:text-brand-text">
               ホーム
             </Link>
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-xl px-4 py-3 text-sm font-medium text-gray-300 hover:bg-white/[0.04] hover:text-white"
+                className="border-b border-line px-1 py-3.5 text-base font-bold text-ink hover:text-brand-text"
               >
                 {item.label}
               </Link>
             ))}
-            <div className="mt-2 grid grid-cols-[1fr_auto] gap-2 border-t border-[var(--border)] pt-4">
-              <Link href="/#search" style={{ color: '#07140f' }} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-[var(--accent)] font-bold text-[#07140f] hover:bg-[var(--accent-hover)] hover:text-[#07140f]">
+            <div className="grid grid-cols-[1fr_auto] gap-2 py-4">
+              <Link href="/#search" className="btn-primary">
                 <Search size={16} /> リポジトリを検索
               </Link>
-              <a href="https://github.com/takam1602/agmachieBlog" target="_blank" rel="noopener noreferrer" className="grid h-11 w-11 place-items-center rounded-xl border border-[var(--border)] text-gray-400 hover:text-white" aria-label="GitHubでソースを見る">
+              <a href="https://github.com/takam1602/agmachieBlog" target="_blank" rel="noopener noreferrer" className="grid h-[2.875rem] w-[2.875rem] place-items-center border-2 border-ink text-ink hover:text-brand-text" aria-label="GitHubでソースを見る">
                 <Github size={18} />
               </a>
             </div>

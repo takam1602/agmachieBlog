@@ -201,34 +201,34 @@ export default function NotesClient({
 
   return (
     <div className="mx-auto grid w-full max-w-7xl gap-6 px-4 py-6 sm:px-6 lg:grid-cols-[320px_1fr] lg:py-10">
-      <aside className="rounded-lg border border-[var(--border)] bg-[var(--surface)]/80">
-        <div className="border-b border-[var(--border)] p-4">
+      <aside className="h-fit border border-line border-t-4 border-t-brand bg-surface">
+        <div className="border-b border-line p-4">
           <div className="flex items-start justify-between gap-3">
             <div>
-              <p className="text-xs font-semibold tracking-[0.16em] text-[var(--accent)]">NOTES</p>
-              <h1 className="mt-2 text-xl font-bold text-white">公開メモ帳</h1>
+              <p className="text-xs font-bold tracking-[0.08em] text-brand-text">NOTES</p>
+              <h1 className="mt-2 text-xl font-bold text-ink">公開メモ帳</h1>
             </div>
             {user ? (
               <form action="/api/auth/github/logout" method="post">
-                <button type="submit" className="grid h-9 w-9 place-items-center rounded-lg border border-[var(--border)] text-gray-400 hover:text-white" aria-label="ログアウト">
+                <button type="submit" className="grid h-9 w-9 place-items-center border-2 border-ink text-ink hover:border-brand hover:bg-brand hover:text-on-brand" aria-label="ログアウト">
                   <LogOut size={16} />
                 </button>
               </form>
             ) : (
-              <a href="/api/auth/github/login" className="grid h-9 w-9 place-items-center rounded-lg border border-[var(--border)] text-gray-400 hover:text-white" aria-label="GitHubでログイン">
+              <a href="/api/auth/github/login" className="grid h-9 w-9 place-items-center border-2 border-ink text-ink hover:border-brand hover:bg-brand hover:text-on-brand" aria-label="GitHubでログイン">
                 <Github size={17} />
               </a>
             )}
           </div>
-          {user && <p className="mt-3 text-xs text-gray-500">@{user.login} で編集できます。</p>}
+          {user && <p className="mt-3 text-sm text-ink-3">@{user.login} で編集できます。</p>}
           {!user && (
-            <a href="/api/auth/github/login" className="mt-4 inline-flex min-h-10 w-full items-center justify-center gap-2 rounded-lg bg-[var(--accent)] px-4 text-sm font-bold text-[#07140f] hover:bg-[var(--accent-hover)] hover:text-[#07140f]">
+            <a href="/api/auth/github/login" className="btn-primary mt-4 w-full text-sm">
               <Github size={16} />
               GitHubでログイン
             </a>
           )}
           {(configError || writeConfigError || pageError) && (
-            <p className="mt-3 rounded-lg border border-amber-500/30 bg-amber-500/10 p-3 text-xs leading-5 text-amber-200">
+            <p className="mt-3 border-l-4 border-yellow bg-warn-bg p-3 text-sm leading-6 text-warn-ink">
               {pageError || configError || writeConfigError}
             </p>
           )}
@@ -236,7 +236,7 @@ export default function NotesClient({
             <button
               type="button"
               onClick={() => startEdit()}
-              className="mt-3 inline-flex min-h-10 w-full items-center justify-center gap-2 rounded-lg border border-[var(--border-strong)] px-4 text-sm font-semibold text-gray-200 hover:border-[var(--accent)] hover:text-[var(--accent)]"
+              className="btn-secondary mt-3 w-full text-sm"
             >
               <Plus size={16} />
               新規メモ
@@ -246,20 +246,20 @@ export default function NotesClient({
 
         <div className="max-h-[56vh] overflow-y-auto p-2 lg:max-h-[calc(100vh-220px)]">
           {notes.length === 0 ? (
-            <p className="p-3 text-sm leading-6 text-gray-500">まだメモがありません。</p>
+            <p className="p-3 text-sm leading-6 text-ink-3">まだメモがありません。</p>
           ) : (
             notes.map((note) => (
               <button
                 key={note.path}
                 type="button"
                 onClick={() => setActiveSlug(note.slug)}
-                className={`w-full rounded-lg p-3 text-left transition-colors ${
-                  activeNote?.slug === note.slug ? 'bg-white/[0.07]' : 'hover:bg-white/[0.04]'
+                className={`w-full border-l-4 p-3 text-left transition-colors ${
+                  activeNote?.slug === note.slug ? 'border-brand bg-brand-tint' : 'border-transparent hover:bg-band'
                 }`}
               >
-                <span className="block text-sm font-semibold text-gray-100">{note.title}</span>
-                <span className="mt-1 line-clamp-2 block text-xs leading-5 text-gray-500">{note.excerpt}</span>
-                {note.updatedAt && <span className="mt-2 block text-[11px] text-gray-600">{note.updatedAt}</span>}
+                <span className="block text-sm font-bold text-ink">{note.title}</span>
+                <span className="mt-1 line-clamp-2 block text-xs leading-5 text-ink-2">{note.excerpt}</span>
+                {note.updatedAt && <span className="mt-2 block text-[11px] text-ink-3">{note.updatedAt}</span>}
               </button>
             ))
           )}
@@ -268,20 +268,20 @@ export default function NotesClient({
 
       <section className="min-w-0">
         {user && (
-          <form onSubmit={submit} className="mb-6 rounded-lg border border-[var(--border)] bg-[var(--surface)]/70 p-4">
+          <form onSubmit={submit} className="mb-6 border border-line bg-band p-4">
             <div className="grid gap-3 sm:grid-cols-[1fr_220px]">
-              <label className="grid gap-1.5 text-xs font-semibold text-gray-400">
+              <label className="grid gap-1.5 text-sm font-bold text-ink">
                 タイトル
-                <input value={title} onChange={(event) => setTitle(event.target.value)} required className="min-h-11 rounded-lg border border-[var(--border)] bg-[#0a0d0b] px-3 text-sm text-white outline-none focus:border-[var(--accent)]" />
+                <input value={title} onChange={(event) => setTitle(event.target.value)} required className="min-h-11 border-2 border-line-strong bg-surface px-3 text-sm text-ink outline-none focus:border-brand" />
               </label>
-              <label className="grid gap-1.5 text-xs font-semibold text-gray-400">
+              <label className="grid gap-1.5 text-sm font-bold text-ink">
                 slug
-                <input value={slug} onChange={(event) => setSlug(event.target.value)} placeholder="空なら自動生成" className="min-h-11 rounded-lg border border-[var(--border)] bg-[#0a0d0b] px-3 text-sm text-white outline-none focus:border-[var(--accent)]" />
+                <input value={slug} onChange={(event) => setSlug(event.target.value)} placeholder="空なら自動生成" className="min-h-11 border-2 border-line-strong bg-surface px-3 text-sm text-ink outline-none focus:border-brand" />
               </label>
             </div>
-            <label className="mt-3 grid gap-1.5 text-xs font-semibold text-gray-400">
+            <label className="mt-3 grid gap-1.5 text-sm font-bold text-ink">
               Markdown
-              <textarea ref={textareaRef} value={body} onChange={(event) => setBody(event.target.value)} required rows={12} className="min-h-64 resize-y rounded-lg border border-[var(--border)] bg-[#0a0d0b] px-3 py-3 font-mono text-sm leading-6 text-white outline-none focus:border-[var(--accent)]" />
+              <textarea ref={textareaRef} value={body} onChange={(event) => setBody(event.target.value)} required rows={12} className="min-h-64 resize-y border-2 border-line-strong bg-surface px-3 py-3 font-mono text-sm font-normal leading-6 text-ink outline-none focus:border-brand" />
             </label>
             <div className="mt-3 flex flex-wrap items-center gap-3">
               <input ref={fileInputRef} type="file" accept="image/*" onChange={uploadImage} className="hidden" />
@@ -289,17 +289,17 @@ export default function NotesClient({
                 type="button"
                 disabled={isUploadingImage}
                 onClick={() => fileInputRef.current?.click()}
-                className="inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border border-[var(--border-strong)] px-4 text-sm font-semibold text-gray-200 hover:border-[var(--accent)] hover:text-[var(--accent)] disabled:cursor-not-allowed disabled:opacity-60"
+                className="btn-secondary min-h-10 px-4 text-sm disabled:cursor-not-allowed disabled:opacity-60"
               >
                 <ImagePlus size={16} />
                 {isUploadingImage ? '画像アップロード中' : '画像を追加'}
               </button>
-              <button type="submit" disabled={isSaving} className="inline-flex min-h-10 items-center justify-center gap-2 rounded-lg bg-[var(--accent)] px-5 text-sm font-bold text-[#07140f] disabled:cursor-not-allowed disabled:opacity-60">
+              <button type="submit" disabled={isSaving} className="btn-primary min-h-10 px-5 text-sm disabled:cursor-not-allowed disabled:opacity-60">
                 <Save size={16} />
                 {isSaving ? '保存中' : 'GitHubに保存'}
               </button>
               {activeNote && (
-                <button type="button" onClick={() => startEdit(activeNote)} className="inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border border-[var(--border-strong)] px-4 text-sm font-semibold text-gray-200 hover:border-[var(--accent)] hover:text-[var(--accent)]">
+                <button type="button" onClick={() => startEdit(activeNote)} className="btn-secondary min-h-10 px-4 text-sm">
                   <Edit3 size={16} />
                   表示中のメモを編集
                 </button>
@@ -309,7 +309,7 @@ export default function NotesClient({
                   type="button"
                   disabled={isPromoting || isDeleting}
                   onClick={promoteActiveNote}
-                  className="inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border border-[var(--accent)]/50 bg-[var(--accent)]/10 px-4 text-sm font-semibold text-[var(--accent)] hover:border-[var(--accent)] hover:bg-[var(--accent)]/15 disabled:cursor-not-allowed disabled:opacity-60"
+                  className="inline-flex min-h-10 items-center justify-center gap-2 border-2 border-brand bg-brand px-4 text-sm font-bold text-on-brand hover:border-brand-hover hover:bg-brand-hover disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   <BookUp size={16} />
                   {isPromoting ? 'blogへ追加中' : 'blogへ追加'}
@@ -320,17 +320,17 @@ export default function NotesClient({
                   type="button"
                   disabled={isDeleting || isPromoting}
                   onClick={deleteActiveNote}
-                  className="inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border border-red-500/40 px-4 text-sm font-semibold text-red-200 hover:border-red-400 hover:text-red-100 disabled:cursor-not-allowed disabled:opacity-60"
+                  className="inline-flex min-h-10 items-center justify-center gap-2 border-2 border-danger px-4 text-sm font-bold text-danger hover:bg-danger hover:text-page disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   <Trash2 size={16} />
                   {isDeleting ? '削除中' : '表示中のメモを削除'}
                 </button>
               )}
-              {status && <p className="text-sm text-gray-400">{status}</p>}
+              {status && <p className="text-sm text-ink-2">{status}</p>}
             </div>
             {body.trim() && (
-              <div className="mt-4 rounded-lg border border-[var(--border)] bg-[#0a0d0b]/80 p-4">
-                <div className="prose prose-invert max-w-none prose-img:rounded-lg prose-img:border prose-img:border-[var(--border)]">
+              <div className="mt-4 border border-line bg-surface p-4">
+                <div className="prose max-w-none">
                   <ReactMarkdown remarkPlugins={[remarkGfm]}>{body}</ReactMarkdown>
                 </div>
               </div>
@@ -338,25 +338,25 @@ export default function NotesClient({
           </form>
         )}
 
-        <article className="rounded-lg border border-[var(--border)] bg-[var(--surface)]/65 p-5 sm:p-7">
+        <article className="border border-line bg-surface p-5 sm:p-7">
           {activeNote ? (
             <>
-              <div className="mb-5 flex flex-wrap items-center justify-between gap-3 border-b border-[var(--border)] pb-4">
+              <div className="mb-5 flex flex-wrap items-center justify-between gap-3 border-b-2 border-line pb-4">
                 <div>
-                  <p className="text-xs font-semibold tracking-[0.16em] text-gray-500">PUBLIC NOTE</p>
-                  <h2 className="mt-2 text-2xl font-bold text-white">{activeNote.title}</h2>
+                  <p className="text-xs font-bold tracking-[0.08em] text-brand-text">PUBLIC NOTE</p>
+                  <h2 className="mt-2 text-2xl font-bold text-ink">{activeNote.title}</h2>
                 </div>
-                <div className="inline-flex items-center gap-2 text-xs text-gray-500">
+                <div className="inline-flex items-center gap-2 text-sm text-ink-3">
                   <Eye size={15} />
                   {activeNote.updatedAt ?? 'no date'}
                 </div>
               </div>
-              <div className="prose prose-invert max-w-none">
+              <div className="prose max-w-none">
                 <ReactMarkdown remarkPlugins={[remarkGfm]}>{activeNote.body}</ReactMarkdown>
               </div>
             </>
           ) : (
-            <p className="text-sm leading-6 text-gray-500">左の一覧からメモを選択してください。</p>
+            <p className="text-sm leading-6 text-ink-3">左の一覧からメモを選択してください。</p>
           )}
         </article>
       </section>

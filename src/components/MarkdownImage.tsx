@@ -19,7 +19,7 @@ export default function MarkdownImage({ src, alt = '' }: { src: string; alt?: st
         )}
 
       <span
-        className="block relative w-full max-w-[1040px] mx-auto my-8 cursor-pointer bg-[#222] border border-[#333] hover:border-[var(--accent)] transition-colors group rounded-lg overflow-hidden"
+        className="block relative w-full max-w-[1040px] mx-auto my-8 cursor-zoom-in bg-band border border-line hover:border-brand transition-colors group overflow-hidden"
         onClick={(e) => {
           e.preventDefault()
           e.stopPropagation()
@@ -33,18 +33,18 @@ export default function MarkdownImage({ src, alt = '' }: { src: string; alt?: st
             width={0}
             height={0}
             sizes="(max-width: 1040px) 100vw, 1040px"
-            className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-auto object-contain"
             onError={() => setIsError(true)}
             unoptimized={true}
           />
         ) : (
-          <span className="flex items-center justify-center w-full aspect-video text-gray-500 text-sm flex-col gap-2">
+          <span className="flex items-center justify-center w-full aspect-video text-ink-3 text-sm flex-col gap-2">
             <span className="text-2xl">⚠️</span>
             <span>Image not found</span>
           </span>
         )}
       </span>
-      {alt && <span className="block text-center text-sm text-gray-500 mt-2 mb-6">{alt}</span>}
+      {alt && <span className="block text-center text-sm text-ink-3 mt-2 mb-6">{alt}</span>}
     </>
   )
 }

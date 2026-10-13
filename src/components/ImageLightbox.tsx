@@ -40,7 +40,7 @@ export default function ImageLightbox({ src, alt = '', onClose }: Props) {
       role="presentation"
     >
       <div
-        className="relative flex h-[92vh] w-full max-w-[96vw] flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#0d0d0d] shadow-2xl animate-zoomIn"
+        className="relative flex h-[92vh] w-full max-w-[96vw] flex-col overflow-hidden border border-white/10 bg-[#111] shadow-2xl animate-zoomIn"
         role="dialog"
         aria-modal="true"
         aria-label={alt ? alt + 'の拡大画像' : '拡大画像'}
@@ -52,7 +52,7 @@ export default function ImageLightbox({ src, alt = '', onClose }: Props) {
               href={src}
               target="_blank"
               rel="noopener noreferrer"
-              className="grid h-10 w-10 place-items-center rounded-full text-gray-400 transition-colors hover:bg-white/10 hover:text-white"
+              className="grid h-10 w-10 place-items-center text-gray-300 transition-colors hover:bg-white/10 hover:text-white"
               aria-label="元画像を新しいタブで開く"
             >
               <ExternalLink size={18} />
@@ -62,7 +62,7 @@ export default function ImageLightbox({ src, alt = '', onClose }: Props) {
               type="button"
               aria-label="画像を閉じる"
               onClick={onClose}
-              className="grid h-10 w-10 place-items-center rounded-full text-gray-300 transition-colors hover:bg-white/10 hover:text-white"
+              className="grid h-10 w-10 place-items-center text-gray-200 transition-colors hover:bg-white/10 hover:text-white"
             >
               <X size={22} />
             </button>

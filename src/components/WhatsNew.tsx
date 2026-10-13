@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowUpRight } from 'lucide-react'
+import { ChevronRight } from 'lucide-react'
 import { BlogPost } from '@/utils/posts'
 
 export default function WhatsNew({ posts }: { posts: BlogPost[] }) {
@@ -7,7 +7,7 @@ export default function WhatsNew({ posts }: { posts: BlogPost[] }) {
 
   if (!latestPosts.length) {
     return (
-      <p className="rounded-xl border border-dashed border-[var(--border)] py-10 text-center text-sm text-gray-500">
+      <p className="border border-dashed border-line-strong bg-surface py-10 text-center text-sm text-ink-3">
         更新された記事はまだありません。
       </p>
     )
@@ -19,21 +19,21 @@ export default function WhatsNew({ posts }: { posts: BlogPost[] }) {
         <li key={post.slug} className="min-w-0">
           <Link
             href={post.href}
-            className="group flex min-h-[118px] flex-col rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4 transition-all hover:-translate-y-0.5 hover:border-[var(--accent)] hover:bg-[var(--surface-strong)]"
+            className="group flex min-h-[128px] flex-col border border-line bg-surface p-5 text-ink transition-colors hover:border-brand hover:text-ink"
           >
             <div className="mb-3 flex items-center justify-between gap-3">
               <span className={index === 0
-                ? 'rounded-full bg-[var(--accent)]/10 px-2 py-1 text-[9px] font-bold tracking-[0.12em] text-[var(--accent)]'
-                : 'rounded-full bg-white/[0.03] px-2 py-1 text-[9px] font-bold tracking-[0.12em] text-gray-600'
+                ? 'bg-brand px-2 py-0.5 text-[11px] font-bold tracking-[0.06em] text-on-brand'
+                : 'border border-line px-2 py-0.5 text-[11px] font-bold tracking-[0.06em] text-ink-3'
               }>
                 {index === 0 ? 'LATEST' : 'UPDATED'}
               </span>
-              <span className="font-mono text-[10px] text-gray-600">{post.updatedAt ?? post.date}</span>
+              <span className="text-xs text-ink-3">{post.updatedAt ?? post.date}</span>
             </div>
-            <span className="line-clamp-2 text-sm font-semibold leading-6 text-gray-300 transition-colors group-hover:text-white">
+            <span className="line-clamp-2 text-base font-bold leading-7 text-ink group-hover:text-brand-text group-hover:underline">
               {post.title}
             </span>
-            <ArrowUpRight size={14} className="mt-auto self-end text-gray-600 transition-colors group-hover:text-[var(--accent)]" aria-hidden="true" />
+            <ChevronRight size={18} className="mt-auto self-end text-brand-text" aria-hidden="true" />
           </Link>
         </li>
       ))}

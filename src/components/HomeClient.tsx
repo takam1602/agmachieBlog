@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, BookOpen, ChevronDown, Compass, Database, Search } from 'lucide-react'
+import { ArrowRight, BookOpen, ChevronDown, ChevronRight, Compass, Database, Search } from 'lucide-react'
 
 import SearchableList from '@/components/SearchableList'
 import WhatsNew from '@/components/WhatsNew'
@@ -105,102 +105,122 @@ export default function HomeClient({
   ]
 
   return (
-    <div className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6">
-      <section className="relative -mx-4 flex min-h-[620px] items-center overflow-hidden border-b border-[var(--border)] px-4 py-16 sm:-mx-6 sm:min-h-[650px] sm:px-6 sm:py-24 lg:mx-0 lg:rounded-3xl lg:border">
-        <HeroBackgroundCarousel images={heroImages} interval={5000} />
-        <div className="relative mx-auto w-full max-w-4xl text-center">
-            <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-[var(--accent)]/25 bg-[var(--accent)]/[0.07] px-3 py-1.5 text-xs font-semibold tracking-[0.16em] text-[var(--accent)]">
+    <div className="w-full">
+      <section className="border-b border-line bg-page" aria-labelledby="hero-title">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 py-8 sm:px-6 sm:py-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,560px)] lg:gap-14 lg:py-16">
+          <div className="lg:order-2">
+            <HeroBackgroundCarousel images={heroImages} interval={5000} />
+          </div>
+          <div className="border-t-[6px] border-yellow pt-7 lg:order-1">
+            <p className="mb-3 text-xs font-bold tracking-[0.08em] text-brand-text">
               AGRICULTURAL MACHINERY REPOSITORY
             </p>
-            <h1 className="text-balance text-4xl font-bold leading-[1.15] tracking-[-0.04em] text-white sm:text-6xl">
+            <h1 id="hero-title" className="text-balance text-3xl font-bold leading-[1.25] text-ink sm:text-5xl">
               旧きを温めて
-              <span className="text-[var(--accent)]">新しきを知る</span>
+              <span className="text-brand-text">新しきを知る</span>
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-pretty text-sm leading-7 text-gray-400 sm:text-base">
+            <p className="mt-5 max-w-2xl text-pretty text-base leading-8 text-ink-2">
               「あれなんだっけ」の時に参照する
               「農業機械」専門のリポジトリです．
             </p>
 
-            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link href="#search" style={{ color: '#07140f' }} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-6 text-sm font-bold text-[#07140f] transition-transform hover:-translate-y-0.5 hover:bg-[var(--accent-hover)] hover:text-[#07140f]">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <Link href="#search" className="btn-primary">
                 <Search size={17} aria-hidden="true" />
                 検索
               </Link>
-              <Link href="#repository" className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-[var(--border-strong)] bg-white/[0.03] px-6 text-sm font-medium text-gray-200 transition-colors hover:border-gray-500 hover:bg-white/[0.06] hover:text-white">
+              <Link href="#repository" className="btn-secondary">
                 記事を見る
                 <ArrowRight size={16} aria-hidden="true" />
               </Link>
             </div>
 
-            <dl className="mx-auto mt-10 grid max-w-xl grid-cols-3 divide-x divide-[var(--border)] rounded-2xl border border-[var(--border)] bg-black/10 py-4 backdrop-blur-sm">
-              {stats.map(({ value, label, icon: Icon }) => (
-                <div key={label} className="flex flex-col items-center px-2">
-                  <dt className="order-2 mt-1 text-[10px] tracking-wide text-gray-500 sm:text-xs">{label}</dt>
-                  <dd className="order-1 flex items-center gap-1.5 text-lg font-bold text-gray-100 sm:text-xl">
-                    <Icon size={14} className="text-[var(--accent)]" aria-hidden="true" />
+            <dl className="mt-8 grid grid-cols-3 border-t border-line pt-5">
+              {stats.map(({ value, label, icon: Icon }, index) => (
+                <div key={label} className={'flex flex-col ' + (index > 0 ? 'border-l border-line pl-4 sm:pl-6' : '')}>
+                  <dt className="order-2 mt-1 text-xs text-ink-3 sm:text-sm">{label}</dt>
+                  <dd className="order-1 flex items-center gap-2 text-2xl font-bold text-ink sm:text-3xl">
+                    <Icon size={16} className="text-brand-text" aria-hidden="true" />
                     {value}
                   </dd>
                 </div>
               ))}
             </dl>
           </div>
+        </div>
       </section>
 
-      <section id="search" className="scroll-mt-24 rounded-3xl border border-[var(--border)] bg-[var(--surface)]/90 px-4 py-8 shadow-2xl shadow-black/20 sm:px-8 sm:py-10">
-          <SectionIntro
-            eyebrow="EXPLORE"
-            title="検索"
-            description="気になる機械やメーカー，作業内容等の単語を入力してください．"
-          />
-          <SearchableList entries={searchEntries} />
-        </section>
+      <Band id="search" tone="band">
+        <SectionIntro
+          eyebrow="EXPLORE"
+          title="検索"
+          description="気になる機械やメーカー，作業内容等の単語を入力してください．"
+          align="center"
+        />
+        <SearchableList entries={searchEntries} />
+      </Band>
 
-        <section id="latest" className="scroll-mt-24 py-12 sm:py-16">
-          <SectionIntro
-            eyebrow="RECENTLY UPDATED"
-            title="新しい更新"
-            description="追加や更新したページ"
-            align="left"
-          />
-          <WhatsNew posts={latestPosts} />
-        </section>
+      <Band id="latest">
+        <SectionIntro
+          eyebrow="RECENTLY UPDATED"
+          title="新しい更新"
+          description="追加や更新したページ"
+        />
+        <WhatsNew posts={latestPosts} />
+      </Band>
 
-        <section id="discover" className="border-t border-[var(--border)] py-12 sm:py-16">
-          <SectionIntro
-            eyebrow="RAMDON NEWS"
-            title="ランダムネス"
-            description="記事を無作為に表示させます"
-            align="left"
-          />
-          {children && (
-            <div id="topic-picks" className="mx-auto max-w-3xl scroll-mt-24">
-              {children}
-            </div>
-          )}
-        </section>
-
-        <div id="news" className="scroll-mt-24">
-          <WeeklyNews latest={weeklyNewsLatest} random={weeklyNewsRandom} />
-        </div>
-
-        <section id="repository" className="scroll-mt-24 border-t border-[var(--border)] py-12 sm:py-16">
-          <SectionIntro
-            eyebrow="ARTICLE"
-            title="記事一覧"
-            description="地域やメーカー，機械の用途で整理した記事です。"
-            align="left"
-          />
-          <div className="space-y-10">
-            {repositorySections.map((section) => (
-              <RepositoryGroup key={section.title} title={section.title}>
-                {section.items.map((item) => <RepositoryCard key={item.href} {...item} />)}
-              </RepositoryGroup>
-            ))}
+      <Band id="discover" tone="band">
+        <SectionIntro
+          eyebrow="RAMDON NEWS"
+          title="ランダムネス"
+          description="記事を無作為に表示させます"
+        />
+        {children && (
+          <div id="topic-picks" className="max-w-3xl scroll-mt-24">
+            {children}
           </div>
-        </section>
+        )}
+      </Band>
 
-        <BlogSection posts={blogPosts} />
+      <div id="news" className="scroll-mt-24">
+        <WeeklyNews latest={weeklyNewsLatest} random={weeklyNewsRandom} />
       </div>
+
+      <Band id="repository" tone="band">
+        <SectionIntro
+          eyebrow="ARTICLE"
+          title="記事一覧"
+          description="地域やメーカー，機械の用途で整理した記事です。"
+        />
+        <div className="space-y-12">
+          {repositorySections.map((section) => (
+            <RepositoryGroup key={section.title} title={section.title}>
+              {section.items.map((item) => <RepositoryCard key={item.href} {...item} />)}
+            </RepositoryGroup>
+          ))}
+        </div>
+      </Band>
+
+      <BlogSection posts={blogPosts} />
+    </div>
+  )
+}
+
+function Band({
+  id,
+  tone = 'page',
+  className = '',
+  children,
+}: {
+  id?: string
+  tone?: 'page' | 'band'
+  className?: string
+  children: React.ReactNode
+}) {
+  return (
+    <section id={id} className={'scroll-mt-20 py-12 sm:py-16 ' + (tone === 'band' ? 'bg-band ' : 'bg-page ') + className}>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">{children}</div>
+    </section>
   )
 }
 
@@ -230,25 +250,32 @@ function HeroBackgroundCarousel({
     return () => window.clearInterval(timer)
   }, [images.length, interval, reduceMotion])
 
+  const active = images[activeIndex]
+
   return (
-    <div className="absolute inset-0 bg-[#08100c]" aria-hidden="true">
-      {images.map((image, index) => (
-        <Image
-          key={image.src}
-          src={image.src}
-          alt=""
-          fill
-          priority={index === 0}
-          sizes="(max-width: 1280px) 100vw, 1280px"
-          className={
-            'object-cover transition-opacity duration-[1400ms] motion-reduce:transition-none ' +
-            (index === activeIndex ? 'opacity-55' : 'opacity-0')
-          }
-        />
-      ))}
-      <div className="hero-carousel-overlay" />
-      <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[var(--bg-primary)] to-transparent" />
-    </div>
+    <figure className="m-0">
+      <div className="hero-photo relative aspect-[4/3] w-full overflow-hidden border border-line">
+        {images.map((image, index) => (
+          <Image
+            key={image.src}
+            src={image.src}
+            alt={index === activeIndex ? image.alt : ''}
+            aria-hidden={index !== activeIndex}
+            fill
+            priority={index === 0}
+            sizes="(min-width: 1024px) 560px, 100vw"
+            className={
+              'object-cover transition-opacity duration-[1400ms] motion-reduce:transition-none ' +
+              (index === activeIndex ? 'opacity-100' : 'opacity-0')
+            }
+          />
+        ))}
+      </div>
+      <figcaption className="mt-2 flex items-center justify-between gap-3 text-sm text-ink-3" aria-live="off">
+        <span>{active?.alt}</span>
+        <span className="tabular-nums">{activeIndex + 1} / {images.length}</span>
+      </figcaption>
+    </figure>
   )
 }
 
@@ -256,7 +283,7 @@ function SectionIntro({
   eyebrow,
   title,
   description,
-  align = 'center',
+  align = 'left',
 }: {
   eyebrow: string
   title: string
@@ -265,10 +292,11 @@ function SectionIntro({
 }) {
   const alignment = align === 'left' ? 'items-start text-left' : 'items-center text-center'
   return (
-    <div className={'mb-7 flex flex-col ' + alignment}>
-      <p className="mb-2 text-[11px] font-bold tracking-[0.2em] text-[var(--accent)]">{eyebrow}</p>
-      <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">{title}</h2>
-      <p className="mt-2 max-w-2xl text-sm leading-6 text-gray-500">{description}</p>
+    <div className={'mb-8 flex flex-col ' + alignment}>
+      <p className="mb-2 text-xs font-bold tracking-[0.08em] text-brand-text">{eyebrow}</p>
+      <h2 className="text-2xl font-bold text-ink sm:text-[2rem]">{title}</h2>
+      <span className="mt-3 block h-1 w-12 bg-yellow" aria-hidden="true" />
+      <p className="mt-4 max-w-2xl text-base leading-7 text-ink-2">{description}</p>
     </div>
   )
 }
@@ -276,10 +304,9 @@ function SectionIntro({
 function RepositoryGroup({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section aria-labelledby={'collection-' + title}>
-      <div className="mb-4 flex items-center gap-3">
-        <h3 id={'collection-' + title} className="text-base font-bold text-gray-200 sm:text-lg">{title}</h3>
-        <span className="h-px flex-1 bg-[var(--border)]" />
-      </div>
+      <h3 id={'collection-' + title} className="mb-4 border-b-2 border-line pb-2 text-lg font-bold text-ink sm:text-xl">
+        {title}
+      </h3>
       <div className="home-tile-grid">{children}</div>
     </section>
   )
@@ -289,18 +316,20 @@ function RepositoryCard({ href, label, desc, count }: { href: string; label: str
   return (
     <Link
       href={href}
-      className="group flex min-h-[112px] flex-col rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--accent)] hover:bg-[var(--surface-strong)]"
+      className="group flex min-h-[124px] flex-col border border-line bg-surface p-5 text-ink transition-colors hover:border-brand hover:text-ink"
     >
       <div className="flex items-start justify-between gap-3">
-        <h4 className="line-clamp-2 text-base font-bold text-gray-100 transition-colors group-hover:text-[var(--accent)]">{label}</h4>
+        <h4 className="line-clamp-2 text-base font-bold text-ink group-hover:text-brand-text group-hover:underline">{label}</h4>
         {typeof count === 'number' && (
-          <span className="shrink-0 rounded-full border border-[var(--border)] px-2 py-0.5 text-[10px] font-mono text-gray-500">
+          <span className="shrink-0 border border-line px-2 py-0.5 text-[11px] text-ink-3">
             {count} docs
           </span>
         )}
       </div>
-      {desc && <p className="mt-2 line-clamp-2 text-xs leading-5 text-gray-500">{desc}</p>}
-      <ArrowRight size={15} className="mt-auto self-end text-gray-600 transition-all group-hover:translate-x-1 group-hover:text-[var(--accent)]" aria-hidden="true" />
+      {desc && <p className="mt-2 line-clamp-2 text-sm leading-6 text-ink-2">{desc}</p>}
+      <span className="link-more mt-auto self-end pt-3 text-sm">
+        <ChevronRight size={18} aria-hidden="true" />
+      </span>
     </Link>
   )
 }
@@ -321,12 +350,11 @@ function BlogSection({ posts }: { posts: BlogPost[] }) {
   }
 
   return (
-    <section id="blog" className="scroll-mt-24 border-t border-[var(--border)] py-12 sm:py-16">
+    <Band id="blog">
       <SectionIntro
         eyebrow="FIELD NOTES"
         title="ブログ"
         description="記事までは行かない，短編メモです．"
-        align="left"
       />
       <div className="home-tile-grid">
         {visiblePosts.map((post) => (
@@ -334,33 +362,35 @@ function BlogSection({ posts }: { posts: BlogPost[] }) {
             key={post.href}
             href={post.href}
             onClick={rememberBlogPosition}
-            className="group flex min-h-[170px] flex-col rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4 transition-all hover:-translate-y-0.5 hover:border-[var(--accent)] hover:bg-[var(--surface-strong)]"
+            className="group flex min-h-[184px] flex-col border border-line bg-surface p-5 text-ink transition-colors hover:border-brand hover:text-ink"
           >
             <div className="mb-3 flex items-center justify-between gap-3">
-              <span className="text-xs font-mono text-gray-600">{post.date}</span>
+              <span className="text-xs text-ink-3">{post.date}</span>
               {post.category && (
-                <span className="shrink-0 rounded-full bg-white/[0.04] px-2 py-1 text-[10px] text-gray-500">{post.category}</span>
+                <span className="shrink-0 bg-band px-2 py-0.5 text-[11px] text-ink-2">{post.category}</span>
               )}
             </div>
-            <h3 className="line-clamp-2 text-base font-bold leading-snug text-gray-100 transition-colors group-hover:text-[var(--accent)]">{post.title}</h3>
-            <p className="mt-2 line-clamp-3 text-xs leading-relaxed text-gray-500">{post.excerpt}</p>
-            <span className="mt-auto pt-3 text-xs font-medium text-[var(--accent)]">読む →</span>
+            <h3 className="line-clamp-2 text-base font-bold leading-snug text-ink group-hover:text-brand-text group-hover:underline">{post.title}</h3>
+            <p className="mt-2 line-clamp-3 text-sm leading-6 text-ink-2">{post.excerpt}</p>
+            <span className="link-more mt-auto pt-3 text-sm">
+              読む <ChevronRight size={16} aria-hidden="true" />
+            </span>
           </Link>
         ))}
       </div>
       {posts.length > 12 && (
-        <div className="mt-7 flex justify-center">
+        <div className="mt-8 flex justify-center">
           <button
             type="button"
             onClick={() => setShowAll((current) => !current)}
             aria-expanded={showAll}
-            className="inline-flex min-h-11 items-center gap-2 rounded-full border border-[var(--border-strong)] bg-white/[0.03] px-5 text-sm font-medium text-gray-300 transition-colors hover:border-gray-500 hover:bg-white/[0.06] hover:text-white"
+            className="btn-secondary"
           >
             {showAll ? '表示を戻す' : 'すべてのブログを見る'}
             <ChevronDown size={16} className={showAll ? 'rotate-180 transition-transform' : 'transition-transform'} aria-hidden="true" />
           </button>
         </div>
       )}
-    </section>
+    </Band>
   )
 }

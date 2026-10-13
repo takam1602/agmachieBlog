@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
-import { ArrowUpRight, Search, X } from 'lucide-react'
+import { ChevronRight, Search, X } from 'lucide-react'
 
 // Updated to accept more data if available, but keeping it compatible
 type Entry = {
@@ -262,7 +262,7 @@ export default function SearchableList({ entries }: { entries: Entry[] }) {
     <div className="w-full">
       <div className="relative group max-w-4xl mx-auto">
         <div className="repository-search-icon absolute inset-y-0 left-0 flex items-center pointer-events-none">
-          <Search size={24} className="text-gray-500 group-focus-within:text-[var(--accent)] transition-colors" />
+          <Search size={22} className="text-ink-3 group-focus-within:text-brand-text" />
         </div>
         <input
           ref={inputRef}
@@ -274,14 +274,14 @@ export default function SearchableList({ entries }: { entries: Entry[] }) {
           placeholder="機械名・メーカー・国などで検索"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="repository-search-input w-full rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] text-white outline-none transition-all placeholder:text-gray-500 focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent)]/10"
+          className="repository-search-input w-full border-2 border-line-strong bg-surface text-ink outline-none transition-colors focus:border-brand"
         />
         {(query || category) && (
           <button
             type="button"
             onClick={reset}
             aria-label="検索条件をクリア"
-            className="absolute inset-y-0 right-3 my-auto flex h-9 w-9 items-center justify-center rounded-full text-gray-500 transition-colors hover:bg-white/5 hover:text-white"
+            className="absolute inset-y-0 right-3 my-auto flex h-9 w-9 items-center justify-center text-ink-3 transition-colors hover:bg-band hover:text-ink"
           >
             <X size={18} />
           </button>
@@ -296,8 +296,8 @@ export default function SearchableList({ entries }: { entries: Entry[] }) {
             aria-pressed={category === item}
             onClick={() => setCategory((current) => current === item ? '' : item)}
             className={category === item
-              ? 'rounded-full border border-[var(--accent)] bg-[var(--accent)]/15 px-3 py-1.5 text-xs text-[var(--accent)] transition-colors'
-              : 'rounded-full border border-[var(--border)] bg-white/[0.02] px-3 py-1.5 text-xs text-gray-400 transition-colors hover:border-gray-500 hover:text-gray-200'
+              ? 'border border-brand bg-brand px-3 py-1.5 text-sm font-bold text-on-brand transition-colors'
+              : 'border border-line-strong bg-surface px-3 py-1.5 text-sm text-ink transition-colors hover:border-brand hover:text-brand-text'
             }
           >
             {getCategoryLabel(item)}
@@ -306,7 +306,7 @@ export default function SearchableList({ entries }: { entries: Entry[] }) {
       </div>
 
       {!isSearching && (
-        <div className="mt-5 flex flex-wrap items-center justify-center gap-2 text-xs text-gray-500">
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-2 text-sm text-ink-3">
           <span>検索例:</span>
           {['トラクター', 'コンバイン', '北海道開発'].map((suggestion) => (
             <button
@@ -316,7 +316,7 @@ export default function SearchableList({ entries }: { entries: Entry[] }) {
                 setQuery(suggestion)
                 inputRef.current?.focus()
               }}
-              className="rounded-full bg-white/[0.04] px-3 py-1.5 text-gray-400 transition-colors hover:bg-white/[0.08] hover:text-white"
+              className="px-1.5 py-1 font-bold text-brand-text underline underline-offset-4 hover:text-brand-hover"
             >
               {suggestion}
             </button>
@@ -326,8 +326,8 @@ export default function SearchableList({ entries }: { entries: Entry[] }) {
       )}
 
       {isSearching && (
-        <p className="mb-4 mt-7 text-center text-sm text-gray-400" aria-live="polite">
-          <span className="font-semibold text-white">{filtered.length}</span> 件を表示
+        <p className="mb-4 mt-7 text-center text-sm text-ink-2" aria-live="polite">
+          <span className="font-bold text-ink">{filtered.length}</span> 件を表示
           {category && <span> ・ {getCategoryLabel(category)}</span>}
         </p>
       )}
@@ -338,27 +338,27 @@ export default function SearchableList({ entries }: { entries: Entry[] }) {
             <Link
               key={entry.href}
               href={entry.href}
-              className="group flex h-full flex-col overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--surface)] transition-all duration-200 hover:-translate-y-1 hover:border-[var(--accent)] hover:shadow-lg hover:shadow-black/20"
+              className="group flex h-full flex-col overflow-hidden border border-line bg-surface text-ink transition-colors hover:border-brand hover:text-ink"
             >
-              <div className="flex h-full min-h-[150px] flex-col p-4">
+              <div className="flex h-full min-h-[160px] flex-col p-5">
                 <div className="mb-2 flex items-center justify-between gap-2">
                   {entry.category && (
-                    <span className="rounded-full bg-white/[0.04] px-2 py-0.5 text-[10px] uppercase tracking-wide text-gray-500">
+                    <span className="bg-band px-2 py-0.5 text-[11px] text-ink-2">
                       {getCategoryLabel(entry.category)}
                     </span>
                   )}
                   {entry.date && (
-                    <span className="ml-auto text-[10px] font-mono text-gray-600 transition-colors group-hover:text-gray-500">
+                    <span className="ml-auto text-xs text-ink-3">
                       {entry.date}
                     </span>
                   )}
                 </div>
-                <h3 className="mb-2 line-clamp-3 text-sm font-bold leading-snug text-gray-200 transition-colors group-hover:text-[var(--accent)] md:text-base">
+                <h3 className="mb-2 line-clamp-3 text-base font-bold leading-snug text-ink group-hover:text-brand-text group-hover:underline">
                   {entry.label}
                 </h3>
-                {entry.excerpt && <p className="mt-auto line-clamp-3 text-xs leading-relaxed text-gray-500">{entry.excerpt}</p>}
-                <span className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-[var(--accent)]">
-                  記事を読む <ArrowUpRight size={13} aria-hidden="true" />
+                {entry.excerpt && <p className="mt-auto line-clamp-3 text-sm leading-6 text-ink-2">{entry.excerpt}</p>}
+                <span className="link-more mt-3 text-sm">
+                  記事を読む <ChevronRight size={16} aria-hidden="true" />
                 </span>
               </div>
             </Link>
@@ -367,10 +367,10 @@ export default function SearchableList({ entries }: { entries: Entry[] }) {
       )}
 
       {isSearching && filtered.length === 0 && (
-        <div className="rounded-xl border border-dashed border-[var(--border)] bg-[var(--surface)]/50 py-14 text-center text-gray-500">
-          <p className="text-gray-300">該当する記事は見つかりませんでした。</p>
+        <div className="border border-dashed border-line-strong bg-surface py-14 text-center text-ink-3">
+          <p className="font-bold text-ink">該当する記事は見つかりませんでした。</p>
           <p className="mt-2 text-sm">表記を短くするか、カテゴリを外してお試しください。</p>
-          <button type="button" onClick={reset} className="mt-5 text-sm font-medium text-[var(--accent)] hover:underline">
+          <button type="button" onClick={reset} className="mt-5 text-sm font-bold text-brand-text underline underline-offset-4">
             検索条件をクリア
           </button>
         </div>

@@ -105,66 +105,66 @@ export default function DocInteractive({ source, dirUrl }: Props) {
       <div className="mx-auto grid w-full max-w-[1480px] grid-cols-1 gap-10 px-4 py-6 sm:px-6 sm:py-10 xl:grid-cols-[minmax(0,1fr)_292px] xl:px-8">
         <div className="min-w-0 w-full">
           <div className="mx-auto mb-7 max-w-[88ch]">
-            <nav className="flex flex-wrap items-center gap-1.5 text-xs text-gray-500" aria-label="パンくずリスト">
-              <Link href="/" className="inline-flex items-center gap-1 rounded-md px-1.5 py-1 text-gray-500 hover:bg-white/[0.04] hover:text-gray-200">
+            <nav className="flex flex-wrap items-center gap-1.5 text-sm text-ink-3" aria-label="パンくずリスト">
+              <Link href="/" className="inline-flex items-center gap-1 px-1 py-1 text-brand-text underline-offset-4 hover:underline">
                 <Home size={12} aria-hidden="true" />
                 ホーム
               </Link>
               <span aria-hidden="true">/</span>
-              <Link href={sectionHref} className="rounded-md px-1.5 py-1 text-gray-500 hover:bg-white/[0.04] hover:text-gray-200">
+              <Link href={sectionHref} className="px-1 py-1 text-brand-text underline-offset-4 hover:underline">
                 {sectionLabel}
               </Link>
               {headings[0]?.text && (
                 <>
                   <span aria-hidden="true">/</span>
-                  <span className="max-w-[20rem] truncate px-1.5 py-1 text-gray-400" aria-current="page">
+                  <span className="max-w-[20rem] truncate px-1 py-1 text-ink-2" aria-current="page">
                     {headings[0].text}
                   </span>
                 </>
               )}
             </nav>
 
-            <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-y border-[var(--border)] py-3">
-              <div className="flex items-center gap-4 text-xs text-gray-500">
+            <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-y border-line py-3">
+              <div className="flex items-center gap-4 text-sm text-ink-3">
                 <span className="inline-flex items-center gap-1.5">
-                  <Clock3 size={14} className="text-[var(--accent)]" aria-hidden="true" />
+                  <Clock3 size={15} className="text-brand-text" aria-hidden="true" />
                   約 {readingMinutes} 分
                 </span>
                 <span className="inline-flex items-center gap-1.5">
-                  <List size={14} className="text-[var(--accent)]" aria-hidden="true" />
+                  <List size={15} className="text-brand-text" aria-hidden="true" />
                   {headings.length} セクション
                 </span>
               </div>
               <button
                 type="button"
                 onClick={copyPageLink}
-                className="inline-flex min-h-9 items-center gap-2 rounded-full border border-[var(--border)] bg-white/[0.02] px-3 text-xs text-gray-400 transition-colors hover:border-gray-500 hover:text-white"
+                className="inline-flex min-h-9 items-center gap-2 border-2 border-ink px-3 text-sm font-bold text-ink transition-colors hover:border-brand hover:bg-brand hover:text-on-brand"
                 aria-live="polite"
               >
-                {copied ? <Check size={14} className="text-[var(--accent)]" /> : <Copy size={14} />}
+                {copied ? <Check size={14} /> : <Copy size={14} />}
                 {copied ? 'コピーしました' : 'ページを共有'}
               </button>
             </div>
 
             <div className="mt-5 flex items-center justify-between gap-3 xl:hidden">
-              <Link href={homeHref} className="inline-flex min-h-10 items-center rounded-full border border-[var(--border)] px-4 text-xs text-gray-400 hover:border-gray-500 hover:text-white">
+              <Link href={homeHref} className="link-more min-h-10 text-sm">
                 ← 一覧へ戻る
               </Link>
               <InPageSearch articleSelector="#md-article" />
             </div>
 
             {headings.length > 0 && (
-              <details className="mt-4 rounded-xl border border-[var(--border)] bg-[var(--surface)] xl:hidden">
-                <summary className="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-semibold text-gray-200">
-                  <span className="inline-flex items-center gap-2"><List size={15} className="text-[var(--accent)]" /> 目次</span>
-                  <ChevronDown size={16} className="details-chevron text-gray-500 transition-transform" />
+              <details className="mt-4 border border-line bg-band xl:hidden">
+                <summary className="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-base font-bold text-ink">
+                  <span className="inline-flex items-center gap-2"><List size={16} className="text-brand-text" /> 目次</span>
+                  <ChevronDown size={16} className="details-chevron text-ink-3 transition-transform" />
                 </summary>
                 <TableOfContents headings={headings} compact />
               </details>
             )}
           </div>
 
-          <article id="md-article" className="md-article prose prose-invert w-full">
+          <article id="md-article" className="md-article prose w-full">
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
               components={{
@@ -172,6 +172,11 @@ export default function DocInteractive({ source, dirUrl }: Props) {
                   if (typeof src !== 'string') return null
                   return <MarkdownImage src={src} alt={alt} />
                 },
+                table: ({ children }) => (
+                  <div className="md-table-scroll">
+                    <table>{children}</table>
+                  </div>
+                ),
                 h1: ({ children, ...rest }) => <HeadingRenderer level={1} getId={headingSlugger} {...rest}>{children}</HeadingRenderer>,
                 h2: ({ children, ...rest }) => <HeadingRenderer level={2} getId={headingSlugger} {...rest}>{children}</HeadingRenderer>,
                 h3: ({ children, ...rest }) => <HeadingRenderer level={3} getId={headingSlugger} {...rest}>{children}</HeadingRenderer>,
@@ -204,7 +209,7 @@ export default function DocInteractive({ source, dirUrl }: Props) {
                       : dirUrl + url
 
                   return (
-                    <Link href={fixed} className={'text-[var(--link)] underline ' + (className ?? '')} title={title}>
+                    <Link href={fixed} className={'text-brand-text underline ' + (className ?? '')} title={title}>
                       {children}
                     </Link>
                   )
@@ -217,20 +222,20 @@ export default function DocInteractive({ source, dirUrl }: Props) {
         </div>
 
         <aside className="sticky top-24 hidden h-fit max-h-[calc(100vh-7rem)] overflow-y-auto pr-2 xl:block">
-          <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-4">
-            <div className="mb-5 flex flex-col items-stretch gap-3 border-b border-[var(--border)] pb-4">
-              <Link href={homeHref} className="w-fit whitespace-nowrap text-xs font-medium text-gray-400 transition-colors hover:text-white">
+          <div className="border border-line border-t-4 border-t-brand bg-surface p-4">
+            <div className="mb-5 flex flex-col items-stretch gap-3 border-b border-line pb-4">
+              <Link href={homeHref} className="w-fit whitespace-nowrap text-sm font-bold text-brand-text hover:underline">
                 ← 一覧へ戻る
               </Link>
               <InPageSearch articleSelector="#md-article" />
             </div>
             {headings.length > 0 ? (
               <>
-                <p className="mb-3 text-[10px] font-bold tracking-[0.18em] text-gray-600">ON THIS PAGE</p>
+                <p className="mb-3 text-xs font-bold tracking-[0.08em] text-ink-3">ON THIS PAGE</p>
                 <ActiveTableOfContents headings={headings} />
               </>
             ) : (
-              <p className="text-sm text-gray-500">この記事には目次がありません。</p>
+              <p className="text-sm text-ink-3">この記事には目次がありません。</p>
             )}
           </div>
         </aside>
@@ -242,14 +247,14 @@ export default function DocInteractive({ source, dirUrl }: Props) {
 
 function TableOfContents({ headings, compact = false }: { headings: Heading[]; compact?: boolean }) {
   return (
-    <ul className={compact ? 'max-h-72 space-y-1 overflow-y-auto border-t border-[var(--border)] px-4 py-3' : 'space-y-1'}>
+    <ul className={compact ? 'max-h-72 space-y-1 overflow-y-auto border-t border-line bg-surface px-4 py-3' : 'space-y-1'}>
       {headings.map((heading, index) => (
         <li
           key={heading.id + '-' + index}
-          className={heading.level === 1 ? 'mt-2 font-semibold' : ''}
+          className={heading.level === 1 ? 'mt-2 font-bold' : ''}
           style={{ paddingLeft: (heading.level - 1) * 0.75 + 'rem' }}
         >
-          <a href={'#' + heading.id} className="block rounded-md px-2 py-1.5 text-xs leading-relaxed text-gray-500 transition-colors hover:bg-white/[0.04] hover:text-[var(--accent)]">
+          <a href={'#' + heading.id} className="block px-2 py-1.5 text-sm leading-relaxed text-ink-2 hover:text-brand-text hover:underline">
             {heading.text}
           </a>
         </li>
@@ -283,8 +288,8 @@ function ActiveTableOfContents({ headings }: { headings: Heading[] }) {
             href={'#' + heading.id}
             aria-current={activeId === heading.id ? 'location' : undefined}
             className={activeId === heading.id
-              ? 'block rounded-md border-l-2 border-[var(--accent)] bg-[var(--accent)]/[0.07] px-2 py-1.5 text-xs font-medium leading-relaxed text-[var(--accent)]'
-              : 'block rounded-md border-l-2 border-transparent px-2 py-1.5 text-xs leading-relaxed text-gray-500 transition-colors hover:bg-white/[0.03] hover:text-gray-200'
+              ? 'block border-l-4 border-brand bg-brand-tint px-2 py-1.5 text-sm font-bold leading-relaxed text-ink'
+              : 'block border-l-4 border-transparent px-2 py-1.5 text-sm leading-relaxed text-ink-2 transition-colors hover:border-line-strong hover:text-ink'
             }
           >
             {heading.text}
@@ -317,8 +322,8 @@ function ReadingProgress({ articleSelector }: { articleSelector: string }) {
   }, [articleSelector])
 
   return (
-    <div className="fixed inset-x-0 top-[67px] z-50 h-0.5 bg-transparent" aria-hidden="true">
-      <div className="h-full origin-left bg-[var(--accent)] transition-transform duration-150" style={{ transform: 'scaleX(' + progress + ')' }} />
+    <div className="fixed inset-x-0 top-[67px] z-50 h-1 bg-transparent" aria-hidden="true">
+      <div className="h-full origin-left bg-yellow transition-transform duration-150" style={{ transform: 'scaleX(' + progress + ')' }} />
     </div>
   )
 }
@@ -338,7 +343,7 @@ function BackToTop() {
     <button
       type="button"
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-      className="fixed bottom-5 right-5 z-40 grid h-11 w-11 place-items-center rounded-full border border-[var(--border-strong)] bg-[var(--surface-strong)] text-gray-300 shadow-xl transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)] sm:bottom-7 sm:right-7"
+      className="fixed bottom-5 right-5 z-40 grid h-11 w-11 place-items-center bg-yellow text-on-yellow transition-colors hover:bg-yellow-hover sm:bottom-7 sm:right-7"
       aria-label="ページ上部へ戻る"
     >
       <ArrowUp size={18} />
@@ -433,7 +438,7 @@ function InPageSearch({ articleSelector }: { articleSelector: string }) {
         range.setEnd(text, position + value.length)
         const mark = document.createElement('mark')
         mark.setAttribute('data-hl', '')
-        mark.className = 'rounded-sm bg-yellow-400/25 text-inherit outline outline-1 outline-yellow-400/60'
+        mark.className = 'bg-mark text-inherit'
         range.surroundContents(mark)
         matches.push(mark)
         const after = mark.nextSibling
@@ -449,7 +454,7 @@ function InPageSearch({ articleSelector }: { articleSelector: string }) {
     setTotal(matches.length)
     setIndex(matches.length ? 1 : 0)
     if (matches[0]) {
-      matches[0].classList.add('ring-2', 'ring-[var(--accent)]')
+      matches[0].classList.add('outline-2', 'outline-brand')
       activeRef.current = matches[0]
       matches[0].scrollIntoView({ behavior: 'smooth', block: 'center' })
     }
@@ -460,34 +465,34 @@ function InPageSearch({ articleSelector }: { articleSelector: string }) {
     const root = document.querySelector(articleSelector)
     const matches = Array.from(root?.querySelectorAll<HTMLElement>('mark[data-hl]') ?? [])
     if (!matches.length) return
-    activeRef.current?.classList.remove('ring-2', 'ring-[var(--accent)]')
+    activeRef.current?.classList.remove('outline-2', 'outline-brand')
     let next = index + direction
     if (next < 1) next = matches.length
     if (next > matches.length) next = 1
     setIndex(next)
     const target = matches[next - 1]
-    target.classList.add('ring-2', 'ring-[var(--accent)]')
+    target.classList.add('outline-2', 'outline-brand')
     activeRef.current = target
     target.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
 
   return (
-    <div className="flex items-center gap-1 rounded-lg border border-[var(--border)] bg-black/15 p-1.5">
-      <Search size={13} className="ml-1 shrink-0 text-gray-600" aria-hidden="true" />
+    <div className="flex items-center gap-1 border border-line-strong bg-surface p-1.5">
+      <Search size={14} className="ml-1 shrink-0 text-ink-3" aria-hidden="true" />
       <input
         type="search"
         value={query}
         onChange={(event) => setQuery(event.target.value)}
         placeholder="本文検索"
         aria-label="本文内を検索"
-        className="w-20 bg-transparent px-1 text-xs text-white outline-none placeholder:text-gray-600"
+        className="w-24 bg-transparent px-1 text-sm text-ink outline-none placeholder:text-ink-3"
       />
-      <span className="min-w-7 text-center font-mono text-[9px] text-gray-600" aria-live="polite">{index}/{total}</span>
-      <div className="flex border-l border-[var(--border)] pl-1">
-        <button type="button" onClick={() => move(-1)} disabled={!total} className="grid h-6 w-6 place-items-center rounded text-gray-500 hover:bg-white/5 hover:text-white disabled:opacity-30" aria-label="前の一致">
+      <span className="min-w-7 text-center text-[11px] text-ink-3" aria-live="polite">{index}/{total}</span>
+      <div className="flex border-l border-line pl-1">
+        <button type="button" onClick={() => move(-1)} disabled={!total} className="grid h-6 w-6 place-items-center text-ink-2 hover:bg-band hover:text-ink disabled:opacity-30" aria-label="前の一致">
           <ChevronUp size={13} />
         </button>
-        <button type="button" onClick={() => move(1)} disabled={!total} className="grid h-6 w-6 place-items-center rounded text-gray-500 hover:bg-white/5 hover:text-white disabled:opacity-30" aria-label="次の一致">
+        <button type="button" onClick={() => move(1)} disabled={!total} className="grid h-6 w-6 place-items-center text-ink-2 hover:bg-band hover:text-ink disabled:opacity-30" aria-label="次の一致">
           <ChevronDown size={13} />
         </button>
       </div>

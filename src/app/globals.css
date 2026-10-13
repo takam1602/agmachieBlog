@@ -1,93 +1,200 @@
 @import "tailwindcss";
 @config "../../tailwind.config.cjs";
 
+/*
+ * Palette after deere.asia: white pages, #333 text, John Deere green (#367c2b),
+ * yellow (#fdda01) for primary actions, light grey bands and hairlines.
+ *
+ * Every colour is a token here, so:
+ *  - prefers-color-scheme: dark gets a hand-tuned dark palette, and
+ *  - Dark Reader (dynamic mode) only has flat, opaque colours to remap –
+ *    no translucent white overlays, glows or text-over-gradient tricks.
+ */
 :root {
-  color-scheme: dark;
-  --bg-primary: #0d0f0e;
-  --bg-secondary: #131715;
-  --surface: #151917;
-  --surface-strong: #1a201d;
-  --border: #29302c;
-  --border-strong: #3a4540;
-  --text-primary: #edf2ef;
-  --text-secondary: #a7b0ab;
-  --accent: #5bd69d;
-  --accent-hover: #72e5ae;
-  --link: #63d6a3;
-  --link-hover: #8beabb;
+  color-scheme: light dark;
+
+  --c-page: #ffffff;
+  --c-band: #f4f3f3;
+  --c-surface: #ffffff;
+  --c-line: #e5e5e5;
+  --c-line-strong: #c2c2c2;
+
+  --c-ink: #333333;
+  --c-ink-2: #555555;
+  --c-ink-3: #6b6b6b;
+
+  --c-green: #367c2b;
+  --c-green-hover: #2b6422;
+  --c-green-text: #367c2b;
+  --c-on-green: #ffffff;
+  --c-green-tint: #eaf2e9;
+
+  --c-yellow: #fdda01;
+  --c-yellow-hover: #f1cf00;
+  --c-on-yellow: #333333;
+
+  --c-footer: #333333;
+  --c-footer-ink: #f4f3f3;
+  --c-footer-ink-2: #c2c2c2;
+
+  --c-code: #f4f3f3;
+  --c-mark: #fff1a1;
+  --c-danger: #bd2e28;
+  --c-warn-bg: #fff8d6;
+  --c-warn-ink: #5c4a00;
+
+  /* Legacy names still referenced by components / prose rules */
+  --bg-primary: var(--c-page);
+  --bg-secondary: var(--c-band);
+  --surface: var(--c-surface);
+  --surface-strong: var(--c-band);
+  --border: var(--c-line);
+  --border-strong: var(--c-line-strong);
+  --text-primary: var(--c-ink);
+  --text-secondary: var(--c-ink-2);
+  --accent: var(--c-green);
+  --accent-hover: var(--c-green-hover);
+  --link: var(--c-green-text);
+  --link-hover: var(--c-green-hover);
+
+  --font-sans-jp:
+    "Helvetica Neue", Helvetica, Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+    "Noto Sans JP", "BIZ UDPGothic", Meiryo, sans-serif;
 }
 
-* {
-  box-sizing: border-box;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c-page: #1a1b1a;
+    --c-band: #222422;
+    --c-surface: #1f211f;
+    --c-line: #363936;
+    --c-line-strong: #4f534f;
+
+    --c-ink: #ececec;
+    --c-ink-2: #c4c4c4;
+    --c-ink-3: #a3a3a3;
+
+    --c-green: #367c2b;
+    --c-green-hover: #3f8f32;
+    --c-green-text: #8fcf7f;
+    --c-on-green: #ffffff;
+    --c-green-tint: #243522;
+
+    --c-yellow: #fdda01;
+    --c-yellow-hover: #f1cf00;
+    --c-on-yellow: #222222;
+
+    --c-footer: #111211;
+    --c-footer-ink: #ececec;
+    --c-footer-ink-2: #a3a3a3;
+
+    --c-code: #141514;
+    --c-mark: #5c5000;
+    --c-danger: #f08a84;
+    --c-warn-bg: #3a3214;
+    --c-warn-ink: #f3dd8a;
+
+    --link-hover: #b2e3a6;
+  }
 }
 
-html {
-  min-height: 100%;
-  scroll-behavior: smooth;
-  scroll-padding-top: 6rem;
-  background: var(--bg-primary);
+@theme inline {
+  --color-page: var(--c-page);
+  --color-band: var(--c-band);
+  --color-surface: var(--c-surface);
+  --color-line: var(--c-line);
+  --color-line-strong: var(--c-line-strong);
+  --color-ink: var(--c-ink);
+  --color-ink-2: var(--c-ink-2);
+  --color-ink-3: var(--c-ink-3);
+  --color-brand: var(--c-green);
+  --color-brand-hover: var(--c-green-hover);
+  --color-brand-text: var(--c-green-text);
+  --color-brand-tint: var(--c-green-tint);
+  --color-on-brand: var(--c-on-green);
+  --color-yellow: var(--c-yellow);
+  --color-yellow-hover: var(--c-yellow-hover);
+  --color-on-yellow: var(--c-on-yellow);
+  --color-footer: var(--c-footer);
+  --color-footer-ink: var(--c-footer-ink);
+  --color-footer-ink-2: var(--c-footer-ink-2);
+  --color-code: var(--c-code);
+  --color-mark: var(--c-mark);
+  --color-danger: var(--c-danger);
+  --color-warn-bg: var(--c-warn-bg);
+  --color-warn-ink: var(--c-warn-ink);
 }
 
-body {
-  min-height: 100vh;
-  margin: 0;
-  background:
-    radial-gradient(circle at 50% -12rem, rgba(43, 117, 79, 0.13), transparent 38rem),
-    var(--bg-primary);
-  color: var(--text-primary);
-  font-family:
-    Inter, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic",
-    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-}
+/* Base rules live in a layer so Tailwind utilities on <a>, <h2>… still win. */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
 
-button,
-input,
-textarea,
-select {
-  font: inherit;
-}
+  html {
+    min-height: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    background: var(--c-page);
+  }
 
-::selection {
-  color: #07140f;
-  background: var(--accent);
-}
+  body {
+    min-height: 100vh;
+    margin: 0;
+    background: var(--c-page);
+    color: var(--c-ink);
+    font-family: var(--font-sans-jp);
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
 
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
-}
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
 
-code,
-pre,
-kbd {
-  font-family: "Fira Code", "SFMono-Regular", Consolas, monospace;
-}
+  ::selection {
+    color: var(--c-on-yellow);
+    background: var(--c-yellow);
+  }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--text-primary);
-  font-weight: 700;
-  letter-spacing: -0.025em;
-}
+  :focus-visible {
+    outline: 2px solid var(--c-green-text);
+    outline-offset: 2px;
+  }
 
-h1 { font-size: 2.25rem; line-height: 1.18; }
-h2 { font-size: 1.875rem; line-height: 1.25; }
-h3 { font-size: 1.5rem; line-height: 1.35; }
+  code,
+  pre,
+  kbd {
+    font-family: "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+  }
 
-a {
-  color: var(--link);
-  text-decoration: none;
-  transition: color 160ms ease;
-}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--c-ink);
+    font-weight: 700;
+    letter-spacing: 0;
+  }
 
-a:hover {
-  color: var(--link-hover);
+  h1 { font-size: 2.25rem; line-height: 1.25; }
+  h2 { font-size: 1.875rem; line-height: 1.3; }
+  h3 { font-size: 1.375rem; line-height: 1.4; }
+
+  a {
+    color: var(--c-green-text);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--link-hover);
+  }
 }
 
 .text-balance {
@@ -98,43 +205,97 @@ a:hover {
   text-wrap: pretty;
 }
 
-.hero-glow {
-  position: absolute;
-  top: -13rem;
-  left: 50%;
-  width: min(52rem, 95vw);
-  height: 34rem;
-  transform: translateX(-50%);
-  border-radius: 9999px;
-  background: radial-gradient(circle, rgba(91, 214, 157, 0.13), transparent 68%);
-  pointer-events: none;
+/* Hero photo: plain photo, no scrim – text sits on its own solid panel. */
+.hero-photo {
+  background: #2b2b2b;
 }
 
-.hero-carousel-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at center, rgba(5, 13, 9, 0.5), rgba(5, 10, 8, 0.82) 72%),
-    linear-gradient(180deg, rgba(4, 10, 7, 0.18), rgba(4, 10, 7, 0.8));
+/* Deere-style primary / secondary buttons (square, bold). */
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  min-height: 2.875rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0 1.5rem;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+
+.btn-primary {
+  border-color: var(--c-yellow);
+  background: var(--c-yellow);
+  color: var(--c-on-yellow);
+}
+
+.btn-primary:hover {
+  border-color: var(--c-yellow-hover);
+  background: var(--c-yellow-hover);
+  color: var(--c-on-yellow);
+}
+
+.btn-secondary {
+  border-color: var(--c-ink);
+  background: transparent;
+  color: var(--c-ink);
+}
+
+.btn-secondary:hover {
+  border-color: var(--c-green);
+  background: var(--c-green);
+  color: var(--c-on-green);
+}
+
+/* Text link with chevron, as used on deere.asia ("詳細はこちら >") */
+.link-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--c-green-text);
+  font-weight: 700;
 }
 
 .prose {
-  color: var(--text-secondary);
+  --tw-prose-body: var(--c-ink-2);
+  --tw-prose-headings: var(--c-ink);
+  --tw-prose-lead: var(--c-ink-2);
+  --tw-prose-links: var(--c-green-text);
+  --tw-prose-bold: var(--c-ink);
+  --tw-prose-counters: var(--c-ink-3);
+  --tw-prose-bullets: var(--c-line-strong);
+  --tw-prose-hr: var(--c-line);
+  --tw-prose-quotes: var(--c-ink);
+  --tw-prose-quote-borders: var(--c-green);
+  --tw-prose-captions: var(--c-ink-3);
+  --tw-prose-kbd: var(--c-ink);
+  --tw-prose-code: var(--c-ink);
+  --tw-prose-pre-code: var(--c-ink);
+  --tw-prose-pre-bg: var(--c-code);
+  --tw-prose-th-borders: var(--c-line-strong);
+  --tw-prose-td-borders: var(--c-line);
+  color: var(--c-ink-2);
 }
 
 .md-article {
   max-width: min(100%, 1180px);
   margin-inline: auto;
   font-size: clamp(1rem, 0.96rem + 0.18vw, 1.075rem);
-  line-height: 1.92;
+  line-height: 1.9;
 }
 
+/* rem, not ch: ch scales with each heading's font size and made h1/h2 wider than the text. */
 .md-article > * {
-  max-width: min(100%, 88ch);
+  max-width: min(100%, 50rem);
   margin-inline: auto;
 }
 
-.md-article > table,
+.md-article > .md-table-scroll,
 .md-article > pre,
 .md-article > blockquote,
 .md-article > ul,
@@ -151,82 +312,104 @@ a:hover {
 .prose h1 {
   margin-top: 0.4em;
   margin-bottom: 0.8em;
-  font-size: clamp(2rem, 5vw, 3.15rem);
-  line-height: 1.2;
-  letter-spacing: -0.04em;
+  font-size: clamp(1.875rem, 4.5vw, 2.75rem);
+  line-height: 1.25;
 }
 
 .prose h2 {
-  margin-top: 2.3em;
+  margin-top: 2.4em;
   margin-bottom: 0.8em;
-  padding-bottom: 0.5em;
-  border-bottom: 1px solid var(--border);
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  padding-bottom: 0.45em;
+  border-bottom: 2px solid var(--c-line);
+  font-size: clamp(1.4rem, 3vw, 1.875rem);
 }
 
 .prose h3 {
   margin-top: 1.9em;
-  margin-bottom: 0.65em;
-  font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+  margin-bottom: 0.6em;
+  font-size: clamp(1.15rem, 2.4vw, 1.375rem);
 }
 
 .prose h1,
 .prose h2,
 .prose h3,
 .prose strong {
-  color: var(--text-primary);
+  color: var(--c-ink);
 }
 
 .prose p,
 .prose li {
-  color: #b7c0bb;
+  color: var(--c-ink-2);
 }
 
 .prose a {
-  color: var(--link);
+  color: var(--c-green-text);
   text-decoration: underline;
-  text-decoration-color: rgba(91, 214, 157, 0.4);
+  text-decoration-thickness: 1px;
   text-underline-offset: 0.2em;
 }
 
 .prose a:hover {
   color: var(--link-hover);
-  text-decoration-color: currentColor;
+  text-decoration-thickness: 2px;
 }
 
 .prose .heading-anchor {
-  color: var(--accent);
+  color: var(--c-ink-3);
   text-decoration: none;
 }
 
-.md-article table {
-  display: block;
+.prose th {
+  background: var(--c-band);
+  color: var(--c-ink);
+}
+
+/* Scroll on a wrapper so the table itself can stay display:table and fill the width. */
+.md-table-scroll {
   overflow-x: auto;
-  border: 1px solid var(--border);
-  border-radius: 0.75rem;
-  background: var(--surface);
+  border: 1px solid var(--c-line);
+  background: var(--c-surface);
+}
+
+.md-article .md-table-scroll table {
+  width: 100%;
+  margin: 0;
+}
+
+.md-article .md-table-scroll th,
+.md-article .md-table-scroll td {
+  padding: 0.6rem 0.9rem;
 }
 
 .md-article pre {
   overflow-x: auto;
-  border: 1px solid var(--border);
-  border-radius: 0.75rem;
-  background: #090b0a;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--c-line);
+  border-radius: 2px;
+  background: var(--c-code);
+  color: var(--c-ink);
+}
+
+.prose :not(pre) > code {
+  padding: 0.1em 0.35em;
+  border-radius: 2px;
+  background: var(--c-code);
+}
+
+.prose :not(pre) > code::before,
+.prose :not(pre) > code::after {
+  content: none;
 }
 
 .prose blockquote {
-  border-left-color: var(--accent);
-  border-radius: 0 0.75rem 0.75rem 0;
-  background: rgba(91, 214, 157, 0.05);
-  padding-block: 0.75rem;
+  border-left: 4px solid var(--c-green);
+  background: var(--c-band);
+  padding: 0.75rem 1rem;
+  font-style: normal;
 }
 
 .prose img {
   margin: 1.5rem auto;
-  border: 1px solid var(--border);
-  border-radius: 0.75rem;
-  box-shadow: 0 16px 45px -24px rgba(0, 0, 0, 0.8);
+  border: 1px solid var(--c-line);
 }
 
 /* MarkdownImage renders its image and caption as sibling spans, not gallery items. */
@@ -243,48 +426,44 @@ a:hover {
   width: 100%;
   height: 220px;
   margin: 0;
-  border: 1px solid var(--border);
-  border-radius: 0.75rem;
+  border: 1px solid var(--c-line);
   object-fit: cover;
-  box-shadow: none;
-  transition: transform 200ms ease, border-color 200ms ease;
+  transition: border-color 150ms ease;
 }
 
 .prose p:has(img + img) img:hover,
 .prose p:has(a + a) img:hover {
-  border-color: var(--accent);
-  transform: scale(1.015);
+  border-color: var(--c-green);
 }
 
 .home-tile-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 .whats-new-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 0.65rem;
+  gap: 1rem;
   width: 100%;
 }
 
 .repository-search-input {
-  height: 3.75rem;
+  height: 3.5rem;
   padding-right: 3.5rem;
-  padding-left: 3.4rem;
-  color: #fff;
-  font-size: clamp(1rem, 2.4vw, 1.2rem);
+  padding-left: 3.25rem;
+  font-size: clamp(1rem, 2.4vw, 1.125rem);
   line-height: 1.2;
 }
 
 .repository-search-input::placeholder {
-  color: #66706a;
+  color: var(--c-ink-3);
   font-size: inherit;
 }
 
 .repository-search-icon {
-  padding-left: 1.2rem;
+  padding-left: 1.1rem;
 }
 
 details[open] .details-chevron {
@@ -298,12 +477,12 @@ details[open] .details-chevron {
   }
 
   .repository-search-input {
-    height: 4.25rem;
-    padding-left: 4rem;
+    height: 4rem;
+    padding-left: 3.75rem;
   }
 
   .repository-search-icon {
-    padding-left: 1.5rem;
+    padding-left: 1.4rem;
   }
 }
 

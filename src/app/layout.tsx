@@ -26,10 +26,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" suppressHydrationWarning>
-      <body className="flex min-h-screen flex-col">
+      <head>
+        <meta name="color-scheme" content="light dark" />
+      </head>
+      <body className="flex min-h-screen flex-col bg-page text-ink">
         <a
           href="#main-content"
-          className="fixed left-4 top-3 z-[100] -translate-y-20 rounded-lg bg-[var(--accent)] px-4 py-2 text-sm font-bold text-[#07140f] transition-transform focus:translate-y-0"
+          className="btn-primary fixed left-4 top-3 z-[100] -translate-y-20 text-sm focus:translate-y-0"
         >
           本文へスキップ
         </a>
@@ -37,26 +40,26 @@ export default function RootLayout({
         <main id="main-content" className="flex-grow" tabIndex={-1}>
           {children}
         </main>
-        <footer className="border-t border-[var(--border)] bg-[#0b0d0c]">
-          <div className="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-9 sm:flex-row sm:items-end sm:justify-between sm:px-6">
+        <footer className="border-t-4 border-brand bg-footer text-footer-ink">
+          <div className="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-10 sm:flex-row sm:items-end sm:justify-between sm:px-6">
             <div>
-              <p className="text-sm font-bold text-gray-300">AgMachine Repository</p>
-              <p className="mt-2 max-w-md text-xs leading-5 text-gray-600">
+              <p className="text-base font-bold text-footer-ink">AgMachine Repository</p>
+              <p className="mt-2 max-w-md text-sm leading-6 text-footer-ink-2">
                 農業機械の技術と記録。
               </p>
             </div>
-            <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-gray-500">
-              <Link href="/#search" className="text-gray-500 hover:text-gray-200">検索</Link>
-              <Link href="/#repository" className="text-gray-500 hover:text-gray-200">記事一覧</Link>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
+              <Link href="/#search" className="text-footer-ink hover:text-yellow hover:underline">検索</Link>
+              <Link href="/#repository" className="text-footer-ink hover:text-yellow hover:underline">記事一覧</Link>
               <a
                 href="https://github.com/takam1602/agmachieBlog"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-500 hover:text-gray-200"
+                className="text-footer-ink hover:text-yellow hover:underline"
               >
                 GitHub ↗
               </a>
-              <span>© {new Date().getFullYear()}</span>
+              <span className="text-footer-ink-2">© {new Date().getFullYear()}</span>
             </div>
           </div>
         </footer>
