@@ -120,8 +120,7 @@ export default function HomeClient({
               <span className="text-brand-text">新しきを知る</span>
             </h1>
             <p className="mt-5 max-w-2xl text-pretty text-base leading-8 text-ink-2">
-              「あれなんだっけ」の時に参照する
-              「農業機械」専門のリポジトリです．
+              かなり偏った，「農業機械専門」リポジトリです．
             </p>
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -154,7 +153,7 @@ export default function HomeClient({
         <SectionIntro
           eyebrow="EXPLORE"
           title="検索"
-          description="気になる機械やメーカー，作業内容等の単語を入力してください．"
+          description="気になる機械やメーカー，作業内容などの単語を入力してください．"
           align="center"
         />
         <SearchableList entries={searchEntries} />
