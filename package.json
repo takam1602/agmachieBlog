@@ -4,10 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "prebuild": "git fetch --unshallow --quiet 2>/dev/null || true",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "update-weekly-news": "jiti scripts/update-weekly-news.ts"
+    "update-weekly-news": "jiti scripts/update-weekly-news.ts",
+    "prepare": "git config core.hooksPath .githooks 2>/dev/null || true",
+    "add-created-date": "node scripts/add-created-date.mjs"
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",

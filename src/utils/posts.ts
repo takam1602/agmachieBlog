@@ -1,5 +1,4 @@
 import fs from 'fs/promises'
-import { Stats } from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { execFile } from 'child_process'
@@ -79,34 +78,62 @@ function createSearchText(content: string, length: number = 5000): string {
   return createPlainText(content).slice(0, length)
 }
 
+function normalizeDate(value: unknown): string | undefined {
+  if (value instanceof Date) return value.toISOString().split('T')[0]
+  if (typeof value === 'string' && /^\d{4}-\d{2}-\d{2}/.test(value)) return value.slice(0, 10)
+  return undefined
+}
+
 /**
- * ファイル名から日付を推測する
+ * ファイル名・frontmatter から日付を推測する。分からなければ undefined。
  */
-function getDateFromFilename(filename: string, stats: Stats, frontmatterDate?: unknown): string {
-  if (frontmatterDate instanceof Date) return frontmatterDate.toISOString().split('T')[0]
-  if (typeof frontmatterDate === 'string' && /^\d{4}-\d{2}-\d{2}/.test(frontmatterDate)) {
-    return frontmatterDate.slice(0, 10)
-  }
+function getDateFromFilename(filename: string, frontmatterDate?: unknown): string | undefined {
+  const normalized = normalizeDate(frontmatterDate)
+  if (normalized) return normalized
 
   const match = filename.match(/^(\d{2})(\d{2})(\d{2})(?:_\d+)?\.mdx?$/)
   if (match) {
     return `20${match[1]}-${match[2]}-${match[3]}`
   }
-  return stats.mtime.toISOString().split('T')[0]
+  return undefined
 }
 
-async function getGitUpdatedAt(filePath: string, stats: Stats) {
-  const relativePath = path.relative(process.cwd(), filePath)
+let gitHistoryAvailable: Promise<boolean> | null = null
 
-  try {
-    const { stdout } = await execFileAsync('git', ['log', '-1', '--format=%cI', '--', relativePath])
-    const updatedAt = stdout.trim()
-    if (updatedAt) return updatedAt.slice(0, 10)
-  } catch {
-    // Git metadata is not always available in every runtime. Fall back to filesystem mtime.
+/**
+ * 完全な git 履歴が使えるかを判定する。
+ * Vercel 等のデプロイ環境は `--depth 1` の浅い clone になるため、
+ * どのファイルに `git log -1` しても最新コミット（例: Weekly News の自動更新）の日付が返り、
+ * 過去記事まで「今日更新された」扱いになってしまう。その場合は git の日付を使わない。
+ */
+function hasFullGitHistory() {
+  if (!gitHistoryAvailable) {
+    gitHistoryAvailable = execFileAsync('git', ['rev-parse', '--is-shallow-repository'])
+      .then(({ stdout }) => stdout.trim() === 'false')
+      .catch(() => false)
   }
+  return gitHistoryAvailable
+}
 
-  return stats.mtime.toISOString().split('T')[0]
+async function gitLogDates(filePath: string): Promise<string[]> {
+  if (!(await hasFullGitHistory())) return []
+
+  const relativePath = path.relative(process.cwd(), filePath)
+  try {
+    // メッセージが [skip-updated] で始まるコミット（frontmatter の一括整備など）は更新扱いにしない
+    const { stdout } = await execFileAsync('git', [
+      'log',
+      '--invert-grep',
+      '--grep=^\\[skip-updated\\]',
+      '--format=%cI',
+      '--',
+      relativePath,
+    ])
+    return stdout.split('\n').map((line) => line.trim().slice(0, 10)).filter(Boolean)
+  } catch {
+    // Git metadata is not always available in every runtime.
+    return []
+  }
 }
 
 /**
@@ -173,17 +200,22 @@ export function slugFromContentPath(filePath: string) {
 
 async function readPost(filePath: string): Promise<BlogPost | null> {
   try {
-    const stats = await fs.stat(filePath)
     const fileContent = await fs.readFile(filePath, 'utf8')
     const { content, data } = matter(fileContent)
     const slugParts = slugFromContentPath(filePath)
     const basename = path.basename(filePath).replace(/\.mdx?$/, '')
+    const gitDates = await gitLogDates(filePath) // 新しい順
+    // ファイルの mtime は checkout 時刻になる（デプロイ環境では毎回「今日」）ため使わない。
+    const date = getDateFromFilename(path.basename(filePath), data.date ?? data.updated)
+      ?? gitDates.at(-1)
+      ?? ''
+    const updatedAt = normalizeDate(data.updated) ?? gitDates[0] ?? date
 
     return {
       slug: slugParts.join('-') || 'index',
       title: getTitle(content, basename, data.title),
-      date: getDateFromFilename(path.basename(filePath), stats, data.date ?? data.updated),
-      updatedAt: await getGitUpdatedAt(filePath, stats),
+      date,
+      updatedAt: updatedAt || undefined,
       excerpt: createExcerpt(content),
       searchText: createSearchText(content),
       href: hrefFromContentPath(filePath),
@@ -215,6 +247,8 @@ export async function getRecentlyUpdatedPosts(limit: number = 5): Promise<BlogPo
     .filter((post) => !post.protected)
     // notes のメモは blog に追加してから更新一覧に掲載する。
     .filter((post) => post.category !== 'notes')
+    // 日付が特定できない記事は「新着」に出さない
+    .filter((post) => Boolean(post.updatedAt ?? post.date))
     .sort((a, b) => ((a.updatedAt ?? a.date) < (b.updatedAt ?? b.date) ? 1 : -1))
     .slice(0, limit)
 }

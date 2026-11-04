@@ -1,0 +1,6 @@
+#!/bin/sh
+# ブログ記事の frontmatter に作成日 (date) を自動追加する
+node scripts/add-created-date.mjs --staged || {
+  echo "warning: add-created-date に失敗しました（コミットは続行します）" >&2
+}
+exit 0
