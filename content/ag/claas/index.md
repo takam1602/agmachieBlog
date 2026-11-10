@@ -43,3 +43,21 @@ CC3000 は2001年に製造されたとの情報もある。
 [公式ページ](https://www.claas.tw/products/technologies/terra-trac/expertise)
 
 ## [cat との関わり](../cat/index.md)がある
+
+
+## 中国でのコンバイン生産
+
+Dominator, Evion などの小型機種は中国の工場で生産している。
+記事たち
+
+[The factory in China's breadbasket.](https://www.claas.com/en-us/discover/stories/many-places-one-passion/gaomi)
+
+[Conceived in Germany, born in China](https://www.claas.com/en-us/discover/stories/many-places-one-passion/gaomi/interview-about-gaomi-factory)
+
+[Our combine harvesters are made in China, but more importantly, they’re made by CLAAS](https://www.claas.com/en-us/discover/stories/many-places-one-passion/gaomi/gaomi-interview)
+
+
+Gaomi, 山東省高密市の工場では、H80, DOMINATOR 370, and DOMINATOR 260 combine harvesters to the EVIONなどを生産している。
+H80は、[春雨コンバイン](https://www.claas.com/zh-cn/agricultural-machinery/combines/mc-h80-plus)のこと。
+軸流だったのね。
+
