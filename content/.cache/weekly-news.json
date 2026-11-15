@@ -1,73 +1,73 @@
 {
   "version": 2,
-  "weekKey": "2026-11-08",
-  "generatedAt": "2026-11-08T19:20:07.472Z",
+  "weekKey": "2026-11-15",
+  "generatedAt": "2026-11-15T20:08:26.668Z",
   "latest": [
     {
-      "title": "Claas co-develops ammonia-powered drive system for agricultural machinery - Farmers Guide",
-      "originalTitle": "Claas co-develops ammonia-powered drive system for agricultural machinery - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/machinery/claas-co-develops-ammonia-powered-drive-system-for-agricultural-machinery/",
+      "title": "Farmers adapt autumn drilling strategies following challenging season - Farmers Guide",
+      "originalTitle": "Farmers adapt autumn drilling strategies following challenging season - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/arable/cereals/farmers-adapt-autumn-drilling-strategies-following-challenging-season/",
       "source": "Farmers Guide",
-      "date": "2026-11-08",
+      "date": "2026-11-15",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Manufacturer Claas has confirmed that it is working with MAN Engines and WTZ Roßlau to develop an ammonia-powered drive system for agricultural machinery.",
-      "topic": "農業機械",
+      "originalSummary": "Farmers Robert Jenness and Andrew Barr told Farmers Guide how changing weather patterns, rising input costs and crop performance are influencing their autumn drilling decisions and plans for the coming season.",
+      "topic": "作業機",
+      "score": 5
+    },
+    {
+      "title": "Lemken expands its plough range with Juwel 10 i - Farmers Guide",
+      "originalTitle": "Lemken expands its plough range with Juwel 10 i - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/machinery/cultivation/lemken-expands-its-plough-range-with-juwel-10-i/",
+      "source": "Farmers Guide",
+      "date": "2026-11-14",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "Lemken has expanded its plough range with the introduction of the Juwel 10 i, an Isobus-compatible mounted reversible plough.",
+      "topic": "スマート農業",
       "score": 20
     },
     {
-      "title": "BKT adds 'unique' size combination to VFlecto tyre range",
-      "originalTitle": "BKT adds 'unique' size combination to VFlecto tyre range",
-      "href": "https://www.fwi.co.uk/machinery/tractors/bkt-adds-unique-size-combination-to-vflecto-tyre-range",
+      "title": "Vredestein takes Traxion tech into row-crop tyres",
+      "originalTitle": "Vredestein takes Traxion tech into row-crop tyres",
+      "href": "https://www.fwi.co.uk/machinery/tractors/vredestein-takes-traxion-tech-into-row-crop-tyres",
       "source": "Farmers Weekly",
-      "date": "2026-11-08",
+      "date": "2026-11-14",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Another two tall traction tyres designed to create the largest footprint while fitting within the confines of a tractor’s mudguards have been added to BKT’s Agrimax VFlecto tyre range.",
-      "topic": "トラクター",
-      "score": 16
+      "originalSummary": "Growers on the look-out for a high-performance row-crop tyre to use on tractors and sprayers have a new option in the latest addition to the Vredestein Traxion line-up from Apollo.",
+      "topic": "作業機",
+      "score": 19
     },
     {
-      "title": "UK tractor registrations remain above five-year average in October - Farmers Guide",
-      "originalTitle": "UK tractor registrations remain above five-year average in October - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/machinery/tractors/uk-tractor-registrations-remain-above-five-year-average-in-october/",
-      "source": "Farmers Guide",
-      "date": "2026-11-07",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "The number of tractors registered in the UK in October was again above the five-year average for the time of year.",
-      "topic": "トラクター",
-      "score": 13
-    },
-    {
-      "title": "John Deere to close two plants",
-      "originalTitle": "John Deere to close two plants",
-      "href": "https://www.profi.co.uk/news/john-deere-to-close-two-plants/",
+      "title": "EIMA 2026: Naio Sanka",
+      "originalTitle": "EIMA 2026: Naio Sanka",
+      "href": "https://www.profi.co.uk/news/eima-2026-naio-sanka/",
       "source": "profi",
-      "date": "2026-11-06",
+      "date": "2026-11-14",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "John Deere has announced plans to close two North American manufacturing sites and transfer production to other plants. One of the plants to be axed is the windrower and round baler site at Ottumwa, Iowa, production of which will shift to Des Moines. The plan is to transfer windrower production by the end of 2027 […]",
-      "topic": "収穫・飼料",
-      "score": 12
-    },
-    {
-      "title": "Sabanto links autonomy to Precision Planting’s 20|20 for unmanned planting",
-      "originalTitle": "Sabanto links autonomy to Precision Planting’s 20|20 for unmanned planting",
-      "href": "https://www.futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/sabanto-links-autonomy-to-precision-planting-s-20-20-for-unmanned-planting/",
-      "source": "Future Farming",
-      "date": "2026-11-06",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "US company Sabanto has announced support for planters equipped with the Precision Planting Gen 3 20|20 system. Combined with a Sabanto-retrofitted tractor, the setup allows autonomous planting without an operator in the seat. Growers can supervise the work remotely through Sabanto’s Vehicle Mission Control (vMC) interface. Support is planned for the 2027 growing season.",
+      "originalSummary": "The Italian show marks the public debut of the Sanka, an autonomous and full electric tool carrier that generates a maximum power of 87hp. Using tried and trusted technology from the French company’s other autonomous machines, which includes Ted and Orio, one of the main differences with the Sanka is the versatility of tools it […]",
       "topic": "スマート農業",
       "score": 8
     },
     {
-      "title": "On test: Kverneland B-series gets tougher shear-bolt leg assembly",
-      "originalTitle": "On test: Kverneland B-series gets tougher shear-bolt leg assembly",
-      "href": "https://www.fwi.co.uk/machinery/cultivation-drilling/cultivators-drills-ploughs/on-test-kverneland-b-series-gets-tougher-shear-bolt-leg-assembly",
+      "title": "Ultimate Guide to buying a trailed combination drill 2027",
+      "originalTitle": "Ultimate Guide to buying a trailed combination drill 2027",
+      "href": "https://www.fwi.co.uk/machinery/cultivation-drilling/cereal-drills/ultimate-guide-to-buying-a-trailed-combination-drill-2027",
       "source": "Farmers Weekly",
-      "date": "2026-11-05",
+      "date": "2026-11-13",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Say what you like about the merits of the maligned plough, but nothing puts the wreckage of a rubbish season to bed quite like it. To bury the misery of a",
+      "originalSummary": "New entries from Amazone, Maschio Gaspardo and Vaderstad lead the changes in this year’s Farmers Weekly cultivator-drill guide.",
       "topic": "作業機",
-      "score": 17
+      "score": 24
+    },
+    {
+      "title": "270hp McCormick X7 at Italian show",
+      "originalTitle": "270hp McCormick X7 at Italian show",
+      "href": "https://www.profi.co.uk/news/mccormick-x7-with-270hp/",
+      "source": "profi",
+      "date": "2026-11-13",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "The X7.270 VT-Drive is a highlight on the McCormick stand at the Italian EIMA show.",
+      "topic": "トラクター",
+      "score": 5
     }
   ],
   "random": [
@@ -94,105 +94,105 @@
       "score": 29
     },
     {
-      "title": "Agrifac develops electric powertrains for self-propelled sprayers",
-      "originalTitle": "Agrifac develops electric powertrains for self-propelled sprayers",
-      "href": "https://www.fwi.co.uk/machinery/spraying-and-fertilising/sprayers/agrifac-develops-electric-powertrains-for-self-propelled-sprayers",
-      "source": "Farmers Weekly",
-      "date": "2026-10-18",
+      "title": "Fira USA debuts: Autonomous tractors for fruit & claimed 15.2m spot sprayer",
+      "originalTitle": "Fira USA debuts: Autonomous tractors for fruit & claimed 15.2m spot sprayer",
+      "href": "https://www.futurefarming.com/tech-in-focus/field-robots/fira-usa-van-autonome-smalspoortrekker-tot-15-meter-brede-spotsprayer/",
+      "source": "Future Farming",
+      "date": "2026-11-11",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Growers and contractors could tap into the benefits of electric propulsion on their next self-propelled sprayer, thanks to a new drive platform developed by Agrifac.",
-      "topic": "動力・環境",
-      "score": 26
+      "originalSummary": "This year, the Fira USA trade event was held in the north-western United States for the first time. The fifth US edition of the event attracted 2,500 visitors from 20 countries to Washington State, including more than 600 growers. Among the technologies on display were autonomous tractors and precision sprayers.",
+      "topic": "スマート農業",
+      "score": 35
     },
     {
-      "title": "Kuhn launches new 6m and 8m Apex disc drill models - Farmers Guide",
-      "originalTitle": "Kuhn launches new 6m and 8m Apex disc drill models - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/machinery/drills/kuhn-launches-new-6m-and-8m-apex-disc-drill-models/",
-      "source": "Farmers Guide",
+      "title": "JCB offers 'more affordable' 3CX Sitemaster backhoe loader",
+      "originalTitle": "JCB offers 'more affordable' 3CX Sitemaster backhoe loader",
+      "href": "https://www.fwi.co.uk/machinery/telehandlers/jcb-offers-more-affordable-3cx-sitemaster-backhoe-loader",
+      "source": "Farmers Weekly",
       "date": "2026-11-02",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Kuhn Farm Machinery has introduced two new trailed disc drill models, a 6m Apex 6000 RC and an 8m Apex 8000 RC, both equipped with a 5,600-litre split seed hopper.",
-      "topic": "作業機",
-      "score": 24
-    },
-    {
-      "title": "Can Kingman Ag's autonomous kit truly navigate dusty fields without GPS?",
-      "originalTitle": "Can Kingman Ag's autonomous kit truly navigate dusty fields without GPS?",
-      "href": "https://www.futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/kingman-ag-autonomous-tractors-also-for-gnss-denied-environments/",
-      "source": "Future Farming",
-      "date": "2026-10-28",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "If you’re looking to upgrade your tractor to perform autonomous operations in a dusty and/or GNSS-denied environment, then Kingman Ag has something to offer.",
-      "topic": "スマート農業",
-      "score": 8
-    }
-  ],
-  "all": [
-    {
-      "title": "Claas co-develops ammonia-powered drive system for agricultural machinery - Farmers Guide",
-      "originalTitle": "Claas co-develops ammonia-powered drive system for agricultural machinery - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/machinery/claas-co-develops-ammonia-powered-drive-system-for-agricultural-machinery/",
-      "source": "Farmers Guide",
-      "date": "2026-11-08",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Manufacturer Claas has confirmed that it is working with MAN Engines and WTZ Roßlau to develop an ammonia-powered drive system for agricultural machinery.",
+      "originalSummary": "Farmers keen to handle their own ditch cleaning, water pipe installation, groundworks and similar operations are being offered a “more affordable” backhoe loader – a new Sitemaster version of the.",
       "topic": "農業機械",
       "score": 20
     },
     {
-      "title": "BKT adds 'unique' size combination to VFlecto tyre range",
-      "originalTitle": "BKT adds 'unique' size combination to VFlecto tyre range",
-      "href": "https://www.fwi.co.uk/machinery/tractors/bkt-adds-unique-size-combination-to-vflecto-tyre-range",
-      "source": "Farmers Weekly",
-      "date": "2026-11-08",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Another two tall traction tyres designed to create the largest footprint while fitting within the confines of a tractor’s mudguards have been added to BKT’s Agrimax VFlecto tyre range.",
-      "topic": "トラクター",
-      "score": 16
-    },
-    {
-      "title": "UK tractor registrations remain above five-year average in October - Farmers Guide",
-      "originalTitle": "UK tractor registrations remain above five-year average in October - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/machinery/tractors/uk-tractor-registrations-remain-above-five-year-average-in-october/",
+      "title": "Kubota showcases new Farmtrac 6050E tractor at EIMA - Farmers Guide",
+      "originalTitle": "Kubota showcases new Farmtrac 6050E tractor at EIMA - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/machinery/tractors/kubota-showcases-new-farmtrac-6050e-tractor-at-eima/",
       "source": "Farmers Guide",
-      "date": "2026-11-07",
+      "date": "2026-11-12",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "The number of tractors registered in the UK in October was again above the five-year average for the time of year.",
+      "originalSummary": "Kubota is showcasing its new 49hp Farmtrac 6050E tractor at EIMA International 2026, the models European debut.",
       "topic": "トラクター",
-      "score": 13
+      "score": 19
+    }
+  ],
+  "all": [
+    {
+      "title": "Farmers adapt autumn drilling strategies following challenging season - Farmers Guide",
+      "originalTitle": "Farmers adapt autumn drilling strategies following challenging season - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/arable/cereals/farmers-adapt-autumn-drilling-strategies-following-challenging-season/",
+      "source": "Farmers Guide",
+      "date": "2026-11-15",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "Farmers Robert Jenness and Andrew Barr told Farmers Guide how changing weather patterns, rising input costs and crop performance are influencing their autumn drilling decisions and plans for the coming season.",
+      "topic": "作業機",
+      "score": 5
     },
     {
-      "title": "John Deere to close two plants",
-      "originalTitle": "John Deere to close two plants",
-      "href": "https://www.profi.co.uk/news/john-deere-to-close-two-plants/",
+      "title": "Lemken expands its plough range with Juwel 10 i - Farmers Guide",
+      "originalTitle": "Lemken expands its plough range with Juwel 10 i - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/machinery/cultivation/lemken-expands-its-plough-range-with-juwel-10-i/",
+      "source": "Farmers Guide",
+      "date": "2026-11-14",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "Lemken has expanded its plough range with the introduction of the Juwel 10 i, an Isobus-compatible mounted reversible plough.",
+      "topic": "スマート農業",
+      "score": 20
+    },
+    {
+      "title": "Vredestein takes Traxion tech into row-crop tyres",
+      "originalTitle": "Vredestein takes Traxion tech into row-crop tyres",
+      "href": "https://www.fwi.co.uk/machinery/tractors/vredestein-takes-traxion-tech-into-row-crop-tyres",
+      "source": "Farmers Weekly",
+      "date": "2026-11-14",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "Growers on the look-out for a high-performance row-crop tyre to use on tractors and sprayers have a new option in the latest addition to the Vredestein Traxion line-up from Apollo.",
+      "topic": "作業機",
+      "score": 19
+    },
+    {
+      "title": "EIMA 2026: Naio Sanka",
+      "originalTitle": "EIMA 2026: Naio Sanka",
+      "href": "https://www.profi.co.uk/news/eima-2026-naio-sanka/",
       "source": "profi",
-      "date": "2026-11-06",
+      "date": "2026-11-14",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "John Deere has announced plans to close two North American manufacturing sites and transfer production to other plants. One of the plants to be axed is the windrower and round baler site at Ottumwa, Iowa, production of which will shift to Des Moines. The plan is to transfer windrower production by the end of 2027 […]",
-      "topic": "収穫・飼料",
-      "score": 12
-    },
-    {
-      "title": "Sabanto links autonomy to Precision Planting’s 20|20 for unmanned planting",
-      "originalTitle": "Sabanto links autonomy to Precision Planting’s 20|20 for unmanned planting",
-      "href": "https://www.futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/sabanto-links-autonomy-to-precision-planting-s-20-20-for-unmanned-planting/",
-      "source": "Future Farming",
-      "date": "2026-11-06",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "US company Sabanto has announced support for planters equipped with the Precision Planting Gen 3 20|20 system. Combined with a Sabanto-retrofitted tractor, the setup allows autonomous planting without an operator in the seat. Growers can supervise the work remotely through Sabanto’s Vehicle Mission Control (vMC) interface. Support is planned for the 2027 growing season.",
+      "originalSummary": "The Italian show marks the public debut of the Sanka, an autonomous and full electric tool carrier that generates a maximum power of 87hp. Using tried and trusted technology from the French company’s other autonomous machines, which includes Ted and Orio, one of the main differences with the Sanka is the versatility of tools it […]",
       "topic": "スマート農業",
       "score": 8
     },
     {
-      "title": "On test: Kverneland B-series gets tougher shear-bolt leg assembly",
-      "originalTitle": "On test: Kverneland B-series gets tougher shear-bolt leg assembly",
-      "href": "https://www.fwi.co.uk/machinery/cultivation-drilling/cultivators-drills-ploughs/on-test-kverneland-b-series-gets-tougher-shear-bolt-leg-assembly",
+      "title": "Ultimate Guide to buying a trailed combination drill 2027",
+      "originalTitle": "Ultimate Guide to buying a trailed combination drill 2027",
+      "href": "https://www.fwi.co.uk/machinery/cultivation-drilling/cereal-drills/ultimate-guide-to-buying-a-trailed-combination-drill-2027",
       "source": "Farmers Weekly",
-      "date": "2026-11-05",
+      "date": "2026-11-13",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Say what you like about the merits of the maligned plough, but nothing puts the wreckage of a rubbish season to bed quite like it. To bury the misery of a",
+      "originalSummary": "New entries from Amazone, Maschio Gaspardo and Vaderstad lead the changes in this year’s Farmers Weekly cultivator-drill guide.",
       "topic": "作業機",
-      "score": 17
+      "score": 24
+    },
+    {
+      "title": "270hp McCormick X7 at Italian show",
+      "originalTitle": "270hp McCormick X7 at Italian show",
+      "href": "https://www.profi.co.uk/news/mccormick-x7-with-270hp/",
+      "source": "profi",
+      "date": "2026-11-13",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "The X7.270 VT-Drive is a highlight on the McCormick stand at the Italian EIMA show.",
+      "topic": "トラクター",
+      "score": 5
     },
     {
       "title": "On test: New engine and transmission revitalise Fendt 516",
@@ -217,37 +217,37 @@
       "score": 29
     },
     {
-      "title": "Agrifac develops electric powertrains for self-propelled sprayers",
-      "originalTitle": "Agrifac develops electric powertrains for self-propelled sprayers",
-      "href": "https://www.fwi.co.uk/machinery/spraying-and-fertilising/sprayers/agrifac-develops-electric-powertrains-for-self-propelled-sprayers",
-      "source": "Farmers Weekly",
-      "date": "2026-10-18",
+      "title": "Fira USA debuts: Autonomous tractors for fruit & claimed 15.2m spot sprayer",
+      "originalTitle": "Fira USA debuts: Autonomous tractors for fruit & claimed 15.2m spot sprayer",
+      "href": "https://www.futurefarming.com/tech-in-focus/field-robots/fira-usa-van-autonome-smalspoortrekker-tot-15-meter-brede-spotsprayer/",
+      "source": "Future Farming",
+      "date": "2026-11-11",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Growers and contractors could tap into the benefits of electric propulsion on their next self-propelled sprayer, thanks to a new drive platform developed by Agrifac.",
-      "topic": "動力・環境",
-      "score": 26
+      "originalSummary": "This year, the Fira USA trade event was held in the north-western United States for the first time. The fifth US edition of the event attracted 2,500 visitors from 20 countries to Washington State, including more than 600 growers. Among the technologies on display were autonomous tractors and precision sprayers.",
+      "topic": "スマート農業",
+      "score": 35
     },
     {
-      "title": "Kuhn launches new 6m and 8m Apex disc drill models - Farmers Guide",
-      "originalTitle": "Kuhn launches new 6m and 8m Apex disc drill models - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/machinery/drills/kuhn-launches-new-6m-and-8m-apex-disc-drill-models/",
-      "source": "Farmers Guide",
+      "title": "JCB offers 'more affordable' 3CX Sitemaster backhoe loader",
+      "originalTitle": "JCB offers 'more affordable' 3CX Sitemaster backhoe loader",
+      "href": "https://www.fwi.co.uk/machinery/telehandlers/jcb-offers-more-affordable-3cx-sitemaster-backhoe-loader",
+      "source": "Farmers Weekly",
       "date": "2026-11-02",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Kuhn Farm Machinery has introduced two new trailed disc drill models, a 6m Apex 6000 RC and an 8m Apex 8000 RC, both equipped with a 5,600-litre split seed hopper.",
-      "topic": "作業機",
-      "score": 24
+      "originalSummary": "Farmers keen to handle their own ditch cleaning, water pipe installation, groundworks and similar operations are being offered a “more affordable” backhoe loader – a new Sitemaster version of the.",
+      "topic": "農業機械",
+      "score": 20
     },
     {
-      "title": "Can Kingman Ag's autonomous kit truly navigate dusty fields without GPS?",
-      "originalTitle": "Can Kingman Ag's autonomous kit truly navigate dusty fields without GPS?",
-      "href": "https://www.futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/kingman-ag-autonomous-tractors-also-for-gnss-denied-environments/",
-      "source": "Future Farming",
-      "date": "2026-10-28",
+      "title": "Kubota showcases new Farmtrac 6050E tractor at EIMA - Farmers Guide",
+      "originalTitle": "Kubota showcases new Farmtrac 6050E tractor at EIMA - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/machinery/tractors/kubota-showcases-new-farmtrac-6050e-tractor-at-eima/",
+      "source": "Farmers Guide",
+      "date": "2026-11-12",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "If you’re looking to upgrade your tractor to perform autonomous operations in a dusty and/or GNSS-denied environment, then Kingman Ag has something to offer.",
-      "topic": "スマート農業",
-      "score": 8
+      "originalSummary": "Kubota is showcasing its new 49hp Farmtrac 6050E tractor at EIMA International 2026, the models European debut.",
+      "topic": "トラクター",
+      "score": 19
     }
   ]
 }
