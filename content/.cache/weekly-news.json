@@ -1,86 +1,86 @@
 {
   "version": 2,
-  "weekKey": "2026-11-15",
-  "generatedAt": "2026-11-15T20:08:26.668Z",
+  "weekKey": "2026-11-22",
+  "generatedAt": "2026-11-22T20:56:17.883Z",
   "latest": [
     {
-      "title": "Farmers adapt autumn drilling strategies following challenging season - Farmers Guide",
-      "originalTitle": "Farmers adapt autumn drilling strategies following challenging season - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/arable/cereals/farmers-adapt-autumn-drilling-strategies-following-challenging-season/",
+      "title": "Fendt to showcase new tractor and combine models at LAMMA 2027 - Farmers Guide",
+      "originalTitle": "Fendt to showcase new tractor and combine models at LAMMA 2027 - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/lamma-2027/fendt-to-showcase-latest-machinery-at-lamma-2027/",
       "source": "Farmers Guide",
-      "date": "2026-11-15",
+      "date": "2026-11-22",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Farmers Robert Jenness and Andrew Barr told Farmers Guide how changing weather patterns, rising input costs and crop performance are influencing their autumn drilling decisions and plans for the coming season.",
-      "topic": "作業機",
-      "score": 5
+      "originalSummary": "Fendt is set to showcase a range of machinery at LAMMA 2027, including the 680hp MT1167 tractor, as well as the latest MY27 Ideal 10T combine and the Rogator self-propelled sprayer.",
+      "topic": "収穫・飼料",
+      "score": 33
     },
     {
-      "title": "Lemken expands its plough range with Juwel 10 i - Farmers Guide",
-      "originalTitle": "Lemken expands its plough range with Juwel 10 i - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/machinery/cultivation/lemken-expands-its-plough-range-with-juwel-10-i/",
-      "source": "Farmers Guide",
-      "date": "2026-11-14",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Lemken has expanded its plough range with the introduction of the Juwel 10 i, an Isobus-compatible mounted reversible plough.",
-      "topic": "スマート農業",
-      "score": 20
-    },
-    {
-      "title": "Vredestein takes Traxion tech into row-crop tyres",
-      "originalTitle": "Vredestein takes Traxion tech into row-crop tyres",
-      "href": "https://www.fwi.co.uk/machinery/tractors/vredestein-takes-traxion-tech-into-row-crop-tyres",
+      "title": "Kuhn adds new features to revamped Axis fert spreader range",
+      "originalTitle": "Kuhn adds new features to revamped Axis fert spreader range",
+      "href": "https://www.fwi.co.uk/machinery/spraying-and-fertilising/fertiliser-spreaders/kuhn-adds-new-features-to-revamped-axis-fert-spreader-range",
       "source": "Farmers Weekly",
-      "date": "2026-11-14",
+      "date": "2026-11-22",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Growers on the look-out for a high-performance row-crop tyre to use on tractors and sprayers have a new option in the latest addition to the Vredestein Traxion line-up from Apollo.",
-      "topic": "作業機",
-      "score": 19
+      "originalSummary": "Precision spreading technology from Kuhn's larger models has filtered down to smaller sizes in its revamped Axis range.",
+      "topic": "スマート農業",
+      "score": 11
     },
     {
-      "title": "EIMA 2026: Naio Sanka",
-      "originalTitle": "EIMA 2026: Naio Sanka",
-      "href": "https://www.profi.co.uk/news/eima-2026-naio-sanka/",
-      "source": "profi",
-      "date": "2026-11-14",
+      "title": "Making every pass count with smarter cultivation - Farmers Guide",
+      "originalTitle": "Making every pass count with smarter cultivation - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/lamma-2027/making-every-pass-count-with-smarter-cultivation/",
+      "source": "Farmers Guide",
+      "date": "2026-11-22",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "The Italian show marks the public debut of the Sanka, an autonomous and full electric tool carrier that generates a maximum power of 87hp. Using tried and trusted technology from the French company’s other autonomous machines, which includes Ted and Orio, one of the main differences with the Sanka is the versatility of tools it […]",
-      "topic": "スマート農業",
+      "originalSummary": "Bullock Tillage will showcase its range of cost-effective cultivation and seeding equipment at LAMMA, including front-mounted airseeders and small seed and slug pellet applicators. The equipment offers farmers practical options for reducing machinery costs and combining field operations.",
+      "topic": "作業機",
       "score": 8
     },
     {
-      "title": "Ultimate Guide to buying a trailed combination drill 2027",
-      "originalTitle": "Ultimate Guide to buying a trailed combination drill 2027",
-      "href": "https://www.fwi.co.uk/machinery/cultivation-drilling/cereal-drills/ultimate-guide-to-buying-a-trailed-combination-drill-2027",
-      "source": "Farmers Weekly",
-      "date": "2026-11-13",
+      "title": "Bateman self-propelled sprayers: Joyous joystick?",
+      "originalTitle": "Bateman self-propelled sprayers: Joyous joystick?",
+      "href": "https://www.profi.co.uk/test-centre/bateman-self-propelled-sprayers-joyous-joystick/",
+      "source": "profi",
+      "date": "2026-11-21",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "New entries from Amazone, Maschio Gaspardo and Vaderstad lead the changes in this year’s Farmers Weekly cultivator-drill guide.",
+      "originalSummary": "DRIVING IMPRESSION: Back in January at LAMMA 2026, Bateman launched its latest self-propelled sprayer models. A key development was the introduction of a new control and joystick layout but, under the skin, the latest models have numerous other developments which we look at here.",
       "topic": "作業機",
-      "score": 24
+      "score": 13
     },
     {
-      "title": "270hp McCormick X7 at Italian show",
-      "originalTitle": "270hp McCormick X7 at Italian show",
-      "href": "https://www.profi.co.uk/news/mccormick-x7-with-270hp/",
+      "title": "4Disc Shift drill: For a spin",
+      "originalTitle": "4Disc Shift drill: For a spin",
+      "href": "https://www.profi.co.uk/test-centre/4disc-shift-drill-for-a-spin/",
       "source": "profi",
-      "date": "2026-11-13",
+      "date": "2026-11-21",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "The X7.270 VT-Drive is a highlight on the McCormick stand at the Italian EIMA show.",
+      "originalSummary": "DRIVING IMPRESSION: 4Disc has come up with a completely new way of drilling crops with its ‘hollow principle’, and we have been to the field to find out more.",
+      "topic": "作業機",
+      "score": 13
+    },
+    {
+      "title": "Joskin unveils 6-12m turntable-type Galion flatbed trailers",
+      "originalTitle": "Joskin unveils 6-12m turntable-type Galion flatbed trailers",
+      "href": "https://www.fwi.co.uk/machinery/trailers/joskin-unveils-6-12m-turntable-type-galion-flatbed-trailers",
+      "source": "Farmers Weekly",
+      "date": "2026-11-21",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "Tractor drivers who reckon they can make a better fist of reversing a turntable trailer than McLaren F1 driver Oscar Piastri (fans of Clarkson’s Farm will know what we’re referring.",
       "topic": "トラクター",
-      "score": 5
+      "score": 7
     }
   ],
   "random": [
     {
-      "title": "On test: New engine and transmission revitalise Fendt 516",
-      "originalTitle": "On test: New engine and transmission revitalise Fendt 516",
-      "href": "https://www.fwi.co.uk/machinery/tractors/on-test-new-engine-and-transmission-revitalise-fendt-516",
-      "source": "Farmers Weekly",
-      "date": "2026-10-20",
+      "title": "Lemken ISObus plough for tractors up to 450hp",
+      "originalTitle": "Lemken ISObus plough for tractors up to 450hp",
+      "href": "https://www.profi.co.uk/news/lemken-isobus-plough-for-tractors-up-to-450hp/",
+      "source": "profi",
+      "date": "2026-11-20",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Too small for heavy tillage and too dear for livestock-related duties, Fendt’s four-cylinder tractors have traditionally served as backfill for the ever-popular 724. But the tables are turning.",
-      "topic": "作業機",
-      "score": 38
+      "originalSummary": "The 10i, a new flagship model in the Juwel range, is claimed as the most powerful ISObus-compatible mounted plough on the market. Tailored for users seeking maximum output without sacrificing the advantages of a mounted plough, the new four to seven furrow model is designed for tractors up to 450hp. Combining the build quality of […]",
+      "topic": "スマート農業",
+      "score": 39
     },
     {
       "title": "Field robot or autonomous tractor? Dutch grower puts both to the test",
@@ -103,74 +103,6 @@
       "originalSummary": "This year, the Fira USA trade event was held in the north-western United States for the first time. The fifth US edition of the event attracted 2,500 visitors from 20 countries to Washington State, including more than 600 growers. Among the technologies on display were autonomous tractors and precision sprayers.",
       "topic": "スマート農業",
       "score": 35
-    },
-    {
-      "title": "JCB offers 'more affordable' 3CX Sitemaster backhoe loader",
-      "originalTitle": "JCB offers 'more affordable' 3CX Sitemaster backhoe loader",
-      "href": "https://www.fwi.co.uk/machinery/telehandlers/jcb-offers-more-affordable-3cx-sitemaster-backhoe-loader",
-      "source": "Farmers Weekly",
-      "date": "2026-11-02",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Farmers keen to handle their own ditch cleaning, water pipe installation, groundworks and similar operations are being offered a “more affordable” backhoe loader – a new Sitemaster version of the.",
-      "topic": "農業機械",
-      "score": 20
-    },
-    {
-      "title": "Kubota showcases new Farmtrac 6050E tractor at EIMA - Farmers Guide",
-      "originalTitle": "Kubota showcases new Farmtrac 6050E tractor at EIMA - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/machinery/tractors/kubota-showcases-new-farmtrac-6050e-tractor-at-eima/",
-      "source": "Farmers Guide",
-      "date": "2026-11-12",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Kubota is showcasing its new 49hp Farmtrac 6050E tractor at EIMA International 2026, the models European debut.",
-      "topic": "トラクター",
-      "score": 19
-    }
-  ],
-  "all": [
-    {
-      "title": "Farmers adapt autumn drilling strategies following challenging season - Farmers Guide",
-      "originalTitle": "Farmers adapt autumn drilling strategies following challenging season - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/arable/cereals/farmers-adapt-autumn-drilling-strategies-following-challenging-season/",
-      "source": "Farmers Guide",
-      "date": "2026-11-15",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Farmers Robert Jenness and Andrew Barr told Farmers Guide how changing weather patterns, rising input costs and crop performance are influencing their autumn drilling decisions and plans for the coming season.",
-      "topic": "作業機",
-      "score": 5
-    },
-    {
-      "title": "Lemken expands its plough range with Juwel 10 i - Farmers Guide",
-      "originalTitle": "Lemken expands its plough range with Juwel 10 i - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/machinery/cultivation/lemken-expands-its-plough-range-with-juwel-10-i/",
-      "source": "Farmers Guide",
-      "date": "2026-11-14",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Lemken has expanded its plough range with the introduction of the Juwel 10 i, an Isobus-compatible mounted reversible plough.",
-      "topic": "スマート農業",
-      "score": 20
-    },
-    {
-      "title": "Vredestein takes Traxion tech into row-crop tyres",
-      "originalTitle": "Vredestein takes Traxion tech into row-crop tyres",
-      "href": "https://www.fwi.co.uk/machinery/tractors/vredestein-takes-traxion-tech-into-row-crop-tyres",
-      "source": "Farmers Weekly",
-      "date": "2026-11-14",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Growers on the look-out for a high-performance row-crop tyre to use on tractors and sprayers have a new option in the latest addition to the Vredestein Traxion line-up from Apollo.",
-      "topic": "作業機",
-      "score": 19
-    },
-    {
-      "title": "EIMA 2026: Naio Sanka",
-      "originalTitle": "EIMA 2026: Naio Sanka",
-      "href": "https://www.profi.co.uk/news/eima-2026-naio-sanka/",
-      "source": "profi",
-      "date": "2026-11-14",
-      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "The Italian show marks the public debut of the Sanka, an autonomous and full electric tool carrier that generates a maximum power of 87hp. Using tried and trusted technology from the French company’s other autonomous machines, which includes Ted and Orio, one of the main differences with the Sanka is the versatility of tools it […]",
-      "topic": "スマート農業",
-      "score": 8
     },
     {
       "title": "Ultimate Guide to buying a trailed combination drill 2027",
@@ -184,26 +116,94 @@
       "score": 24
     },
     {
-      "title": "270hp McCormick X7 at Italian show",
-      "originalTitle": "270hp McCormick X7 at Italian show",
-      "href": "https://www.profi.co.uk/news/mccormick-x7-with-270hp/",
+      "title": "Amazone Avant 4502-2 combi drill: Swap and sow",
+      "originalTitle": "Amazone Avant 4502-2 combi drill: Swap and sow",
+      "href": "https://www.profi.co.uk/test-centre/amazone-avant-4502-2-combi-drill-swap-and-sow/",
       "source": "profi",
-      "date": "2026-11-13",
+      "date": "2026-11-19",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "The X7.270 VT-Drive is a highlight on the McCormick stand at the Italian EIMA show.",
-      "topic": "トラクター",
-      "score": 5
+      "originalSummary": "DRIVING IMPRESSION: With the Avant 4502-2, Amazone is plugging a gap in its range. The 4.50m front-rear combi may seem like a niche working width, but it can also be paired with the six-row Precea precision planter.",
+      "topic": "スマート農業",
+      "score": 20
+    }
+  ],
+  "all": [
+    {
+      "title": "Fendt to showcase new tractor and combine models at LAMMA 2027 - Farmers Guide",
+      "originalTitle": "Fendt to showcase new tractor and combine models at LAMMA 2027 - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/lamma-2027/fendt-to-showcase-latest-machinery-at-lamma-2027/",
+      "source": "Farmers Guide",
+      "date": "2026-11-22",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "Fendt is set to showcase a range of machinery at LAMMA 2027, including the 680hp MT1167 tractor, as well as the latest MY27 Ideal 10T combine and the Rogator self-propelled sprayer.",
+      "topic": "収穫・飼料",
+      "score": 33
     },
     {
-      "title": "On test: New engine and transmission revitalise Fendt 516",
-      "originalTitle": "On test: New engine and transmission revitalise Fendt 516",
-      "href": "https://www.fwi.co.uk/machinery/tractors/on-test-new-engine-and-transmission-revitalise-fendt-516",
+      "title": "Kuhn adds new features to revamped Axis fert spreader range",
+      "originalTitle": "Kuhn adds new features to revamped Axis fert spreader range",
+      "href": "https://www.fwi.co.uk/machinery/spraying-and-fertilising/fertiliser-spreaders/kuhn-adds-new-features-to-revamped-axis-fert-spreader-range",
       "source": "Farmers Weekly",
-      "date": "2026-10-20",
+      "date": "2026-11-22",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Too small for heavy tillage and too dear for livestock-related duties, Fendt’s four-cylinder tractors have traditionally served as backfill for the ever-popular 724. But the tables are turning.",
+      "originalSummary": "Precision spreading technology from Kuhn's larger models has filtered down to smaller sizes in its revamped Axis range.",
+      "topic": "スマート農業",
+      "score": 11
+    },
+    {
+      "title": "Making every pass count with smarter cultivation - Farmers Guide",
+      "originalTitle": "Making every pass count with smarter cultivation - Farmers Guide",
+      "href": "https://www.farmersguide.co.uk/lamma-2027/making-every-pass-count-with-smarter-cultivation/",
+      "source": "Farmers Guide",
+      "date": "2026-11-22",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "Bullock Tillage will showcase its range of cost-effective cultivation and seeding equipment at LAMMA, including front-mounted airseeders and small seed and slug pellet applicators. The equipment offers farmers practical options for reducing machinery costs and combining field operations.",
       "topic": "作業機",
-      "score": 38
+      "score": 8
+    },
+    {
+      "title": "Bateman self-propelled sprayers: Joyous joystick?",
+      "originalTitle": "Bateman self-propelled sprayers: Joyous joystick?",
+      "href": "https://www.profi.co.uk/test-centre/bateman-self-propelled-sprayers-joyous-joystick/",
+      "source": "profi",
+      "date": "2026-11-21",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "DRIVING IMPRESSION: Back in January at LAMMA 2026, Bateman launched its latest self-propelled sprayer models. A key development was the introduction of a new control and joystick layout but, under the skin, the latest models have numerous other developments which we look at here.",
+      "topic": "作業機",
+      "score": 13
+    },
+    {
+      "title": "4Disc Shift drill: For a spin",
+      "originalTitle": "4Disc Shift drill: For a spin",
+      "href": "https://www.profi.co.uk/test-centre/4disc-shift-drill-for-a-spin/",
+      "source": "profi",
+      "date": "2026-11-21",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "DRIVING IMPRESSION: 4Disc has come up with a completely new way of drilling crops with its ‘hollow principle’, and we have been to the field to find out more.",
+      "topic": "作業機",
+      "score": 13
+    },
+    {
+      "title": "Joskin unveils 6-12m turntable-type Galion flatbed trailers",
+      "originalTitle": "Joskin unveils 6-12m turntable-type Galion flatbed trailers",
+      "href": "https://www.fwi.co.uk/machinery/trailers/joskin-unveils-6-12m-turntable-type-galion-flatbed-trailers",
+      "source": "Farmers Weekly",
+      "date": "2026-11-21",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "Tractor drivers who reckon they can make a better fist of reversing a turntable trailer than McLaren F1 driver Oscar Piastri (fans of Clarkson’s Farm will know what we’re referring.",
+      "topic": "トラクター",
+      "score": 7
+    },
+    {
+      "title": "Lemken ISObus plough for tractors up to 450hp",
+      "originalTitle": "Lemken ISObus plough for tractors up to 450hp",
+      "href": "https://www.profi.co.uk/news/lemken-isobus-plough-for-tractors-up-to-450hp/",
+      "source": "profi",
+      "date": "2026-11-20",
+      "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
+      "originalSummary": "The 10i, a new flagship model in the Juwel range, is claimed as the most powerful ISObus-compatible mounted plough on the market. Tailored for users seeking maximum output without sacrificing the advantages of a mounted plough, the new four to seven furrow model is designed for tractors up to 450hp. Combining the build quality of […]",
+      "topic": "スマート農業",
+      "score": 39
     },
     {
       "title": "Field robot or autonomous tractor? Dutch grower puts both to the test",
@@ -228,26 +228,26 @@
       "score": 35
     },
     {
-      "title": "JCB offers 'more affordable' 3CX Sitemaster backhoe loader",
-      "originalTitle": "JCB offers 'more affordable' 3CX Sitemaster backhoe loader",
-      "href": "https://www.fwi.co.uk/machinery/telehandlers/jcb-offers-more-affordable-3cx-sitemaster-backhoe-loader",
+      "title": "Ultimate Guide to buying a trailed combination drill 2027",
+      "originalTitle": "Ultimate Guide to buying a trailed combination drill 2027",
+      "href": "https://www.fwi.co.uk/machinery/cultivation-drilling/cereal-drills/ultimate-guide-to-buying-a-trailed-combination-drill-2027",
       "source": "Farmers Weekly",
-      "date": "2026-11-02",
+      "date": "2026-11-13",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Farmers keen to handle their own ditch cleaning, water pipe installation, groundworks and similar operations are being offered a “more affordable” backhoe loader – a new Sitemaster version of the.",
-      "topic": "農業機械",
-      "score": 20
+      "originalSummary": "New entries from Amazone, Maschio Gaspardo and Vaderstad lead the changes in this year’s Farmers Weekly cultivator-drill guide.",
+      "topic": "作業機",
+      "score": 24
     },
     {
-      "title": "Kubota showcases new Farmtrac 6050E tractor at EIMA - Farmers Guide",
-      "originalTitle": "Kubota showcases new Farmtrac 6050E tractor at EIMA - Farmers Guide",
-      "href": "https://www.farmersguide.co.uk/machinery/tractors/kubota-showcases-new-farmtrac-6050e-tractor-at-eima/",
-      "source": "Farmers Guide",
-      "date": "2026-11-12",
+      "title": "Amazone Avant 4502-2 combi drill: Swap and sow",
+      "originalTitle": "Amazone Avant 4502-2 combi drill: Swap and sow",
+      "href": "https://www.profi.co.uk/test-centre/amazone-avant-4502-2-combi-drill-swap-and-sow/",
+      "source": "profi",
+      "date": "2026-11-19",
       "summary": "農業機械の新製品・技術・現場動向を紹介する海外記事です。",
-      "originalSummary": "Kubota is showcasing its new 49hp Farmtrac 6050E tractor at EIMA International 2026, the models European debut.",
-      "topic": "トラクター",
-      "score": 19
+      "originalSummary": "DRIVING IMPRESSION: With the Avant 4502-2, Amazone is plugging a gap in its range. The 4.50m front-rear combi may seem like a niche working width, but it can also be paired with the six-row Precea precision planter.",
+      "topic": "スマート農業",
+      "score": 20
     }
   ]
 }
