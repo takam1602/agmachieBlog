@@ -163,7 +163,7 @@ export default function HomeClient({
         <SectionIntro
           eyebrow="RECENTLY UPDATED"
           title="新しい更新"
-          description="追加や更新したページ"
+          description="記事・ブログ・メモの更新を新しい順に５件"
         />
         <WhatsNew posts={latestPosts} />
       </Band>

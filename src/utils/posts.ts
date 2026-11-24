@@ -14,6 +14,7 @@ export interface BlogPost {
   category?: string
   protected?: boolean
   updatedAt?: string
+  gitUpdatedAt?: string
 }
 
 export interface RepositorySection {
@@ -129,7 +130,7 @@ async function gitLogDates(filePath: string): Promise<string[]> {
       '--',
       relativePath,
     ])
-    return stdout.split('\n').map((line) => line.trim().slice(0, 10)).filter(Boolean)
+    return stdout.split('\n').map((line) => line.trim()).filter(Boolean)
   } catch {
     // Git metadata is not always available in every runtime.
     return []
@@ -207,15 +208,16 @@ async function readPost(filePath: string): Promise<BlogPost | null> {
     const gitDates = await gitLogDates(filePath) // 新しい順
     // ファイルの mtime は checkout 時刻になる（デプロイ環境では毎回「今日」）ため使わない。
     const date = getDateFromFilename(path.basename(filePath), data.date ?? data.updated)
-      ?? gitDates.at(-1)
+      ?? gitDates.at(-1)?.slice(0, 10)
       ?? ''
-    const updatedAt = normalizeDate(data.updated) ?? gitDates[0] ?? date
+    const updatedAt = normalizeDate(data.updated) ?? gitDates[0]?.slice(0, 10) ?? date
 
     return {
       slug: slugParts.join('-') || 'index',
       title: getTitle(content, basename, data.title),
       date,
       updatedAt: updatedAt || undefined,
+      gitUpdatedAt: gitDates[0],
       excerpt: createExcerpt(content),
       searchText: createSearchText(content),
       href: hrefFromContentPath(filePath),
@@ -240,17 +242,21 @@ export async function getAllContentPosts() {
 export async function getRecentlyUpdatedPosts(limit: number = 5): Promise<BlogPost[]> {
   const files = await walkMarkdown(CONTENT_DIR)
   const posts = await Promise.all(files.map(readPost))
+  const fullGitHistory = await hasFullGitHistory()
 
   return posts
     .filter((post): post is BlogPost => Boolean(post))
     .filter((post) => post.href !== '/docs/')
     .filter((post) => !post.protected)
-    // notes のメモは blog に追加してから更新一覧に掲載する。
-    .filter((post) => post.category !== 'notes')
+    .filter((post) => !fullGitHistory || Boolean(post.gitUpdatedAt))
+    // カテゴリを問わず、Git の最終更新日時を優先する。
+    // 履歴が利用できない環境では記事に記録された日付を使う。
+    .map((post) => ({ ...post, updatedAt: post.gitUpdatedAt ?? post.updatedAt ?? post.date }))
     // 日付が特定できない記事は「新着」に出さない
-    .filter((post) => Boolean(post.updatedAt ?? post.date))
-    .sort((a, b) => ((a.updatedAt ?? a.date) < (b.updatedAt ?? b.date) ? 1 : -1))
+    .filter((post) => Boolean(post.updatedAt))
+    .sort((a, b) => Date.parse(b.updatedAt) - Date.parse(a.updatedAt) || a.href.localeCompare(b.href))
     .slice(0, limit)
+    .map((post) => ({ ...post, updatedAt: post.updatedAt.slice(0, 10) }))
 }
 
 export async function getGitRecentUpdates(limit: number = 5): Promise<BlogPost[]> {
