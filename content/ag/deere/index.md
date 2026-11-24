@@ -199,4 +199,4 @@ seeding unit の押し付け圧の調整
 - Langfang: milling machines, pavers rollers
 - Tianjin: AG tractors, 4WD loaders, hydraulic exavators, engines, transmission, ag product engineering
 
-という内訳
+という内訳である。
