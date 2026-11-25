@@ -41,6 +41,7 @@ const categoryLabels: Record<string, { label: string; group: string; desc?: stri
   Brazil: { label: 'BR', group: '各国の特色ある機械たち', desc: 'Brazil' },
   France: { label: 'FR', group: '各国の特色ある機械たち', desc: 'France' },
   Hungary: { label: 'HU', group: '各国の特色ある機械たち', desc: 'Hungary' },
+  china: { label: 'CN', group: '各国の特色ある機械たち', desc: 'China' },
   deere: { label: 'John Deere', group: '農業機械のメーカー', desc: 'Nothing runs like a Deere' },
   cat: { label: 'Caterpillar', group: '農業機械のメーカー', desc: 'Crawler tractors and more' },
   claas: { label: 'Claas', group: '農業機械のメーカー', desc: 'Harvesting machines' },

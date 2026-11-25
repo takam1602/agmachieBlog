@@ -12,18 +12,18 @@ import WeeklyNews from '@/components/WeeklyNews'
 import { WeeklyNewsItem } from '@/utils/weeklyNews'
 
 const heroImages = [
-  { src: '/img/front/1.jpg',  alt: '農業機械の作業風景', width: 640, height: 480 },
-  { src: '/img/front/2.jpg',  alt: 'カルチベーター', width: 640, height: 480 },
-  { src: '/img/front/3.JPG',  alt: 'いも収穫機', width: 640, height: 480 },
-  { src: '/img/front/4.jpg',  alt: '栃木の農業機械', width: 640, height: 480 },
-  { src: '/img/front/5.JPG',  alt: 'ディスクハロー', width: 640, height: 480 },
-  { src: '/img/front/6.JPG',  alt: 'チゼルプラウ', width: 640, height: 480 },
-  { src: '/img/front/7.JPG',  alt: '大型コンバイン 9750', width: 640, height: 480 },
-  { src: '/img/front/8.JPG',  alt: 'タイの農業機械', width: 640, height: 480 },
-  { src: '/img/front/9.JPG',  alt: '大型農業機械', width: 640, height: 480 },
-  { src: '/img/front/10.JPG', alt: 'オーストラリア Wagga Wagga の農業', width: 640, height: 480 },
-  { src: '/img/front/11.JPG', alt: '中国の農業機械', width: 640, height: 480 },
-  { src: '/img/front/12.JPG', alt: '中国の農作業風景', width: 640, height: 480 },
+  { src: '/img/front/1.jpg',  alt: '915', width: 640, height: 480 },
+  { src: '/img/front/2.jpg',  alt: 'フィールドカルチ', width: 640, height: 480 },
+  { src: '/img/front/3.JPG',  alt: '馬鈴薯収穫', width: 640, height: 480 },
+  { src: '/img/front/4.jpg',  alt: '協調ロボット', width: 640, height: 480 },
+  { src: '/img/front/5.JPG',  alt: '爆速ディスク', width: 640, height: 480 },
+  { src: '/img/front/6.JPG',  alt: 'チゼル', width: 640, height: 480 },
+  { src: '/img/front/7.JPG',  alt: '9750 STS', width: 640, height: 480 },
+  { src: '/img/front/8.JPG',  alt: 'タイの天水田でロボット', width: 640, height: 480 },
+  { src: '/img/front/9.JPG',  alt: 'UCB901', width: 640, height: 480 },
+  { src: '/img/front/10.JPG', alt: 'Waggaのディーラー', width: 640, height: 480 },
+  { src: '/img/front/11.JPG', alt: 'Lobolのスプレーヤー', width: 640, height: 480 },
+  { src: '/img/front/12.JPG', alt: 'Lobol のコンバイン', width: 640, height: 480 },
 ]
 
 interface HomeClientProps {
@@ -153,7 +153,7 @@ export default function HomeClient({
         <SectionIntro
           eyebrow="EXPLORE"
           title="検索"
-          description="気になる機械やメーカー，作業内容などの単語を入力してください．"
+          description="気になる機械やメーカーなどの単語を入力してください．"
           align="center"
         />
         <SearchableList entries={searchEntries} />
@@ -161,9 +161,9 @@ export default function HomeClient({
 
       <Band id="latest">
         <SectionIntro
-          eyebrow="RECENTLY UPDATED"
+          eyebrow="NEW"
           title="新しい更新"
-          description="記事・ブログ・メモの更新を新しい順に５件"
+          description="最近更新したものたち"
         />
         <WhatsNew posts={latestPosts} />
       </Band>
@@ -171,8 +171,8 @@ export default function HomeClient({
       <Band id="discover" tone="band">
         <SectionIntro
           eyebrow="RAMDON NEWS"
-          title="ランダムネス"
-          description="記事を無作為に表示させます"
+          title="ランダム"
+          description="ブログを無作為に表示します"
         />
         {children && (
           <div id="topic-picks" className="max-w-3xl scroll-mt-24">
@@ -189,7 +189,7 @@ export default function HomeClient({
         <SectionIntro
           eyebrow="ARTICLE"
           title="記事一覧"
-          description="地域やメーカー，機械の用途で整理した記事です。"
+          description="地域やメーカー，機械の用途などで整理した記事です。"
         />
         <div className="space-y-12">
           {repositorySections.map((section) => (
